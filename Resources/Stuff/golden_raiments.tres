@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://bu3rqcedkm3ic"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_1kia5"]
+
+[resource]
+script = ExtResource("1_1kia5")
+name = "Golden Raiments"
+value = 200.0
+qualities = Dictionary[int, float]({
+2: 5.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

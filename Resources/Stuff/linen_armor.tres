@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://cjxhqqpoobgaq"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_gfyhx"]
+
+[resource]
+script = ExtResource("1_gfyhx")
+name = "Linen Armor"
+value = 25.0
+qualities = Dictionary[int, float]({
+8: 2.5
+})
+exp_to = Dictionary[String, float]({
+"Armory": 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

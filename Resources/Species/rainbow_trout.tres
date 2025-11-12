@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://ngsirtsh2xwq"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_vohq3"]
+[ext_resource type="Resource" uid="uid://bp18xaaeucfs8" path="res://Resources/Stuff/roe.tres" id="2_6645r"]
+[ext_resource type="Resource" uid="uid://488tnlw6bkqg" path="res://Resources/Stuff/fancy_fish.tres" id="3_pfeh8"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_3dxcy"]
+
+[resource]
+script = ExtResource("4_3dxcy")
+kind = 8
+kill_produce = Dictionary[ExtResource("1_vohq3"), int]({
+ExtResource("3_pfeh8"): 2
+})
+harvest_produce = Dictionary[ExtResource("1_vohq3"), int]({
+ExtResource("2_6645r"): 1
+})
+rarity = 35.0
+game = true
+name = "Rainbow Trout"
+value = 10.0
+found_in = Array[int]([5])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

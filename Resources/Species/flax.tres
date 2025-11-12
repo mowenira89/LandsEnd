@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://cyhmu63rk664p"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_qp1jq"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="2_m4sjt"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_5c5l8"]
+
+[resource]
+script = ExtResource("3_5c5l8")
+kind = 6
+kill_produce = Dictionary[ExtResource("1_qp1jq"), int]({
+ExtResource("2_m4sjt"): 3
+})
+harvest_produce = Dictionary[ExtResource("1_qp1jq"), int]({
+ExtResource("2_m4sjt"): 3
+})
+rarity = 25.0
+name = "Flax"
+found_in = Array[int]([0])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

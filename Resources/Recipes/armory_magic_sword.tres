@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bucl5geng83cp"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_eu6ns"]
+[ext_resource type="Resource" uid="uid://bt85i3i2fa24g" path="res://Resources/Stuff/oricalchum.tres" id="2_r3620"]
+[ext_resource type="Resource" uid="uid://csqk5gpsyuxyl" path="res://Resources/Stuff/magic_sword.tres" id="3_jbti6"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_kypjy"]
+
+[resource]
+script = ExtResource("4_kypjy")
+name = "Magic Sword"
+id = "armory_magic_sword"
+turns = 2
+inputs = Dictionary[ExtResource("1_eu6ns"), int]({
+ExtResource("2_r3620"): 2
+})
+outputs = Dictionary[ExtResource("1_eu6ns"), int]({
+ExtResource("3_jbti6"): 1
+})
+exp_to = Dictionary[String, float]({
+"Orangesmith": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dco4pdflbgkvn"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_pc1g2"]
+[ext_resource type="Resource" uid="uid://bk0p2ys740a5e" path="res://Resources/Stuff/silver_ingot.tres" id="2_xfmsm"]
+[ext_resource type="Resource" uid="uid://p4483m5eicko" path="res://Resources/Stuff/silver_raiments.tres" id="3_8f7vs"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_r6q0y"]
+
+[resource]
+script = ExtResource("4_r6q0y")
+name = "Silver Raiments"
+id = "whitesmith_silver_raiments"
+turns = 2
+inputs = Dictionary[ExtResource("1_pc1g2"), int]({
+ExtResource("2_xfmsm"): 2
+})
+outputs = Dictionary[ExtResource("1_pc1g2"), int]({
+ExtResource("3_8f7vs"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

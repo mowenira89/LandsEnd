@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://8d2ii7nuv6jo"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_5lrqi"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="2_lw5w8"]
+[ext_resource type="Resource" uid="uid://cdf1y3g80yt8t" path="res://Resources/Stuff/leather.tres" id="3_iw6pp"]
+[ext_resource type="Resource" uid="uid://d2gvkojgn1b6o" path="res://Resources/Stuff/wheel.tres" id="4_q0oja"]
+[ext_resource type="Resource" uid="uid://r3rkydo0pnc" path="res://Resources/Stuff/chariot.tres" id="5_hdc78"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="6_ywqv6"]
+
+[resource]
+script = ExtResource("6_ywqv6")
+name = "Chariot"
+id = "workshop_chariot"
+turns = 2
+inputs = Dictionary[ExtResource("1_5lrqi"), int]({
+ExtResource("2_lw5w8"): 2,
+ExtResource("3_iw6pp"): 1,
+ExtResource("4_q0oja"): 2
+})
+outputs = Dictionary[ExtResource("1_5lrqi"), int]({
+ExtResource("5_hdc78"): 1
+})
+exp_to = Dictionary[String, float]({
+"Wainwright": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

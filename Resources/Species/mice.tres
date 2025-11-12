@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://cse3s8sl70tcw"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_racr3"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_7xxk8"]
+
+[resource]
+script = ExtResource("2_7xxk8")
+kind = 1
+rarity = 85.0
+speed = 4.0
+name = "Mice"
+value = 1.0
+qualities = Dictionary[int, float]({
+0: 0.5,
+2: -1.0
+})
+found_in = Array[int]([0, 2, 4, 3])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

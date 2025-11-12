@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dgdtsnv6k7mbm"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_afn5i"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_b1j7e"]
+
+[resource]
+script = ExtResource("2_b1j7e")
+kind = 6
+rarity = 4.0
+name = "Moly"
+found_in = Array[int]([0, 2, 1])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

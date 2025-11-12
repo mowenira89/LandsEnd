@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://ceivweb0m4nf1"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_tows8"]
+
+[resource]
+script = ExtResource("1_tows8")
+name = "Quartz Sand"
+value = 2.0
+qualities = Dictionary[int, float]({
+6: 65.0
+})
+found_in = Array[int]([4])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Camp" load_steps=11 format=3 uid="uid://bg7rwygs07wkj"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_dlvg1"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_cwisb"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_sqelu"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="4_0634d"]
+[ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="5_qaymi"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_5munj"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_xo48i"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_i4n06"]
+[ext_resource type="Resource" uid="uid://vij24luwxwvf" path="res://Resources/Recipes/lumber_mill_lumber.tres" id="9_umg3b"]
+[ext_resource type="Script" uid="uid://doa1vbsvkk4tx" path="res://Data/buildings/camp.gd" id="10_sif1p"]
+
+[resource]
+script = ExtResource("10_sif1p")
+chop_wood = true
+name = "Lumber Mll"
+construction_time = 1
+construction_materials = Dictionary[ExtResource("3_sqelu"), int]({
+ExtResource("4_0634d"): 10,
+ExtResource("5_qaymi"): 10
+})
+construction_staff = Dictionary[int, int]({
+0: 5
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+0: 5
+})
+district_type = 3
+production_slots = 2
+recipes = Array[ExtResource("8_i4n06")]([ExtResource("9_umg3b")])
+metadata/_custom_type_script = "uid://doa1vbsvkk4tx"

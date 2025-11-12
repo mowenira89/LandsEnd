@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="Camp" load_steps=23 format=3 uid="uid://ddnn8m548yucj"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_fxers"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_j13ja"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_lm60y"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="3_j13ja"]
+[ext_resource type="Resource" uid="uid://be3fpj4ymxj8y" path="res://Resources/Stuff/canvas.tres" id="4_jlqba"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="5_uah8x"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="6_j14bi"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_jlqba"]
+[ext_resource type="Texture2D" uid="uid://bdwdjfpgh8kub" path="res://Assets/Images/BuildingImages/camp.png" id="6_uah8x"]
+[ext_resource type="Resource" uid="uid://628r3srsrfjx" path="res://Resources/Recipes/camp_canvas.tres" id="7_kllio"]
+[ext_resource type="Resource" uid="uid://cuprv3t8m84s8" path="res://Resources/Recipes/camp_horn_carving.tres" id="8_jvke4"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="8_uah8x"]
+[ext_resource type="Resource" uid="uid://dwsu1sq0thk3u" path="res://Resources/Recipes/camp_ivory_carving.tres" id="9_j27x5"]
+[ext_resource type="Resource" uid="uid://cwif52v0bdks3" path="res://Resources/Recipes/camp_leather.tres" id="10_80m7v"]
+[ext_resource type="Resource" uid="uid://c0wyua0f1r05e" path="res://Resources/Recipes/camp_lumber.tres" id="11_jxmh5"]
+[ext_resource type="Resource" uid="uid://q8874acykipv" path="res://Resources/Recipes/camp_simple_clohing_canvas.tres" id="12_t1wd2"]
+[ext_resource type="Resource" uid="uid://dsm568eqwf6o6" path="res://Resources/Recipes/camp_simple_clothing_pelt.tres" id="13_5675l"]
+[ext_resource type="Resource" uid="uid://dtov2tct7blh5" path="res://Resources/Recipes/camp_stone_carving.tres" id="14_vggk8"]
+[ext_resource type="Resource" uid="uid://drm1r5x0plpnr" path="res://Resources/Recipes/camp_traditional_medicine.tres" id="15_bqfr3"]
+[ext_resource type="Resource" uid="uid://71gkprq6v0vd" path="res://Resources/Recipes/camp_wood_carving.tres" id="16_cmqur"]
+[ext_resource type="Script" uid="uid://doa1vbsvkk4tx" path="res://Data/buildings/camp.gd" id="17_vl77t"]
+
+[sub_resource type="Resource" id="Resource_j14bi"]
+script = ExtResource("6_jlqba")
+extention_slots = 1
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[resource]
+script = ExtResource("17_vl77t")
+fish = true
+hunt = true
+forage = true
+chop_wood = true
+name = "Camp"
+unlocked = true
+image = ExtResource("6_uah8x")
+pop_cap = Dictionary[int, int]({
+0: 100
+})
+construction_time = 1
+construction_materials = Dictionary[ExtResource("2_lm60y"), int]({
+ExtResource("3_j13ja"): 10,
+ExtResource("4_jlqba"): 10
+})
+construction_staff = Dictionary[int, int]({
+0: 10
+})
+construction_level = 1
+staff_needed = Dictionary[int, int]({
+0: 10
+})
+production_slots = 2
+recipes = Array[ExtResource("6_j14bi")]([ExtResource("7_kllio"), ExtResource("8_jvke4"), ExtResource("9_j27x5"), ExtResource("10_80m7v"), ExtResource("11_jxmh5"), ExtResource("12_t1wd2"), ExtResource("13_5675l"), ExtResource("14_vggk8"), ExtResource("15_bqfr3"), ExtResource("16_cmqur")])
+level_up_slates = Array[ExtResource("6_jlqba")]([SubResource("Resource_j14bi")])
+metadata/_custom_type_script = "uid://doa1vbsvkk4tx"

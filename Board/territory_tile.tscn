@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cygj7dclxd7c6"]
+
+[ext_resource type="Script" uid="uid://bubmmvreaxns4" path="res://Board/territory_tile.gd" id="1_6ynih"]
+[ext_resource type="Texture2D" uid="uid://db77yb865r63v" path="res://Assets/Images/Territory Tiles/frame.png" id="2_owtqe"]
+
+[node name="TerritoryTile" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+script = ExtResource("1_6ynih")
+
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="Frame" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_owtqe")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

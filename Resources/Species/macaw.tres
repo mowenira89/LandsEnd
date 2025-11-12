@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://dks1eyr27asyo"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_v7lf1"]
+[ext_resource type="Resource" uid="uid://qlieo2jmhtgu" path="res://Resources/Stuff/feather.tres" id="2_eaxqp"]
+[ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="3_jn8gb"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_f54c0"]
+
+[resource]
+script = ExtResource("4_f54c0")
+kind = 3
+kill_produce = Dictionary[ExtResource("1_v7lf1"), int]({
+ExtResource("3_jn8gb"): 1,
+ExtResource("2_eaxqp"): 1
+})
+harvest_produce = Dictionary[ExtResource("1_v7lf1"), int]({
+ExtResource("2_eaxqp"): 1
+})
+rarity = 12.0
+speed = 3.0
+game = true
+name = "Macaw"
+value = 45.0
+found_in = Array[int]([2])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

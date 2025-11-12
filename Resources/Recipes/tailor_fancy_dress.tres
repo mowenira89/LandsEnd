@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://c30ql271iqtyb"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_r2pjt"]
+[ext_resource type="Resource" uid="uid://cry61qvpicxe5" path="res://Resources/Stuff/silk.tres" id="2_ycqpf"]
+[ext_resource type="Resource" uid="uid://dd6i0bdv36egh" path="res://Resources/Stuff/pearl.tres" id="3_d1iok"]
+[ext_resource type="Resource" uid="uid://qlieo2jmhtgu" path="res://Resources/Stuff/feather.tres" id="4_cd462"]
+[ext_resource type="Resource" uid="uid://cyhlmd5tynb8c" path="res://Resources/Stuff/fancy_dress.tres" id="5_xfnes"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="6_n111b"]
+
+[resource]
+script = ExtResource("6_n111b")
+name = "Exquisite Clothing"
+id = "tailor_fancy_dress"
+turns = 2
+inputs = Dictionary[ExtResource("1_r2pjt"), int]({
+ExtResource("2_ycqpf"): 1,
+ExtResource("3_d1iok"): 1,
+ExtResource("4_cd462"): 1
+})
+outputs = Dictionary[ExtResource("1_r2pjt"), int]({
+ExtResource("5_xfnes"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

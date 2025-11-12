@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bid07lpk2shok"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_0ip36"]
+[ext_resource type="Resource" uid="uid://cornvya5si7q4" path="res://Resources/Stuff/cloth.tres" id="2_43ua5"]
+[ext_resource type="Resource" uid="uid://ctyl0mtojw5vq" path="res://Resources/Stuff/simple_clothing.tres" id="3_yxdk4"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_iavte"]
+
+[resource]
+script = ExtResource("4_iavte")
+name = "Simple Clothing (Wool)"
+id = "textile_simple_clothing_wool"
+turns = 1
+inputs = Dictionary[ExtResource("1_0ip36"), int]({
+ExtResource("2_43ua5"): 1
+})
+outputs = Dictionary[ExtResource("1_0ip36"), int]({
+ExtResource("3_yxdk4"): 1
+})
+exp_to = Dictionary[String, float]({
+"Tailor": 1.0,
+"Textiles": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

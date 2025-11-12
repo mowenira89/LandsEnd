@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://be2sap83vst3q"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_5ocf5"]
+[ext_resource type="Resource" uid="uid://baewvmenynp8x" path="res://Resources/Stuff/oricalc.tres" id="2_1ra5o"]
+[ext_resource type="Resource" uid="uid://bt85i3i2fa24g" path="res://Resources/Stuff/oricalchum.tres" id="3_1wl8k"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_6hlhg"]
+
+[resource]
+script = ExtResource("4_6hlhg")
+name = "Orichalcum"
+id = "orangesmith_orichalcum"
+turns = 1
+inputs = Dictionary[ExtResource("1_5ocf5"), int]({
+ExtResource("2_1ra5o"): 1
+})
+outputs = Dictionary[ExtResource("1_5ocf5"), int]({
+ExtResource("3_1wl8k"): 2
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

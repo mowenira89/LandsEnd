@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://d4lgyb52ri20o"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_upk44"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="2_q7e5w"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="3_ctukg"]
+[ext_resource type="Resource" uid="uid://dprmx6rm7d6cg" path="res://Resources/Stuff/loom.tres" id="4_ur0ou"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_qkqjj"]
+
+[resource]
+script = ExtResource("5_qkqjj")
+name = "Loom"
+id = "workshop_loom"
+turns = 1
+inputs = Dictionary[ExtResource("1_upk44"), int]({
+ExtResource("2_q7e5w"): 2,
+ExtResource("3_ctukg"): 1
+})
+outputs = Dictionary[ExtResource("1_upk44"), int]({
+ExtResource("4_ur0ou"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

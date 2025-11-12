@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://dqrhsqnodr3ws"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_62mul"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="2_dvr7g"]
+[ext_resource type="Resource" uid="uid://d2gvkojgn1b6o" path="res://Resources/Stuff/wheel.tres" id="3_ryxla"]
+[ext_resource type="Resource" uid="uid://brni18b0el1ol" path="res://Resources/Stuff/cart.tres" id="4_isu24"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_58erh"]
+
+[resource]
+script = ExtResource("5_58erh")
+name = "Cart"
+id = "workshop_cart"
+turns = 2
+inputs = Dictionary[ExtResource("1_62mul"), int]({
+ExtResource("2_dvr7g"): 2,
+ExtResource("3_ryxla"): 4
+})
+outputs = Dictionary[ExtResource("1_62mul"), int]({
+ExtResource("4_isu24"): 1
+})
+exp_to = Dictionary[String, float]({
+"Wainwright": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

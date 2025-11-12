@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://dad5vwc4iil8y"]
+
+[ext_resource type="Theme" uid="uid://b3tuuffn62byp" path="res://Assets/Themes/menu.tres" id="1_pa8t5"]
+[ext_resource type="Script" uid="uid://dhxe5r3w8en2e" path="res://Menus/build_menu.gd" id="2_4dxoc"]
+
+[node name="BuildMenu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pa8t5")
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+script = ExtResource("2_4dxoc")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PotentialBuildingsHolder" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(370, 370)
+layout_mode = 2
+columns = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="BuildingTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Building Name"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+expand_mode = 1
+
+[node name="Info" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 180)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 16
+text = "Construction:
+50 Wood, 20 Stone, 10 Followers, 2 Turns
+
+Staff:
+10 Followers"
+
+[node name="Build" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Build"
+
+[connection signal="pressed" from="MarginContainer/Build" to="." method="_on_build_pressed"]

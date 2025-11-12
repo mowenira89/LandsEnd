@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://b6wqpk7wbumr2"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_minld"]
+[ext_resource type="Resource" uid="uid://dw3qa3h2pbl0l" path="res://Resources/Stuff/egg.tres" id="2_78uvn"]
+[ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="3_ps27a"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_1db8f"]
+
+[resource]
+script = ExtResource("4_1db8f")
+kind = 3
+kill_produce = Dictionary[ExtResource("1_minld"), int]({
+ExtResource("3_ps27a"): 1
+})
+harvest_produce = Dictionary[ExtResource("1_minld"), int]({
+ExtResource("2_78uvn"): 1
+})
+rarity = 55.0
+speed = 3.0
+game = true
+name = "Pigeon"
+value = 10.0
+found_in = Array[int]([0, 1])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://dei76cvtmox1f"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_12nuv"]
+[ext_resource type="Resource" uid="uid://4ut5xliyf7jc" path="res://Resources/Stuff/wool.tres" id="2_fow7l"]
+[ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="3_mt53e"]
+[ext_resource type="Resource" uid="uid://du817n882ksa7" path="res://Resources/Stuff/pelt.tres" id="4_8pgx4"]
+[ext_resource type="Resource" uid="uid://dhuuxiv38pk4g" path="res://Resources/Stuff/horn.tres" id="5_fow7l"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="5_i4mti"]
+
+[resource]
+script = ExtResource("5_i4mti")
+kind = 1
+kill_produce = Dictionary[ExtResource("1_12nuv"), int]({
+ExtResource("3_mt53e"): 2,
+ExtResource("4_8pgx4"): 1,
+ExtResource("2_fow7l"): 1,
+ExtResource("5_fow7l"): 2
+})
+harvest_produce = Dictionary[ExtResource("1_12nuv"), int]({
+ExtResource("2_fow7l"): 1
+})
+rarity = 75.0
+offense = 1.0
+defense = 2.0
+speed = 3.0
+game = true
+steed = true
+name = "Bighorn Sheep"
+found_in = Array[int]([1])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

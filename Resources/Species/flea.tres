@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://btyafvd58hien"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_eti7p"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_r4taf"]
+
+[resource]
+script = ExtResource("2_r4taf")
+kind = 9
+rarity = 35.0
+speed = 9.0
+name = "Flea"
+value = 5.0
+exp_to = Dictionary[String, float]({
+"Flea Circus": 1.0
+})
+found_in = Array[int]([2, 0, 3])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

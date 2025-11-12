@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://drm1r5x0plpnr"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_jyrj4"]
+[ext_resource type="Resource" uid="uid://d20v07glb4l0u" path="res://Resources/Stuff/ivory.tres" id="2_3i45b"]
+[ext_resource type="Resource" uid="uid://bvki5qdvgnxsa" path="res://Resources/Stuff/chitin.tres" id="3_oefsp"]
+[ext_resource type="Resource" uid="uid://btw4i1ym4cmpp" path="res://Resources/Stuff/traditional_medicine.tres" id="4_s0c81"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_vlpga"]
+
+[resource]
+script = ExtResource("5_vlpga")
+name = "Traditional Medicine"
+id = "camp_raditional_medicine"
+turns = 1
+inputs = Dictionary[ExtResource("1_jyrj4"), int]({
+ExtResource("2_3i45b"): 1,
+ExtResource("3_oefsp"): 1
+})
+outputs = Dictionary[ExtResource("1_jyrj4"), int]({
+ExtResource("4_s0c81"): 1
+})
+exp_to = Dictionary[String, float]({
+"Medicine": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

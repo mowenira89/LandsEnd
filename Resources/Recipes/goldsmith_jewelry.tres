@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://cttpwavoc55ia"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_dsw27"]
+[ext_resource type="Resource" uid="uid://54ay3tokrval" path="res://Resources/Stuff/gold_ingot.tres" id="2_oo0qi"]
+[ext_resource type="Resource" uid="uid://dd6i0bdv36egh" path="res://Resources/Stuff/pearl.tres" id="3_056yp"]
+[ext_resource type="Resource" uid="uid://s4tn1vi4wp7l" path="res://Resources/Stuff/jewelry.tres" id="4_cg8cg"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_xdimq"]
+
+[resource]
+script = ExtResource("5_xdimq")
+name = "Jewelry"
+id = "goldsmith_jewelry"
+turns = 1
+inputs = Dictionary[ExtResource("1_dsw27"), int]({
+ExtResource("2_oo0qi"): 1,
+ExtResource("3_056yp"): 1
+})
+outputs = Dictionary[ExtResource("1_dsw27"), int]({
+ExtResource("4_cg8cg"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

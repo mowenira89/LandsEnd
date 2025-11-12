@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://b075l3lc04412"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_cs5w2"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="2_n7i7w"]
+[ext_resource type="Resource" uid="uid://be3fpj4ymxj8y" path="res://Resources/Stuff/canvas.tres" id="3_pst2h"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_hcf7m"]
+
+[resource]
+script = ExtResource("4_hcf7m")
+name = "Canvas"
+id = "textile_canvas"
+turns = 1
+inputs = Dictionary[ExtResource("1_cs5w2"), int]({
+ExtResource("2_n7i7w"): 1
+})
+outputs = Dictionary[ExtResource("1_cs5w2"), int]({
+ExtResource("3_pst2h"): 3
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

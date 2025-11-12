@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://wot1ehofqjjf"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_o6fgw"]
+[ext_resource type="Resource" uid="uid://de8fon4qwniy8" path="res://Resources/Stuff/clay.tres" id="2_7lhf2"]
+[ext_resource type="Resource" uid="uid://cvqv7ihlpfguv" path="res://Resources/Stuff/amphora.tres" id="3_0pl12"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_8piqc"]
+
+[resource]
+script = ExtResource("4_8piqc")
+name = "Amphora"
+id = "pottery_amphora"
+turns = 1
+inputs = Dictionary[ExtResource("1_o6fgw"), int]({
+ExtResource("2_7lhf2"): 1
+})
+outputs = Dictionary[ExtResource("1_o6fgw"), int]({
+ExtResource("3_0pl12"): 3
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

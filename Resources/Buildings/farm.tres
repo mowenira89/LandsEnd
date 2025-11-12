@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="Farm" load_steps=15 format=3 uid="uid://vyyhdli2faa6"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_mqsbj"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_b44j8"]
+[ext_resource type="Script" uid="uid://bjkwd2eqjow0a" path="res://Data/conditions/needs_terrain_condition.gd" id="3_fi2wv"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="4_mjyw8"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="5_suiq6"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="6_o00dq"]
+[ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="7_upxnp"]
+[ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="8_qnitw"]
+[ext_resource type="Texture2D" uid="uid://bjfr383ojbehf" path="res://Assets/Images/BuildingImages/farm.png" id="9_bmvb1"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="10_2vyas"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="11_3jrbj"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="12_udeb0"]
+[ext_resource type="Script" uid="uid://dbhgissbp5478" path="res://Data/buildings/farm.gd" id="13_a6q2k"]
+
+[sub_resource type="Resource" id="Resource_n3hev"]
+script = ExtResource("3_fi2wv")
+terrain = Array[int]([0])
+metadata/_custom_type_script = "uid://bjkwd2eqjow0a"
+
+[resource]
+script = ExtResource("13_a6q2k")
+name = "Farm"
+unlocked = true
+image = ExtResource("9_bmvb1")
+pop_cap = Dictionary[int, int]({
+0: 5
+})
+construction_time = 4
+construction_materials = Dictionary[ExtResource("4_mjyw8"), int]({
+ExtResource("5_suiq6"): 25,
+ExtResource("6_o00dq"): 5,
+ExtResource("7_upxnp"): 5,
+ExtResource("8_qnitw"): 5
+})
+construction_staff = Dictionary[int, int]({
+0: 5
+})
+construction_level = 2
+construction_conditions = Array[ExtResource("2_b44j8")]([SubResource("Resource_n3hev")])
+staff_needed = Dictionary[int, int]({
+0: 10
+})
+needed_districts = 1
+district_type = 2
+production_slots = 2
+metadata/_custom_type_script = "uid://dbhgissbp5478"

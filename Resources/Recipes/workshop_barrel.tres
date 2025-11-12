@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dhbojnxm65y6e"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_edk0g"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="2_2pkyp"]
+[ext_resource type="Resource" uid="uid://c2wuxkk4cgide" path="res://Resources/Stuff/barrel.tres" id="3_32nn6"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_a51km"]
+
+[resource]
+script = ExtResource("4_a51km")
+name = "Barrel"
+id = "workshop_barrel"
+turns = 2
+inputs = Dictionary[ExtResource("1_edk0g"), int]({
+ExtResource("2_2pkyp"): 1
+})
+outputs = Dictionary[ExtResource("1_edk0g"), int]({
+ExtResource("3_32nn6"): 1
+})
+exp_to = Dictionary[String, float]({
+"Carpenter": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

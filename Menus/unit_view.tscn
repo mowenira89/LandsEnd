@@ -1,0 +1,104 @@
+[gd_scene load_steps=2 format=3 uid="uid://vbjlty56mu01"]
+
+[ext_resource type="Script" uid="uid://c7m678fpf8h0g" path="res://Menus/unit_view.gd" id="1_o5w8a"]
+
+[node name="UnitView" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+script = ExtResource("1_o5w8a")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Pic" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Character Name"
+
+[node name="Info" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Equipment"
+
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Soldiers"
+
+[node name="Button4" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Followers"
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="MoveUnit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Move"
+
+[node name="MoveUnit2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Combat"
+
+[node name="Survey" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Survey"
+
+[node name="Assimilate" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Assimilate"
+
+[node name="AssimilateFollowers" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Assimilate Followers"
+
+[node name="Disband" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Disband"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Queued Actions"
+
+[node name="ActionQueue" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Buttons/Survey" to="." method="_on_survey_pressed"]

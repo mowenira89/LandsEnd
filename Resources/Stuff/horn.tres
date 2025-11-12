@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://dhuuxiv38pk4g"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_7rn4p"]
+
+[resource]
+script = ExtResource("1_7rn4p")
+name = "Horn"
+value = 1.0
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

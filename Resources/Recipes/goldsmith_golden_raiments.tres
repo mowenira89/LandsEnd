@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dvr8y5yt1m8rd"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_glx8g"]
+[ext_resource type="Resource" uid="uid://54ay3tokrval" path="res://Resources/Stuff/gold_ingot.tres" id="2_itxtl"]
+[ext_resource type="Resource" uid="uid://bu3rqcedkm3ic" path="res://Resources/Stuff/golden_raiments.tres" id="3_n2wis"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_lfcuo"]
+
+[resource]
+script = ExtResource("4_lfcuo")
+name = "Golden Raiments"
+id = "goldsmith_golden_raiments"
+turns = 2
+inputs = Dictionary[ExtResource("1_glx8g"), int]({
+ExtResource("2_itxtl"): 3
+})
+outputs = Dictionary[ExtResource("1_glx8g"), int]({
+ExtResource("3_n2wis"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

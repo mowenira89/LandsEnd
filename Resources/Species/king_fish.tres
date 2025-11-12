@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://cjsntcpsbwgjp"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_8n01b"]
+[ext_resource type="Resource" uid="uid://bp18xaaeucfs8" path="res://Resources/Stuff/roe.tres" id="2_sbq7m"]
+[ext_resource type="Resource" uid="uid://488tnlw6bkqg" path="res://Resources/Stuff/fancy_fish.tres" id="3_dah6e"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_ykgel"]
+
+[resource]
+script = ExtResource("4_ykgel")
+kind = 8
+kill_produce = Dictionary[ExtResource("1_8n01b"), int]({
+ExtResource("3_dah6e"): 2
+})
+harvest_produce = Dictionary[ExtResource("1_8n01b"), int]({
+ExtResource("2_sbq7m"): 1
+})
+rarity = 15.0
+offense = 2.0
+defense = 2.0
+speed = 4.0
+game = true
+name = "King Fish"
+value = 25.0
+exp_to = Dictionary[String, float]({
+"Aquaculture": 1.0
+})
+found_in = Array[int]([5])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

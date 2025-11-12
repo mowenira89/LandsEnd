@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://dm0y1k4lqnrjs"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_jdl00"]
+
+[resource]
+script = ExtResource("1_jdl00")
+name = "Anamita Muscaria"
+value = 55.0
+qualities = Dictionary[int, float]({
+5: 1.0,
+10: 2.0
+})
+found_in = Array[int]([3])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

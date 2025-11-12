@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://xjsf4olbqnat"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_6w38f"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="2_r0s3f"]
+[ext_resource type="Resource" uid="uid://cdf1y3g80yt8t" path="res://Resources/Stuff/leather.tres" id="3_r0s3f"]
+[ext_resource type="Resource" uid="uid://basx14af4ccd2" path="res://Resources/Stuff/bellows.tres" id="3_rstxb"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_k1sx8"]
+
+[resource]
+script = ExtResource("4_k1sx8")
+name = "Bellows"
+id = "workshop_bellows"
+turns = 1
+inputs = Dictionary[ExtResource("1_6w38f"), int]({
+ExtResource("2_r0s3f"): 1,
+ExtResource("3_r0s3f"): 1
+})
+outputs = Dictionary[ExtResource("1_6w38f"), int]({
+ExtResource("3_rstxb"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

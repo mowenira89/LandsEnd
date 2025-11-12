@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://difjhjtico7tn"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_xbdhy"]
+[ext_resource type="Resource" uid="uid://b18tqcb4xbadt" path="res://Resources/Stuff/charcoal.tres" id="2_knegx"]
+[ext_resource type="Resource" uid="uid://ckoocyvkwuoo0" path="res://Resources/Stuff/pigments.tres" id="3_5vvgg"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_cvkq8"]
+
+[resource]
+script = ExtResource("4_cvkq8")
+name = "Pigment (Charcoal)"
+id = "studio_pigment_charcoal"
+turns = 1
+inputs = Dictionary[ExtResource("1_xbdhy"), int]({
+ExtResource("2_knegx"): 1
+})
+outputs = Dictionary[ExtResource("1_xbdhy"), int]({
+ExtResource("3_5vvgg"): 1
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

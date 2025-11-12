@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bf0fh0fa7wed4"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_538q2"]
+[ext_resource type="Resource" uid="uid://co2wq5nk220dx" path="res://Resources/Stuff/blue_stone.tres" id="2_5hg5b"]
+[ext_resource type="Resource" uid="uid://ckoocyvkwuoo0" path="res://Resources/Stuff/pigments.tres" id="3_o6ugh"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_6d8k8"]
+
+[resource]
+script = ExtResource("4_6d8k8")
+name = "Pigments (Blue)"
+id = "studio_pigments_blue"
+turns = 1
+inputs = Dictionary[ExtResource("1_538q2"), int]({
+ExtResource("2_5hg5b"): 1
+})
+outputs = Dictionary[ExtResource("1_538q2"), int]({
+ExtResource("3_o6ugh"): 1
+})
+exp_to = Dictionary[String, float]({
+"Painting Studio": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://c0wyua0f1r05e"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_0u4bd"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="2_rcfgv"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_hojtl"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_ek4ej"]
+
+[resource]
+script = ExtResource("4_ek4ej")
+name = "Lumber"
+id = "camp_lumber"
+turns = 1
+inputs = Dictionary[ExtResource("1_0u4bd"), int]({
+ExtResource("2_rcfgv"): 1
+})
+outputs = Dictionary[ExtResource("1_0u4bd"), int]({
+ExtResource("3_hojtl"): 1
+})
+exp_to = Dictionary[String, float]({
+"Lumber Mill": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

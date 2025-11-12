@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://25mq1rtxotke"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_n0sx7"]
+[ext_resource type="Resource" uid="uid://caxykwx2ho0tk" path="res://Resources/Stuff/iron_ore.tres" id="2_pdvtn"]
+[ext_resource type="Resource" uid="uid://b23k518tdno7r" path="res://Resources/Stuff/iron_ingot.tres" id="3_rv3hw"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_tadnk"]
+
+[resource]
+script = ExtResource("4_tadnk")
+name = "Iron Ingot"
+id = "smelter_iron_ingot"
+turns = 1
+inputs = Dictionary[ExtResource("1_n0sx7"), int]({
+ExtResource("2_pdvtn"): 1
+})
+outputs = Dictionary[ExtResource("1_n0sx7"), int]({
+ExtResource("3_rv3hw"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

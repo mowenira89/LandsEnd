@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://bapmdqfvfpds8"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_2oieu"]
+[ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="2_13lcq"]
+[ext_resource type="Resource" uid="uid://du817n882ksa7" path="res://Resources/Stuff/pelt.tres" id="3_blbps"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_ismi2"]
+
+[resource]
+script = ExtResource("4_ismi2")
+kind = 1
+kill_produce = Dictionary[ExtResource("1_2oieu"), int]({
+ExtResource("2_13lcq"): 3,
+ExtResource("3_blbps"): 2
+})
+rarity = 60.0
+offense = 3.0
+defense = 2.0
+speed = 5.0
+game = true
+steed = true
+name = "Deer"
+found_in = Array[int]([0, 2])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

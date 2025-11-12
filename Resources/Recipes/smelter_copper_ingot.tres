@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://domj8ccbp6wjq"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_03xeu"]
+[ext_resource type="Resource" uid="uid://c5nba8d43np2d" path="res://Resources/Stuff/copper_ore.tres" id="2_cmjpo"]
+[ext_resource type="Resource" uid="uid://c7iv1ddmvnd7m" path="res://Resources/Stuff/copper_ingot.tres" id="3_cmjpo"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="3_www3p"]
+
+[resource]
+script = ExtResource("3_www3p")
+name = "Copper Ingot"
+id = "smelter_copper_ingot"
+turns = 1
+inputs = Dictionary[ExtResource("1_03xeu"), int]({
+ExtResource("2_cmjpo"): 1
+})
+outputs = Dictionary[ExtResource("1_03xeu"), int]({
+ExtResource("3_cmjpo"): 1
+})
+exp_to = Dictionary[String, float]({
+"Bronze": 1.0,
+"Ironworking": 1.0,
+"Orangesmiting": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

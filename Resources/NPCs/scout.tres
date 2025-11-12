@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Person" load_steps=6 format=3 uid="uid://cv7bedu1r2n72"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_qqk4s"]
+[ext_resource type="Script" uid="uid://bvj2qmbrpitfg" path="res://Data/abilities/survey_ability.gd" id="2_8wpd2"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_5c4f6"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="4_oxvly"]
+
+[sub_resource type="Resource" id="Resource_81j5t"]
+script = ExtResource("2_8wpd2")
+metadata/_custom_type_script = "uid://bvj2qmbrpitfg"
+
+[resource]
+script = ExtResource("4_oxvly")
+title = "Scout"
+abilities = Array[ExtResource("1_qqk4s")]([SubResource("Resource_81j5t")])
+metadata/_custom_type_script = "uid://bd374amcrlpgs"

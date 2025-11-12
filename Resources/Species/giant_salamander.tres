@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://dn35gcb5hgggq"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_4tqry"]
+[ext_resource type="Resource" uid="uid://vcopy2xqdqfi" path="res://Resources/Stuff/luxury_meat.tres" id="2_6jw5s"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_t25xp"]
+
+[resource]
+script = ExtResource("3_t25xp")
+kind = 4
+kill_produce = Dictionary[ExtResource("1_4tqry"), int]({
+ExtResource("2_6jw5s"): 3
+})
+rarity = 6.0
+offense = 1.0
+defense = 2.0
+speed = 3.0
+game = true
+name = "Giant Salamander"
+found_in = Array[int]([3])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

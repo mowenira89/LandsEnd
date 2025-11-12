@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://85iq778l2nbx"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_dkccf"]
+[ext_resource type="Resource" uid="uid://vcopy2xqdqfi" path="res://Resources/Stuff/luxury_meat.tres" id="2_a2nmj"]
+[ext_resource type="Resource" uid="uid://bvki5qdvgnxsa" path="res://Resources/Stuff/chitin.tres" id="3_a2nmj"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_eg5uw"]
+
+[resource]
+script = ExtResource("3_eg5uw")
+kind = 5
+kill_produce = Dictionary[ExtResource("1_dkccf"), int]({
+ExtResource("2_a2nmj"): 4,
+ExtResource("3_a2nmj"): 4
+})
+rarity = 4.0
+offense = 6.0
+defense = 7.0
+speed = 7.0
+game = true
+steed = true
+name = "Giant Lobster"
+found_in = Array[int]([3])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

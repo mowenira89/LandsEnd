@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://crw82wee1xq82"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_u4vlj"]
+[ext_resource type="Resource" uid="uid://bj0hykevcuma6" path="res://Resources/Stuff/linen.tres" id="2_sqj5e"]
+[ext_resource type="Resource" uid="uid://cjxhqqpoobgaq" path="res://Resources/Stuff/linen_armor.tres" id="3_1apgf"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_bmdy4"]
+
+[resource]
+script = ExtResource("4_bmdy4")
+name = "Linen Armor"
+id = "textile_linen_armor"
+turns = 2
+inputs = Dictionary[ExtResource("1_u4vlj"), int]({
+ExtResource("2_sqj5e"): 2
+})
+outputs = Dictionary[ExtResource("1_u4vlj"), int]({
+ExtResource("3_1apgf"): 1
+})
+exp_to = Dictionary[String, float]({
+"Armory": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

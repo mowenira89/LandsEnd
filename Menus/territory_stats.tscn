@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://uhpredpyn7c3"]
+
+[ext_resource type="Script" uid="uid://cc21ore5qxqf4" path="res://Menus/territory_stats.gd" id="1_htqfu"]
+
+[sub_resource type="Theme" id="Theme_j75fl"]
+Label/font_sizes/font_size = 22
+RichTextLabel/font_sizes/normal_font_size = 24
+
+[node name="TerritoryStats" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_j75fl")
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+script = ExtResource("1_htqfu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Name" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Territory Name"
+
+[node name="Info" type="RichTextLabel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Resources: ???
+
+Flora: ???
+
+Fauna: ???"

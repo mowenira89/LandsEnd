@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Food" load_steps=2 format=3 uid="uid://r5vcco63ai5s"]
+
+[ext_resource type="Script" uid="uid://cnmbjer2140vm" path="res://Data/food.gd" id="1_pbkoj"]
+
+[resource]
+script = ExtResource("1_pbkoj")
+vitamins = Dictionary[int, float]({
+4: 3.0
+})
+name = "Grain"
+value = 1.0
+qualities = Dictionary[int, float]({
+0: 0.5
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

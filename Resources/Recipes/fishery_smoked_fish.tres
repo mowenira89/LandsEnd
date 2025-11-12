@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://k7yaa1es4tcb"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_7s560"]
+[ext_resource type="Resource" uid="uid://bkphlf0yxmdq3" path="res://Resources/Stuff/fish.tres" id="2_5m01i"]
+[ext_resource type="Resource" uid="uid://c0af7wlbe2s4b" path="res://Resources/Stuff/smoked_fish.tres" id="3_mldws"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_b7u62"]
+
+[resource]
+script = ExtResource("4_b7u62")
+name = "Smoked Fish"
+id = "fishery_smoked_fish"
+turns = 1
+inputs = Dictionary[ExtResource("1_7s560"), int]({
+ExtResource("2_5m01i"): 1
+})
+outputs = Dictionary[ExtResource("1_7s560"), int]({
+ExtResource("3_mldws"): 3
+})
+exp_to = Dictionary[String, float]({
+"Restaurant": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

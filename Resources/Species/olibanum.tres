@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dmasxirak0da2"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_baarl"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_hi5bx"]
+
+[resource]
+script = ExtResource("2_hi5bx")
+kind = 6
+name = "Olibanum"
+value = 100.0
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

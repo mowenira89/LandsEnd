@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://vij24luwxwvf"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_pqr72"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="2_l3xjx"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_2dvsh"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_u6xqd"]
+
+[resource]
+script = ExtResource("4_u6xqd")
+name = "Lumber"
+id = "lumber_mill_lumber"
+turns = 1
+inputs = Dictionary[ExtResource("1_pqr72"), int]({
+ExtResource("2_l3xjx"): 1
+})
+outputs = Dictionary[ExtResource("1_pqr72"), int]({
+ExtResource("3_2dvsh"): 3
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

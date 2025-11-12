@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Food" load_steps=2 format=3 uid="uid://bkphlf0yxmdq3"]
+
+[ext_resource type="Script" uid="uid://cnmbjer2140vm" path="res://Data/food.gd" id="1_w6501"]
+
+[resource]
+script = ExtResource("1_w6501")
+vitamins = Dictionary[int, float]({
+2: 4.0,
+5: 4.0
+})
+name = "Fish"
+value = 2.0
+qualities = Dictionary[int, float]({
+0: 2.0
+})
+exp_to = Dictionary[String, float]({
+"Fishery": 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

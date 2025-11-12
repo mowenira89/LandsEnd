@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://dfef1t06h0pnw"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_p3w1e"]
+[ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="2_8rr32"]
+[ext_resource type="Resource" uid="uid://du817n882ksa7" path="res://Resources/Stuff/pelt.tres" id="3_lqtfw"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_udoew"]
+
+[resource]
+script = ExtResource("4_udoew")
+kind = 1
+kill_produce = Dictionary[ExtResource("1_p3w1e"), int]({
+ExtResource("2_8rr32"): 1,
+ExtResource("3_lqtfw"): 1
+})
+rarity = 75.0
+offense = 1.0
+defense = 1.0
+speed = 3.0
+game = true
+name = "Hare"
+found_in = Array[int]([0, 2, 3, 4])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

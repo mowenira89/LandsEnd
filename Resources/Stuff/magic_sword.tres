@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://csqk5gpsyuxyl"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_4jxf0"]
+
+[resource]
+script = ExtResource("1_4jxf0")
+name = "Magic Sword"
+value = 150.0
+qualities = Dictionary[int, float]({
+7: 8.0,
+10: 2.0
+})
+exp_to = Dictionary[String, float]({
+"Armory": 5.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

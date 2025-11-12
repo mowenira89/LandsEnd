@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://c2jwwx234kob"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_xr6rx"]
+
+[resource]
+script = ExtResource("1_xr6rx")
+name = "Raw Silk"
+value = 10.0
+qualities = Dictionary[int, float]({
+4: 1.0
+})
+exp_to = Dictionary[String, float]({
+"Textiles": 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

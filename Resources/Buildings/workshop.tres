@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Building" load_steps=21 format=3 uid="uid://cb6d1kppx0q1r"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_ul6y8"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_b71b7"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_xp3l6"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="4_r38nb"]
+[ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="5_p07rn"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_bmbpn"]
+[ext_resource type="Texture2D" uid="uid://bcowx2puyi1j3" path="res://Assets/Images/BuildingImages/workshop.png" id="6_xp3l6"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_ijljd"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="7_r38nb"]
+[ext_resource type="Resource" uid="uid://c4vvwlmleaqk0" path="res://Resources/Recipes/workshop_amphora.tres" id="8_jle1f"]
+[ext_resource type="Resource" uid="uid://dhbojnxm65y6e" path="res://Resources/Recipes/workshop_barrel.tres" id="9_ilfc6"]
+[ext_resource type="Resource" uid="uid://xjsf4olbqnat" path="res://Resources/Recipes/workshop_bellows.tres" id="10_1t452"]
+[ext_resource type="Resource" uid="uid://b6wj3274fhas" path="res://Resources/Recipes/workshop_canvas.tres" id="11_uh6kp"]
+[ext_resource type="Resource" uid="uid://dqrhsqnodr3ws" path="res://Resources/Recipes/workshop_cart.tres" id="12_kbsid"]
+[ext_resource type="Resource" uid="uid://8d2ii7nuv6jo" path="res://Resources/Recipes/workshop_chariot.tres" id="13_l0eps"]
+[ext_resource type="Resource" uid="uid://bid5br31j7243" path="res://Resources/Recipes/workshop_horn_carving.tres" id="14_l2tss"]
+[ext_resource type="Resource" uid="uid://cedtw1lh0df7i" path="res://Resources/Recipes/workshop_ivory_carving.tres" id="15_c64j4"]
+[ext_resource type="Resource" uid="uid://d4lgyb52ri20o" path="res://Resources/Recipes/workshop_loom.tres" id="16_sc18c"]
+[ext_resource type="Resource" uid="uid://qnfs1ibtvf1e" path="res://Resources/Recipes/workshop_stone_carving.tres" id="17_a61b2"]
+[ext_resource type="Resource" uid="uid://qmdifkgbveme" path="res://Resources/Recipes/workshop_wood_carving.tres" id="18_k13sd"]
+
+[resource]
+script = ExtResource("6_bmbpn")
+name = "Workshop"
+unlocked = true
+image = ExtResource("6_xp3l6")
+construction_time = 2
+construction_materials = Dictionary[ExtResource("3_xp3l6"), int]({
+ExtResource("4_r38nb"): 10,
+ExtResource("5_p07rn"): 5
+})
+construction_staff = Dictionary[int, int]({
+0: 10
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+0: 5
+})
+district_type = 3
+production_slots = 2
+recipes = Array[ExtResource("7_ijljd")]([ExtResource("8_jle1f"), ExtResource("9_ilfc6"), ExtResource("10_1t452"), ExtResource("11_uh6kp"), ExtResource("12_kbsid"), ExtResource("13_l0eps"), ExtResource("14_l2tss"), ExtResource("15_c64j4"), ExtResource("16_sc18c"), ExtResource("17_a61b2"), ExtResource("18_k13sd")])
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

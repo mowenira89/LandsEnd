@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dsm568eqwf6o6"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_0kerg"]
+[ext_resource type="Resource" uid="uid://du817n882ksa7" path="res://Resources/Stuff/pelt.tres" id="2_1qrep"]
+[ext_resource type="Resource" uid="uid://ctyl0mtojw5vq" path="res://Resources/Stuff/simple_clothing.tres" id="3_npy3u"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_hl5bb"]
+
+[resource]
+script = ExtResource("4_hl5bb")
+name = "Simple Clothing (Pelt)"
+id = "camp_simple_clothing"
+turns = 1
+inputs = Dictionary[ExtResource("1_0kerg"), int]({
+ExtResource("2_1qrep"): 1
+})
+outputs = Dictionary[ExtResource("1_0kerg"), int]({
+ExtResource("3_npy3u"): 1
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

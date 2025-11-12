@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dwsu1sq0thk3u"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_t4df5"]
+[ext_resource type="Resource" uid="uid://d20v07glb4l0u" path="res://Resources/Stuff/ivory.tres" id="2_ixvkn"]
+[ext_resource type="Resource" uid="uid://dxh7plba4467d" path="res://Resources/Stuff/ivory_carving.tres" id="3_vweuj"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_6og1f"]
+
+[resource]
+script = ExtResource("4_6og1f")
+name = "Ivory Carving"
+id = "camp_ivory_carving"
+turns = 1
+inputs = Dictionary[ExtResource("1_t4df5"), int]({
+ExtResource("2_ixvkn"): 1
+})
+outputs = Dictionary[ExtResource("1_t4df5"), int]({
+ExtResource("3_vweuj"): 1
+})
+exp_to = Dictionary[String, float]({
+"Sculpture Studio": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

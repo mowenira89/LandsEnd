@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://ud03cqfqm02f"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_1sl0s"]
+[ext_resource type="Resource" uid="uid://bl0wisipevdpv" path="res://Resources/Stuff/tin_ore.tres" id="2_ryvlu"]
+[ext_resource type="Resource" uid="uid://bdmfger4xbtew" path="res://Resources/Stuff/tin_ingot.tres" id="3_wqs2h"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_3frmp"]
+
+[resource]
+script = ExtResource("4_3frmp")
+name = "Tin Ingot"
+id = "smelter_tin_ingot"
+turns = 1
+inputs = Dictionary[ExtResource("1_1sl0s"), int]({
+ExtResource("2_ryvlu"): 1
+})
+outputs = Dictionary[ExtResource("1_1sl0s"), int]({
+ExtResource("3_wqs2h"): 1
+})
+exp_to = Dictionary[String, float]({
+"Bronze": 1.0,
+"Ironworking": 1.0,
+"Whitesmithing": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

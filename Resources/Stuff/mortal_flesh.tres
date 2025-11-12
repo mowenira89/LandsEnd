@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Food" load_steps=2 format=3 uid="uid://dgjhkn842uhmy"]
+
+[ext_resource type="Script" uid="uid://cnmbjer2140vm" path="res://Data/food.gd" id="1_c22ct"]
+
+[resource]
+script = ExtResource("1_c22ct")
+vitamins = Dictionary[int, float]({
+0: 1.0,
+1: 1.0,
+2: 1.0,
+3: 1.0,
+4: 1.0,
+5: 1.0
+})
+name = "Mortal Flesh"
+value = 5.0
+qualities = Dictionary[int, float]({
+0: 2.0,
+2: -2.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

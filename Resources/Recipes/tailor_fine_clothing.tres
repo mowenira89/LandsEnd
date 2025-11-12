@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cr8vdbd74lcvo"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_11bnk"]
+[ext_resource type="Resource" uid="uid://bj0hykevcuma6" path="res://Resources/Stuff/linen.tres" id="2_2r8lo"]
+[ext_resource type="Resource" uid="uid://mltk4d2iuylc" path="res://Resources/Stuff/fine_clothing.tres" id="3_qi5bf"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_66wk1"]
+
+[resource]
+script = ExtResource("4_66wk1")
+name = "Fine Clothing"
+id = "tailor_fine_clothing"
+turns = 1
+inputs = Dictionary[ExtResource("1_11bnk"), int]({
+ExtResource("2_2r8lo"): 1
+})
+outputs = Dictionary[ExtResource("1_11bnk"), int]({
+ExtResource("3_qi5bf"): 1
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

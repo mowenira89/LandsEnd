@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://bjaxari5op5ob"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_76rts"]
+
+[resource]
+script = ExtResource("1_76rts")
+name = "Lumber"
+value = 2.0
+qualities = Dictionary[int, float]({
+3: 2.0
+})
+exp_to = Dictionary[String, float]({
+"Lumber Mill": 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

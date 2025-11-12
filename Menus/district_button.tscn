@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://707cl1sfy86w"]
+
+[ext_resource type="Script" uid="uid://c5eu1iiovv3wj" path="res://Menus/district_button.gd" id="1_it08n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_it08n"]
+bg_color = Color(0.42699754, 0.6740306, 0.38300472, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v00ma"]
+bg_color = Color(0.46887755, 0.64973724, 0.5408353, 1)
+
+[sub_resource type="Theme" id="Theme_6m70w"]
+Button/styles/disabled = null
+Button/styles/hover = SubResource("StyleBoxFlat_it08n")
+Button/styles/normal = SubResource("StyleBoxFlat_v00ma")
+Button/styles/pressed = null
+
+[node name="District" type="Button"]
+custom_minimum_size = Vector2(150, 150)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1650.0
+offset_bottom = -700.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_it08n")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -45.0
+offset_right = 45.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SelectorButton" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_6m70w")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

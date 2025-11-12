@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://r4tj75dtxmae"]
+
+[ext_resource type="Script" uid="uid://dyr8rkswv8po" path="res://Menus/event_button.gd" id="1_xoek6"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "This is an event. "
+script = ExtResource("1_xoek6")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+text = "X"

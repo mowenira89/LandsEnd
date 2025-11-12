@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://de8fon4qwniy8"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_ra7pl"]
+
+[resource]
+script = ExtResource("1_ra7pl")
+name = "Clay"
+value = 2.0
+qualities = Dictionary[int, float]({
+3: 0.5,
+6: 75.0
+})
+exp_to = Dictionary[String, float]({
+"Pottery": 1.0
+})
+found_in = Array[int]([3])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

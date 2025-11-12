@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=4 format=3 uid="uid://carbbrw5n73um"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_iw61y"]
+[ext_resource type="Resource" uid="uid://dyyttfsfctue3" path="res://Resources/Stuff/gold_ore.tres" id="2_swdwk"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="3_8rtl0"]
+
+[resource]
+script = ExtResource("3_8rtl0")
+name = "Gold Ingot"
+id = "smelter_gold_ingot"
+turns = 1
+inputs = Dictionary[ExtResource("1_iw61y"), int]({
+ExtResource("2_swdwk"): 1
+})
+exp_to = Dictionary[String, float]({
+"Goldsmith": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

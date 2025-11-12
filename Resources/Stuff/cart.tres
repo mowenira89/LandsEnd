@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://brni18b0el1ol"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_fem4k"]
+
+[resource]
+script = ExtResource("1_fem4k")
+name = "Cart"
+value = 35.0
+qualities = Dictionary[int, float]({
+12: 100.0,
+13: 2.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

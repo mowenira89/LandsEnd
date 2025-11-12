@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://cvqv7ihlpfguv"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_al3bl"]
+
+[resource]
+script = ExtResource("1_al3bl")
+name = "Amphora"
+value = 2.0
+qualities = Dictionary[int, float]({
+12: 5.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://3oe6auv0cv7j"]
+
+[ext_resource type="Script" uid="uid://c4ajniducmmah" path="res://Menus/districts_view.gd" id="1_1fnty"]
+[ext_resource type="PackedScene" uid="uid://707cl1sfy86w" path="res://Menus/district_button.tscn" id="1_kbrfh"]
+
+[node name="DistrictsView" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+script = ExtResource("1_1fnty")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -152.0
+offset_right = 306.0
+offset_bottom = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="District" parent="GridContainer" instance=ExtResource("1_kbrfh")]
+layout_mode = 2
+
+[node name="District2" parent="GridContainer" instance=ExtResource("1_kbrfh")]
+layout_mode = 2
+
+[node name="District3" parent="GridContainer" instance=ExtResource("1_kbrfh")]
+layout_mode = 2
+
+[node name="District4" parent="GridContainer" instance=ExtResource("1_kbrfh")]
+layout_mode = 2
+
+[node name="District5" parent="GridContainer" instance=ExtResource("1_kbrfh")]
+layout_mode = 2
+
+[node name="District6" parent="GridContainer" instance=ExtResource("1_kbrfh")]
+layout_mode = 2
+
+[node name="District7" parent="GridContainer" instance=ExtResource("1_kbrfh")]
+layout_mode = 2
+
+[node name="District8" parent="GridContainer" instance=ExtResource("1_kbrfh")]
+layout_mode = 2

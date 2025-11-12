@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://bk0p2ys740a5e"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_15ojh"]
+
+[resource]
+script = ExtResource("1_15ojh")
+name = "Silver Ingot"
+value = 25.0
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

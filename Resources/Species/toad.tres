@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://bg0dsspgwrp2d"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_kdhwg"]
+[ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="2_57fif"]
+[ext_resource type="Resource" uid="uid://bmfrhtdbq0uxf" path="res://Resources/Stuff/toad_essence.tres" id="2_o30ng"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_o30ng"]
+
+[resource]
+script = ExtResource("3_o30ng")
+kind = 4
+kill_produce = Dictionary[ExtResource("1_kdhwg"), int]({
+ExtResource("2_57fif"): 1,
+ExtResource("2_o30ng"): 1
+})
+harvest_produce = Dictionary[ExtResource("1_kdhwg"), int]({
+ExtResource("2_o30ng"): 1
+})
+rarity = 30.0
+speed = 1.0
+game = true
+name = "Toad"
+found_in = Array[int]([3])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

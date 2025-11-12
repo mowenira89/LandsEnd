@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://6ksjvhk3tld"]
+
+[ext_resource type="Script" uid="uid://dop2x5gtiw1g5" path="res://Menus/red_green_button.gd" id="1_h04px"]
+[ext_resource type="Theme" uid="uid://dwwjdofh8ltwp" path="res://Assets/Themes/red_green_button.tres" id="1_lh2wr"]
+
+[node name="RedGreenButton" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lh2wr")
+toggle_mode = true
+script = ExtResource("1_h04px")
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://po5nmvu0vq71"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_uvvut"]
+[ext_resource type="Resource" uid="uid://vc1jcimcly1p" path="res://Resources/Stuff/refined_mithril.tres" id="2_7bss2"]
+[ext_resource type="Resource" uid="uid://e2qytdduyoq2" path="res://Resources/Stuff/mithril_armor.tres" id="3_6q2op"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_abiv4"]
+
+[resource]
+script = ExtResource("4_abiv4")
+name = "Mithril Armor"
+id = "armory_mithril_armor"
+turns = 3
+inputs = Dictionary[ExtResource("1_uvvut"), int]({
+ExtResource("2_7bss2"): 2
+})
+outputs = Dictionary[ExtResource("1_uvvut"), int]({
+ExtResource("3_6q2op"): 1
+})
+exp_to = Dictionary[String, float]({
+"Whitesmith": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

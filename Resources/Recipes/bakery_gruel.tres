@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://c52212v3fqdtd"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_xnslj"]
+[ext_resource type="Resource" uid="uid://r5vcco63ai5s" path="res://Resources/Stuff/grain.tres" id="2_cloes"]
+[ext_resource type="Resource" uid="uid://bvobk116igqex" path="res://Resources/Stuff/gruel.tres" id="3_bdmkb"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_v33v7"]
+
+[resource]
+script = ExtResource("4_v33v7")
+name = "Gruel"
+id = "bakery_gruel"
+turns = 1
+inputs = Dictionary[ExtResource("1_xnslj"), int]({
+ExtResource("2_cloes"): 1
+})
+outputs = Dictionary[ExtResource("1_xnslj"), int]({
+ExtResource("3_bdmkb"): 1
+})
+exp_to = Dictionary[String, float]({
+"Restaurant": 0.2
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cvywvqoel40jn"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_pxk7c"]
+[ext_resource type="Resource" uid="uid://684olx0723yd" path="res://Resources/Stuff/silver_ore.tres" id="2_aoe0d"]
+[ext_resource type="Resource" uid="uid://bk0p2ys740a5e" path="res://Resources/Stuff/silver_ingot.tres" id="3_p6hjb"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_4jv54"]
+
+[resource]
+script = ExtResource("4_4jv54")
+name = "Silver Ingot"
+id = "smelter_silver_ingot"
+turns = 1
+inputs = Dictionary[ExtResource("1_pxk7c"), int]({
+ExtResource("2_aoe0d"): 1
+})
+outputs = Dictionary[ExtResource("1_pxk7c"), int]({
+ExtResource("3_p6hjb"): 1
+})
+exp_to = Dictionary[String, float]({
+"Whitesmith": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

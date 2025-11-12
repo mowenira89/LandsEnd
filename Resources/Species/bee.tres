@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bv6l1kfkvs7qn"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_4bfny"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_avdo4"]
+
+[resource]
+script = ExtResource("2_avdo4")
+kind = 9
+rarity = 50.0
+offense = 1.0
+speed = 8.0
+name = "Bee"
+value = 5.0
+exp_to = Dictionary[String, float]({
+"Beekeeping": 1.0
+})
+found_in = Array[int]([0, 2, 1])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

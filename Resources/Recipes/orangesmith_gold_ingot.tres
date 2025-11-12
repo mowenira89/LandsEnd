@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://liw3bxv2slon"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_sgcdl"]
+[ext_resource type="Resource" uid="uid://dyyttfsfctue3" path="res://Resources/Stuff/gold_ore.tres" id="2_c3tex"]
+[ext_resource type="Resource" uid="uid://54ay3tokrval" path="res://Resources/Stuff/gold_ingot.tres" id="3_h5q3n"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_akr8v"]
+
+[resource]
+script = ExtResource("4_akr8v")
+name = "Gold Ingot"
+id = "orangesmith_gold_ingot"
+turns = 1
+inputs = Dictionary[ExtResource("1_sgcdl"), int]({
+ExtResource("2_c3tex"): 1
+})
+outputs = Dictionary[ExtResource("1_sgcdl"), int]({
+ExtResource("3_h5q3n"): 2
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

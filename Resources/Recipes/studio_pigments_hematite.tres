@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cqgkg4s5n8tgs"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_8qf5u"]
+[ext_resource type="Resource" uid="uid://caxykwx2ho0tk" path="res://Resources/Stuff/iron_ore.tres" id="2_xge5b"]
+[ext_resource type="Resource" uid="uid://ckoocyvkwuoo0" path="res://Resources/Stuff/pigments.tres" id="3_w5hi4"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_m31gm"]
+
+[resource]
+script = ExtResource("4_m31gm")
+name = "Pigments (Hematite)"
+id = "studio_pigments_hematite"
+turns = 1
+inputs = Dictionary[ExtResource("1_8qf5u"), int]({
+ExtResource("2_xge5b"): 1
+})
+outputs = Dictionary[ExtResource("1_8qf5u"), int]({
+ExtResource("3_w5hi4"): 1
+})
+exp_to = Dictionary[String, float]({
+"Painting Studio": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

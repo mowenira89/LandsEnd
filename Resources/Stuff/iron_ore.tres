@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://caxykwx2ho0tk"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_8f8co"]
+
+[resource]
+script = ExtResource("1_8f8co")
+name = "Iron Ore"
+value = 4.0
+qualities = Dictionary[int, float]({
+6: 30.0
+})
+exp_to = Dictionary[String, float]({
+"Blacksmith": 1.0,
+"Smelter": 1.0
+})
+found_in = Array[int]([1])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

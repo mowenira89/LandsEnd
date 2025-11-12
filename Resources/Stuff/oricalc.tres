@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://baewvmenynp8x"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_wly5j"]
+
+[resource]
+script = ExtResource("1_wly5j")
+name = "Oricalc"
+value = 20.0
+qualities = Dictionary[int, float]({
+6: 4.0
+})
+exp_to = Dictionary[String, float]({
+"Metallurgy": 1.0,
+"Orangesmithing": 1.0
+})
+found_in = Array[int]([3, 1])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"
