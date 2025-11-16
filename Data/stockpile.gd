@@ -15,6 +15,19 @@ var granary_capacity:int
 var storeroom_capacity:int
 var animal_fields:int
 
+func create(t:Territory=null,unit:Unit=null):
+	if t:
+		owner=t
+		storeroom_capacity=100
+		granary_capacity=100
+		animal_fields=100
+	elif unit:
+		owner=unit
+		storeroom_capacity=10
+		granary_capacity=10
+		animal_fields=10
+		
+		
 func add_stuff(s:Stuff,a:float):
 	
 	var cap

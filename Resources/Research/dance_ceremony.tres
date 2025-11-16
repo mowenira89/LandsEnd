@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Research" load_steps=9 format=3 uid="uid://djoj4qv2nnvg6"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_00ii2"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_0n2ex"]
+[ext_resource type="Resource" uid="uid://8k0c4jk187xr" path="res://Resources/Ceremonies/dance.tres" id="3_4hnya"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_dfb6q"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_apycu"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_vboe3"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_tx2ib"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_5njq2"]
+
+[resource]
+script = ExtResource("7_tx2ib")
+name = "Dance Ceremony"
+ceremonies = Array[ExtResource("2_0n2ex")]([ExtResource("3_4hnya")])
+exp_to_unlock = 25
+inspiration_threshold = 25.0
+inspired_class = 3
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

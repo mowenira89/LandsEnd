@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Research" load_steps=9 format=3 uid="uid://bld06l1x6uvdy"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_idf4v"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_pulhy"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_13aty"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_opqvm"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="5_q4lu8"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="6_2v2p1"]
+[ext_resource type="Resource" uid="uid://dvqstmgmsdhpc" path="res://Resources/Research/Charm.tres" id="7_pif6x"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_0chjk"]
+
+[resource]
+script = ExtResource("6_2v2p1")
+name = "Glamour"
+prerequisites = Array[ExtResource("6_2v2p1")]([ExtResource("7_pif6x")])
+inspiration_threshold = 10.0
+inspired_class = 1
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

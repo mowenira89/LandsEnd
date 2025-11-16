@@ -1,13 +1,22 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://udx183rgo1kd"]
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://udx183rgo1kd"]
 
-[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_8x5ro"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_agjah"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_n4y8k"]
 
 [resource]
-script = ExtResource("1_8x5ro")
+script = ExtResource("2_n4y8k")
 name = "Stone Sculpture"
-value = 44.0
+value = 50.0
 qualities = Dictionary[int, float]({
-2: 3.0,
-10: 1.5
+2: 2.0,
+10: 2.0,
+16: 2.0
+})
+mystic_qualities = Dictionary[int, float]({
+1: 2.0,
+4: 2.0
+})
+exp_to = Dictionary[String, float]({
+"Sculpture Studio": 1.0
 })
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

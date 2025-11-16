@@ -5,6 +5,7 @@ var dedication:Nymphoi
 var sanctity:float
 var defilment:float
 var ceremonies:Array[Event]
+@export var pilgrim_draw:float
 
 func create(d:District):
 	super(d)
@@ -12,3 +13,10 @@ func create(d:District):
 
 func do_ceremony():
 	pass
+
+func level_up():
+	super()
+	
+func upgrade(b:Building):
+	super(b)
+	pilgrim_draw+=upgrading_to.pilgrim_draw

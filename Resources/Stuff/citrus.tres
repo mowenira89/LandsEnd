@@ -15,4 +15,8 @@ qualities = Dictionary[int, float]({
 0: 1.0,
 11: 1.0
 })
+mystic_qualities = Dictionary[int, float]({
+0: 1.0,
+4: 1.0
+})
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://irhotjsp8c73"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_024ir"]
+[ext_resource type="Resource" uid="uid://cry61qvpicxe5" path="res://Resources/Stuff/silk.tres" id="2_q7xrn"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_tu10m"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_kwl3r"]
+
+[resource]
+script = ExtResource("4_kwl3r")
+kind = 9
+harvest_produce = Dictionary[ExtResource("1_024ir"), int]({
+ExtResource("2_q7xrn"): 1
+})
+rarity = 5.0
+name = "Bombyx"
+value = 50.0
+found_in = Array[int]([2])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

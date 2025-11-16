@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Research" load_steps=10 format=3 uid="uid://d2oxkkcqdq2rp"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_wfwpe"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_bswoq"]
+[ext_resource type="Resource" uid="uid://bw5qr0cctnauj" path="res://Resources/Ceremonies/ganja.tres" id="3_mbm0i"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_hmrce"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_ugc23"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_66taw"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_ioxyh"]
+[ext_resource type="Resource" uid="uid://cnxla5x8wv1pu" path="res://Resources/Research/tea_ceremony.tres" id="8_rbv14"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_r0hre"]
+
+[resource]
+script = ExtResource("7_ioxyh")
+name = "Ganja Ceremony"
+ceremonies = Array[ExtResource("2_bswoq")]([ExtResource("3_mbm0i")])
+exp_to_unlock = 100
+prerequisites = Array[ExtResource("7_ioxyh")]([ExtResource("8_rbv14")])
+inspiration_threshold = 50.0
+inspired_class = 3
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

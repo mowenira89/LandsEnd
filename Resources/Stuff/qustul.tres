@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://bbcwmipem08de"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_vw1ji"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_l213u"]
+
+[resource]
+script = ExtResource("2_l213u")
+name = "Qustul"
+value = 50.0
+qualities = Dictionary[int, float]({
+5: 2.0,
+10: 6.0,
+15: 5.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 4.0,
+4: 4.0,
+6: 2.0
+})
+found_in = Array[int]([1])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

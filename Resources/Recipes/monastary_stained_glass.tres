@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://b6vg6vkjmtv53"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_echok"]
+[ext_resource type="Resource" uid="uid://u8sax8phrhwe" path="res://Resources/Stuff/glass.tres" id="2_mdk8w"]
+[ext_resource type="Resource" uid="uid://ckoocyvkwuoo0" path="res://Resources/Stuff/pigments.tres" id="3_xlr31"]
+[ext_resource type="Resource" uid="uid://u6rhr1gxvppt" path="res://Resources/Stuff/stained_glass.tres" id="4_gnoee"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_p3s6o"]
+
+[resource]
+script = ExtResource("5_p3s6o")
+name = "Stained Glass"
+id = "monastary_stained_glass"
+turns = 2
+inputs = Dictionary[ExtResource("1_echok"), int]({
+ExtResource("2_mdk8w"): 1,
+ExtResource("3_xlr31"): 1
+})
+outputs = Dictionary[ExtResource("1_echok"), int]({
+ExtResource("4_gnoee"): 1
+})
+exp_to = Dictionary[String, float]({
+"Cathedral": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

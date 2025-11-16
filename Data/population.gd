@@ -1,14 +1,16 @@
 class_name Population extends Resource
 
 var pops:Dictionary[Pop.CLASS,Pop]
-var territory:Territory
-var unit:Unit
+var owner
 var hunger:float
 var vitamins:Dictionary[Biome.VITAMINS,int]
+var temp_jobs:Dictionary[Pop.CLASS,int]
 
 func create(t:Territory=null,u:Unit=null):
-	territory=t
-	unit=u
+	if u:
+		owner=u
+	else:
+		owner=t
 	for x in Pop.CLASS.values():
 		var new_pop = Pop.new()
 		new_pop.create(x,t)
@@ -32,14 +34,14 @@ func get_pop_breakdown():
 	
 func consume():
 	if hunger>0:
-		for x in territory.stockpile.food_order:
+		for x in get_territory().stockpile.food_order:
 			while hunger>0:
 				pass
 				
 func assimilate_unit(u:Unit,mode:String):
 	var followers = u.followers.pops
 	for x in followers:
-		var cap = territory.get_pop_cap(x)
+		var cap = get_territory().get_pop_cap(x)
 		var current_pop = pops[x].persons
 		var change=0
 		if followers[x].persons>cap-current_pop:
@@ -65,9 +67,63 @@ func move_to(to:Population,a:int,c:Pop.CLASS):
 		to.change_pop(c,-a)
 
 func get_population_name():
-	if territory:
-		return territory.name
-	return unit.name
+	return owner.name
 	
 func get_pop_stat(c:Pop.CLASS,s:Beliefs.STATS):
 	return pops[c].beliefs.stats[s]
+
+func get_territory():
+	if owner is Unit:
+		return owner.current_territory
+	else:
+		return owner
+		
+
+func appoint_workers():
+	var ratios = {}
+	var have = get_pop_breakdown()
+	var needed = {}
+	var to_appoint = {}
+	for x in Pop.CLASS:
+		needed[x]=0
+		to_appoint[x]=0
+		ratios[x]=0
+	for x in get_territory().districts:
+		if x.building!=null:
+			for y in x.building.staff_needed:
+				needed[y]+=x.building.staff_needed[y]
+	for x in temp_jobs:
+		needed[x]+=temp_jobs[x]
+	for x in needed:
+		if needed[x]<=have[x]:
+			to_appoint[x]=needed[x]
+		else:
+			ratios[x] = float(get_pops(x))/needed[x]
+	for x in get_territory().districts:
+		if x.building!=null:
+			for c in x.building.staff:
+				if needed[x]>have[x]:
+					x.building.staff_appointed[c]=x.building.staff[c]*ratios[c]
+				else:
+					x.building.staff_appointed[c]=x.staff[c]
+	
+	
+func get_idle_pop(c:Pop.CLASS):
+	var have = get_pops(c)
+	var needed:int=0
+	for x in get_territory().districts:
+		if x.building!=null:
+			for y in x.building.staff_needed:
+				if y == c:
+					needed+=x.building.staff_needed[c]
+	return have-needed
+	
+
+func change_temp_jobs(c:Pop.CLASS,a:int):
+	if c not in temp_jobs.keys():
+		temp_jobs[c]=a
+	else:
+		temp_jobs[c]+=a
+
+func get_pop_belief(c:Pop.CLASS,b:Beliefs.STATS):
+	return pops[c].beliefs.stats[b]

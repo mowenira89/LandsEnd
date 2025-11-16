@@ -17,5 +17,8 @@ value = 3.0
 qualities = Dictionary[int, float]({
 12: 10.0
 })
+mystic_qualities = Dictionary[int, float]({
+4: 0.5
+})
 outfit_buffs = Array[ExtResource("1_knvi2")]([SubResource("Resource_lr7am")])
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

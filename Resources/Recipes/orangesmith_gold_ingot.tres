@@ -17,4 +17,5 @@ outputs = Dictionary[ExtResource("1_sgcdl"), int]({
 ExtResource("3_h5q3n"): 2
 })
 unlocked = true
+pollution = 5.0
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

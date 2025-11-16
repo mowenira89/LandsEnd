@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Ceremony" load_steps=6 format=3 uid="uid://8k0c4jk187xr"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_lqd1i"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_blyn3"]
+[ext_resource type="Resource" uid="uid://cnxla5x8wv1pu" path="res://Resources/Research/tea_ceremony.tres" id="2_mi456"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_pw8sm"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_pw8sm"]
+
+[resource]
+script = ExtResource("3_pw8sm")
+name = "Dance Ceremony"
+length = 2
+interest = 1.0
+happiness_reward = 0.1
+requirements_of_quality = Dictionary[int, float]({
+18: 10.0
+})
+monks_needed = 10
+exp_to = Dictionary[ExtResource("1_lqd1i"), float]({
+ExtResource("2_mi456"): 1.0
+})
+metadata/_custom_type_script = "uid://h1hksovre84"

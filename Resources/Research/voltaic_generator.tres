@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Research" load_steps=13 format=3 uid="uid://drn6neqlfh77q"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_e8bsf"]
+[ext_resource type="Resource" uid="uid://dnwf0affsnaec" path="res://Resources/Buildings/giant_bug_zapper.tres" id="2_lqe8m"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_lgaqm"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_l1lvy"]
+[ext_resource type="Script" uid="uid://bgumvg008wgml" path="res://Data/conditions/need_stuff_condition.gd" id="5_mto0e"]
+[ext_resource type="Resource" uid="uid://baewvmenynp8x" path="res://Resources/Stuff/oricalc.tres" id="6_4t84x"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="7_dxx4y"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="8_d713u"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="9_c47ft"]
+[ext_resource type="Resource" uid="uid://bgx3biv0fu1j7" path="res://Resources/Research/voltaomancy.tres" id="10_qphed"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="11_ld1of"]
+
+[sub_resource type="Resource" id="Resource_a4iv3"]
+script = ExtResource("5_mto0e")
+stuff = ExtResource("6_4t84x")
+metadata/_custom_type_script = "uid://bgumvg008wgml"
+
+[resource]
+script = ExtResource("9_c47ft")
+name = "Voltaic Generator"
+buildings = Array[ExtResource("1_e8bsf")]([ExtResource("2_lqe8m")])
+exp_to_unlock = 2000
+prerequisites = Array[ExtResource("9_c47ft")]([ExtResource("10_qphed")])
+inspiration_threshold = 25.0
+conditions = Array[ExtResource("4_l1lvy")]([SubResource("Resource_a4iv3")])
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

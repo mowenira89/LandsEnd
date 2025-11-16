@@ -2,8 +2,9 @@ extends Node
 
 var research:Dictionary[String,Research] = {}
 
-func ready_():
+func _ready():
 	add_research()
+	RM.check_exp_to()
 	
 func add_research():
 	var path = "res://Resources/Research/"

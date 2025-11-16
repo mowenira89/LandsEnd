@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://qlieo2jmhtgu"]
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://qlieo2jmhtgu"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_fb0wh"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_tdvt3"]
 
 [resource]
 script = ExtResource("1_fb0wh")
@@ -8,5 +9,8 @@ name = "Feather"
 value = 1.0
 qualities = Dictionary[int, float]({
 2: 1.0
+})
+mystic_qualities = Dictionary[int, float]({
+6: 1.0
 })
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

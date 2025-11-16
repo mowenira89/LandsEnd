@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Food" load_steps=2 format=3 uid="uid://cwjrrbty0abgo"]
+[gd_resource type="Resource" script_class="Food" load_steps=3 format=3 uid="uid://cwjrrbty0abgo"]
 
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_lnurh"]
 [ext_resource type="Script" uid="uid://cnmbjer2140vm" path="res://Data/food.gd" id="1_p5ta6"]
 
 [resource]
@@ -9,4 +10,7 @@ vitamins = Dictionary[int, float]({
 })
 name = "Flour"
 value = 1.5
+mystic_qualities = Dictionary[int, float]({
+4: 0.5
+})
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

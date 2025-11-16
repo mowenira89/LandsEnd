@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Food" load_steps=2 format=3 uid="uid://ccxsg5qih8kxb"]
+[gd_resource type="Resource" script_class="Food" load_steps=3 format=3 uid="uid://ccxsg5qih8kxb"]
 
 [ext_resource type="Script" uid="uid://cnmbjer2140vm" path="res://Data/food.gd" id="1_2q7fq"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_kiq63"]
 
 [resource]
 script = ExtResource("1_2q7fq")
@@ -13,5 +14,8 @@ value = 2.0
 qualities = Dictionary[int, float]({
 0: 3.0,
 2: 1.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 1.0
 })
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

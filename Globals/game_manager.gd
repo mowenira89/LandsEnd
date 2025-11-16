@@ -21,6 +21,7 @@ var leader:Person
 
 var month:MONTHS=1 as MONTHS
 var week:int=1
+var year:int=1
 #COLORS
 const GREEN = "#378b41"
 const RED = "#f16568"
@@ -75,7 +76,12 @@ func end_turn():
 		week=1
 		month+=1
 		if month==MONTHS.size():
-			month=1
+			month=0
+			year+=1
+
+
+	for x in GM.board.tiles_by_cell.values():
+		x.data.end_turn()
 
 	for x in event_queue.duplicate():
 		x.end_turn()
@@ -116,3 +122,26 @@ func get_buffs(t:Buff.TYPE,b:Building=null,ter:Territory=null,u:Unit=null):
 	if u:
 		r += u.get_all_buffs(t)
 	return r
+
+func get_prowess(p:Person.PROWESS,b:Building=null,u:Unit=null):
+	var prowess:float=0
+	var t:Territory
+	if b:
+		t=b.district.territory
+	elif u:
+		t=u.current_territory
+	for x in t.NPCs:
+		if x.territorial_prowess.has(p):
+			if x.friend:
+				prowess+=x.territorial_prowess[p]
+			else:
+				prowess-=x.territorial_prowess[p]
+	if b:
+		if b.boss.prowess.has(p):
+			if b.boss.friend:
+				prowess+=b.boss.prowess[p]
+			else:
+				prowess-=b.boss.prowess[p]
+	elif u:
+		prowess+=u.get_powess(p)
+	return prowess

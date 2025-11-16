@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Research" load_steps=10 format=3 uid="uid://dqvf5shjgaduh"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_4wv6o"]
+[ext_resource type="Resource" uid="uid://cug64pdrjjui4" path="res://Resources/Buildings/restaurant.tres" id="2_0gv7n"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_w5eh5"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_jb105"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_npdv3"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_t8exu"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_nc6mx"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_y03d0"]
+[ext_resource type="Resource" uid="uid://cc2dfmy7c53wl" path="res://Resources/Recipes/restauant_chowder.tres" id="9_qqgky"]
+
+[resource]
+script = ExtResource("7_nc6mx")
+name = "Restaurant"
+recipes = Array[ExtResource("8_y03d0")]([ExtResource("9_qqgky")])
+buildings = Array[ExtResource("1_4wv6o")]([ExtResource("2_0gv7n")])
+exp_to_unlock = 2000
+inspiration_threshold = 50.0
+inspired_class = 1
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

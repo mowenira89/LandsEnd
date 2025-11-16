@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Building" load_steps=13 format=3 uid="uid://d13f3l1litam3"]
+[gd_resource type="Resource" script_class="Building" load_steps=14 format=3 uid="uid://d13f3l1litam3"]
 
 [ext_resource type="Script" uid="uid://shaorb866qv1" path="res://Data/buffs.gd" id="1_yyb7u"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_q4f15"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="5_0q2rc"]
 [ext_resource type="Resource" uid="uid://be3fpj4ymxj8y" path="res://Resources/Stuff/canvas.tres" id="6_dnrnc"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="7_g5ues"]
+[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="8_q4f15"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="8_wicpb"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_r4x6n"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="10_m0umw"]
@@ -26,7 +27,8 @@ upgrade_only = true
 buffs = SubResource("Resource_7yfx5")
 stats = SubResource("Resource_wkqm5")
 pop_cap = Dictionary[int, int]({
-0: 150
+0: 500,
+1: 500
 })
 construction_time = 4
 construction_materials = Dictionary[ExtResource("3_0b1xp"), int]({

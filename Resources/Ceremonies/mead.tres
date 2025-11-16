@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Ceremony" load_steps=7 format=3 uid="uid://bfi4rwhop6x0p"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_cgpo2"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_cxi1c"]
+[ext_resource type="Resource" uid="uid://b1rfmg01mmtkm" path="res://Resources/Stuff/mead.tres" id="3_xgvfi"]
+[ext_resource type="Resource" uid="uid://uvv62iwu53pw" path="res://Resources/Stuff/drum.tres" id="4_dnx3i"]
+[ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="5_37jrh"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="6_c3kto"]
+
+[resource]
+script = ExtResource("6_c3kto")
+name = "Mead Ceremony"
+length = 3
+reward = Dictionary[ExtResource("2_cxi1c"), float]({
+ExtResource("5_37jrh"): 10.0
+})
+requirements = Dictionary[ExtResource("2_cxi1c"), int]({
+ExtResource("3_xgvfi"): 1.0,
+ExtResource("4_dnx3i"): 0.2
+})
+metadata/_custom_type_script = "uid://h1hksovre84"

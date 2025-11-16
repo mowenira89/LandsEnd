@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Research" load_steps=8 format=3 uid="uid://cos4ilo1amm1i"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_4tk30"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_pysw3"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_bupnf"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_7nknf"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="5_c78f3"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="6_8y8r5"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_ui6bt"]
+
+[resource]
+script = ExtResource("6_8y8r5")
+name = "Flight"
+exp_to_unlock = 100
+inspiration_threshold = 25.0
+inspired_class = 3
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

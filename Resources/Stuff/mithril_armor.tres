@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://e2qytdduyoq2"]
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://e2qytdduyoq2"]
 
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_64a2b"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_nrcaf"]
 
 [resource]
@@ -8,5 +9,9 @@ name = "Mithril Armor"
 value = 150.0
 qualities = Dictionary[int, float]({
 8: 8.0
+})
+mystic_qualities = Dictionary[int, float]({
+1: 5.0,
+4: 6.0
 })
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Research" load_steps=13 format=3 uid="uid://csc1y1t0usjt0"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_1d8ct"]
+[ext_resource type="Resource" uid="uid://b82rdposfw5vp" path="res://Resources/Buildings/glass_workshop.tres" id="2_gcyqa"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_o6m42"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_essne"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_jlet5"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_6o26t"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_ny7hi"]
+[ext_resource type="Resource" uid="uid://cfgx2mn2nq4cv" path="res://Resources/Research/metallurgy.tres" id="8_v8rjg"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_8fdxt"]
+[ext_resource type="Resource" uid="uid://b6vg6vkjmtv53" path="res://Resources/Recipes/monastary_stained_glass.tres" id="10_ja54b"]
+[ext_resource type="Resource" uid="uid://c3krd5sjgxm" path="res://Resources/Recipes/workshop_glass.tres" id="11_g6agf"]
+[ext_resource type="Resource" uid="uid://bntcj0kjrxjny" path="res://Resources/Recipes/workshop_glass_glass.tres" id="12_xi5k5"]
+
+[resource]
+script = ExtResource("7_ny7hi")
+name = "Glassworking"
+recipes = Array[ExtResource("9_8fdxt")]([ExtResource("10_ja54b"), ExtResource("11_g6agf"), ExtResource("12_xi5k5")])
+buildings = Array[ExtResource("1_1d8ct")]([ExtResource("2_gcyqa")])
+exp_to_unlock = 50
+prerequisites = Array[ExtResource("7_ny7hi")]([ExtResource("8_v8rjg")])
+inspiration_threshold = 30.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

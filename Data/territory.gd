@@ -24,52 +24,6 @@ func create(c:Vector2i):
 	nymphoi=Pop.new()
 	nymphoi.create(Pop.CLASS.Nymphoi,self)
 
-func appoint_workers():
-	var ratios = {}
-	var have = population.get_population_breakdown()
-	var needed = {}
-	var to_appoint = {}
-	for x in Pop.CLASS:
-		needed[x]=0
-		to_appoint[x]=0
-		ratios[x]=0
-	for x in districts:
-		if x.building!=null:
-			for y in x.building.staff_needed:
-				needed[y]+=x.building.staff_needed[y]
-	for x in temp_jobs:
-		needed[x]+=temp_jobs[x]
-	for x in needed:
-		if needed[x]<=have[x]:
-			to_appoint[x]=needed[x]
-		else:
-			ratios[x] = float(population.get_persons(x))/needed[x]
-	for x in districts:
-		if x.building!=null:
-			for c in x.building.staff:
-				if needed[x]>have[x]:
-					x.building.staff_appointed[c]=x.building.staff[c]*ratios[c]
-				else:
-					x.building.staff_appointed[c]=x.staff[c]
-	
-	
-func get_idle_pop(c:Pop.CLASS):
-	var have = population.get_pops(c)
-	var needed:int=0
-	for x in districts:
-		if x.building!=null:
-			for y in x.building.staff_needed:
-				if y == c:
-					needed+=x.building.staff_needed[c]
-	return have-needed
-	
-
-func change_temp_jobs(c:Pop.CLASS,a:int):
-	if c not in temp_jobs.keys():
-		temp_jobs[c]=a
-	else:
-		temp_jobs[c]+=a
-
 func check_water():
 	var surrounding = GM.board.ground.get_surrounding_cells(coords)
 	if surrounding.size()<6:
@@ -122,6 +76,12 @@ func get_known_forage():
 		
 	
 func end_turn():
+	
+	population.appoint_workers()
+	for x in districts:
+		if x.building:
+			x.building.end_turn()
+	
 	for x in NPCs:
 		x.end_turn()
 	for x in units:

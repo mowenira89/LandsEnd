@@ -2,6 +2,7 @@ class_name District extends Resource
 
 enum TYPES {Wild,Sacred,Agricultural,Industrial,Mining,Military,Residential}
 
+@export var name:String
 @export var biome:Biome
 @export var type:TYPES
 @export var territory:Territory
@@ -24,6 +25,7 @@ func create(t:Territory,i:int):
 		type=TYPES.Wild
 	biome=Biome.new()
 	biome.create()
+	name = "District "+str(i)
 
 func fauna_spotted(s:Species):
 	if s not in discovered_game:

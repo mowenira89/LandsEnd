@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="Building" load_steps=18 format=3 uid="uid://dshsqcvo8q3ri"]
+
+[ext_resource type="Script" uid="uid://shaorb866qv1" path="res://Data/buffs.gd" id="1_xm7vu"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_fgmvw"]
+[ext_resource type="Script" uid="uid://dfvuv4fq4adpa" path="res://Data/conditions/building_level_condition.gd" id="3_8k6gh"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="4_a1h56"]
+[ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="5_ajfmh"]
+[ext_resource type="Resource" uid="uid://bt85i3i2fa24g" path="res://Resources/Stuff/oricalchum.tres" id="6_m2gxv"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="7_dfsoy"]
+[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="8_ow61r"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="9_aiwoj"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="10_udoxq"]
+[ext_resource type="Resource" uid="uid://liw3bxv2slon" path="res://Resources/Recipes/orangesmith_gold_ingot.tres" id="11_vac03"]
+[ext_resource type="Resource" uid="uid://c744m7rld0yy3" path="res://Resources/Recipes/orangesmith_magic_sword.tres" id="12_6a58j"]
+[ext_resource type="Resource" uid="uid://be2sap83vst3q" path="res://Resources/Recipes/orangesmith_orichalcum.tres" id="13_dfean"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="14_muieu"]
+
+[sub_resource type="Resource" id="Resource_tgtor"]
+script = ExtResource("1_xm7vu")
+metadata/_custom_type_script = "uid://shaorb866qv1"
+
+[sub_resource type="Resource" id="Resource_45enj"]
+script = ExtResource("3_8k6gh")
+level = 5
+metadata/_custom_type_script = "uid://dfvuv4fq4adpa"
+
+[sub_resource type="Resource" id="Resource_atse1"]
+script = ExtResource("14_muieu")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("9_aiwoj")
+name = "Orangesmith"
+buffs = SubResource("Resource_tgtor")
+stats = SubResource("Resource_atse1")
+construction_time = 4
+construction_materials = Dictionary[ExtResource("4_a1h56"), int]({
+ExtResource("5_ajfmh"): 40,
+ExtResource("6_m2gxv"): 10
+})
+construction_level = 4
+construction_conditions = Array[ExtResource("2_fgmvw")]([SubResource("Resource_45enj")])
+staff_needed = Dictionary[int, int]({
+0: 25
+})
+district_type = 3
+production_slots = 2
+recipes = Array[ExtResource("10_udoxq")]([ExtResource("11_vac03"), ExtResource("12_6a58j"), ExtResource("13_dfean")])
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

@@ -1,6 +1,6 @@
 class_name Buff extends Resource
 
-enum TYPE {LuckINT,LuckPER,Hunting,Gathering,RSRCH,Scout,BuildingEXP,LongStride}
+enum TYPE {LuckINT,LuckPER,Hunting,Gathering,RSRCH,Scout,BuildingEXP,LongStride,MiningProwess}
 
 var owner
 var turns:int=1

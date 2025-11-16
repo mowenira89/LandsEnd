@@ -14,8 +14,7 @@ func update_menu(d:District):
 		build.visible=false
 	else:
 		build.visible=true
-	var l = "District "
-	l+=str(d.index)+" of "
+	var l = d.name+" of "
 	l+=d.territory.name+"\n"	
 	l+=District.TYPES.keys()[d.type]+" "+Biome.TERRAIN.keys()[d.biome.terrain]
 	label.text=l

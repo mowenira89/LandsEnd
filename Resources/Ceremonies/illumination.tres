@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Ceremony" load_steps=9 format=3 uid="uid://byojb3n4g6lfc"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_x57s5"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_ox1qd"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_6l1ri"]
+[ext_resource type="Resource" uid="uid://cd2en76hyfke1" path="res://Resources/Stuff/true_kykeon.tres" id="4_0fhch"]
+[ext_resource type="Resource" uid="uid://bmajm78u1kxyk" path="res://Resources/Stuff/magic_mushroom.tres" id="5_joe8c"]
+[ext_resource type="Resource" uid="uid://b1rfmg01mmtkm" path="res://Resources/Stuff/mead.tres" id="6_bb7cn"]
+[ext_resource type="Resource" uid="uid://ccyw7ok13xyba" path="res://Resources/Stuff/ganja.tres" id="7_s8urh"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="8_xep5o"]
+
+[resource]
+script = ExtResource("8_xep5o")
+name = "Illumination Rites"
+length = 32
+requirements = Dictionary[ExtResource("3_6l1ri"), float]({
+ExtResource("4_0fhch"): 0.01,
+ExtResource("5_joe8c"): 0.01,
+ExtResource("6_bb7cn"): 0.02,
+ExtResource("7_s8urh"): 0.01
+})
+requirements_of_quality = Dictionary[int, float]({
+15: 100.0,
+18: 25.0
+})
+metadata/_custom_type_script = "uid://h1hksovre84"

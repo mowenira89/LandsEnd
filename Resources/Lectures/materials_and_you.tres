@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Lecture" load_steps=7 format=3 uid="uid://c18aln1wom4jt"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_xr0hv"]
+[ext_resource type="Resource" uid="uid://cfgx2mn2nq4cv" path="res://Resources/Research/metallurgy.tres" id="2_86w2h"]
+[ext_resource type="Resource" uid="uid://dp1hi5cgcithi" path="res://Resources/Research/ironwork.tres" id="3_mn3vb"]
+[ext_resource type="Resource" uid="uid://coqwyx2r33sfn" path="res://Resources/Research/whitesmithing.tres" id="4_rm0yk"]
+[ext_resource type="Resource" uid="uid://cvx5p01d1hrdf" path="res://Resources/Research/orangesmithing.tres" id="5_5l1xd"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="6_8brbb"]
+
+[resource]
+script = ExtResource("6_8brbb")
+name = "Materials and You"
+lecture_length = 10
+subject = 5
+research = Dictionary[ExtResource("1_xr0hv"), float]({
+ExtResource("2_86w2h"): 5.0,
+ExtResource("3_mn3vb"): 5.0,
+ExtResource("4_rm0yk"): 5.0,
+ExtResource("5_5l1xd"): 5.0
+})
+metadata/_custom_type_script = "uid://m330oqovp04n"

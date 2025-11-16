@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://unubdugtruel"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_kbl4p"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_mhbd2"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_m76vo"]
+
+[resource]
+script = ExtResource("3_m76vo")
+rarity = 25.0
+name = "Tobacco"
+qualities = Dictionary[int, float]({
+2: 2.0,
+10: 1.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 3.0,
+4: 3.0
+})
+exp_to = Dictionary[String, float]({
+"Tobacco Ceremony": 1.0
+})
+found_in = Array[int]([0, 1])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

@@ -25,8 +25,11 @@ func add_exp(a:float,b:Array[Buffs],territory:Territory):
 		
 		current_exp+=amt
 		if current_exp>=exp_to_unlock:
-			unlock()
+			check_inspiration(territory)
 			
+func check_inspiration(t:Territory):
+	var creativity = t.population.get_pop_belief(inspired_class,Beliefs.STATS.Creativity)
+	
 func unlock():
 	for x in buildings:
 		RM.buildings[x.name].unlocked=true

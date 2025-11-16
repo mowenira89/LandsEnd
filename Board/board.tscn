@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://cc4jjk0qer8ds"]
+[gd_scene load_steps=37 format=4 uid="uid://cc4jjk0qer8ds"]
 
 [ext_resource type="Texture2D" uid="uid://6ddnc08k2vlq" path="res://Assets/Images/Territory Tiles/water.png" id="1_7ncmu"]
 [ext_resource type="Script" uid="uid://b2e3ta76l8vr" path="res://Board/board.gd" id="1_ehn5f"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bf2q05mnpbcaf" path="res://Menus/unit_action_menu.tscn" id="19_4kang"]
 [ext_resource type="PackedScene" uid="uid://cqwhwxmmfa8kg" path="res://Menus/exchange_window.tscn" id="20_7hvnj"]
 [ext_resource type="PackedScene" uid="uid://d15ij77ctqagt" path="res://Menus/assimilation.tscn" id="20_y4q0p"]
+[ext_resource type="PackedScene" uid="uid://dox0w3hhuskkv" path="res://Menus/building_view_bottom.tscn" id="21_imfj5"]
 [ext_resource type="Script" uid="uid://c2uxq8qn50gd7" path="res://Board/message_box.gd" id="24_e123n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_733os"]
@@ -71,6 +72,9 @@ sources/2 = SubResource("TileSetAtlasSource_1cpk3")
 sources/3 = SubResource("TileSetAtlasSource_mjeqw")
 sources/4 = SubResource("TileSetAtlasSource_7oini")
 
+[sub_resource type="Theme" id="Theme_imfj5"]
+Button/styles/focus = null
+
 [node name="Board" type="Node2D"]
 script = ExtResource("1_ehn5f")
 
@@ -108,6 +112,7 @@ offset_right = 1797.0
 offset_bottom = 853.0
 size_flags_horizontal = 8
 mouse_filter = 1
+theme = SubResource("Theme_imfj5")
 
 [node name="ColorRect" type="ColorRect" parent="Menus/SideMenu"]
 layout_mode = 1
@@ -209,6 +214,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="ExchangeWindow" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("20_7hvnj")]
+layout_mode = 1
+
+[node name="BuildingViewBottom" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("21_imfj5")]
 layout_mode = 1
 
 [node name="BottomMenu" type="Control" parent="Menus"]

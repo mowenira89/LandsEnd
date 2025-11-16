@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://ccyw7ok13xyba"]
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://ccyw7ok13xyba"]
 
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_fefv3"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_miv67"]
 
 [resource]
@@ -11,6 +12,14 @@ qualities = Dictionary[int, float]({
 5: 5.0,
 9: 2.0,
 10: 2.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 3.0,
+4: 5.0,
+6: 1.0
+})
+exp_to = Dictionary[String, float]({
+"Ganja Ceremony": 1.0
 })
 found_in = Array[int]([0, 1, 2, 3])
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

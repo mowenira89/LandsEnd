@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://6crtkhussdig"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_8k7e8"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="2_e0brp"]
+[ext_resource type="Resource" uid="uid://cdf1y3g80yt8t" path="res://Resources/Stuff/leather.tres" id="3_ceujn"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_bwayr"]
+
+[resource]
+script = ExtResource("4_bwayr")
+name = "Drum"
+id = "camp_drum"
+turns = 1
+inputs = Dictionary[ExtResource("1_8k7e8"), int]({
+ExtResource("2_e0brp"): 1,
+ExtResource("3_ceujn"): 1
+})
+exp_to = Dictionary[String, float]({
+"Dance Ceremony": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Ceremony" load_steps=7 format=3 uid="uid://blj7nxbeavx8l"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_v8nwg"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_bgaq2"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_q10i3"]
+[ext_resource type="Resource" uid="uid://bx3t5s84ua6x5" path="res://Resources/Stuff/haoma.tres" id="4_83tud"]
+[ext_resource type="Resource" uid="uid://beuoc1x1cperg" path="res://Resources/Stuff/soma.tres" id="5_4bqwr"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="6_gqa3u"]
+
+[resource]
+script = ExtResource("6_gqa3u")
+name = "Haoma Ceremony"
+length = 2
+interest = 0.02
+reward = Dictionary[ExtResource("3_q10i3"), float]({
+ExtResource("5_4bqwr"): 2.0
+})
+requirements = Dictionary[ExtResource("3_q10i3"), float]({
+ExtResource("4_83tud"): 1.0
+})
+requirements_of_quality = Dictionary[int, float]({
+15: 10.0
+})
+monks_needed = 45
+metadata/_custom_type_script = "uid://h1hksovre84"

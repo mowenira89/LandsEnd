@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Research" load_steps=8 format=3 uid="uid://dvqstmgmsdhpc"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_y8fl0"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_f2rnc"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_tdnt5"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_6pa56"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="5_0xgy1"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="6_kjqdj"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_plxmy"]
+
+[resource]
+script = ExtResource("6_kjqdj")
+name = "Charm"
+exp_to_unlock = 500
+inspiration_threshold = 25.0
+inspired_class = 1
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

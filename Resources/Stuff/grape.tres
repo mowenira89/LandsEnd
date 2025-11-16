@@ -12,6 +12,9 @@ qualities = Dictionary[int, float]({
 5: 10.0,
 10: 0.5
 })
+mystic_qualities = Dictionary[int, float]({
+0: 2.0
+})
 exp_to = Dictionary[String, float]({
 "Brewery": 1.0
 })

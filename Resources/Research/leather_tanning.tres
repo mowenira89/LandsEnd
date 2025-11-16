@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Research" load_steps=11 format=3 uid="uid://dhsj8e4frbqt2"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_01nik"]
+[ext_resource type="Resource" uid="uid://dne6u8apox0fa" path="res://Resources/Buildings/tannery.tres" id="2_ehg5e"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_nl2w4"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_4c8a6"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_swxch"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_vul81"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_0obar"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_46y6l"]
+[ext_resource type="Resource" uid="uid://cwif52v0bdks3" path="res://Resources/Recipes/camp_leather.tres" id="9_jy5ml"]
+[ext_resource type="Resource" uid="uid://dfada7pgnfv3l" path="res://Resources/Recipes/tannery_leather.tres" id="10_wtmnu"]
+
+[resource]
+script = ExtResource("7_0obar")
+name = "Leather Tanning"
+recipes = Array[ExtResource("8_46y6l")]([null, ExtResource("9_jy5ml"), ExtResource("10_wtmnu")])
+buildings = Array[ExtResource("1_01nik")]([ExtResource("2_ehg5e")])
+exp_to_unlock = 50
+inspiration_threshold = 10.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

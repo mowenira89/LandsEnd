@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://dw8mtx3417ev6"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_raud3"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_jpy5l"]
+
+[resource]
+script = ExtResource("2_jpy5l")
+name = "Lead Ingot"
+value = 15.0
+exp_to = Dictionary[String, float]({
+"Whitesmithing": 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

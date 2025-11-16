@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://coe138i782skq"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_4xvcb"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="2_fwnls"]
+[ext_resource type="Resource" uid="uid://uvv62iwu53pw" path="res://Resources/Stuff/drum.tres" id="3_50gir"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_75edq"]
+
+[resource]
+script = ExtResource("4_75edq")
+name = "Drum"
+id = "sudio_drum"
+turns = 1
+inputs = Dictionary[ExtResource("1_4xvcb"), int]({
+ExtResource("2_fwnls"): 1
+})
+outputs = Dictionary[ExtResource("1_4xvcb"), int]({
+ExtResource("3_50gir"): 3
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

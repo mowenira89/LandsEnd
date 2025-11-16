@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://c3krd5sjgxm"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_yqdxp"]
+[ext_resource type="Resource" uid="uid://b4xmbl7q4wjcg" path="res://Resources/Stuff/sand.tres" id="2_iau8g"]
+[ext_resource type="Resource" uid="uid://u8sax8phrhwe" path="res://Resources/Stuff/glass.tres" id="3_1xw04"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_mptrm"]
+
+[resource]
+script = ExtResource("4_mptrm")
+name = "Glass"
+id = "workshop_glass"
+turns = 2
+inputs = Dictionary[ExtResource("1_yqdxp"), int]({
+ExtResource("2_iau8g"): 1
+})
+outputs = Dictionary[ExtResource("1_yqdxp"), int]({
+ExtResource("3_1xw04"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

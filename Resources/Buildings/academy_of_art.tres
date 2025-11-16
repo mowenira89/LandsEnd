@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="School" load_steps=14 format=3 uid="uid://4m6ufiymemj6"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_cxfo1"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_d7mt8"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_e5xex"]
+[ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="4_3nk8g"]
+[ext_resource type="Resource" uid="uid://i3mwf3gwhduv" path="res://Resources/Stuff/empty_book.tres" id="5_3erru"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="6_b0fud"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="7_bus1y"]
+[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="8_op6ng"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="9_5y80c"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="10_ki3hm"]
+[ext_resource type="Script" uid="uid://blsex2fyqwke" path="res://Data/buildings/school.gd" id="11_kc1ai"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="12_uneof"]
+
+[sub_resource type="Resource" id="Resource_ftofm"]
+script = ExtResource("12_uneof")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("11_kc1ai")
+lecture_slots = 4
+class_room_size = 50
+name = "Academy of Art"
+upgrade_only = true
+stats = SubResource("Resource_ftofm")
+construction_time = 5
+construction_materials = Dictionary[ExtResource("2_d7mt8"), int]({
+ExtResource("3_e5xex"): 50,
+ExtResource("4_3nk8g"): 25,
+ExtResource("5_3erru"): 25
+})
+construction_level = 4
+staff_needed = Dictionary[int, int]({
+1: 25
+})
+metadata/_custom_type_script = "uid://blsex2fyqwke"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ceremony" load_steps=5 format=3 uid="uid://c3n2jxf1ltdh0"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_7sti3"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_yknbj"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_bf71q"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="4_xgs47"]
+
+[resource]
+script = ExtResource("4_xgs47")
+name = "Mass Transcendence"
+metadata/_custom_type_script = "uid://h1hksovre84"

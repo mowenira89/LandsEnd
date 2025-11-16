@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Research" load_steps=12 format=3 uid="uid://bij7hwcyqox0l"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_oe6wg"]
+[ext_resource type="Resource" uid="uid://cxynkn3ltngrf" path="res://Resources/Buildings/workshop_pottery.tres" id="2_boajg"]
+[ext_resource type="Resource" uid="uid://biu0am15iaecl" path="res://Resources/Buildings/granary.tres" id="3_boajg"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_fnqka"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_7fwe6"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_pf6bp"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_jfp6t"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_caha1"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_pkpea"]
+[ext_resource type="Resource" uid="uid://wot1ehofqjjf" path="res://Resources/Recipes/pottery_amphora.tres" id="9_7ts63"]
+[ext_resource type="Resource" uid="uid://c4vvwlmleaqk0" path="res://Resources/Recipes/workshop_amphora.tres" id="10_86b6k"]
+
+[resource]
+script = ExtResource("7_caha1")
+name = "Pottery"
+recipes = Array[ExtResource("8_pkpea")]([ExtResource("9_7ts63"), ExtResource("10_86b6k")])
+buildings = Array[ExtResource("1_oe6wg")]([ExtResource("2_boajg"), ExtResource("3_boajg")])
+exp_to_unlock = 25
+inspiration_threshold = 25.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

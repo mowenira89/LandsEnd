@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Lecture" load_steps=5 format=3 uid="uid://40ovhp0q4c7e"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_gkwey"]
+[ext_resource type="Resource" uid="uid://cnxla5x8wv1pu" path="res://Resources/Research/tea_ceremony.tres" id="2_vy26x"]
+[ext_resource type="Resource" uid="uid://bf5qbiau1jvbi" path="res://Resources/Research/tobacco_ceremony.tres" id="3_u1atu"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_s6j58"]
+
+[resource]
+script = ExtResource("4_s6j58")
+name = "The Essence of Ceremony"
+lecture_length = 20
+subject = 2
+pop_training = 3
+train_pops = true
+difficulty = 50
+research = Dictionary[ExtResource("1_gkwey"), float]({
+ExtResource("2_vy26x"): 5.0,
+ExtResource("3_u1atu"): 5.0
+})
+metadata/_custom_type_script = "uid://m330oqovp04n"

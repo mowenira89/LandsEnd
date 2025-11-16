@@ -31,7 +31,7 @@ func _on_pressed() -> void:
 
 func _on_texture_button_pressed() -> void:
 	district.building.get_menu()
-
+	GM.menus.building_view_bottom.update_menu(district.building)
 
 
 func _on_selector_button_gui_input(event: InputEvent) -> void:

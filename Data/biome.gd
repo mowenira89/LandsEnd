@@ -15,7 +15,8 @@ enum VITAMINS {A,B,C,D,K,Q,F}
 @export var mineable_amount:int
 @export var water_pollution:float
 @export var air_pollution:float
-
+@export var timber:int
+@export var original_timber:int
 
 var original_water:float
 var original_vitamins:Dictionary
@@ -31,7 +32,10 @@ func create():
 	else:
 		water=randi_range(5000,20000)
 	original_water=water
-	
+	original_timber=randi_range(1000,5000)
+	if terrain==TERRAIN.Forest:
+		original_timber*=3
+	timber=original_timber
 	for x in VITAMINS.values():
 		if !terrain==TERRAIN.Barren:	
 			vitamins[x]=randi_range(1000,10000)
@@ -40,7 +44,6 @@ func create():
 	original_vitamins=vitamins.duplicate()
 	set_flora_and_fauna()
 	set_mineables()
-	mineable_amount = randi_range(1000,10000)
 	if mineable and mineable.qualities.has(Stuff.QUALITIES.Forage):
 		forage[mineable]=mineable.qualities[Stuff.QUALITIES.Forage]
 	
@@ -74,6 +77,7 @@ func set_mineables():
 		if randi_range(0,101)<=x.qualities[Stuff.QUALITIES.Mineable]:
 			mineable=x
 			break
+	mineable_amount = randi_range(1000,10000)
 
 func get_game():
 	var r = []

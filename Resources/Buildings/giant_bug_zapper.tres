@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Building" load_steps=11 format=3 uid="uid://dnwf0affsnaec"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_4uqr7"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_pns4p"]
+[ext_resource type="Resource" uid="uid://b1ue65pvuglfc" path="res://Resources/Stuff/concrete.tres" id="3_iicoa"]
+[ext_resource type="Resource" uid="uid://bt85i3i2fa24g" path="res://Resources/Stuff/oricalchum.tres" id="4_042wd"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_ep7kn"]
+[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_dc6wk"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_2j816"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_5eh0w"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="9_vsym5"]
+
+[sub_resource type="Resource" id="Resource_5vbuq"]
+script = ExtResource("9_vsym5")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("7_2j816")
+name = "Giant Bug Zapper"
+upgrade_only = true
+stats = SubResource("Resource_5vbuq")
+construction_time = 5
+construction_materials = Dictionary[ExtResource("2_pns4p"), int]({
+ExtResource("3_iicoa"): 10,
+ExtResource("4_042wd"): 10
+})
+construction_level = 4
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://bdxk4kd44gpn"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_x2lir"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_d3jyg"]
+
+[resource]
+script = ExtResource("2_d3jyg")
+name = "Refined Mithril Armor"
+value = 2500.0
+qualities = Dictionary[int, float]({
+8: 11.0
+})
+mystic_qualities = Dictionary[int, float]({
+1: 7.0,
+4: 8.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

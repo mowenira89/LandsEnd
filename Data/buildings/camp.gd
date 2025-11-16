@@ -29,7 +29,7 @@ func progress_production():
 			match producing_this_turn[x]:
 				"Hunt":
 					var hunt_effect=HuntEffect.new()
-					hunt_effect.create(district.territory.stockpile,null,self)
+					hunt_effect.create(district.territory.stockpile,district.territory,district,self)
 					var id = district.territory.name+str(district.index)+str(x)+"production_event"
 					var new_event=Event.new()
 					var m = "Hunting"

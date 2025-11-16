@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Ceremony" load_steps=5 format=3 uid="uid://bw5qr0cctnauj"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_mobos"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_lsqp2"]
+[ext_resource type="Resource" uid="uid://ccyw7ok13xyba" path="res://Resources/Stuff/ganja.tres" id="3_xd5yn"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="4_ffpc1"]
+
+[resource]
+script = ExtResource("4_ffpc1")
+name = "Ganja Ceremony"
+length = 2
+requirements = Dictionary[ExtResource("2_lsqp2"), int]({
+ExtResource("3_xd5yn"): 10
+})
+metadata/_custom_type_script = "uid://h1hksovre84"

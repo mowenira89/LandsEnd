@@ -9,8 +9,10 @@ class_name Building extends Resource
 @export var image:Texture2D
 @export var pop_cap:Dictionary[Pop.CLASS,int]
 @export var boss:Person
+@export var boss_type:Pop.CLASS
 @export var unlock_message:String
 @export var age:int=0
+@export var memories:Array[Memory]
 #CONSTRUCTION
 
 @export var construction_time:int
@@ -40,8 +42,14 @@ var extentions = [null,null,null,null,null,null]
 var extention_construction = [0,0,0,0,0,0]
 var extention_slots:int=0
 var extention_buffs:Array[Buff]
-var upgrade_level:int=1
+
+#UPGRADES
+
 var upgrade_construction = 0
+var upgrading_to:Building
+@export var upgrades:Array[Building]
+@export var upgrade_at_level:int=0
+
 
 #EXPERIENCE
 var experience:float=0
@@ -106,7 +114,13 @@ func repair():
 
 func end_turn():
 	progress_production()
+	for x in memories.duplicate():
+		x.end_turn()
 	age+=1
+	
+func add_memory(m:Memory):
+	memories.append(m)
+	m.init()
 	
 func extract_products():
 	var r = []
@@ -127,3 +141,59 @@ func extract_products():
 func plunder(stockpile:Stockpile):
 	var loot_table = LootTable.new()
 	var loot = loot_table.create(extract_products())
+
+
+func upgrade(b:Building):
+	name=b.name
+	production_slots=b.production_slots
+	extention_slots=b.extention_slots
+	for x in b.recipes:
+		this_building_recipes[x.name]=x
+	image=b.image
+	b=null
+	
+func get_extention(b:Building):
+	for x in b.recipes:
+		this_building_recipes[x.name]=x
+	stats.total_hp+=b.stats.total_hp/2
+	stats.current_hp=stats.total_hp
+	stats.defense+=b.stats.defense
+	stats.offense+=b.offense
+	for x in b.staff_needed:
+		if x in staff_needed.keys():	
+			staff_needed[x]+=b.staff_needed[x]
+		else:
+			staff_needed[x]=b.staff_needed[x]
+			
+func take_damage(a:int):
+	a+=a*stats.defense/100
+	stats.change_hp(a)
+	if stats.current_hp<=0:
+		destroy_building()
+	
+func destroy_building(burn:bool=false):
+	if !burn:
+		for x in construction_materials:
+			district.territory.stockpile.add_stuff(x,construction_materials[x]/2)
+	district.building=null
+	
+func get_exp(a:float):
+	var b = []
+	var mod=0
+	for x in buffs.buffs:
+		if x is BuildingExpBuff:
+			b.append(x)
+	for x in boss.personal_buffs.buffs:
+		if x is BuildingExpBuff:
+			b.append(x)
+	for x in district.territory.buffs.buffs:
+		if x is BuildingExpBuff:
+			b.apped(x)
+	for x in b:
+		mod+=x.amt
+	a+=a*mod
+	experience+=a		
+	
+	
+func level_up():
+	pass

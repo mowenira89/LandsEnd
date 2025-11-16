@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://m38ak8vvi5v5"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_758rb"]
+[ext_resource type="Resource" uid="uid://cvuww43pj04bk" path="res://Resources/Species/olive.tres" id="2_tmatb"]
+[ext_resource type="Resource" uid="uid://io8kxjjhmilj" path="res://Resources/Stuff/oil.tres" id="3_wfd1b"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_tdqqu"]
+
+[resource]
+script = ExtResource("4_tdqqu")
+name = "Olive Oil"
+id = "oil_press_olive"
+turns = 1
+inputs = Dictionary[ExtResource("1_758rb"), int]({
+ExtResource("2_tmatb"): 1
+})
+outputs = Dictionary[ExtResource("1_758rb"), int]({
+ExtResource("3_wfd1b"): 5
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

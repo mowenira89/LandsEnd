@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://brni18b0el1ol"]
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://brni18b0el1ol"]
 
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_bdlce"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_fem4k"]
 
 [resource]
@@ -10,5 +11,8 @@ qualities = Dictionary[int, float]({
 8: 2.0,
 12: 100.0,
 13: 2.0
+})
+mystic_qualities = Dictionary[int, float]({
+4: 1.0
 })
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

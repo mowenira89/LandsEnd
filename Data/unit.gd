@@ -16,7 +16,8 @@ class_name Unit extends Resource
 @export var movements_allowed_this_turn=0
 @export var traveling:bool=false
 @export var friendly:bool=true
-
+@export var memories:Array[Memory]
+@export var prohibited_game:Array[Species]
 #STATS
 @export var animals_killed:int=0
 @export var previous_territories:Array[Territory]
@@ -109,7 +110,10 @@ func end_turn():
 		x.end_turn()
 		if !x.is_alive():
 			action_queue.erase(x)
-			
+	
+	for x in memories:
+		x.end_turn()
+	
 	movements_allowed_this_turn=speed
 
 func get_all_buffs(t:Buff.TYPE):
@@ -128,3 +132,9 @@ func extract_buffs():
 	for x in companions:
 		r.append(x.personal_buffs)
 	return r
+
+func get_powess(p:Person.PROWESS):
+	var prowess = leader.get_prowess(p) if leader else 0
+	for x in companions:
+		prowess += x.get_prowess(p)
+	return prowess

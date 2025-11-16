@@ -16,6 +16,8 @@ class_name MenuController extends CanvasLayer
 @onready var recipe_menu: RecipeMenu = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom/RecipeMenu
 @onready var unit_action_menu: UnitActionMenu = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom/UnitActionMenu
 @onready var exchange_window: ExchangeWindow = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom/ExchangeWindow
+@onready var building_view_bottom: Control = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom/BuildingViewBottom
+
 
 @onready var alert: ColorRect = $Alert
 @onready var alert_label: Label = $Alert/AlertLabel

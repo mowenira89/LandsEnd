@@ -1,6 +1,6 @@
 class_name Beliefs extends Resource
 
-enum STATS {Happiness,Loyalty,Militancy,Piety,Creativity}
+enum STATS {Happiness,Loyalty,Militancy,Piety,Creativity,Sanity}
 
 @export var stats:Dictionary[STATS,float]
 
@@ -21,6 +21,8 @@ func create(c:Pop.CLASS):
 		
 func change_stat(s:STATS,a:float):
 	stats[s]=clamp(stats[s]+a,-1,1)
+
+
 
 func create_random():
 	for x in STATS.values():

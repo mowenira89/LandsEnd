@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://ccpfaufrt228u"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_cubwh"]
+[ext_resource type="Resource" uid="uid://dn3prl04iyl70" path="res://Resources/Stuff/lead_ore.tres" id="2_2rmd2"]
+[ext_resource type="Resource" uid="uid://dw8mtx3417ev6" path="res://Resources/Stuff/lead_ingot.tres" id="3_xho0p"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_qk3ap"]
+
+[resource]
+script = ExtResource("4_qk3ap")
+name = "Lead Ingot"
+id = "smelter_lead_ingot"
+turns = 1
+inputs = Dictionary[ExtResource("1_cubwh"), int]({
+ExtResource("2_2rmd2"): 1
+})
+outputs = Dictionary[ExtResource("1_cubwh"), int]({
+ExtResource("3_xho0p"): 1
+})
+exp_to = Dictionary[String, float]({
+"Whitesmithing": 1.0
+})
+pollution = 5.0
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

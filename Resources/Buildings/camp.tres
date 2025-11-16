@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Camp" load_steps=23 format=3 uid="uid://ddnn8m548yucj"]
+[gd_resource type="Resource" script_class="Camp" load_steps=30 format=3 uid="uid://ddnn8m548yucj"]
 
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_fxers"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_j13ja"]
@@ -14,13 +14,20 @@
 [ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="8_uah8x"]
 [ext_resource type="Resource" uid="uid://dwsu1sq0thk3u" path="res://Resources/Recipes/camp_ivory_carving.tres" id="9_j27x5"]
 [ext_resource type="Resource" uid="uid://cwif52v0bdks3" path="res://Resources/Recipes/camp_leather.tres" id="10_80m7v"]
+[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="10_jxmh5"]
 [ext_resource type="Resource" uid="uid://c0wyua0f1r05e" path="res://Resources/Recipes/camp_lumber.tres" id="11_jxmh5"]
+[ext_resource type="Resource" uid="uid://8v4i0hnt5w35" path="res://Resources/Buildings/fishery.tres" id="11_t1wd2"]
+[ext_resource type="Resource" uid="uid://dne6u8apox0fa" path="res://Resources/Buildings/tannery.tres" id="12_5675l"]
 [ext_resource type="Resource" uid="uid://q8874acykipv" path="res://Resources/Recipes/camp_simple_clohing_canvas.tres" id="12_t1wd2"]
 [ext_resource type="Resource" uid="uid://dsm568eqwf6o6" path="res://Resources/Recipes/camp_simple_clothing_pelt.tres" id="13_5675l"]
+[ext_resource type="Resource" uid="uid://bg7rwygs07wkj" path="res://Resources/Buildings/lumber_mill.tres" id="13_vggk8"]
+[ext_resource type="Resource" uid="uid://cpjc66m2o43ll" path="res://Resources/Buildings/ranger_lodge.tres" id="14_bqfr3"]
 [ext_resource type="Resource" uid="uid://dtov2tct7blh5" path="res://Resources/Recipes/camp_stone_carving.tres" id="14_vggk8"]
 [ext_resource type="Resource" uid="uid://drm1r5x0plpnr" path="res://Resources/Recipes/camp_traditional_medicine.tres" id="15_bqfr3"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="15_cmqur"]
 [ext_resource type="Resource" uid="uid://71gkprq6v0vd" path="res://Resources/Recipes/camp_wood_carving.tres" id="16_cmqur"]
 [ext_resource type="Script" uid="uid://doa1vbsvkk4tx" path="res://Data/buildings/camp.gd" id="17_vl77t"]
+[ext_resource type="Resource" uid="uid://d13f3l1litam3" path="res://Resources/Buildings/longhouses.tres" id="28_t1wd2"]
 
 [sub_resource type="Resource" id="Resource_j14bi"]
 script = ExtResource("6_jlqba")
@@ -50,5 +57,8 @@ staff_needed = Dictionary[int, int]({
 })
 production_slots = 2
 recipes = Array[ExtResource("6_j14bi")]([ExtResource("7_kllio"), ExtResource("8_jvke4"), ExtResource("9_j27x5"), ExtResource("10_80m7v"), ExtResource("11_jxmh5"), ExtResource("12_t1wd2"), ExtResource("13_5675l"), ExtResource("14_vggk8"), ExtResource("15_bqfr3"), ExtResource("16_cmqur")])
+possible_extentions = Array[ExtResource("5_uah8x")]([ExtResource("11_t1wd2"), ExtResource("12_5675l"), ExtResource("13_vggk8"), ExtResource("14_bqfr3"), null])
+upgrades = Array[ExtResource("5_uah8x")]([ExtResource("28_t1wd2")])
+upgrade_at_level = 4
 level_up_slates = Array[ExtResource("6_jlqba")]([SubResource("Resource_j14bi")])
 metadata/_custom_type_script = "uid://doa1vbsvkk4tx"

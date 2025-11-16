@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Building" load_steps=11 format=3 uid="uid://byg6amjg4srl3"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_peik1"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_v73p5"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_b3st1"]
+[ext_resource type="Resource" uid="uid://du817n882ksa7" path="res://Resources/Stuff/pelt.tres" id="4_452fs"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_22a21"]
+[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_jeuhx"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_5iare"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_526eg"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="9_27f15"]
+
+[sub_resource type="Resource" id="Resource_51i6p"]
+script = ExtResource("9_27f15")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("7_5iare")
+name = "Furrier"
+stats = SubResource("Resource_51i6p")
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_v73p5"), int]({
+ExtResource("3_b3st1"): 25,
+ExtResource("4_452fs"): 25
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+0: 5
+})
+production_slots = 2
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

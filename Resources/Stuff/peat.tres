@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://btqkbmskwto2h"]
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://btqkbmskwto2h"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_f6omy"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_ssxd2"]
 
 [resource]
 script = ExtResource("1_f6omy")
@@ -9,6 +10,9 @@ value = 3.0
 qualities = Dictionary[int, float]({
 1: 2.0,
 6: 75.0
+})
+mystic_qualities = Dictionary[int, float]({
+1: 2.0
 })
 found_in = Array[int]([3])
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

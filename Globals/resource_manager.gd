@@ -15,6 +15,14 @@ func _ready():
 	set_stuff()
 	set_buildings()
 	set_NPCs()
+	
+
+func check_exp_to():
+	for x in RM.stuff.values():
+		if !x.exp_to.is_empty():
+			for y in x.exp_to.keys():
+				if y not in ResearchManager.research.keys():
+					print(x.name+" trying "+y)
 
 func set_species():
 	for x in Biome.TERRAIN.values():

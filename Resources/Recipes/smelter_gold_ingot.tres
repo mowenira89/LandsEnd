@@ -16,4 +16,5 @@ exp_to = Dictionary[String, float]({
 "Goldsmith": 1.0
 })
 unlocked = true
+pollution = 3.0
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

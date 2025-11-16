@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Building" load_steps=12 format=3 uid="uid://bgxleyckw7mxb"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_3l65q"]
+[ext_resource type="Script" uid="uid://bjkwd2eqjow0a" path="res://Data/conditions/needs_terrain_condition.gd" id="2_kdx60"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_lcnfl"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_kdx60"]
+[ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="4_46uh5"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_bok2h"]
+[ext_resource type="Texture2D" uid="uid://b84jbj8yf8d46" path="res://Assets/Images/BuildingImages/windmill.png" id="6_46uh5"]
+[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_ekapg"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_7m53s"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_m4tro"]
+
+[sub_resource type="Resource" id="Resource_bok2h"]
+script = ExtResource("2_kdx60")
+terrain = Array[int]([0])
+metadata/_custom_type_script = "uid://bjkwd2eqjow0a"
+
+[resource]
+script = ExtResource("7_7m53s")
+name = "Windmill"
+upgrade_only = true
+image = ExtResource("6_46uh5")
+construction_time = 3
+construction_materials = Dictionary[ExtResource("2_lcnfl"), int]({
+ExtResource("3_kdx60"): 20,
+ExtResource("4_46uh5"): 5
+})
+construction_level = 2
+construction_conditions = Array[ExtResource("1_3l65q")]([SubResource("Resource_bok2h")])

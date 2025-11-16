@@ -1,12 +1,14 @@
 class_name Person extends Resource
 
-enum KEYWORD {Merchant,Farmer,Hunter,Scout}
+enum PROWESS {Hunting,Gathering,Fishing,Trading,Farming,Smithing,Woodsmith,MiningSavant,
+GreenThumb}
+
 
 @export var title:String
 @export var name:String
 @export var image:Texture2D
 @export var abilities:Array[Ability]
-@export var keywords:Array[KEYWORD]
+@export var prowess:Dictionary[PROWESS,float]
 @export var level:int
 @export var stats:Stats
 @export var CLASS:Pop.CLASS
@@ -14,10 +16,16 @@ enum KEYWORD {Merchant,Farmer,Hunter,Scout}
 @export var beliefs_mods:Dictionary[Beliefs.STATS,float]
 @export var presence_buffs:Buffs
 @export var personal_buffs:Buffs
+@export var territorial_prowess:Dictionary[PROWESS,float]
 @export var current_territory:Territory
 @export var unit:Unit
 @export var unlocked:bool=false
 @export var inventory:UnitInventory
+@export var memories:Array[Memory]
+@export var friend:bool=true
+@export var ally:bool=false
+@export var behavior:Behavior
+
 
 const ICON = "uid://dxqvaehqg2uoa"
 
@@ -52,4 +60,11 @@ func get_personal_buff_total(t:Buff.TYPE):
 	return personal_buffs.get_buffs_total(t)
 
 func end_turn():
-	pass
+	for x in memories:
+		x.end_turn()
+
+func get_prowess(p:PROWESS):
+	if prowess.has(p):
+		return prowess[p]
+	return 0
+		

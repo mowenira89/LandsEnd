@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dm0y1k4lqnrjs"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://dm0y1k4lqnrjs"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_jdl00"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_kj2o1"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_yntti"]
 
 [resource]
@@ -12,6 +13,14 @@ value = 55.0
 qualities = Dictionary[int, float]({
 5: 1.0,
 10: 2.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 2.0,
+1: 2.0,
+4: 5.0
+})
+exp_to = Dictionary[String, float]({
+"Magic Mushroom Ceremony": 1.0
 })
 found_in = Array[int]([3])
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

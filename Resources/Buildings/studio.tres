@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Building" load_steps=21 format=3 uid="uid://cmxgcebf23yff"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_vgav6"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_ig5vp"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_6q613"]
+[ext_resource type="Resource" uid="uid://be3fpj4ymxj8y" path="res://Resources/Stuff/canvas.tres" id="4_bnulh"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_jgn53"]
+[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_plcgm"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_86rn3"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_arla8"]
+[ext_resource type="Resource" uid="uid://ck8mbp08riigx" path="res://Resources/Recipes/studio_horn_carving.tres" id="9_tixce"]
+[ext_resource type="Resource" uid="uid://bqqrbkhecmre5" path="res://Resources/Recipes/studio_ivory_carving.tres" id="10_yragl"]
+[ext_resource type="Resource" uid="uid://cbusq2kilu440" path="res://Resources/Recipes/studio_ivory_sculpture.tres" id="11_fffik"]
+[ext_resource type="Resource" uid="uid://bf0fh0fa7wed4" path="res://Resources/Recipes/studio_pigments_blue.tres" id="12_xm02s"]
+[ext_resource type="Resource" uid="uid://cqgkg4s5n8tgs" path="res://Resources/Recipes/studio_pigments_hematite.tres" id="13_bsx2a"]
+[ext_resource type="Resource" uid="uid://c6w3wkey818ng" path="res://Resources/Recipes/studio_pigments_malachite.tres" id="14_31o5y"]
+[ext_resource type="Resource" uid="uid://d3s4tlv31o4rb" path="res://Resources/Recipes/studio_pigments_ochre.tres" id="15_i5x8u"]
+[ext_resource type="Resource" uid="uid://difjhjtico7tn" path="res://Resources/Recipes/studio_pigment_charcoal.tres" id="16_3akdd"]
+[ext_resource type="Resource" uid="uid://rwgnkpli0ga6" path="res://Resources/Recipes/studio_stone_carving.tres" id="17_wa4y2"]
+[ext_resource type="Resource" uid="uid://jiadqweridtp" path="res://Resources/Recipes/studio_wood_carving.tres" id="18_40mjj"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="19_7rc1u"]
+
+[sub_resource type="Resource" id="Resource_qyiux"]
+script = ExtResource("19_7rc1u")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("7_86rn3")
+name = "Studio"
+stats = SubResource("Resource_qyiux")
+pop_cap = Dictionary[int, int]({
+1: 50
+})
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_ig5vp"), int]({
+ExtResource("3_6q613"): 25,
+ExtResource("4_bnulh"): 15
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+1: 15
+})
+recipes = Array[ExtResource("8_arla8")]([ExtResource("9_tixce"), ExtResource("10_yragl"), ExtResource("11_fffik"), ExtResource("12_xm02s"), ExtResource("13_bsx2a"), ExtResource("14_31o5y"), ExtResource("15_i5x8u"), ExtResource("16_3akdd"), ExtResource("17_wa4y2"), ExtResource("18_40mjj")])
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

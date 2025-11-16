@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Temple" load_steps=12 format=3 uid="uid://dtvqqb000heia"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_vvk0c"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_87pbs"]
+[ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="3_q4l3a"]
+[ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="4_rljk8"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_t0tm4"]
+[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_stdv7"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_6v47q"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_c38yv"]
+[ext_resource type="Script" uid="uid://ds8ftt1ahq3nf" path="res://Data/buildings/temple.gd" id="9_otdv4"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="10_dttfm"]
+
+[sub_resource type="Resource" id="Resource_ci4al"]
+script = ExtResource("10_dttfm")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("9_otdv4")
+pilgrim_draw = 20.0
+name = "Shrine"
+stats = SubResource("Resource_ci4al")
+pop_cap = Dictionary[int, int]({
+3: 100
+})
+construction_time = 4
+construction_materials = Dictionary[ExtResource("2_87pbs"), int]({
+ExtResource("3_q4l3a"): 15,
+ExtResource("4_rljk8"): 10
+})
+construction_level = 3
+metadata/_custom_type_script = "uid://ds8ftt1ahq3nf"

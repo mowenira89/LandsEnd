@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Lecture" load_steps=3 format=3 uid="uid://1ytomei0w6vt"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_xukkb"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="2_d2un2"]
+
+[resource]
+script = ExtResource("2_d2un2")
+name = "Fundamentals of Worship"
+lecture_length = 24
+subject = 2
+pop_training = 3
+train_pops = true
+difficulty = 10
+metadata/_custom_type_script = "uid://m330oqovp04n"
