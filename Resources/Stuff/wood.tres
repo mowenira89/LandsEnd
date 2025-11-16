@@ -13,4 +13,5 @@ qualities = Dictionary[int, float]({
 exp_to = Dictionary[String, float]({
 "Lumber Mill": 1.0
 })
+found_in = Array[int]([0, 1, 2, 3])
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

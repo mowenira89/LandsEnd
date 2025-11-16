@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Storeroom" load_steps=11 format=3 uid="uid://jodwm7umhpxa"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_vkulh"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_iebwb"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_guig0"]
+[ext_resource type="Resource" uid="uid://87npi8da4k00" path="res://Resources/Stuff/brick.tres" id="4_crpwp"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_m320b"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_w0gyi"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_l27rs"]
+[ext_resource type="Script" uid="uid://w6133npa21mi" path="res://Data/buildings/storeroom.gd" id="8_jx0vy"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="9_783l2"]
+
+[sub_resource type="Resource" id="Resource_tfa8y"]
+script = ExtResource("9_783l2")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("8_jx0vy")
+storeroom_cap = 100
+name = "Storeroom"
+unlocked = true
+stats = SubResource("Resource_tfa8y")
+construction_time = 1
+construction_materials = Dictionary[ExtResource("2_iebwb"), int]({
+ExtResource("3_guig0"): 20,
+ExtResource("4_crpwp"): 20
+})
+construction_level = 2
+metadata/_custom_type_script = "uid://w6133npa21mi"

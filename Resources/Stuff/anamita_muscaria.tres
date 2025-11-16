@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://dm0y1k4lqnrjs"]
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dm0y1k4lqnrjs"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_jdl00"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_yntti"]
 
 [resource]
-script = ExtResource("1_jdl00")
+script = ExtResource("2_yntti")
+kind = 6
+rarity = 1.0
 name = "Anamita Muscaria"
 value = 55.0
 qualities = Dictionary[int, float]({

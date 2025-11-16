@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Building" load_steps=10 format=3 uid="uid://ciembxg1our16"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_tmx0d"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_1461h"]
+[ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="3_jfp7f"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="4_mcfye"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_yvk5b"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_q8i2k"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_m8c3u"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="8_4gq12"]
+
+[sub_resource type="Resource" id="Resource_31awn"]
+script = ExtResource("8_4gq12")
+defense = 5.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("6_q8i2k")
+name = "Citadel"
+upgrade_only = true
+stats = SubResource("Resource_31awn")
+pop_cap = Dictionary[int, int]({
+0: 1000,
+1: 1000,
+2: 500,
+3: 500
+})
+construction_time = 10
+construction_materials = Dictionary[ExtResource("2_1461h"), int]({
+ExtResource("3_jfp7f"): 100,
+ExtResource("4_mcfye"): 100
+})
+construction_level = 5
+production_slots = 6
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

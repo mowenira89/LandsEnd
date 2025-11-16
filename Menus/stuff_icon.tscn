@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvm08d8r12hpl"]
+
+[ext_resource type="Script" uid="uid://dvjd3kl0d3w8v" path="res://Menus/stuff_icon.gd" id="1_herfb"]
+
+[node name="StuffIcon" type="Control"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_herfb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Content"
+
+[node name="x" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "x"
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/x" to="." method="_on_x_pressed"]

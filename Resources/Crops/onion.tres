@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=4 format=3 uid="uid://cdvqigqcuonrx"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_cxc1w"]
+[ext_resource type="Resource" uid="uid://d36p6lqy4n2gi" path="res://Resources/Stuff/onion.tres" id="2_ggg4q"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_yn51j"]
+
+[resource]
+script = ExtResource("3_yn51j")
+name = "Onion"
+vitamin_need = 1.0
+water_need = 2.0
+health = 45.0
+produce = Array[ExtResource("1_cxc1w")]([ExtResource("2_ggg4q")])
+metadata/_custom_type_script = "uid://wxkcemfn60gw"

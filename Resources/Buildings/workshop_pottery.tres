@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Building" load_steps=9 format=3 uid="uid://cxynkn3ltngrf"]
 
-[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_nrdji"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_vpnme"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_yokpi"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="4_mpshx"]
 [ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="5_2ull8"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_nrdji"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_0tgph"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_01ros"]
 [ext_resource type="Resource" uid="uid://wot1ehofqjjf" path="res://Resources/Recipes/pottery_amphora.tres" id="8_tf6te"]
@@ -12,13 +12,11 @@
 [resource]
 script = ExtResource("6_0tgph")
 name = "Pottery Worshop"
+upgrade_only = true
 construction_time = 2
 construction_materials = Dictionary[ExtResource("3_yokpi"), int]({
 ExtResource("4_mpshx"): 15,
 ExtResource("5_2ull8"): 5
-})
-construction_staff = Dictionary[int, int]({
-0: 10
 })
 construction_level = 2
 staff_needed = Dictionary[int, int]({

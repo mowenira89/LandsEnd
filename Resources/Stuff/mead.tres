@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://b1rfmg01mmtkm"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_jcej6"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_3jmut"]
+
+[resource]
+script = ExtResource("2_3jmut")
+name = "Mead"
+value = 65.0
+qualities = Dictionary[int, float]({
+0: 1.0,
+2: 4.0,
+10: 3.0
+})
+exp_to = Dictionary[String, float]({
+"Advanced Distillation": 1.0,
+"Mead Ceremony": 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

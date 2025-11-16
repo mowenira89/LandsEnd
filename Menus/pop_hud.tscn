@@ -1,0 +1,135 @@
+[gd_scene load_steps=2 format=3 uid="uid://crkbfw7fflemo"]
+
+[ext_resource type="Script" uid="uid://da14mvow55b7b" path="res://Menus/pop_hud.gd" id="1_se7fx"]
+
+[node name="PopHud" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+script = ExtResource("1_se7fx")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Total: "
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Idle: "
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Employed: "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Followers"
+
+[node name="TotalFollowers" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="IdleFollowers" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="EmployedFollowers" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Soldiers"
+
+[node name="TotalSoldiers" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="IdleSoldiers" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="EmployedSoldiers" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "Monks"
+
+[node name="TotalMonks" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="IdleMonks" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="EmployedMonks" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+text = "Artists"
+
+[node name="TotalArtists" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="IdleArtists" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="EmployedArtists" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1

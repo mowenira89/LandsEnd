@@ -1,0 +1,95 @@
+[gd_scene load_steps=2 format=3 uid="uid://c06pjfpe3rt04"]
+
+[ext_resource type="Script" uid="uid://21nuiqjph7y6" path="res://Menus/stuff_mover.gd" id="1_3pix7"]
+
+[node name="StuffMover" type="MarginContainer"]
+custom_minimum_size = Vector2(0, 60)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -30.0
+offset_right = 350.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_3pix7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_bottom = 10
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="LeftLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Stockpile"
+
+[node name="Stockpile" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "50 "
+horizontal_alignment = 1
+
+[node name="TenStock" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "  <<  "
+
+[node name="OneStock" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "   <    "
+
+[node name="Stuff" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Stuff"
+
+[node name="OneParty" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "    >    "
+
+[node name="TenParty" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "  >>  "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="RightLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "   Party   "
+
+[node name="Party" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/TenStock" to="." method="_on_ten_stock_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/OneStock" to="." method="_on_one_stock_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/OneParty" to="." method="_on_one_party_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/TenParty" to="." method="_on_ten_party_pressed"]

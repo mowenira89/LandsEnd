@@ -1,0 +1,88 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf2q05mnpbcaf"]
+
+[ext_resource type="Script" uid="uid://sda6cmepwqss" path="res://Menus/unit_action_menu.gd" id="1_4dusb"]
+
+[node name="UnitActionMenu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+script = ExtResource("1_4dusb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Move" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Move"
+
+[node name="Assimilate" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exchange"
+
+[node name="Disband" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Disband"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Attack" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Attack"
+
+[node name="Fortify" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Fortify"
+
+[node name="Plunder" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Plunder"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Build" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Build"
+
+[node name="Survey" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Survey"
+
+[node name="Forage" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Forage"
+
+[node name="x" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Move" to="." method="_on_move_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Assimilate" to="." method="_on_assimilate_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer3/Build" to="." method="_on_build_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer3/Survey" to="." method="_on_survey_pressed"]
+[connection signal="pressed" from="MarginContainer/x" to="." method="_on_x_pressed"]

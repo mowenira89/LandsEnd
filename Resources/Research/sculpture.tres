@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Research" load_steps=5 format=3 uid="uid://dyjwvuchlwewt"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_s4ggf"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_kffje"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_56rjy"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_sa8he"]
+
+[resource]
+script = ExtResource("3_56rjy")
+name = "Sculpture"
+recipes = Array[ExtResource("4_sa8he")]([null])
+exp_to_unlock = 25
+inspired_class = 1
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

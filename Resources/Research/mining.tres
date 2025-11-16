@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Research" load_steps=7 format=3 uid="uid://dmv4jxca10c48"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_cwsre"]
+[ext_resource type="Resource" uid="uid://b5ewy0vgr6nbq" path="res://Resources/Buildings/mine.tres" id="2_qygek"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_jjc1a"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="4_m3gwi"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="5_mukyb"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="6_jcym8"]
+
+[resource]
+script = ExtResource("5_mukyb")
+name = "Mining"
+recipes = Array[ExtResource("6_jcym8")]([null])
+buildings = Array[ExtResource("1_cwsre")]([ExtResource("2_qygek")])
+exp_to_unlock = 45
+inspiration_threshold = 60.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

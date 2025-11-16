@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Research" load_steps=6 format=3 uid="uid://dmwj6qacjge8q"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_eotig"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_qbs81"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="3_tf55i"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="4_prep5"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_5vgil"]
+
+[resource]
+script = ExtResource("4_prep5")
+name = "Theurgy"
+exp_to_unlock = 1000
+prerequisites = Array[ExtResource("4_prep5")]([null])
+inspiration_threshold = 10.0
+inspired_class = 3
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

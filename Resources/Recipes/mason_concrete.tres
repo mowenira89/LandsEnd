@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://cjoa407vp84l2"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_x3c2v"]
+[ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="2_rnsyk"]
+[ext_resource type="Resource" uid="uid://cm0xo6ydyl2bi" path="res://Resources/Stuff/gypsum.tres" id="3_8fg3d"]
+[ext_resource type="Resource" uid="uid://b1ue65pvuglfc" path="res://Resources/Stuff/concrete.tres" id="4_f7kam"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_y3nmd"]
+
+[resource]
+script = ExtResource("5_y3nmd")
+name = "Concrete"
+id = "mason_concrete"
+turns = 1
+inputs = Dictionary[ExtResource("1_x3c2v"), int]({
+ExtResource("2_rnsyk"): 1,
+ExtResource("3_8fg3d"): 1
+})
+outputs = Dictionary[ExtResource("1_x3c2v"), int]({
+ExtResource("4_f7kam"): 3
+})
+exp_to = Dictionary[String, float]({
+"Reinforced Concrete": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

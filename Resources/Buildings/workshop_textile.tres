@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Building" load_steps=14 format=3 uid="uid://ceoktbvqlfxoq"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_fd3nv"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_kfl2l"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_1tjdv"]
+[ext_resource type="Resource" uid="uid://dprmx6rm7d6cg" path="res://Resources/Stuff/loom.tres" id="4_mau3h"]
+[ext_resource type="Texture2D" uid="uid://c42uv67w4qlii" path="res://Assets/Images/BuildingImages/textile.png" id="5_xcc1u"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_tyooc"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_ma8wq"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_b0hq6"]
+[ext_resource type="Resource" uid="uid://b075l3lc04412" path="res://Resources/Recipes/textile_canvas.tres" id="9_u1fng"]
+[ext_resource type="Resource" uid="uid://b4s16tr576nar" path="res://Resources/Recipes/textile_fine_clothing.tres" id="10_77wv5"]
+[ext_resource type="Resource" uid="uid://bafbkkc8p42e5" path="res://Resources/Recipes/textile_linen.tres" id="11_j8ygp"]
+[ext_resource type="Resource" uid="uid://crw82wee1xq82" path="res://Resources/Recipes/textile_linen_armor.tres" id="12_3d66m"]
+[ext_resource type="Resource" uid="uid://bid07lpk2shok" path="res://Resources/Recipes/textile_simple_clothing_wool.tres" id="13_6pfcb"]
+
+[resource]
+script = ExtResource("7_ma8wq")
+name = "Textile Workshop"
+image = ExtResource("5_xcc1u")
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_kfl2l"), int]({
+ExtResource("3_1tjdv"): 15,
+ExtResource("4_mau3h"): 10
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+0: 6
+})
+district_type = 3
+production_slots = 2
+recipes = Array[ExtResource("8_b0hq6")]([ExtResource("9_u1fng"), ExtResource("10_77wv5"), ExtResource("11_j8ygp"), ExtResource("12_3d66m"), ExtResource("13_6pfcb")])
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

@@ -1,19 +1,12 @@
-class_name UnitInventory extends Stockpile
+class_name UnitInventory extends Unit
 
-var unit:Unit
+var person:Person
 
-func init(u:Unit):
-	unit=u
-	
-	
-func get_capacity():
-	var r=1
-	for x in stuff.keys():
-		if x.qualities.has(Stuff.QUALITIES.Capacity):
-			r+=x.qualities[Stuff.QUALITIES.Capacity]*stuff[x]
-	r+=unit.get_total_followers()
-	capacity=r
-
-func add_stuff(s:Stuff,a:float):
-	super(s,a)
-	
+func init(l:Person):
+	person=l
+	if cargo==null:
+		cargo=Stockpile.new()
+		cargo.owner=self
+	if outfit==null:
+		outfit=Stockpile.new()
+		outfit.owner=self	

@@ -54,10 +54,4 @@ alignment = 2
 layout_mode = 2
 text = "Build"
 
-[node name="Survey" type="Button" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-toggle_mode = true
-text = "Survey"
-
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Build" to="." method="_on_build_pressed"]
-[connection signal="toggled" from="VBoxContainer/HBoxContainer/Survey" to="." method="_on_survey_toggled"]

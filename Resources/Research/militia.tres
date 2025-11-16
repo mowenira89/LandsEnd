@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Research" load_steps=5 format=3 uid="uid://b5wvpi3sdlrri"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_c8hka"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_8wn37"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_eaebh"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_f8kjg"]
+
+[resource]
+script = ExtResource("3_eaebh")
+name = "Militia"
+exp_to_unlock = 15
+inspiration_threshold = 26.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

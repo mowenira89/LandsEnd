@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Research" load_steps=6 format=3 uid="uid://dmffih27j5sab"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_naveb"]
+[ext_resource type="Resource" uid="uid://vyyhdli2faa6" path="res://Resources/Buildings/farm.tres" id="2_vmf5c"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="3_ecg7o"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="4_snqvf"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_04aui"]
+
+[resource]
+script = ExtResource("4_snqvf")
+name = "Farming"
+buildings = Array[ExtResource("1_naveb")]([ExtResource("2_vmf5c")])
+exp_to_unlock = 25
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

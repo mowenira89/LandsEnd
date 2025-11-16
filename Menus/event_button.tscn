@@ -11,8 +11,10 @@ layout_mode = 2
 text = "This is an event. "
 script = ExtResource("1_xoek6")
 
-[node name="Button2" type="Button" parent="."]
+[node name="x" type="Button" parent="."]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 text = "X"
+
+[connection signal="pressed" from="x" to="Button" method="_on_x_pressed"]

@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://qnfs1ibtvf1e"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_ir43b"]
-[ext_resource type="Resource" uid="uid://d20v07glb4l0u" path="res://Resources/Stuff/ivory.tres" id="2_fymdr"]
-[ext_resource type="Resource" uid="uid://dxh7plba4467d" path="res://Resources/Stuff/ivory_carving.tres" id="3_slqpn"]
+[ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="2_ir43b"]
+[ext_resource type="Resource" uid="uid://x4aq2q22kqxn" path="res://Resources/Stuff/stone_carving.tres" id="3_fymdr"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_27b7v"]
 
 [resource]
@@ -11,10 +11,10 @@ name = "Stone Carving"
 id = "workshop_stone_carving"
 turns = 1
 inputs = Dictionary[ExtResource("1_ir43b"), int]({
-ExtResource("2_fymdr"): 1
+ExtResource("2_ir43b"): 1
 })
 outputs = Dictionary[ExtResource("1_ir43b"), int]({
-ExtResource("3_slqpn"): 3
+ExtResource("3_fymdr"): 2
 })
 exp_to = Dictionary[String, float]({
 "Sculpture Studio": 1.0

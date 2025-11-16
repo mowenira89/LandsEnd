@@ -9,11 +9,12 @@
 script = ExtResource("4_5q44n")
 name = "Mithril Armor"
 id = "whitesmith_mithril_armor"
-turns = 1
+turns = 2
 inputs = Dictionary[ExtResource("1_a85sx"), int]({
 ExtResource("2_7feoo"): 1
 })
 outputs = Dictionary[ExtResource("1_a85sx"), int]({
 ExtResource("3_sbee0"): 1
 })
+exp_value = 5.0
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

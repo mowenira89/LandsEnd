@@ -20,4 +20,5 @@ ExtResource("4_cd462"): 1
 outputs = Dictionary[ExtResource("1_r2pjt"), int]({
 ExtResource("5_xfnes"): 1
 })
+exp_value = 2.0
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

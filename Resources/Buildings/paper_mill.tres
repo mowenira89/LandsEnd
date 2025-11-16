@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Building" load_steps=12 format=3 uid="uid://b3aqw1egapgqt"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_syh4g"]
+[ext_resource type="Script" uid="uid://fq88cbj1x31o" path="res://Data/conditions/needs_water_condition.gd" id="2_6wqgo"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_qna68"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="4_kqtc0"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="5_1kw4j"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_a2hra"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_yvd6b"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_4t8s5"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="9_dpasl"]
+
+[sub_resource type="Resource" id="Resource_o6rv7"]
+script = ExtResource("2_6wqgo")
+metadata/_custom_type_script = "uid://fq88cbj1x31o"
+
+[sub_resource type="Resource" id="Resource_e6mqm"]
+script = ExtResource("9_dpasl")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("7_yvd6b")
+name = "Paper Mill"
+upgrade_only = true
+stats = SubResource("Resource_e6mqm")
+construction_time = 2
+construction_materials = Dictionary[ExtResource("3_qna68"), int]({
+ExtResource("4_kqtc0"): 15,
+ExtResource("5_1kw4j"): 15
+})
+construction_level = 2
+construction_conditions = Array[ExtResource("1_syh4g")]([SubResource("Resource_o6rv7")])
+staff_needed = Dictionary[int, int]({
+0: 10
+})
+district_type = 3
+production_slots = 2
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Research" load_steps=6 format=3 uid="uid://cwnntj46c4hx5"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_e77n3"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_kge65"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_28b1e"]
+[ext_resource type="Resource" uid="uid://b5wvpi3sdlrri" path="res://Resources/Research/militia.tres" id="4_kge65"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_kl60c"]
+
+[resource]
+script = ExtResource("3_28b1e")
+name = "Armory"
+buildings = Array[ExtResource("1_e77n3")]([null])
+exp_to_unlock = 50
+prerequisites = Array[ExtResource("3_28b1e")]([ExtResource("4_kge65")])
+inspiration_threshold = 25.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

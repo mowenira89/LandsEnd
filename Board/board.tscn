@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://cc4jjk0qer8ds"]
+[gd_scene load_steps=35 format=4 uid="uid://cc4jjk0qer8ds"]
 
 [ext_resource type="Texture2D" uid="uid://6ddnc08k2vlq" path="res://Assets/Images/Territory Tiles/water.png" id="1_7ncmu"]
 [ext_resource type="Script" uid="uid://b2e3ta76l8vr" path="res://Board/board.gd" id="1_ehn5f"]
@@ -16,6 +16,16 @@
 [ext_resource type="PackedScene" uid="uid://3oe6auv0cv7j" path="res://Menus/districts_view.tscn" id="12_5ybqi"]
 [ext_resource type="PackedScene" uid="uid://vbjlty56mu01" path="res://Menus/unit_view.tscn" id="13_5ybqi"]
 [ext_resource type="PackedScene" uid="uid://c60n5wh7jo5h2" path="res://Menus/npc_view.tscn" id="14_1cpk3"]
+[ext_resource type="PackedScene" uid="uid://d4grqya58kder" path="res://Menus/basic_building_view.tscn" id="15_aaue3"]
+[ext_resource type="PackedScene" uid="uid://nvlxpklqmgok" path="res://Menus/pop_bottom_menu.tscn" id="16_0fkod"]
+[ext_resource type="PackedScene" uid="uid://crkbfw7fflemo" path="res://Menus/pop_hud.tscn" id="17_mjeqw"]
+[ext_resource type="Script" uid="uid://bk6647o8qcyff" path="res://Menus/top_menu.gd" id="18_6dage"]
+[ext_resource type="PackedScene" uid="uid://bew5nturr15aw" path="res://Menus/create_unit_screen.tscn" id="18_7oini"]
+[ext_resource type="PackedScene" uid="uid://517t13bv8ubd" path="res://Menus/recipe_menu.tscn" id="18_e123n"]
+[ext_resource type="PackedScene" uid="uid://bf2q05mnpbcaf" path="res://Menus/unit_action_menu.tscn" id="19_4kang"]
+[ext_resource type="PackedScene" uid="uid://cqwhwxmmfa8kg" path="res://Menus/exchange_window.tscn" id="20_7hvnj"]
+[ext_resource type="PackedScene" uid="uid://d15ij77ctqagt" path="res://Menus/assimilation.tscn" id="20_y4q0p"]
+[ext_resource type="Script" uid="uid://c2uxq8qn50gd7" path="res://Board/message_box.gd" id="24_e123n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_733os"]
 texture = ExtResource("1_7ncmu")
@@ -81,6 +91,14 @@ script = ExtResource("8_hmvj7")
 [node name="Menus" type="CanvasLayer" parent="."]
 script = ExtResource("8_mjcd3")
 
+[node name="Screen" type="ColorRect" parent="Menus"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
 [node name="SideMenu" type="Control" parent="Menus"]
 layout_mode = 3
 anchors_preset = 0
@@ -89,6 +107,7 @@ offset_top = 1.0
 offset_right = 1797.0
 offset_bottom = 853.0
 size_flags_horizontal = 8
+mouse_filter = 1
 
 [node name="ColorRect" type="ColorRect" parent="Menus/SideMenu"]
 layout_mode = 1
@@ -97,6 +116,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0, 0, 0, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="Menus/SideMenu/ColorRect"]
@@ -134,32 +154,61 @@ layout_mode = 2
 [node name="NPC_View" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" instance=ExtResource("14_1cpk3")]
 layout_mode = 2
 
+[node name="BasicBuildingView" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" instance=ExtResource("15_aaue3")]
+layout_mode = 2
+
 [node name="TopButtons" type="HBoxContainer" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="Button" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons"]
+[node name="Land" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons"]
 layout_mode = 2
 text = "Land"
 
-[node name="Button2" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons"]
+[node name="People" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons"]
 layout_mode = 2
 text = "People"
+
+[node name="Events" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons"]
+layout_mode = 2
+text = "Events"
 
 [node name="LandButtons" type="HBoxContainer" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="PeopleButtons" type="HBoxContainer" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Population" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/PeopleButtons"]
+layout_mode = 2
+text = "Population"
+
+[node name="Individuals" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/PeopleButtons"]
+layout_mode = 2
+text = "Individuals"
 
 [node name="SideBottom" type="Control" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 350)
 layout_mode = 2
 size_flags_vertical = 10
+mouse_filter = 1
 
 [node name="DistrictsView" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("12_5ybqi")]
+layout_mode = 1
+
+[node name="PopBottomMenu" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("16_0fkod")]
+layout_mode = 1
+
+[node name="RecipeMenu" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("18_e123n")]
+layout_mode = 1
+
+[node name="UnitActionMenu" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("19_4kang")]
+layout_mode = 1
+
+[node name="ExchangeWindow" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("20_7hvnj")]
 layout_mode = 1
 
 [node name="BottomMenu" type="Control" parent="Menus"]
@@ -198,6 +247,7 @@ layout_mode = 2
 offset_right = 968.0
 offset_bottom = 156.0
 color = Color(0, 0, 0, 1)
+script = ExtResource("18_6dage")
 
 [node name="MarginContainer" type="MarginContainer" parent="Menus/TopMenu"]
 layout_mode = 1
@@ -210,3 +260,128 @@ theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menus/TopMenu/MarginContainer"]
+layout_mode = 2
+
+[node name="PopHud" parent="Menus/TopMenu/MarginContainer/HBoxContainer" instance=ExtResource("17_mjeqw")]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menus/TopMenu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+alignment = 1
+
+[node name="Week" type="Label" parent="Menus/TopMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Week 1"
+horizontal_alignment = 1
+
+[node name="Month" type="Label" parent="Menus/TopMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "THAWBRAWN"
+
+[node name="EndTurn" type="Button" parent="Menus/TopMenu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "  End Turn  "
+
+[node name="CreateUnit" parent="Menus" instance=ExtResource("18_7oini")]
+visible = false
+
+[node name="Assimilation" parent="Menus" instance=ExtResource("20_y4q0p")]
+visible = false
+
+[node name="Alert" type="ColorRect" parent="Menus"]
+visible = false
+offset_left = 92.0
+offset_top = 255.0
+offset_right = 887.0
+offset_bottom = 351.0
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="AlertLabel" type="Label" parent="Menus/Alert"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "The text should really be this big"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndTurnBox" type="ColorRect" parent="Menus"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.69803923)
+script = ExtResource("24_e123n")
+
+[node name="MarginContainer" type="MarginContainer" parent="Menus/EndTurnBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -163.5
+offset_right = 250.0
+offset_bottom = 163.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Menus/EndTurnBox/MarginContainer"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menus/EndTurnBox/MarginContainer"]
+layout_mode = 2
+
+[node name="TurnLabel" type="Label" parent="Menus/EndTurnBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "End of Turn"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Menus/EndTurnBox/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+
+[node name="MessageContainer" type="VBoxContainer" parent="Menus/EndTurnBox/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="StartTurn" type="Button" parent="Menus/EndTurnBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Begin"
+
+[connection signal="mouse_entered" from="Menus/Screen" to="." method="_on_screen_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/Screen" to="." method="_on_screen_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu" to="." method="_on_side_menu_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu" to="." method="_on_side_menu_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" to="." method="_on_side_top_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" to="." method="_on_side_top_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/TerritoryStats" to="." method="_on_territory_stats_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/TerritoryStats" to="." method="_on_territory_stats_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/DistrictStats" to="." method="_on_district_stats_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/DistrictStats" to="." method="_on_district_stats_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/BuildMenu" to="." method="_on_build_menu_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/BuildMenu" to="." method="_on_build_menu_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/UnitView" to="." method="_on_unit_view_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/UnitView" to="." method="_on_unit_view_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/NPC_View" to="." method="_on_npc_view_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/NPC_View" to="." method="_on_npc_view_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/BasicBuildingView" to="." method="_on_basic_building_view_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/BasicBuildingView" to="." method="_on_basic_building_view_mouse_exited"]
+[connection signal="pressed" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/Land" to="Menus" method="_on_land_pressed"]
+[connection signal="pressed" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/People" to="Menus" method="_on_people_pressed"]
+[connection signal="pressed" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/Events" to="Menus" method="_on_events_pressed"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" to="." method="_on_side_bottom_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" to="." method="_on_side_bottom_mouse_exited"]
+[connection signal="pressed" from="Menus/TopMenu/MarginContainer/HBoxContainer/EndTurn" to="Menus" method="_on_end_turn_pressed"]
+[connection signal="pressed" from="Menus/EndTurnBox/MarginContainer/VBoxContainer/StartTurn" to="Menus/EndTurnBox" method="_on_start_turn_pressed"]

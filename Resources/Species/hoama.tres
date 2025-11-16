@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://2tk6h5o834s2"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_qseb5"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_jli5e"]
+
+[resource]
+script = ExtResource("2_jli5e")
+kind = 6
+name = "Hoama"
+value = 200.0
+qualities = Dictionary[int, float]({
+5: 1.0,
+10: 5.0
+})
+exp_to = Dictionary[String, float]({
+"Hoama Ceremony": 1.0
+})
+found_in = Array[int]([0])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

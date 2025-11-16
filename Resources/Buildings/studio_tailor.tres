@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Building" load_steps=15 format=3 uid="uid://c4taov21qht8o"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_0hyas"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_wwbm5"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_2n80c"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="4_qqb2d"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="5_ygg8b"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="6_84x0l"]
+[ext_resource type="Resource" uid="uid://c30ql271iqtyb" path="res://Resources/Recipes/tailor_fancy_dress.tres" id="7_8q7do"]
+[ext_resource type="Resource" uid="uid://cr8vdbd74lcvo" path="res://Resources/Recipes/tailor_fine_clothing.tres" id="8_bkh1a"]
+[ext_resource type="Resource" uid="uid://dfao5oua6uhrf" path="res://Resources/Recipes/tailor_fine_clothing_silk.tres" id="9_g4f4r"]
+[ext_resource type="Resource" uid="uid://btd2q65ah033t" path="res://Resources/Recipes/tailor_clothing_canvas.tres" id="10_qqb2d"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="10_rixmf"]
+[ext_resource type="Resource" uid="uid://bnt4y2k4v36qi" path="res://Resources/Recipes/tailor_clothing_cloth.tres" id="11_ygg8b"]
+[ext_resource type="Resource" uid="uid://brx3t6iicixdf" path="res://Resources/Recipes/tailor_clothing_pelt.tres" id="12_84x0l"]
+
+[sub_resource type="Resource" id="Resource_xwswp"]
+script = ExtResource("10_rixmf")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("5_ygg8b")
+name = "Tailor"
+upgrade_only = true
+stats = SubResource("Resource_xwswp")
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_wwbm5"), int]({
+ExtResource("3_2n80c"): 15
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+1: 5
+})
+district_type = 3
+production_slots = 2
+recipes = Array[ExtResource("6_84x0l")]([ExtResource("7_8q7do"), ExtResource("8_bkh1a"), ExtResource("9_g4f4r"), ExtResource("10_qqb2d"), ExtResource("11_ygg8b"), ExtResource("12_84x0l")])
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

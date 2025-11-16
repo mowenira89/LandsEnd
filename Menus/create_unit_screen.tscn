@@ -1,0 +1,305 @@
+[gd_scene load_steps=7 format=3 uid="uid://bew5nturr15aw"]
+
+[ext_resource type="Script" uid="uid://dh07evwblh4gk" path="res://Menus/create_unit_screen.gd" id="1_5xanp"]
+[ext_resource type="Theme" uid="uid://b3tuuffn62byp" path="res://Assets/Themes/menu.tres" id="1_ytj7v"]
+[ext_resource type="Script" uid="uid://d3yg81snwi5h" path="res://Data/stockpile.gd" id="2_eaher"]
+[ext_resource type="PackedScene" uid="uid://nk2nf7urmdxa" path="res://Menus/PersonSelectButton.tscn" id="4_nrl4f"]
+[ext_resource type="PackedScene" uid="uid://c06pjfpe3rt04" path="res://Menus/stuff_mover.tscn" id="5_nrl4f"]
+
+[sub_resource type="Resource" id="Resource_gbew0"]
+script = ExtResource("2_eaher")
+metadata/_custom_type_script = "uid://d3yg81snwi5h"
+
+[node name="CreateUnit" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8509804)
+script = ExtResource("1_5xanp")
+stockpile = SubResource("Resource_gbew0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.0
+offset_top = -200.0
+offset_right = 627.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Leader"
+horizontal_alignment = 1
+
+[node name="PersonSelectorButton" parent="VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource("4_nrl4f")]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(1000, 400)
+layout_mode = 2
+theme = ExtResource("1_ytj7v")
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+text = "Outfit: "
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+text = "Companions: "
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+text = "Guard:"
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+text = "Followers: "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Outfit1" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "1 Flying Carpet"
+
+[node name="Outfit2" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "1 Flying Carpet"
+
+[node name="Outfit3" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "1 Flying Carpet"
+
+[node name="Outfit4" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "1 Flying Carpet"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Companion1" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer3" instance=ExtResource("4_nrl4f")]
+layout_mode = 2
+
+[node name="Companion2" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer3" instance=ExtResource("4_nrl4f")]
+layout_mode = 2
+
+[node name="Companion3" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer3" instance=ExtResource("4_nrl4f")]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Guard1" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer5" instance=ExtResource("4_nrl4f")]
+layout_mode = 2
+
+[node name="Guard2" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer5" instance=ExtResource("4_nrl4f")]
+layout_mode = 2
+
+[node name="Guard3" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer5" instance=ExtResource("4_nrl4f")]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Followers" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer4"]
+layout_mode = 2
+text = "0 Followers"
+
+[node name="Soldiers" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer4"]
+layout_mode = 2
+text = "0 Soldiers"
+
+[node name="Artists" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer4"]
+layout_mode = 2
+text = "0 Artists"
+
+[node name="Monks" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer4"]
+layout_mode = 2
+text = "0 Monks"
+
+[node name="HBoxContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 20
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/ScrollContainer/CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/ScrollContainer/CenterContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 250
+
+[node name="MoverHolder" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/ScrollContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Storage Capacity: 100 "
+
+[node name="Speed" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Speed: 1"
+
+[node name="Offense" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Offense: 0"
+
+[node name="Defense" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Defense: 0"
+
+[node name="Overlay" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 0.8)
+
+[node name="StoreContainerContainer" type="MarginContainer" parent="Overlay"]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 253.0
+offset_right = 1308.0
+offset_bottom = 753.0
+
+[node name="ColorRect" type="ColorRect" parent="Overlay/StoreContainerContainer"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Overlay/StoreContainerContainer/ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StoreContainer" type="VBoxContainer" parent="Overlay/StoreContainerContainer/ColorRect/ScrollContainer"]
+layout_mode = 2
+
+[node name="StuffMover" type="MarginContainer" parent="Overlay"]
+layout_mode = 0
+offset_left = 599.0
+offset_top = 349.0
+offset_right = 949.0
+offset_bottom = 444.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Overlay/StuffMover"]
+layout_mode = 2
+
+[node name="StuffMover" parent="Overlay/StuffMover/VBoxContainer" instance=ExtResource("5_nrl4f")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Overlay/StuffMover/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Cancel" type="Button" parent="Overlay/StuffMover/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Cancel "
+
+[node name="OK" type="Button" parent="Overlay/StuffMover/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "OK"
+
+[node name="AddCargo" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1339.0
+offset_top = 590.0
+offset_right = 1467.0
+offset_bottom = 632.0
+theme = ExtResource("1_ytj7v")
+text = "Add Cargo"
+
+[connection signal="gui_input" from="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/Outfit1" to="." method="_on_outfit_1_gui_input"]
+[connection signal="gui_input" from="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/Outfit2" to="." method="_on_outfit_2_gui_input"]
+[connection signal="gui_input" from="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/Outfit3" to="." method="_on_outfit_3_gui_input"]
+[connection signal="gui_input" from="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/Outfit4" to="." method="_on_outfit_4_gui_input"]
+[connection signal="pressed" from="Overlay/StuffMover/VBoxContainer/HBoxContainer/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="Overlay/StuffMover/VBoxContainer/HBoxContainer/OK" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="AddCargo" to="." method="_on_add_cargo_pressed"]

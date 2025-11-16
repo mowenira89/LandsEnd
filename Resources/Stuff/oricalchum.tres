@@ -6,4 +6,7 @@
 script = ExtResource("1_ynjau")
 name = "Oricalchum"
 value = 45.0
+exp_to = Dictionary[String, float]({
+"Electromancy": 1.0
+})
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

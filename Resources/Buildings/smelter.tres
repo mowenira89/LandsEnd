@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Building" load_steps=17 format=3 uid="uid://cmdo7n46mq0em"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_el85g"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_ihqb2"]
+[ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="3_32d8y"]
+[ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="4_iex4i"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_7iv3x"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_xl1qk"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_64uxn"]
+[ext_resource type="Resource" uid="uid://domj8ccbp6wjq" path="res://Resources/Recipes/smelter_copper_ingot.tres" id="8_3cdyv"]
+[ext_resource type="Resource" uid="uid://carbbrw5n73um" path="res://Resources/Recipes/smelter_gold_ingot.tres" id="9_cgrwf"]
+[ext_resource type="Resource" uid="uid://25mq1rtxotke" path="res://Resources/Recipes/smelter_iron_ingot.tres" id="10_khlsp"]
+[ext_resource type="Resource" uid="uid://ccf7niqhjvcce" path="res://Resources/Recipes/smelter_orichalcum.tres" id="11_gkjfw"]
+[ext_resource type="Resource" uid="uid://dk604h1unoagc" path="res://Resources/Recipes/smelter_refined_mithril.tres" id="12_06pmi"]
+[ext_resource type="Resource" uid="uid://cvywvqoel40jn" path="res://Resources/Recipes/smelter_silver_ingot.tres" id="13_aumex"]
+[ext_resource type="Resource" uid="uid://ud03cqfqm02f" path="res://Resources/Recipes/smelter_tin_ingot.tres" id="14_dhpmh"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="15_oyaud"]
+
+[sub_resource type="Resource" id="Resource_rlh43"]
+script = ExtResource("15_oyaud")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("6_xl1qk")
+name = "Smelter"
+stats = SubResource("Resource_rlh43")
+construction_time = 3
+construction_materials = Dictionary[ExtResource("2_ihqb2"), int]({
+ExtResource("3_32d8y"): 10,
+ExtResource("4_iex4i"): 25
+})
+construction_level = 3
+staff_needed = Dictionary[int, int]({
+0: 10
+})
+district_type = 3
+production_slots = 2
+recipes = Array[ExtResource("7_64uxn")]([ExtResource("8_3cdyv"), ExtResource("9_cgrwf"), ExtResource("10_khlsp"), ExtResource("11_gkjfw"), ExtResource("12_06pmi"), ExtResource("13_aumex"), ExtResource("14_dhpmh")])
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://cc2dfmy7c53wl"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_jmfd6"]
+[ext_resource type="Resource" uid="uid://r5vcco63ai5s" path="res://Resources/Stuff/grain.tres" id="2_3dubt"]
+[ext_resource type="Resource" uid="uid://cskujfa1ue1oe" path="res://Resources/Stuff/milk.tres" id="3_5g2gx"]
+[ext_resource type="Resource" uid="uid://yoxeirj6vbuq" path="res://Resources/Stuff/chowder.tres" id="4_ewhcc"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_upvf4"]
+
+[resource]
+script = ExtResource("5_upvf4")
+name = "Chowder"
+id = "restaurant_chowder"
+turns = 1
+inputs = Dictionary[ExtResource("1_jmfd6"), int]({
+ExtResource("2_3dubt"): 1,
+ExtResource("3_5g2gx"): 1
+})
+outputs = Dictionary[ExtResource("1_jmfd6"), int]({
+ExtResource("4_ewhcc"): 2
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

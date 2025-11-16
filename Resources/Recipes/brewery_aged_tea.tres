@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cibwb3tmgdq54"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_gned4"]
+[ext_resource type="Resource" uid="uid://dduf4xcy2iye2" path="res://Resources/Stuff/tea.tres" id="2_ach8n"]
+[ext_resource type="Resource" uid="uid://d1vnqy1g1h3qc" path="res://Resources/Stuff/aged_tea.tres" id="3_2b4x3"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_ohukt"]
+
+[resource]
+script = ExtResource("4_ohukt")
+name = "Aged Tea"
+id = "brewery_aged_tea"
+turns = 10
+inputs = Dictionary[ExtResource("1_gned4"), int]({
+ExtResource("2_ach8n"): 1
+})
+outputs = Dictionary[ExtResource("1_gned4"), int]({
+ExtResource("3_2b4x3"): 1
+})
+exp_to = Dictionary[String, float]({
+"Tea Ceremony": 2.0
+})
+exp_value = 2.0
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

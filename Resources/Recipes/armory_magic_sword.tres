@@ -19,4 +19,5 @@ ExtResource("3_jbti6"): 1
 exp_to = Dictionary[String, float]({
 "Orangesmith": 1.0
 })
+exp_value = 5.0
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

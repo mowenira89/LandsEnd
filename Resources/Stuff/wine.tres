@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://c6qmed27pj8nr"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_dsskv"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_0dqcl"]
+
+[resource]
+script = ExtResource("2_0dqcl")
+name = "Wine"
+value = 25.0
+qualities = Dictionary[int, float]({
+2: 3.0,
+10: 2.0,
+11: 1.0
+})
+exp_to = Dictionary[String, float]({
+"Advanced Distillation": 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

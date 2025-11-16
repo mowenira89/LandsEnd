@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://d1vnqy1g1h3qc"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_colsf"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_3becy"]
+
+[resource]
+script = ExtResource("2_3becy")
+name = "Aged Tea"
+value = 50.0
+qualities = Dictionary[int, float]({
+2: 6.0
+})
+exp_to = Dictionary[String, float]({
+"Tea Ceremony": 2.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

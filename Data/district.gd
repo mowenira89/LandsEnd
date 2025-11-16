@@ -1,6 +1,6 @@
 class_name District extends Resource
 
-enum TYPES {Wild,Sacred,Agricultural,Industrial,Mining}
+enum TYPES {Wild,Sacred,Agricultural,Industrial,Mining,Military,Residential}
 
 @export var biome:Biome
 @export var type:TYPES
@@ -8,7 +8,11 @@ enum TYPES {Wild,Sacred,Agricultural,Industrial,Mining}
 @export var building:Building
 @export var index:int
 @export var construction_time:int=0
-@export var surveyed:bool=false
+
+@export var discovered_game:Array[Species]
+@export var discovered_flora:Array[Species]
+@export var discovered_resources:Array[Stuff]
+@export var discovered_forage:Array[Stuff]
 
 func create(t:Territory,i:int):
 	territory=t
@@ -20,3 +24,20 @@ func create(t:Territory,i:int):
 		type=TYPES.Wild
 	biome=Biome.new()
 	biome.create()
+
+func fauna_spotted(s:Species):
+	if s not in discovered_game:
+		discovered_game.append(s)
+		#SEND MESSAGE
+		
+func flora_spotted(s:Species):
+	if s not in discovered_flora:
+		discovered_flora.append(s)
+
+func resource_spotted(s:Stuff):
+	if s not in discovered_resources:
+		discovered_resources.append(s)
+		
+func forage_spotted(s:Stuff):
+	if s not in discovered_forage:
+		discovered_forage.append(s)

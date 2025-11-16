@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Research" load_steps=5 format=3 uid="uid://cnxla5x8wv1pu"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_x7dmf"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_yjnsg"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_i8q6p"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_bkmc6"]
+
+[resource]
+script = ExtResource("3_i8q6p")
+name = "Tea Ceremony"
+exp_to_unlock = 100
+inspiration_threshold = 5.0
+inspired_class = 3
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

@@ -13,7 +13,7 @@ func _ready():
 	GM.camera=self
 
 func _unhandled_input(event: InputEvent) -> void:
-	if !dont_zoom:
+	if GM.board.can_zoom:
 		if event.is_action_pressed("MWD"):
 			zoom_in()
 		elif event.is_action_pressed("MWU"):

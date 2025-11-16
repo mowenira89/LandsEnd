@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://llwhodni4ash"]
+
+[ext_resource type="Script" uid="uid://parowijsknue" path="res://Menus/recipe_button.gd" id="1_o3jy2"]
+
+[sub_resource type="Theme" id="Theme_o3jy2"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+
+[node name="RecipeButton" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_o3jy2")
+
+[node name="RecipeButton" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme = SubResource("Theme_o3jy2")
+color = Color(0.48570347, 0.48570353, 0.48570347, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Inputs" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Stuff" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Outputs" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[connection signal="gui_input" from="RecipeButton" to="RecipeButton" method="_on_gui_input"]

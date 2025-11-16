@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Research" load_steps=7 format=3 uid="uid://dp1hi5cgcithi"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_8dwup"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_udgpv"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_hlif7"]
+[ext_resource type="Resource" uid="uid://cfgx2mn2nq4cv" path="res://Resources/Research/metallurgy.tres" id="4_40epg"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_802gj"]
+[ext_resource type="Resource" uid="uid://25mq1rtxotke" path="res://Resources/Recipes/smelter_iron_ingot.tres" id="6_e5x45"]
+
+[resource]
+script = ExtResource("3_hlif7")
+name = "Ironwork"
+recipes = Array[ExtResource("5_802gj")]([ExtResource("6_e5x45")])
+exp_to_unlock = 25
+prerequisites = Array[ExtResource("3_hlif7")]([ExtResource("4_40epg")])
+inspiration_threshold = 10.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

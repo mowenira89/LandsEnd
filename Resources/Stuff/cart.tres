@@ -7,6 +7,7 @@ script = ExtResource("1_fem4k")
 name = "Cart"
 value = 35.0
 qualities = Dictionary[int, float]({
+8: 2.0,
 12: 100.0,
 13: 2.0
 })

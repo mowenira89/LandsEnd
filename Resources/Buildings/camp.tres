@@ -44,9 +44,6 @@ construction_materials = Dictionary[ExtResource("2_lm60y"), int]({
 ExtResource("3_j13ja"): 10,
 ExtResource("4_jlqba"): 10
 })
-construction_staff = Dictionary[int, int]({
-0: 10
-})
 construction_level = 1
 staff_needed = Dictionary[int, int]({
 0: 10

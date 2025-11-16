@@ -16,4 +16,5 @@ ExtResource("2_itxtl"): 3
 outputs = Dictionary[ExtResource("1_glx8g"), int]({
 ExtResource("3_n2wis"): 1
 })
+exp_value = 5.0
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

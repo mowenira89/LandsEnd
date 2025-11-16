@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Research" load_steps=15 format=3 uid="uid://cvx5p01d1hrdf"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_42bfu"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_g27l3"]
+[ext_resource type="Script" uid="uid://dy2kpn5vls50" path="res://Data/conditions/need_resource_condition.gd" id="3_ew3hj"]
+[ext_resource type="Resource" uid="uid://baewvmenynp8x" path="res://Resources/Stuff/oricalc.tres" id="4_tf4x2"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="5_6j4d7"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="6_3hhp6"]
+[ext_resource type="Resource" uid="uid://cfgx2mn2nq4cv" path="res://Resources/Research/metallurgy.tres" id="7_078c5"]
+[ext_resource type="Resource" uid="uid://dp1hi5cgcithi" path="res://Resources/Research/ironwork.tres" id="8_ikaaj"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_l714d"]
+[ext_resource type="Resource" uid="uid://ccf7niqhjvcce" path="res://Resources/Recipes/smelter_orichalcum.tres" id="10_hi6y5"]
+[ext_resource type="Resource" uid="uid://be2sap83vst3q" path="res://Resources/Recipes/orangesmith_orichalcum.tres" id="11_5mvt6"]
+[ext_resource type="Resource" uid="uid://bucl5geng83cp" path="res://Resources/Recipes/armory_magic_sword.tres" id="12_ew3hj"]
+[ext_resource type="Resource" uid="uid://c744m7rld0yy3" path="res://Resources/Recipes/orangesmith_magic_sword.tres" id="13_tf4x2"]
+
+[sub_resource type="Resource" id="Resource_ljc2v"]
+script = ExtResource("3_ew3hj")
+stuff = ExtResource("4_tf4x2")
+metadata/_custom_type_script = "uid://dy2kpn5vls50"
+
+[resource]
+script = ExtResource("6_3hhp6")
+name = "Orangesmithing"
+recipes = Array[ExtResource("9_l714d")]([ExtResource("10_hi6y5"), ExtResource("11_5mvt6"), ExtResource("12_ew3hj"), ExtResource("13_tf4x2")])
+exp_to_unlock = 200
+prerequisites = Array[ExtResource("6_3hhp6")]([ExtResource("7_078c5"), ExtResource("8_ikaaj")])
+inspiration_threshold = 10.0
+conditions = Array[ExtResource("2_g27l3")]([SubResource("Resource_ljc2v")])
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

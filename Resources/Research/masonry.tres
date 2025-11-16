@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Research" load_steps=5 format=3 uid="uid://ua5auyt0c053"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_vwls2"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_612lx"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_m8mhw"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_gvap3"]
+
+[resource]
+script = ExtResource("3_m8mhw")
+name = "Masonry"
+exp_to_unlock = 25
+inspiration_threshold = 25.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

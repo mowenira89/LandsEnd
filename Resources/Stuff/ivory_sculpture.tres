@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=2 format=3 uid="uid://cqcojh1dg4qe4"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_6jwu5"]
+
+[resource]
+script = ExtResource("1_6jwu5")
+name = "Ivory Sculpture"
+value = 150.0
+qualities = Dictionary[int, float]({
+2: 4.0,
+10: 2.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

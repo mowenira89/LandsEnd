@@ -10,7 +10,6 @@ qualities = Dictionary[int, float]({
 6: 2.0
 })
 exp_to = Dictionary[String, float]({
-"Metallurgy": 1.0,
 "Whitesmithing": 1.0
 })
 found_in = Array[int]([1])

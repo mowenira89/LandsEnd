@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=4 format=3 uid="uid://yh6j3v5hv2sp"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_113vj"]
+[ext_resource type="Resource" uid="uid://brb7cei56ovf0" path="res://Resources/Stuff/myrrh.tres" id="2_j5n8q"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_jb6s7"]
+
+[resource]
+script = ExtResource("3_jb6s7")
+name = "Myrrh"
+startup_time = 15.0
+produce = Array[ExtResource("1_113vj")]([ExtResource("2_j5n8q")])
+metadata/_custom_type_script = "uid://wxkcemfn60gw"

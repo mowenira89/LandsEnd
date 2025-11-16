@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://dn3prl04iyl70"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_t5x0x"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_4k3qb"]
+
+[resource]
+script = ExtResource("2_4k3qb")
+name = "Lead Ore"
+value = 3.0
+qualities = Dictionary[int, float]({
+6: 20.0
+})
+exp_to = Dictionary[String, float]({
+"Whitesmithing": 1.0
+})
+found_in = Array[int]([1])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

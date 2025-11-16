@@ -6,10 +6,9 @@
 script = ExtResource("1_8hjme")
 name = "Gypsum"
 value = 4.0
-qualities = Dictionary[int, float]({
-6: 45.0
-})
 exp_to = Dictionary[String, float]({
+"Concrete": 1.0,
 "Porcelain": 1.0
 })
+found_in = Array[int]([1])
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

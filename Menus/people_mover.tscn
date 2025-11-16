@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://el6sviuskpyq"]
+
+[ext_resource type="Script" uid="uid://dxe7m4yyvtefv" path="res://Menus/people_mover.gd" id="1_fh5um"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_left = 4.0
+offset_right = 195.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fh5um")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="PeopleMover" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="A_Num" type="Label" parent="PeopleMover"]
+layout_mode = 2
+
+[node name="TenToA" type="Button" parent="PeopleMover"]
+layout_mode = 2
+text = "<<"
+
+[node name="OneToA" type="Button" parent="PeopleMover"]
+layout_mode = 2
+text = "<"
+
+[node name="Label" type="Label" parent="PeopleMover"]
+layout_mode = 2
+text = "Followers"
+
+[node name="OneToB" type="Button" parent="PeopleMover"]
+layout_mode = 2
+text = ">"
+
+[node name="TenToB" type="Button" parent="PeopleMover"]
+layout_mode = 2
+text = ">>"
+
+[node name="B_Num" type="Label" parent="PeopleMover"]
+layout_mode = 2
+
+[connection signal="pressed" from="PeopleMover/TenToA" to="." method="_on_ten_to_a_pressed"]
+[connection signal="pressed" from="PeopleMover/OneToA" to="." method="_on_one_to_a_pressed"]
+[connection signal="pressed" from="PeopleMover/OneToB" to="." method="_on_one_to_b_pressed"]
+[connection signal="pressed" from="PeopleMover/TenToB" to="." method="_on_ten_to_b_pressed"]

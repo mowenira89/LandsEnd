@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cygj7dclxd7c6"]
+[gd_scene load_steps=5 format=3 uid="uid://cygj7dclxd7c6"]
 
 [ext_resource type="Script" uid="uid://bubmmvreaxns4" path="res://Board/territory_tile.gd" id="1_6ynih"]
+[ext_resource type="Texture2D" uid="uid://bvu1ssvjhxcup" path="res://Assets/Images/Territory Tiles/river.png" id="2_0r4b2"]
 [ext_resource type="Texture2D" uid="uid://db77yb865r63v" path="res://Assets/Images/Territory Tiles/frame.png" id="2_owtqe"]
+[ext_resource type="Texture2D" uid="uid://b7r4k0kgknph" path="res://Assets/Images/Territory Tiles/travelers.png" id="3_c254v"]
 
 [node name="TerritoryTile" type="Control"]
 layout_mode = 3
@@ -10,16 +12,88 @@ mouse_filter = 1
 script = ExtResource("1_6ynih")
 
 [node name="Button" type="TextureButton" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 1
+texture_normal = ExtResource("2_0r4b2")
+
+[node name="Ownership" type="TextureRect" parent="Button"]
+visible = false
+self_modulate = Color(0.54765904, 0.00023045004, 0.5522549, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -64.5
+offset_right = 63.0
+offset_bottom = 64.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_owtqe")
 
 [node name="Frame" type="TextureRect" parent="Button"]
 visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -64.5
+offset_right = 63.0
+offset_bottom = 64.5
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_owtqe")
 
+[node name="SelectorButton" type="TextureButton" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_0r4b2")
+
+[node name="Travelers" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_c254v")
+expand_mode = 1
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="gui_input" from="SelectorButton" to="." method="_on_selector_button_gui_input"]

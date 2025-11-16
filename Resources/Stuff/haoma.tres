@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://bx3t5s84ua6x5"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_pyhcs"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_l53cw"]
+
+[resource]
+script = ExtResource("2_l53cw")
+name = "Haoma"
+value = 200.0
+qualities = Dictionary[int, float]({
+5: 1.0,
+10: 6.0
+})
+exp_to = Dictionary[String, float]({
+"Haoma Ceremony": 1.0
+})
+found_in = Array[int]([0, 1])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

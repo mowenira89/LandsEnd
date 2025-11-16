@@ -3,19 +3,25 @@ class_name Event extends Resource
 var turns=1
 var effects:Array[Effect]
 var id:String
-var permanent:bool
+var message:String
 
-func create(id:String, t=1):
+func create(id:String, m:String, t=1):
 	turns = t
+	message=m
 
 func end_turn():
-	if !permanent:
-		turns-=1
-		for x in effects:
-			x.per_turn()
-			if turns<=0:
-				x.apply()
-				x.on_removal()
+	turns-=1
+	for x in effects:
+		x.per_turn(turns)
+		if turns<=0:
+			x.apply()
+			x.on_removal(0)
 
-func remove():
-	GM.finished_events.append(self)
+func is_alive():
+	return turns!=0
+
+func get_message()->String:
+	return id
+	
+func get_end_turn_message():
+	pass
