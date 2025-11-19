@@ -4,7 +4,6 @@ class_name Building extends Resource
 @export var district:District
 @export var unlocked:bool=false
 @export var upgrade_only:bool=false
-@export var buffs:Buffs
 @export var stats:Stats
 @export var image:Texture2D
 @export var pop_cap:Dictionary[Pop.CLASS,int]
@@ -12,7 +11,8 @@ class_name Building extends Resource
 @export var boss_type:Pop.CLASS
 @export var unlock_message:String
 @export var age:int=0
-@export var memories:Array[Memory]
+@export var memories:Array[Event]
+@export_multiline var desc:String
 #CONSTRUCTION
 
 @export var construction_time:int
@@ -21,7 +21,7 @@ class_name Building extends Resource
 @export var construction_conditions:Array[Condition]
 #STAFF
 @export var staff_needed:Dictionary[Pop.CLASS,int]
-@export var staff_appointed:Dictionary[Pop.CLASS,int]
+@export var staff_appointed:Dictionary[Pop.CLASS,float]
 
 #Districts
 var utilized_districts:Array[District]
@@ -62,11 +62,13 @@ func create(d:District):
 		this_building_recipes[x.name]=x
 	if !stats:
 		stats = Stats.new()
-		stats.create(self,construction_level*50,0,0,0)
+		stats.create(self,construction_level*50,0,0,0,0)
 	else:
 		stats.total_hp=construction_level*50
 		stats.current_hp=construction_level*50
-		
+	for x in Pop.CLASS.values():
+		staff_appointed[x]=0
+	stats.init(self)
 
 func get_menu():
 	GM.menus.basic_building_view.update_menu(self)
@@ -83,6 +85,13 @@ func set_production(s:String,i:int,r:Recipe=null):
 		producing_this_turn[i]=s
 		turns_producing[i]=0
 
+func get_production(i:int):
+	var prod = producing_this_turn[i]
+	if prod:
+		if prod is Recipe:
+			return prod.name
+		else:
+			return prod.name
 	
 func progress_production():
 	for x in producing_this_turn.size()-1:
@@ -118,9 +127,6 @@ func end_turn():
 		x.end_turn()
 	age+=1
 	
-func add_memory(m:Memory):
-	memories.append(m)
-	m.init()
 	
 func extract_products():
 	var r = []
@@ -175,24 +181,24 @@ func destroy_building(burn:bool=false):
 	if !burn:
 		for x in construction_materials:
 			district.territory.stockpile.add_stuff(x,construction_materials[x]/2)
+	if pop_cap:
+		for x in pop_cap:
+			var pop = district.territory.get_pop(x)
+			var cap = district.territory.get_pop_cap(x)-pop_cap[x]
+			var loss = max(pop-cap,0)
+			district.territory.population.change_pop(x,-loss)
+			district.territory.population.change_pop(Pop.CLASS.Underclass,loss)
 	district.building=null
 	
 func get_exp(a:float):
-	var b = []
-	var mod=0
-	for x in buffs.buffs:
-		if x is BuildingExpBuff:
-			b.append(x)
-	for x in boss.personal_buffs.buffs:
-		if x is BuildingExpBuff:
-			b.append(x)
-	for x in district.territory.buffs.buffs:
-		if x is BuildingExpBuff:
-			b.apped(x)
-	for x in b:
-		mod+=x.amt
-	a+=a*mod
-	experience+=a		
+	var wisdom=0
+	if boss:
+		wisdom=boss.get_prowess(Person.PROWESS.Wise)
+	experience+=a+wisdom
+	if experience>=(level+1)*(50**2):
+		experience=0
+		level+=1
+		level_up()		
 	
 	
 func level_up():

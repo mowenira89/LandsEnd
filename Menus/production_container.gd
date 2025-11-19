@@ -8,11 +8,20 @@ var index:int
 func create(b:Building,i:int,o:Array[String]):
 	building=b
 	index=i
+	for x in container.get_children():
+		x.queue_free()
 	for x in o:
 		var button = Button.new()
 		container.add_child(button)
 		button.text=x
 		button.pressed.connect(func(nb=button):recieve_choice.call(nb.text))
+	var s = b.producing_this_turn[i]
+	if s is Recipe:
+		title=s.name
+	elif s is String:
+		title=s
+	else:
+		title="---"
 		
 func recieve_choice(t:String):
 	title=t
@@ -34,5 +43,6 @@ func _on_gui_input(event: InputEvent) -> void:
 
 
 func _on_folding_changed(is_folded: bool) -> void:
-	if title=="Craft":
+	if title=="Craft" and is_folded:
 		GM.menus.recipe_menu.update_menu(building,index)
+		

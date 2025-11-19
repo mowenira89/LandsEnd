@@ -2,7 +2,7 @@ class_name ExchangeWindow extends Control
 
 @onready var stuff_movers: VBoxContainer = $ColorRect/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/StuffMovers
 @onready var people_movers: VBoxContainer = $ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/ScrollContainer/PeopleMovers
-@onready var stuff_movers_2: VBoxContainer = $ColorRect/MarginContainer/HBoxContainer/VBoxContainer3/ScrollContainer/StuffMovers2
+
 
 const STUFF_MOVER = preload("res://Menus/stuff_mover.tscn")
 const PEOPLE_MOVER = preload("res://Menus/people_mover.tscn")

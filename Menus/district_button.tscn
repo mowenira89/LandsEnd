@@ -78,3 +78,5 @@ theme = SubResource("Theme_6m70w")
 [connection signal="pressed" from="." to="." method="_on_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="gui_input" from="SelectorButton" to="." method="_on_selector_button_gui_input"]
+[connection signal="mouse_entered" from="SelectorButton" to="." method="_on_selector_button_mouse_entered"]
+[connection signal="mouse_exited" from="SelectorButton" to="." method="_on_selector_button_mouse_exited"]

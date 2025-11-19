@@ -1,7 +1,9 @@
 class_name Biome extends Resource
 
-enum TERRAIN {Field,Hills,Forest,Swamp,Barren,Water}
+enum TERRAIN {Field,Hills,Forest,Swamp,Barren,Water,Underground}
 enum VITAMINS {A,B,C,D,K,Q,F}
+
+enum BLURSES {Fertile,Blessed,Cursed,Haunted}
 
 @export var terrain:TERRAIN
 @export var fauna:Dictionary[Species,float]
@@ -22,7 +24,7 @@ var original_water:float
 var original_vitamins:Dictionary
 
 func create():
-	terrain=randi_range(0,5)
+	terrain=randi_range(0,4)
 	if terrain in [TERRAIN.Field,TERRAIN.Forest,TERRAIN.Hills]:
 		rivers=randi_range(0,1)
 	if terrain==TERRAIN.Barren: 
@@ -64,6 +66,8 @@ func set_flora_and_fauna():
 	if RM.species["Bee"] in fauna.keys():
 		forage[RM.stuff["Honey"]]=RM.stuff["Honey"].qualities[Stuff.QUALITIES.Forage]
 	for x in flora.keys():
+		if x.qualities.has(Stuff.QUALITIES.Forage):
+			forage[x]=x.qualities[Stuff.QUALITIES.Forage]
 		for y in x.kill_produce:
 			if y not in forage.keys():
 				forage[y]=y.qualities[Stuff.QUALITIES.Forage]
@@ -80,8 +84,8 @@ func set_mineables():
 	mineable_amount = randi_range(1000,10000)
 
 func get_game():
-	var r = []
+	var r = {}
 	for x in fauna:
 		if x.game:
-			r.append(x)
+			r[x]=fauna[x]
 	return r

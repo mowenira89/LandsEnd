@@ -1,18 +1,31 @@
-[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://cvj6j6supf8xr"]
+[gd_resource type="Resource" script_class="Species" load_steps=6 format=3 uid="uid://cvj6j6supf8xr"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_20d5f"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_2ubjg"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_qnje0"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_2ubjg"]
+
+[sub_resource type="Resource" id="Resource_i14qv"]
+script = ExtResource("4_2ubjg")
+sp = 7.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("2_qnje0")
 kind = 9
 rarity = 20.0
-speed = 8.0
+aggressiveness = 3.0
+skittishness = 6.0
 name = "Locust"
+stats = SubResource("Resource_i14qv")
 value = 5.0
 qualities = Dictionary[int, float]({
 0: 1.0,
 2: 1.0
+})
+mystic_qualities = Dictionary[int, float]({
+5: 0.5,
+6: 1.0
 })
 found_in = Array[int]([0])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

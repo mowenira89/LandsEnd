@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="KhemicRecipe" load_steps=5 format=3 uid="uid://dvv6p2oeb1xjs"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_sj446"]
+[ext_resource type="Resource" uid="uid://c5nba8d43np2d" path="res://Resources/Stuff/copper_ore.tres" id="2_l118e"]
+[ext_resource type="Resource" uid="uid://bl0wisipevdpv" path="res://Resources/Stuff/tin_ore.tres" id="3_4iyov"]
+[ext_resource type="Script" uid="uid://b5amvji0dfqa4" path="res://Data/khemic_recipe.gd" id="4_m1vm0"]
+
+[resource]
+script = ExtResource("4_m1vm0")
+mystic_need = 5.0
+mystic_type = 1
+level = 1
+name = "Tin  to Copper"
+id = "khem_tin_copper"
+turns = 1
+inputs = Dictionary[ExtResource("1_sj446"), int]({
+ExtResource("3_4iyov"): 1
+})
+outputs = Dictionary[ExtResource("1_sj446"), int]({
+ExtResource("2_l118e"): 1
+})
+unlocked = true
+metadata/_custom_type_script = "uid://b5amvji0dfqa4"

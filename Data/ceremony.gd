@@ -1,4 +1,4 @@
-class_name Ceremony extends Effect
+class_name Ceremony extends Event
 
 @export var name:String
 @export var length:int
@@ -14,11 +14,13 @@ class_name Ceremony extends Effect
 @export var tribute:Stockpile
 @export var value:float
 @export var target:Nymphoi
-@export var performers=Population
+@export var performers:Array[Person]
+@export var leader:Person
+@export var fuel:Stuff
 
 #X amount of people want to attend, causing the requirements to go up
 
-func create(t:Stockpile):
+func make_plans(t:Stockpile,p:Population):
 	tribute=t
 	
 
@@ -36,3 +38,5 @@ func apply():
 	happiness+=happiness*(value/1000)
 	
 		
+func calculate_value():
+	pass

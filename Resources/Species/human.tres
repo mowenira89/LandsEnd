@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://l38bjx2o7f1b"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_il1mm"]
+[ext_resource type="Resource" uid="uid://dgjhkn842uhmy" path="res://Resources/Stuff/mortal_flesh.tres" id="2_3xgc4"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_6n3u3"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_wk12w"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_3xgc4"]
+
+[sub_resource type="Resource" id="Resource_6n3u3"]
+script = ExtResource("5_3xgc4")
+hp = 100.0
+off = 3.0
+def = 3.0
+mag = 3.0
+magdef = 3.0
+sp = 4.0
+l = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("4_wk12w")
+kind = 1
+kill_produce = Dictionary[ExtResource("1_il1mm"), int]({
+ExtResource("2_3xgc4"): 2
+})
+aggressiveness = 3.0
+skittishness = 8.0
+name = "Human"
+stats = SubResource("Resource_6n3u3")
+value = 2500.0
+mystic_qualities = Dictionary[int, float]({
+4: 1.0
+})
+prohibited = true
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

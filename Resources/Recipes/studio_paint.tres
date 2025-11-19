@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cbnt0tmgcik1g"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_ocpdn"]
+[ext_resource type="Resource" uid="uid://ckoocyvkwuoo0" path="res://Resources/Stuff/pigments.tres" id="2_lirn2"]
+[ext_resource type="Resource" uid="uid://bjy7lykbufbjg" path="res://Resources/Stuff/paint.tres" id="3_c3dc2"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_02bce"]
+
+[resource]
+script = ExtResource("4_02bce")
+name = "Paint"
+id = "studio_paint"
+turns = 1
+inputs = Dictionary[ExtResource("1_ocpdn"), int]({
+ExtResource("2_lirn2"): 1
+})
+outputs = Dictionary[ExtResource("1_ocpdn"), int]({
+ExtResource("3_c3dc2"): 1
+})
+exp_to = Dictionary[String, float]({
+"Painter Studio": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

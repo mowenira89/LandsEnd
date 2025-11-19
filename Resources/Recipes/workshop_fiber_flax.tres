@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://2nw6yxgxlter"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_ovksa"]
+[ext_resource type="Resource" uid="uid://cyhmu63rk664p" path="res://Resources/Species/flax.tres" id="2_rygxr"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="3_0svsv"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_531u1"]
+
+[resource]
+script = ExtResource("4_531u1")
+name = "Fiber (Flax)"
+id = "workshop_fiber_flax"
+turns = 1
+inputs = Dictionary[ExtResource("1_ovksa"), int]({
+ExtResource("2_rygxr"): 1
+})
+outputs = Dictionary[ExtResource("1_ovksa"), int]({
+ExtResource("3_0svsv"): 4
+})
+exp_to = Dictionary[String, float]({
+"Textiles": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

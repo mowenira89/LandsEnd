@@ -1,9 +1,22 @@
-[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://s5r8vass2l05"]
+[gd_resource type="Resource" script_class="Species" load_steps=8 format=3 uid="uid://s5r8vass2l05"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_abekb"]
 [ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="2_14dlk"]
 [ext_resource type="Resource" uid="uid://du817n882ksa7" path="res://Resources/Stuff/pelt.tres" id="3_rn48p"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="4_14dlk"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_rdye5"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="6_rn48p"]
+
+[sub_resource type="Resource" id="Resource_rdye5"]
+script = ExtResource("6_rn48p")
+hp = 40.0
+off = 7.0
+def = 5.0
+mag = 1.0
+magdef = 1.0
+sp = 5.0
+l = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("4_rdye5")
@@ -13,11 +26,14 @@ ExtResource("2_14dlk"): 4,
 ExtResource("3_rn48p"): 4
 })
 rarity = 15.0
-offense = 8.0
-defense = 6.0
-speed = 4.0
 game = true
 steed = true
+aggressiveness = 7.0
+skittishness = 2.0
 name = "Bear"
+stats = SubResource("Resource_rdye5")
+mystic_qualities = Dictionary[int, float]({
+0: 2.0
+})
 found_in = Array[int]([2, 1])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

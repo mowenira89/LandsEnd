@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="LevelUpSlates" load_steps=14 format=3 uid="uid://b35qwqlsil5d1"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_3cf3h"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="2_immfm"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="3_f2yf7"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="4_bobt3"]
+[ext_resource type="Resource" uid="uid://diqapn5ij1wxp" path="res://Resources/Buildings/schoolhouse.tres" id="5_bobt3"]
+[ext_resource type="Script" uid="uid://cufwo02xpojny" path="res://Data/level_up_slates.gd" id="5_cipov"]
+[ext_resource type="Resource" uid="uid://d13f3l1litam3" path="res://Resources/Buildings/longhouses.tres" id="6_cipov"]
+[ext_resource type="Resource" uid="uid://jeik2bkprruw" path="res://Resources/Buildings/burbs.tres" id="8_bobt3"]
+
+[sub_resource type="Resource" id="Resource_cipov"]
+script = ExtResource("3_f2yf7")
+production_slots = 1
+pops_cap_up = Dictionary[int, int]({
+0: 15
+})
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_n4t5m"]
+script = ExtResource("3_f2yf7")
+buildings_unlocked = Array[ExtResource("2_immfm")]([ExtResource("5_bobt3")])
+extention_slots = 1
+pops_cap_up = Dictionary[int, int]({
+0: 15
+})
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_t5r6g"]
+script = ExtResource("3_f2yf7")
+needs_upgrade = Array[ExtResource("2_immfm")]([ExtResource("6_cipov")])
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_poah0"]
+script = ExtResource("3_f2yf7")
+production_slots = 1
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_kq3e3"]
+script = ExtResource("3_f2yf7")
+extention_slots = 1
+needs_extentions = Array[ExtResource("2_immfm")]([ExtResource("8_bobt3")])
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[resource]
+script = ExtResource("5_cipov")
+slates = Dictionary[int, ExtResource("3_f2yf7")]({
+2: SubResource("Resource_cipov"),
+3: SubResource("Resource_n4t5m"),
+4: SubResource("Resource_t5r6g"),
+5: SubResource("Resource_poah0"),
+6: SubResource("Resource_kq3e3"),
+7: null,
+8: null,
+9: null,
+10: null
+})
+metadata/_custom_type_script = "uid://cufwo02xpojny"

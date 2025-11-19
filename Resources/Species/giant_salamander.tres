@@ -1,8 +1,21 @@
-[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://dn35gcb5hgggq"]
+[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://dn35gcb5hgggq"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_4tqry"]
 [ext_resource type="Resource" uid="uid://vcopy2xqdqfi" path="res://Resources/Stuff/luxury_meat.tres" id="2_6jw5s"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_6jw5s"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_t25xp"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_t25xp"]
+
+[sub_resource type="Resource" id="Resource_cwgnj"]
+script = ExtResource("5_t25xp")
+hp = 55.0
+off = 1.0
+def = 2.0
+mag = 7.0
+magdef = 6.0
+sp = 4.0
+l = 2.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("3_t25xp")
@@ -11,10 +24,15 @@ kill_produce = Dictionary[ExtResource("1_4tqry"), int]({
 ExtResource("2_6jw5s"): 3
 })
 rarity = 6.0
-offense = 1.0
-defense = 2.0
-speed = 3.0
 game = true
+aggressiveness = 1.0
+skittishness = 6.0
 name = "Giant Salamander"
+stats = SubResource("Resource_cwgnj")
+mystic_qualities = Dictionary[int, float]({
+1: 1.0,
+2: 1.0,
+3: 1.0
+})
 found_in = Array[int]([3])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

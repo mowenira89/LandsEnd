@@ -27,7 +27,6 @@ class_name Unit extends Resource
 
 @export var outfit_order:Array[Stuff]
 
-
 func create(t:Territory,l:Person=null, c:Stockpile=null,o:Stockpile=null,f:Population=null,coms=[]):
 	creation_date=[GM.month,GM.week]
 	leader=l
@@ -45,13 +44,14 @@ func create(t:Territory,l:Person=null, c:Stockpile=null,o:Stockpile=null,f:Popul
 	current_territory=t
 	if cargo==null:
 		cargo=Stockpile.new()
-		cargo.owner=self
+	cargo.owner=self
+	cargo.create(null,self)
 	if outfit==null:
 		outfit=Stockpile.new()
-		outfit.owner=self
+		outfit.create(null,self)
 	if followers==null:
 		followers=Population.new()
-		followers.create(null,self)
+		followers.create(current_territory,self)
 	if leader not in original_territory.NPCs:
 		original_territory.NPCs.append(leader)
 	for x in companions:
@@ -73,12 +73,15 @@ func move(t:Territory):
 	current_territory=t
 	movements_allowed_this_turn-=1
 	current_territory.units.append(self)
+	followers.move(t)
 	GM.board.update_board()
 	GM.menus.update_menus()
 
 
 func get_total_followers():
 	return followers.get_total_population()
+	
+
 	
 func change_inventory_capacity():
 	var r=1
@@ -110,6 +113,10 @@ func end_turn():
 		x.end_turn()
 		if !x.is_alive():
 			action_queue.erase(x)
+	leader.end_turn()
+	for x in companions:
+		if x:
+			x.end_turn()
 	
 	for x in memories:
 		x.end_turn()
@@ -133,8 +140,89 @@ func extract_buffs():
 		r.append(x.personal_buffs)
 	return r
 
-func get_powess(p:Person.PROWESS):
+func get_prowess(p:Person.PROWESS):
 	var prowess = leader.get_prowess(p) if leader else 0
 	for x in companions:
-		prowess += x.get_prowess(p)
+		if x:
+			prowess += x.get_prowess(p)
 	return prowess
+
+func get_research():
+	var x = []
+	for y in companions:
+		x.append(y)
+	x.append(leader)
+	for z in x:
+		if !z.species.exp_to.is_empty():
+			ResearchManager.get_exp_from_nymphoi(z)
+			
+func get_stat(s:Stats.STATS):
+	var r = 0
+	match s:
+		Stats.STATS.HP:
+			r=leader.stats.total_hp
+			for x in companions:
+				if x:
+					r+=x.stats.total_hp
+		Stats.STATS.Attack:
+			r=leader.stats.offense
+			for x in companions:
+				if x:
+					r+=x.stats.offense
+		Stats.STATS.Defense:
+			r=leader.stats.defense
+			for x in companions:
+				if x:
+					r+=x.stats.defense
+		Stats.STATS.Magic:
+			r=leader.stats.magic
+			for x in companions:
+				if x:
+					r+=x.stats.magic
+		Stats.STATS.MagicDef:
+			r=leader.stats.magic_def
+			for x in companions:
+				if x:
+					r+=x.stats.magic_def
+		Stats.STATS.Speed:
+			r=leader.stats.speed
+			for x in companions:
+				if x:
+					r+=x.stats.speed
+		Stats.STATS.Luck:
+			r=leader.stats.luck
+			for x in companions:
+				if x:
+					r+=x.stats.luck
+	return r
+
+func add_event(e:Event,d:District=null,b:Building=null):
+	if !e.check(d,d.territory,b):		
+		return false
+	e.init()
+	action_queue.append(e)
+	return true
+
+func remove_event(e:Event):
+	e.on_removal(e.turns)
+	action_queue.erase(e)
+
+func disband():
+	for x in followers.pops:
+		followers.add_max(current_territory.population,x)
+	for x in companions:
+		if x:
+			leave_party(x)
+	
+	if !leader:
+		for x in cargo:
+			current_territory.stockpile.add_max(x,cargo[x])
+		current_territory.units.erase(self)
+	
+func foresake():
+	pass		
+
+func leave_party(p:Person):
+	var u = Unit.new()
+	u.create(current_territory,p)
+	

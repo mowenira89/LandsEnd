@@ -17,12 +17,14 @@ func display_messages():
 	turn_label.text=GM.MONTHS.keys()[GM.month]+" Week "+str(GM.week)
 	for x in messages:
 		var label = Label.new()
-		message_container.append(label)
+		message_container.add_child(label)
 		label.text=x
 	start_turn.text = "Begin turn "+str(GM.turns)
+	visible=true
 
 
 func _on_start_turn_pressed() -> void:
 	messages.clear()
 	for x in message_container.get_children():
 		x.queue_free()
+	visible=false

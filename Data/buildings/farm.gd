@@ -12,11 +12,22 @@ func create(d:District):
 	
 func end_turn():
 	for x in crops:
+		x.starting_up-=1
+	for x in crops:
 		if x is Crop:
+			if GM.month in x.dead_season:
+				growth[x]=0
 			if GM.month not in x.dead_season:
-				grow()
-			elif GM.month in x.harvest_season:
-				district.stockpile.add_stuff()
+				if x.starting_up<=0:
+					grow()
+			if GM.month in x.harvest_season:
+				for y in x.produce:
+					district.stockpile.add_stuff(y,growth[x])
+				
+
+func plant_crop(c:Crop,i:int):
+	crops[i]=c.duplicate()
+	crops[i].starting_up=crops[i].startup_time
 
 func grow():	
 	if district.biome.water<0:

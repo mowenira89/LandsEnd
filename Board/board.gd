@@ -5,7 +5,7 @@ class_name Board extends Node2D
 
 const TERRITORY_TILE = preload("res://Board/territory_tile.tscn")
 @onready var menus: MenuController = $Menus
-@onready var screen: ColorRect = $Menus/Screen
+@onready var end_turn_box: EndTurnBox = $Menus/EndTurnBox
 
 var tiles_by_cell:Dictionary[Vector2i,TerritoryTile] = {}
 
@@ -24,6 +24,9 @@ func _ready():
 
 func create():
 	var coords = ground.get_used_cells()
+	#Coordinates of tiles on tilemap layer, new territory resource created for each
+	#Assigned to tiles_by_cell dictionary used to access territories when needed
+	#especially for movement. 
 	for x in coords:
 		var new_tile = TERRITORY_TILE.instantiate()
 		territories.add_child(new_tile)
@@ -37,6 +40,9 @@ func update_board():
 	for x in tiles_by_cell.values():
 		x.update_tile()
 		
+	#Update tile will change based on some buildings in the territory
+	#and whether there is a NPC in the territory. The x represents an NPC
+		
 func territory_button_clicked(t:TerritoryTile):
 	if currently_selected:
 		currently_selected.unselect()
@@ -45,6 +51,8 @@ func territory_button_clicked(t:TerritoryTile):
 	menus.show_territory(t.data)
 	center_camera(t.data.coords)
 	
+	#receives data from the clicked territory tile which holds its Territory resource
+	#Show menu shows the starter menus
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Middle Click"):	
@@ -76,23 +84,19 @@ func get_target_territory(t:Territory,unit:Unit):
 		if x in tiles_by_cell.keys():
 			tiles_by_cell[x].untarget()
 	return array[0]
+	
+	#the cell coords are held in the territory, used to get surrounding tiles, 
+	#data can be handled from there. the board is disabled so that only the  
+	#this is awaited by the unit_action_menu when move is selected. 
 
+	#disabled board is used to make sure the player doesnt click something while
+	#an input is needed
 func disable_board():
 	for x in tiles_by_cell.values():
 		x.disable()
+	GM.menus.disable_buttons()
 		
 func enable_board():
 	for x in tiles_by_cell.values():
 		x.enable()
-
-
-func _on_side_menu_mouse_entered() -> void:
-	can_zoom=false
-	screen.visible=true
-func _on_side_menu_mouse_exited() -> void:
-	can_zoom=true
-	screen.visible=true
-
-func _on_screen_mouse_entered() -> void:
-	can_zoom=true
-	screen.visible=false
+	GM.menus.enable_buttons()

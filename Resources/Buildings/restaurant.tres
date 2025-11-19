@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="Storeroom" load_steps=12 format=3 uid="uid://cug64pdrjjui4"]
+[gd_resource type="Resource" script_class="Storeroom" load_steps=13 format=3 uid="uid://cug64pdrjjui4"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_pb0mh"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_1kx14"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_e2vs2"]
 [ext_resource type="Resource" uid="uid://b18tqcb4xbadt" path="res://Resources/Stuff/charcoal.tres" id="4_25m5p"]
+[ext_resource type="Texture2D" uid="uid://c4kknov7vrbl" path="res://Assets/Images/BuildingImages/restaurant.png" id="5_1kx14"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_57gjr"]
-[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_k0o5g"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_buxbu"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_e2vs2"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_57u66"]
 [ext_resource type="Script" uid="uid://w6133npa21mi" path="res://Data/buildings/storeroom.gd" id="9_ldp04"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="10_c4htg"]
@@ -20,6 +21,7 @@ script = ExtResource("9_ldp04")
 granary_cap = 50
 name = "Restaurant"
 stats = SubResource("Resource_5cmne")
+image = ExtResource("5_1kx14")
 boss_type = 1
 construction_time = 2
 construction_materials = Dictionary[ExtResource("2_1kx14"), int]({

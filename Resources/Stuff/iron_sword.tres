@@ -1,11 +1,18 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://db8x2qoa3j11u"]
+[gd_resource type="Resource" script_class="Stuff" load_steps=5 format=3 uid="uid://db8x2qoa3j11u"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_i8imu"]
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_sky7m"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="3_ttq72"]
+
+[sub_resource type="Resource" id="Resource_6ppmv"]
+script = ExtResource("3_ttq72")
+off = 6.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("1_i8imu")
 name = "Iron Sword"
+stats = SubResource("Resource_6ppmv")
 value = 20.0
 qualities = Dictionary[int, float]({
 7: 5.0

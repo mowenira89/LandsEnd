@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Camp" load_steps=30 format=3 uid="uid://ddnn8m548yucj"]
+[gd_resource type="Resource" script_class="Camp" load_steps=29 format=3 uid="uid://ddnn8m548yucj"]
 
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_fxers"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_j13ja"]
@@ -14,7 +14,6 @@
 [ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="8_uah8x"]
 [ext_resource type="Resource" uid="uid://dwsu1sq0thk3u" path="res://Resources/Recipes/camp_ivory_carving.tres" id="9_j27x5"]
 [ext_resource type="Resource" uid="uid://cwif52v0bdks3" path="res://Resources/Recipes/camp_leather.tres" id="10_80m7v"]
-[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="10_jxmh5"]
 [ext_resource type="Resource" uid="uid://c0wyua0f1r05e" path="res://Resources/Recipes/camp_lumber.tres" id="11_jxmh5"]
 [ext_resource type="Resource" uid="uid://8v4i0hnt5w35" path="res://Resources/Buildings/fishery.tres" id="11_t1wd2"]
 [ext_resource type="Resource" uid="uid://dne6u8apox0fa" path="res://Resources/Buildings/tannery.tres" id="12_5675l"]

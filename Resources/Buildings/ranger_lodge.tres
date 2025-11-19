@@ -1,25 +1,26 @@
-[gd_resource type="Resource" script_class="Camp" load_steps=9 format=3 uid="uid://cpjc66m2o43ll"]
+[gd_resource type="Resource" script_class="Camp" load_steps=12 format=3 uid="uid://cpjc66m2o43ll"]
 
-[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_87j36"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_cgt73"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_x6mgn"]
 [ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="4_6xte0"]
 [ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="5_2ht7l"]
+[ext_resource type="Texture2D" uid="uid://b6wimhrebpfqw" path="res://Assets/Images/BuildingImages/ranger.png" id="5_6xte0"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_2ht7l"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_oda3v"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_csdm6"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_oda3v"]
 [ext_resource type="Script" uid="uid://doa1vbsvkk4tx" path="res://Data/buildings/camp.gd" id="8_u6bx8"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="9_csdm6"]
 
 [resource]
 script = ExtResource("8_u6bx8")
 forage = true
 name = "Ranger Lodge"
+image = ExtResource("5_6xte0")
 construction_time = 2
 construction_materials = Dictionary[ExtResource("3_x6mgn"), int]({
 ExtResource("4_6xte0"): 15,
 ExtResource("5_2ht7l"): 5
-})
-construction_staff = Dictionary[int, int]({
-0: 5
 })
 construction_level = 2
 needed_districts = 1

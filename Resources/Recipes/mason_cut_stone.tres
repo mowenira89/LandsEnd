@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://s1xcj2badh41"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_mbxtd"]
+[ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="2_4nefl"]
+[ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="3_pwxiv"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_wuu4b"]
+
+[resource]
+script = ExtResource("4_wuu4b")
+name = "Cut Stone"
+id = "mason_cut_stone"
+turns = 1
+inputs = Dictionary[ExtResource("1_mbxtd"), int]({
+ExtResource("2_4nefl"): 1
+})
+outputs = Dictionary[ExtResource("1_mbxtd"), int]({
+ExtResource("3_pwxiv"): 2
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

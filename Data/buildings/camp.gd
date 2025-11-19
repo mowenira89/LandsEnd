@@ -12,7 +12,7 @@ func get_production_options():
 	if hunt:
 		r.append("Hunt")
 	if forage:
-		r.append("Gather")
+		r.append("Forage")
 	if fish:
 		r.append("Fish")
 	if chop_wood:
@@ -28,17 +28,15 @@ func progress_production():
 		if producing_this_turn[x] is String:
 			match producing_this_turn[x]:
 				"Hunt":
-					var hunt_effect=HuntEffect.new()
-					hunt_effect.create(district.territory.stockpile,district.territory,district,self)
-					var id = district.territory.name+str(district.index)+str(x)+"production_event"
-					var new_event=Event.new()
-					var m = "Hunting"
-					new_event.create(id,m)
-					new_event.effects.append(hunt_effect)
-					GM.add_event(new_event)
+					var hunt_event = HuntEvent.new()
+					hunt_event.make_plans(district,district.territory.stockpile,district.territory,self)
+					hunt_event.apply()
 				"Fish":
 					pass
 				"Chop Wood":
 					pass
-				"Gather":
-					pass
+				"Forage":
+					var forage = ForageEvent.new()
+					forage.make_plans(district.territory,district.stockpile,district,self)
+					forage.apply()
+				

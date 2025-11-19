@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Studio" load_steps=13 format=3 uid="uid://blq0gm6qpnw7m"]
+
+[ext_resource type="Script" uid="uid://shaorb866qv1" path="res://Data/buffs.gd" id="1_iojt7"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_35btx"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_di5ts"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="4_s5pmq"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_1hruw"]
+[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_xtnnd"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_m5nvn"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_p4lx8"]
+[ext_resource type="Script" uid="uid://c5r4yu6u8isj5" path="res://Data/buildings/studio.gd" id="9_bj3bq"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="10_66b6u"]
+
+[sub_resource type="Resource" id="Resource_c6d83"]
+script = ExtResource("1_iojt7")
+metadata/_custom_type_script = "uid://shaorb866qv1"
+
+[sub_resource type="Resource" id="Resource_4hds5"]
+script = ExtResource("10_66b6u")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("9_bj3bq")
+type = 2
+name = "Musician Studio"
+buffs = SubResource("Resource_c6d83")
+stats = SubResource("Resource_4hds5")
+construction_time = 3
+construction_materials = Dictionary[ExtResource("3_di5ts"), int]({
+ExtResource("4_s5pmq"): 25
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+1: 10
+})
+district_type = 3
+production_slots = 2
+metadata/_custom_type_script = "uid://c5r4yu6u8isj5"

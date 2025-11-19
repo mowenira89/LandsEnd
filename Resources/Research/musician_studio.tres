@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Research" load_steps=10 format=3 uid="uid://crqv233i641ua"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_17nfj"]
+[ext_resource type="Resource" uid="uid://blq0gm6qpnw7m" path="res://Resources/Buildings/musician_studio.tres" id="2_w1ddg"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_maa3v"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_iqqm5"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_rb6bu"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_qb111"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_glx3v"]
+[ext_resource type="Resource" uid="uid://h0rtj7wa6xpa" path="res://Resources/Research/studio.tres" id="8_e27ao"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_4d1r5"]
+
+[resource]
+script = ExtResource("7_glx3v")
+name = "Musician Studio"
+buildings = Array[ExtResource("1_17nfj")]([ExtResource("2_w1ddg")])
+exp_to_unlock = 300
+prerequisites = Array[ExtResource("7_glx3v")]([ExtResource("8_e27ao")])
+inspiration_threshold = 25.0
+inspired_class = 1
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

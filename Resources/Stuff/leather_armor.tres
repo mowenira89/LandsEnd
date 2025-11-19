@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=5 format=3 uid="uid://c6x8088bmne20"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_kjtwy"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_4l42l"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="3_8dyfh"]
+
+[sub_resource type="Resource" id="Resource_ac10v"]
+script = ExtResource("3_8dyfh")
+off = 2.0
+magdef = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("2_4l42l")
+name = "Leather Armor"
+stats = SubResource("Resource_ac10v")
+mystic_qualities = Dictionary[int, float]({
+0: 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

@@ -1,19 +1,19 @@
 class_name Stockpile extends Resource
 
 var stuff:Dictionary[Stuff,float]
-var capacity:int=100
 var owner
 
-var food_order:Array[Food]
+var food_order:Array[Stuff]
 var storeroom_order:Array[Stuff]
 var animal_order:Array[Species]
 
-var forbidden_food:Array[Food]
-var non_consumables:Array[Stuff]
+var prohibited:Array[Stuff]
 
-var granary_capacity:int
-var storeroom_capacity:int
-var animal_fields:int
+var granary_capacity:int=0:get=get_granary_capacity
+var storeroom_capacity:int=0:get=get_store_capacity
+var animal_fields:int=0:get=get_animal_fields
+
+var outfit : Array[Stuff]=[]
 
 func create(t:Territory=null,unit:Unit=null):
 	if t:
@@ -27,8 +27,31 @@ func create(t:Territory=null,unit:Unit=null):
 		granary_capacity=10
 		animal_fields=10
 		
+func get_store_capacity():
+	var c = storeroom_capacity
+	for x in outfit:
+		if x and x.qualitites.has(Stuff.QUALITIES.Capacity):
+			c+=x.qualitites[Stuff.QUALITIES.Capacity]
+	if owner is Unit:
+		c+=owner.get_prowess(Person.PROWESS.StrongBack)*10
+	return c
+	
+func get_animal_fields():
+	var f = animal_fields
+	if owner is Unit:
+		f+=owner.get_prowess(Person.PROWESS.Shepherd)*100
+	return f
+	
+func get_granary_capacity():
+	var c = granary_capacity
+	for x in outfit:
+		if x and x.qualitites.has(Stuff.QUALITIES.Capacity):
+			c+=x.qualitites[Stuff.QUALITIES.Capacity]
+	if owner is Unit:
+		c+=owner.get_prowess(Person.PROWESS.StrongBack)*10
+	return c
 		
-func add_stuff(s:Stuff,a:float):
+func add_stuff(s:Stuff,a:float,experience:bool=false):
 	
 	var cap
 	if s in food_order:
@@ -36,32 +59,32 @@ func add_stuff(s:Stuff,a:float):
 	elif s is Species:
 		cap=animal_fields
 	else:
-		cap=granary_capacity
+		cap=storeroom_capacity
 	if stuff.has(s):
 		if stuff[s]+a>cap:
 			return false
+		else:
+			stuff[s]+=a
+			return true
 	else:
 		if a>cap:
 			return false
 	if s not in stuff.keys():
+		print('not in keys')
+		if s.qualities.has(Stuff.QUALITIES.Food) and s not in food_order:
+			food_order.append(s)
+		elif s is Species and s not in animal_order:
+			if s.kind!=Species.KIND.Flora:
+				animal_order.append(s)
+		else:
+			storeroom_order.append(s)
 		stuff[s]=clamp(a,0,cap)
+	if experience:
 		if owner is Territory:
 			ResearchManager.exp_from_stuff(s,owner,null)
 		else:
 			ResearchManager.exp_from_stuff(s,null,owner)
-	else:
-		stuff[s]=clamp(stuff[s]+a,0,cap)
-		if owner is Territory:
-			ResearchManager.exp_from_stuff(s,owner,null)
-		else:
-			ResearchManager.exp_from_stuff(s,null,owner)
-	if s.qualities.has(Stuff.QUALITIES.Food) and s not in food_order:
-		food_order.append(s)
-	elif s is Species and s not in animal_order:
-		if s.kind!=Species.KIND.Flora:
-			animal_order.append(s)
-	else:
-		storeroom_order.append(s)
+	
 	
 func remove_stuff(s:Stuff,a:float):
 	if s in stuff.keys():
@@ -128,3 +151,31 @@ func get_building_materials():
 		if x.qualities.has(Stuff.QUALITIES.Build):
 			r[x]=x.qualities[Stuff.QUALITIES.Build]
 	return r
+
+func end_turn():
+	pass
+	if RM.species["Mice"] in stuff.keys():
+		if RM.species["Cat"] in stuff.keys():
+			return false
+		else:
+			if RM.stuff["Grain"] in stuff.keys():
+				remove_stuff(RM.stuff["Grain"],1)
+		
+func alter_useage(x:Stuff):
+	if x in prohibited:
+		prohibited.erase(x)
+	else:
+		prohibited.append(x)
+
+func add_max(s:Stuff,a:float):
+	var cap
+	if s in food_order:
+		cap=granary_capacity
+	elif s is Species:
+		cap=animal_fields
+	else:
+		cap=storeroom_capacity
+	if s not in stuff.keys():
+		stuff[s]=min(a,cap)
+	else:
+		stuff[s]=min(stuff[s]+a,cap)

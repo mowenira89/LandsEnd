@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Building" load_steps=10 format=3 uid="uid://dcfk12tjksoj4"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_cbr6u"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_by1n5"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_xi0yn"]
+[ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="4_jwwnv"]
+[ext_resource type="Resource" uid="uid://d3xc4mm7nunw2" path="res://Resources/Stuff/alembic.tres" id="5_i62bx"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_gpkba"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_j8e5u"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="8_iq1iq"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_kebu0"]
+
+[resource]
+script = ExtResource("8_iq1iq")
+name = "Alchemist Studio"
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_by1n5"), int]({
+ExtResource("3_xi0yn"): 10,
+ExtResource("4_jwwnv"): 10,
+ExtResource("5_i62bx"): 5
+})
+construction_level = 3
+staff_needed = Dictionary[int, int]({
+1: 10
+})
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

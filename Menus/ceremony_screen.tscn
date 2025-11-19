@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=3 uid="uid://wtqjmbfmifd7"]
+
+[ext_resource type="Script" uid="uid://d2knneryj3hs4" path="res://Menus/ceremony_screen.gd" id="1_i2qs0"]
+[ext_resource type="PackedScene" uid="uid://7g2xivh0ne32" path="res://Menus/SelectorButton.tscn" id="1_i62wk"]
+
+[node name="CeremonyScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i2qs0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Incense"
+horizontal_alignment = 1
+
+[node name="SelectorButton" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("1_i62wk")]
+layout_mode = 2
+
+[node name="SelectorButton2" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("1_i62wk")]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fuel"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SelectorButton2" parent="MarginContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("1_i62wk")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Ceremony"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Offering"
+horizontal_alignment = 1
+
+[node name="SelectorButton" parent="MarginContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("1_i62wk")]
+layout_mode = 2
+
+[node name="SelectorButton2" parent="MarginContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("1_i62wk")]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Libation"
+horizontal_alignment = 1

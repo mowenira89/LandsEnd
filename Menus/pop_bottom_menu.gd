@@ -16,7 +16,7 @@ func update_menu(t:Territory):
 		if x.friendly:
 			var icon = PERSON_SELECT.instantiate()
 			friends.add_child(icon)
-			icon.create(x)
+			icon.create(x.leader)
 			icon.clicked.connect(show_unit_view)
 	for x in territory.NPCs:
 		if !x.unit:
@@ -28,11 +28,10 @@ func update_menu(t:Territory):
 	GM.menus.switch_side_bottom(self)
 
 func show_unit_view(button):
-	if button.unit:
-		GM.menus.unit_action_menu.update_menu(button.unit)
-		GM.menus.unit_view.update_menu(button.unit)
-	elif button.person:
-		GM.board.npc_view.update_menu(button.person)
+	if button.person.unit:
+		GM.menus.unit_action_menu.update_menu(button.person.unit)
+		GM.menus.unit_view.update_menu(button.person.unit)
+
 	
 func _update_menu():
 	update_menu(territory)

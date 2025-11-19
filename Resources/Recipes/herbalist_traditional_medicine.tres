@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://dfqjqojn07dxu"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_onidc"]
+[ext_resource type="Resource" uid="uid://bvki5qdvgnxsa" path="res://Resources/Stuff/chitin.tres" id="2_d1bfu"]
+[ext_resource type="Resource" uid="uid://d20v07glb4l0u" path="res://Resources/Stuff/ivory.tres" id="3_71cdk"]
+[ext_resource type="Resource" uid="uid://btw4i1ym4cmpp" path="res://Resources/Stuff/traditional_medicine.tres" id="4_v76x4"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_xd2ym"]
+
+[resource]
+script = ExtResource("5_xd2ym")
+name = "Traditional Medicine"
+id = "herbalist_trad_medicine"
+turns = 1
+inputs = Dictionary[ExtResource("1_onidc"), int]({
+ExtResource("2_d1bfu"): 1,
+ExtResource("3_71cdk"): 1
+})
+outputs = Dictionary[ExtResource("1_onidc"), int]({
+ExtResource("4_v76x4"): 2
+})
+exp_to = Dictionary[String, float]({
+"Distilled Medicine": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

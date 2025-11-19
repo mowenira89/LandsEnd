@@ -11,6 +11,14 @@ script = ExtResource("5_wjmkl")
 name = "Flying Mushroom Ceremony"
 length = 4
 interest = 0.4
+happiness_reward = 0.2
+requirements_of_quality = Dictionary[int, float]({
+10: 10.0,
+15: 10.0
+})
+requirements_of_people = Dictionary[int, int]({
+3: 23
+})
 exp_to = Dictionary[ExtResource("1_3cp7e"), float]({
 ExtResource("2_rjec4"): 5.0
 })

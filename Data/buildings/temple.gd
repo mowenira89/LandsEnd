@@ -7,6 +7,9 @@ var defilment:float
 var ceremonies:Array[Event]
 @export var pilgrim_draw:float
 
+var incense:Stuff
+var music:Stuff
+
 func create(d:District):
 	super(d)
 	storeroom.owner=d.territory

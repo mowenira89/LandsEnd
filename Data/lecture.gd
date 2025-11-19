@@ -9,16 +9,14 @@ class_name Lecture extends Event
 @export var difficulty:int
 @export var research:Dictionary[Research,float]
 
-func create(id:String, m:String, t=1, b:Building=null):
+func create(t=1, b:Building=null):
 	building=b
 	
 func end_turn():
 	turns-=1
-	for x in effects:
-		x.per_turn(turns)
-		if turns<=0:
-			x.apply()
-			turns=lecture_length
+	if turns<=0:
+		apply()
+		turns=lecture_length
 
 func apply():
 	if train_pops:

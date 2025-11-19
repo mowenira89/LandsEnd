@@ -7,6 +7,14 @@ class_name LevelUpSlate extends Resource
 @export var production_slots:int
 @export var buffs:Array[Buff]
 @export var trigger_event:Array[Event]
+@export var needs_upgrade:Array[Building]
+@export var needs_extentions:Array[Building]
+@export var district_upgrade:Array[District.TYPES]
+@export var store_cap_up:int
+@export var granary_cap_up:int
+@export var fields_up:int
+@export var animal_fields_up:int
+@export var pops_cap_up:Dictionary[Pop.CLASS,int]
 
 func apply(b:Building):
 	for x in buildings_unlocked:

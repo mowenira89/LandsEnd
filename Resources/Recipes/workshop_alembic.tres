@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cyni8ddcjdbwi"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_r4jar"]
+[ext_resource type="Resource" uid="uid://u8sax8phrhwe" path="res://Resources/Stuff/glass.tres" id="2_8n8au"]
+[ext_resource type="Resource" uid="uid://d3xc4mm7nunw2" path="res://Resources/Stuff/alembic.tres" id="3_udamk"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_bsnb8"]
+
+[resource]
+script = ExtResource("4_bsnb8")
+name = "Alembic"
+id = "workshop_alembic"
+turns = 2
+inputs = Dictionary[ExtResource("1_r4jar"), int]({
+ExtResource("2_8n8au"): 1
+})
+outputs = Dictionary[ExtResource("1_r4jar"), int]({
+ExtResource("3_udamk"): 1
+})
+exp_to = Dictionary[String, float]({
+"Alchemy": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

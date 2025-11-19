@@ -1,6 +1,6 @@
 class_name BuildingExpBuff extends Buff
 
-@export var amt:float
+
 @export var for_quality:Array[Stuff.QUALITIES]
 
 

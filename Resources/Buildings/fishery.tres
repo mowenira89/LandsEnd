@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Camp" load_steps=15 format=3 uid="uid://8v4i0hnt5w35"]
+[gd_resource type="Resource" script_class="Camp" load_steps=16 format=3 uid="uid://8v4i0hnt5w35"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_8c5a2"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_riqxc"]
@@ -9,8 +9,9 @@
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_a6pby"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="7_a6pby"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_h4uyu"]
-[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="8_h4uyu"]
+[ext_resource type="Texture2D" uid="uid://b62rn6c0ug6yd" path="res://Assets/Images/BuildingImages/fishery.png" id="7_ly88r"]
 [ext_resource type="Script" uid="uid://doa1vbsvkk4tx" path="res://Data/buildings/camp.gd" id="8_ly88r"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="9_81gmf"]
 [ext_resource type="Resource" uid="uid://k7yaa1es4tcb" path="res://Resources/Recipes/fishery_smoked_fish.tres" id="10_g7b6d"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="10_ly88r"]
 
@@ -22,6 +23,7 @@ metadata/_custom_type_script = "uid://fq88cbj1x31o"
 script = ExtResource("8_ly88r")
 fish = true
 name = "Fishery"
+image = ExtResource("7_ly88r")
 construction_time = 2
 construction_materials = Dictionary[ExtResource("2_riqxc"), int]({
 ExtResource("3_8c5a2"): 15,

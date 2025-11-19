@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="Temple" load_steps=11 format=3 uid="uid://bnl1u16l284dq"]
+[gd_resource type="Resource" script_class="Temple" load_steps=12 format=3 uid="uid://bnl1u16l284dq"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_5n1v7"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_iw5j1"]
 [ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="3_f5afp"]
+[ext_resource type="Texture2D" uid="uid://b6fgelyevgk3" path="res://Assets/Images/BuildingImages/grove.png" id="4_iw5j1"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="4_msqjc"]
-[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="5_gw4wb"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_f5afp"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_tngq5"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_boc4b"]
 [ext_resource type="Script" uid="uid://ds8ftt1ahq3nf" path="res://Data/buildings/temple.gd" id="8_7kdx7"]
@@ -20,6 +21,7 @@ pilgrim_draw = 15.0
 name = "Sacred Grove"
 unlocked = true
 stats = SubResource("Resource_jkpd3")
+image = ExtResource("4_iw5j1")
 pop_cap = Dictionary[int, int]({
 3: 25
 })

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://di5np8d418ic1"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_rxi2n"]
+[ext_resource type="Resource" uid="uid://bdmfger4xbtew" path="res://Resources/Stuff/tin_ingot.tres" id="2_1xvp0"]
+[ext_resource type="Resource" uid="uid://glxdul4w3gjs" path="res://Resources/Stuff/tin_trumpet.tres" id="3_in1ou"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_yxtb6"]
+
+[resource]
+script = ExtResource("4_yxtb6")
+name = "Tin Trumpet"
+id = "musician_studio_tin_trumpet"
+turns = 1
+inputs = Dictionary[ExtResource("1_rxi2n"), int]({
+ExtResource("2_1xvp0"): 1
+})
+outputs = Dictionary[ExtResource("1_rxi2n"), int]({
+ExtResource("3_in1ou"): 3
+})
+exp_to = Dictionary[String, float]({
+"Orchestra": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

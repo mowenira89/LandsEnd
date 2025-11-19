@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=6 format=3 uid="uid://dcwbox8m58y83"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_naqx7"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_trrya"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_2lkxk"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_fpj7w"]
+
+[sub_resource type="Resource" id="Resource_p2o8t"]
+script = ExtResource("4_fpj7w")
+hp = 190.0
+off = 3.0
+def = 3.0
+mag = 8.0
+magdef = 8.0
+sp = 5.0
+l = 2.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_2lkxk")
+aggressiveness = 4.0
+skittishness = 8.0
+name = "Dark Elf"
+stats = SubResource("Resource_p2o8t")
+value = 20000.0
+mystic_qualities = Dictionary[int, float]({
+0: 3.0
+})
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

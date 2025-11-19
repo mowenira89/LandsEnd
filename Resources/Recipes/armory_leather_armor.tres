@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dxecqqw65bji"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_lboqq"]
+[ext_resource type="Resource" uid="uid://cdf1y3g80yt8t" path="res://Resources/Stuff/leather.tres" id="2_sgvxu"]
+[ext_resource type="Resource" uid="uid://c6x8088bmne20" path="res://Resources/Stuff/leather_armor.tres" id="3_1q2rd"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_cmlb8"]
+
+[resource]
+script = ExtResource("4_cmlb8")
+name = "Leather Armor"
+id = "armory_leather_armor"
+turns = 1
+inputs = Dictionary[ExtResource("1_lboqq"), int]({
+ExtResource("2_sgvxu"): 1
+})
+outputs = Dictionary[ExtResource("1_lboqq"), int]({
+ExtResource("3_1q2rd"): 2
+})
+exp_to = Dictionary[String, float]({
+"Armory": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

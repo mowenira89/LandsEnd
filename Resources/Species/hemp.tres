@@ -1,9 +1,18 @@
-[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://by5utr1kongxn"]
+[gd_resource type="Resource" script_class="Species" load_steps=8 format=3 uid="uid://by5utr1kongxn"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_7w7e4"]
 [ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="2_0gpbu"]
 [ext_resource type="Resource" uid="uid://ccyw7ok13xyba" path="res://Resources/Stuff/ganja.tres" id="3_0gpbu"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_0qlmp"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="4_0qlmp"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="6_pepwh"]
+
+[sub_resource type="Resource" id="Resource_213qh"]
+script = ExtResource("6_pepwh")
+hp = 20.0
+mag = 1.0
+magdef = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("3_0qlmp")
@@ -17,5 +26,11 @@ ExtResource("3_0gpbu"): 1
 })
 rarity = 50.0
 name = "Hemp"
+stats = SubResource("Resource_213qh")
+mystic_qualities = Dictionary[int, float]({
+0: 1.0,
+1: 1.0,
+4: 1.0
+})
 found_in = Array[int]([0, 2, 1, 3])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

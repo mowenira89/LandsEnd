@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Building" load_steps=14 format=3 uid="uid://ca37hr1ffwg3m"]
+[gd_resource type="Resource" script_class="Building" load_steps=15 format=3 uid="uid://ca37hr1ffwg3m"]
 
 [ext_resource type="Script" uid="uid://shaorb866qv1" path="res://Data/buffs.gd" id="1_7b80a"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_twf4j"]
@@ -6,8 +6,9 @@
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="4_ppqkk"]
 [ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="5_a8pyi"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_iuabf"]
-[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="7_ffuol"]
+[ext_resource type="Texture2D" uid="uid://xylr5jsx7xuk" path="res://Assets/Images/BuildingImages/woodsmith.png" id="6_twf4j"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="8_1p00q"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="8_ajaly"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_ldx27"]
 [ext_resource type="Resource" uid="uid://dk54yevudsk1q" path="res://Resources/Recipes/carpenter_barrel.tres" id="10_m8btv"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="11_s5lc3"]
@@ -25,6 +26,7 @@ script = ExtResource("8_1p00q")
 name = "Woodsmith"
 buffs = SubResource("Resource_tsbj7")
 stats = SubResource("Resource_2gkw7")
+image = ExtResource("6_twf4j")
 construction_time = 2
 construction_materials = Dictionary[ExtResource("3_ajaly"), int]({
 ExtResource("4_ppqkk"): 10,

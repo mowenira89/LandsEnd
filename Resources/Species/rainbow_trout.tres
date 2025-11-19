@@ -1,9 +1,19 @@
-[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://ngsirtsh2xwq"]
+[gd_resource type="Resource" script_class="Species" load_steps=8 format=3 uid="uid://ngsirtsh2xwq"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_vohq3"]
 [ext_resource type="Resource" uid="uid://bp18xaaeucfs8" path="res://Resources/Stuff/roe.tres" id="2_6645r"]
 [ext_resource type="Resource" uid="uid://488tnlw6bkqg" path="res://Resources/Stuff/fancy_fish.tres" id="3_pfeh8"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_3dxcy"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="4_6645r"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="6_pfeh8"]
+
+[sub_resource type="Resource" id="Resource_3dxcy"]
+script = ExtResource("6_pfeh8")
+hp = 15.0
+def = 1.0
+sp = 5.0
+l = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("4_3dxcy")
@@ -16,7 +26,13 @@ ExtResource("2_6645r"): 1
 })
 rarity = 35.0
 game = true
+aggressiveness = 1.0
+skittishness = 5.0
 name = "Rainbow Trout"
+stats = SubResource("Resource_3dxcy")
 value = 10.0
+mystic_qualities = Dictionary[int, float]({
+2: 2.0
+})
 found_in = Array[int]([5])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

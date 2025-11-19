@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cce2mseql7hit"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_n2xc3"]
+[ext_resource type="Resource" uid="uid://bkk5cro2nvdbq" path="res://Resources/Crops/hemp.tres" id="2_fhl6g"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="3_3kic0"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_0ac7c"]
+
+[resource]
+script = ExtResource("4_0ac7c")
+name = "Fiber (Hemp)"
+id = "workshop_fiber_hemp"
+turns = 1
+inputs = Dictionary[ExtResource("1_n2xc3"), int]({
+ExtResource("2_fhl6g"): 1
+})
+outputs = Dictionary[ExtResource("1_n2xc3"), int]({
+ExtResource("3_3kic0"): 4
+})
+exp_to = Dictionary[String, float]({
+"Textiles": 2.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

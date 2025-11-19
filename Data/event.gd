@@ -1,27 +1,47 @@
 class_name Event extends Resource
 
 var turns=1
-var effects:Array[Effect]
 var id:String
+var memory:String
+var remember_for:int=-1
 var message:String
 
-func create(id:String, m:String, t=1):
+func create(t=1):
 	turns = t
-	message=m
+	
+func init():
+	pass
+
+func check(d:District=null,t:Territory=null,b:Building=null,u:Unit=null):
+	return true
+
+func apply():
+	pass
+	
+func on_removal(turns_left:int=0):
+	pass
+
+func per_turn(turns):
+	pass
 
 func end_turn():
-	turns-=1
-	for x in effects:
-		x.per_turn(turns)
+	per_turn(turns)
+	if turns>0:
+		turns-=1
 		if turns<=0:
-			x.apply()
-			x.on_removal(0)
+			apply()
+			on_removal()
+	if remember_for>0:
+		remember_for-=1
 
 func is_alive():
 	return turns!=0
 
 func get_message()->String:
-	return id
+	return message
+
+func get_memory()->String:
+	return memory
 	
 func get_end_turn_message():
 	pass

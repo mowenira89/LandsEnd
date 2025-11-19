@@ -1,11 +1,19 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://csqk5gpsyuxyl"]
+[gd_resource type="Resource" script_class="Stuff" load_steps=5 format=3 uid="uid://csqk5gpsyuxyl"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_4jxf0"]
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_co6g0"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="3_safe0"]
+
+[sub_resource type="Resource" id="Resource_ag1s7"]
+script = ExtResource("3_safe0")
+off = 8.0
+l = 2.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("1_4jxf0")
 name = "Magic Sword"
+stats = SubResource("Resource_ag1s7")
 value = 150.0
 qualities = Dictionary[int, float]({
 7: 8.0,

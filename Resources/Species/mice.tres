@@ -1,18 +1,40 @@
-[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://cse3s8sl70tcw"]
+[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://cse3s8sl70tcw"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_racr3"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_7xxk8"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_bdl0h"]
+[ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="2_ym772"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_bdl0h"]
+
+[sub_resource type="Resource" id="Resource_ym772"]
+script = ExtResource("4_bdl0h")
+hp = 5.0
+off = 1.0
+def = 1.0
+mag = 1.0
+magdef = 1.0
+sp = 5.0
+l = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("2_7xxk8")
 kind = 1
+kill_produce = Dictionary[ExtResource("1_racr3"), int]({
+ExtResource("2_ym772"): 1
+})
 rarity = 85.0
-speed = 4.0
+aggressiveness = 1.0
+skittishness = 6.0
 name = "Mice"
+stats = SubResource("Resource_ym772")
 value = 1.0
 qualities = Dictionary[int, float]({
 0: 0.5,
 2: -1.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 1.0
 })
 found_in = Array[int]([0, 2, 4, 3])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

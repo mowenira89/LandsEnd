@@ -1,24 +1,24 @@
-[gd_resource type="Resource" script_class="Building" load_steps=9 format=3 uid="uid://dne6u8apox0fa"]
+[gd_resource type="Resource" script_class="Building" load_steps=11 format=3 uid="uid://dne6u8apox0fa"]
 
-[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_vdawn"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_fp6j1"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_gl35h"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="4_gwwfs"]
+[ext_resource type="Texture2D" uid="uid://3le2kb3lxn3o" path="res://Assets/Images/BuildingImages/tannery.png" id="5_gl35h"]
 [ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="5_xjs5x"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_bsdv6"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_gwwfs"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_hqb3g"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_xjs5x"]
 [ext_resource type="Resource" uid="uid://dfada7pgnfv3l" path="res://Resources/Recipes/tannery_leather.tres" id="8_vyel1"]
 
 [resource]
 script = ExtResource("6_bsdv6")
 name = "Tannery"
+image = ExtResource("5_gl35h")
 construction_time = 1
 construction_materials = Dictionary[ExtResource("3_gl35h"), int]({
 ExtResource("4_gwwfs"): 15,
 ExtResource("5_xjs5x"): 5
-})
-construction_staff = Dictionary[int, int]({
-0: 5
 })
 construction_level = 2
 staff_needed = Dictionary[int, int]({

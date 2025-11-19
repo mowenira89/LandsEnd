@@ -32,15 +32,30 @@ func end_turn():
 
 
 func repair():
-	pass
+	var stockpile = district.territory.stockpile
+	var percentage = (stats.total_hp-stats.current_hp)/100
+	var materials_needed = construction_materials.duplicate()
+	for x in materials_needed.keys():
+		if !x.qualities.has(Stuff.QUALITIES.Build):
+			materials_needed.erase(x)
+	for x in materials_needed:
+		materials_needed[x]*=percentage
+		if stockpile.check_stuff_amount(x)<materials_needed[x]:
+			return false
+	for x in materials_needed:
+		stockpile.remove_stuff(x,materials_needed[x])
+	stats.current_hp=stats.total_hp
+			
 
 func get_damage(depth:int):
 	var r = randi_range(1,100)
-	var prowess = 10+GM.get_prowess(Person.PROWESS.Mining,self)*10
-	var mod = GM.get_buffs(Buff.TYPE.MiningProwess,self,district.territory,boss.leader)
-	prowess+=mod
+	var prowess = 10+GM.get_prowess(Person.PROWESS.MiningSavant,self)*10
+	var disrepair = stats.total_hp-stats.current_hp
+	r+=disrepair
 	if r>prowess:
 		var damage = randi_range(1,r)
 		var memory = Memory.new()
 		var string = str(damage)+" damage done in collapse."
 		memory.create(self,damage,string)
+		memories.append(memory)
+		take_damage(damage)

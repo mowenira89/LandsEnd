@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Species" load_steps=6 format=3 uid="uid://bk63aldwfohbi"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_tumdq"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_ycpxn"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_xv3nt"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_ycpxn"]
+
+[sub_resource type="Resource" id="Resource_xv3nt"]
+script = ExtResource("4_ycpxn")
+hp = 100.0
+off = 4.0
+def = 4.0
+mag = 5.0
+magdef = 3.0
+sp = 5.0
+l = 3.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_xv3nt")
+rarity = 25.0
+aggressiveness = 5.0
+skittishness = 8.0
+name = "Satyr"
+stats = SubResource("Resource_xv3nt")
+value = 2500.0
+mystic_qualities = Dictionary[int, float]({
+0: 2.0
+})
+exp_to = Dictionary[String, float]({
+"Brewing": 1.0
+})
+prohibited = true
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

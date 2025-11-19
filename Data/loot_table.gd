@@ -10,7 +10,7 @@ func create(d:Dictionary,luck=0):
 	var cumulative=0
 	var r
 	var target:Stuff=null
-
+	luck = 0 if !luck else luck
 	if luck>0:
 		for x in d:
 			if d[x]>50:
@@ -20,7 +20,7 @@ func create(d:Dictionary,luck=0):
 	
 	for x in d:
 		total_weight+=d[x]
-	cumulative = randf_range(0,total_weight)
+	r = randf_range(0,total_weight)
 	for x in d:
 		cumulative+=d[x]
 		if r<cumulative:

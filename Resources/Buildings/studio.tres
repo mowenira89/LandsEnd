@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="Building" load_steps=21 format=3 uid="uid://cmxgcebf23yff"]
+[gd_resource type="Resource" script_class="Building" load_steps=22 format=3 uid="uid://cmxgcebf23yff"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_vgav6"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_ig5vp"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_6q613"]
 [ext_resource type="Resource" uid="uid://be3fpj4ymxj8y" path="res://Resources/Stuff/canvas.tres" id="4_bnulh"]
+[ext_resource type="Texture2D" uid="uid://dk8s8qk4y2slp" path="res://Assets/Images/BuildingImages/studio.png" id="5_ig5vp"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_jgn53"]
-[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_plcgm"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_6q613"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_86rn3"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_arla8"]
 [ext_resource type="Resource" uid="uid://ck8mbp08riigx" path="res://Resources/Recipes/studio_horn_carving.tres" id="9_tixce"]
@@ -28,6 +29,7 @@ metadata/_custom_type_script = "uid://d2hat5snxwp82"
 script = ExtResource("7_86rn3")
 name = "Studio"
 stats = SubResource("Resource_qyiux")
+image = ExtResource("5_ig5vp")
 pop_cap = Dictionary[int, int]({
 1: 50
 })

@@ -1,8 +1,19 @@
-[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://cvyieoa2fip55"]
+[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://cvyieoa2fip55"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_rig31"]
 [ext_resource type="Resource" uid="uid://cwvi12e0vscxo" path="res://Resources/Stuff/dried_newt.tres" id="2_1ktsv"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_xbgb0"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_1ktsv"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_upm0m"]
+
+[sub_resource type="Resource" id="Resource_g2d7g"]
+script = ExtResource("5_upm0m")
+hp = 2.0
+mag = 5.0
+magdef = 7.0
+sp = 5.0
+l = 2.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("2_xbgb0")
@@ -11,7 +22,13 @@ kill_produce = Dictionary[ExtResource("1_rig31"), int]({
 ExtResource("2_1ktsv"): 1
 })
 rarity = 10.0
-speed = 2.0
+skittishness = 7.0
 name = "Newt"
+stats = SubResource("Resource_g2d7g")
+value = 3.0
+mystic_qualities = Dictionary[int, float]({
+0: 2.0,
+5: 1.0
+})
 found_in = Array[int]([3])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

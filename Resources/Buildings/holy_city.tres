@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="Building" load_steps=10 format=3 uid="uid://c24ui73agncyg"]
+[gd_resource type="Resource" script_class="Building" load_steps=12 format=3 uid="uid://c24ui73agncyg"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_qgkvb"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_plfi7"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_c8kbk"]
 [ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="4_lpo3h"]
+[ext_resource type="Texture2D" uid="uid://1as8cui8hp7y" path="res://Assets/Images/BuildingImages/holy city.png" id="5_c8kbk"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_mlqhm"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_3i46r"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_dxygv"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_lpo3h"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="8_t7bpy"]
 
 [sub_resource type="Resource" id="Resource_hnt4w"]
@@ -18,6 +20,7 @@ script = ExtResource("6_3i46r")
 name = "Holy City"
 upgrade_only = true
 stats = SubResource("Resource_hnt4w")
+image = ExtResource("5_c8kbk")
 pop_cap = Dictionary[int, int]({
 0: 500,
 1: 250,

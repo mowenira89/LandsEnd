@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Temple" load_steps=6 format=3 uid="uid://b3b5f54egcucd"]
+[gd_resource type="Resource" script_class="Temple" load_steps=7 format=3 uid="uid://b3b5f54egcucd"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_lmk5p"]
+[ext_resource type="Texture2D" uid="uid://cx7sdm6jv32cx" path="res://Assets/Images/BuildingImages/stones.png" id="3_sbm20"]
 [ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="3_tnmht"]
 [ext_resource type="Script" uid="uid://ds8ftt1ahq3nf" path="res://Data/buildings/temple.gd" id="8_gxr84"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="9_ndp50"]
@@ -16,6 +17,7 @@ name = "Standing Stones"
 unlocked = null
 upgrade_only = null
 stats = SubResource("Resource_6phg4")
+image = ExtResource("3_sbm20")
 pop_cap = Dictionary[int, int]({
 3: 20
 })

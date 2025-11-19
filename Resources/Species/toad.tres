@@ -1,9 +1,20 @@
-[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://bg0dsspgwrp2d"]
+[gd_resource type="Resource" script_class="Species" load_steps=8 format=3 uid="uid://bg0dsspgwrp2d"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_kdhwg"]
 [ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="2_57fif"]
 [ext_resource type="Resource" uid="uid://bmfrhtdbq0uxf" path="res://Resources/Stuff/toad_essence.tres" id="2_o30ng"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_o30ng"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="4_o30ng"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="6_jqyck"]
+
+[sub_resource type="Resource" id="Resource_80gma"]
+script = ExtResource("6_jqyck")
+hp = 5.0
+mag = 2.0
+magdef = 2.0
+sp = 5.0
+l = 5.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("3_o30ng")
@@ -16,8 +27,13 @@ harvest_produce = Dictionary[ExtResource("1_kdhwg"), int]({
 ExtResource("2_o30ng"): 1
 })
 rarity = 30.0
-speed = 1.0
 game = true
+skittishness = 8.0
 name = "Toad"
+stats = SubResource("Resource_80gma")
+mystic_qualities = Dictionary[int, float]({
+0: 1.0,
+5: 1.0
+})
 found_in = Array[int]([3])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

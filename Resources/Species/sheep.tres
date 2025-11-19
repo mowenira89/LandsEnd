@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://dei76cvtmox1f"]
+[gd_resource type="Resource" script_class="Species" load_steps=10 format=3 uid="uid://dei76cvtmox1f"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_12nuv"]
 [ext_resource type="Resource" uid="uid://4ut5xliyf7jc" path="res://Resources/Stuff/wool.tres" id="2_fow7l"]
@@ -6,6 +6,19 @@
 [ext_resource type="Resource" uid="uid://du817n882ksa7" path="res://Resources/Stuff/pelt.tres" id="4_8pgx4"]
 [ext_resource type="Resource" uid="uid://dhuuxiv38pk4g" path="res://Resources/Stuff/horn.tres" id="5_fow7l"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="5_i4mti"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="6_mt53e"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="8_8pgx4"]
+
+[sub_resource type="Resource" id="Resource_i4mti"]
+script = ExtResource("8_8pgx4")
+hp = 30.0
+off = 1.0
+def = 2.0
+mag = 2.0
+magdef = 3.0
+sp = 3.0
+l = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("5_i4mti")
@@ -20,11 +33,14 @@ harvest_produce = Dictionary[ExtResource("1_12nuv"), int]({
 ExtResource("2_fow7l"): 1
 })
 rarity = 75.0
-offense = 1.0
-defense = 2.0
-speed = 3.0
 game = true
 steed = true
+aggressiveness = 2.0
+skittishness = 5.0
 name = "Bighorn Sheep"
+stats = SubResource("Resource_i4mti")
+mystic_qualities = Dictionary[int, float]({
+0: 2.0
+})
 found_in = Array[int]([1])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

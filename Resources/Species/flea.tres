@@ -1,15 +1,27 @@
-[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://btyafvd58hien"]
+[gd_resource type="Resource" script_class="Species" load_steps=6 format=3 uid="uid://btyafvd58hien"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_eti7p"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_jeujc"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_r4taf"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_jeujc"]
+
+[sub_resource type="Resource" id="Resource_saejk"]
+script = ExtResource("4_jeujc")
+hp = 1.0
+sp = 7.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("2_r4taf")
 kind = 9
 rarity = 35.0
-speed = 9.0
+skittishness = 2.0
 name = "Flea"
+stats = SubResource("Resource_saejk")
 value = 5.0
+mystic_qualities = Dictionary[int, float]({
+5: 0.5
+})
 exp_to = Dictionary[String, float]({
 "Flea Circus": 1.0
 })

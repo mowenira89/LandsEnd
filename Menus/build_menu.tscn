@@ -28,7 +28,11 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="PotentialBuildingsHolder" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+
+[node name="PotentialBuildingsHolder" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer"]
 custom_minimum_size = Vector2(370, 370)
 layout_mode = 2
 columns = 5
@@ -42,11 +46,6 @@ layout_mode = 2
 text = "Building Name"
 horizontal_alignment = 1
 
-[node name="Pic" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-expand_mode = 1
-
 [node name="Info" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 180)
 layout_mode = 2
@@ -56,11 +55,3 @@ text = "Construction:
 
 Staff:
 10 Followers"
-
-[node name="Build" type="Button" parent="MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
-text = "Build"
-
-[connection signal="pressed" from="MarginContainer/Build" to="." method="_on_build_pressed"]

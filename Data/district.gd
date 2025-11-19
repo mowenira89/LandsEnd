@@ -9,6 +9,8 @@ enum TYPES {Wild,Sacred,Agricultural,Industrial,Mining,Military,Residential}
 @export var building:Building
 @export var index:int
 @export var construction_time:int=0
+@export var attractiveness:float=0
+@export var chief:Nymphoi
 
 @export var discovered_game:Array[Species]
 @export var discovered_flora:Array[Species]
@@ -29,17 +31,21 @@ func create(t:Territory,i:int):
 
 func fauna_spotted(s:Species):
 	if s not in discovered_game:
+		GM.menus.end_turn_box.get_message("Discovered "+s.name+" in "+name+"!")
 		discovered_game.append(s)
 		#SEND MESSAGE
 		
 func flora_spotted(s:Species):
 	if s not in discovered_flora:
+		GM.menus.end_turn_box.get_message("Discovered "+s.name+" in "+name+"!")
 		discovered_flora.append(s)
 
 func resource_spotted(s:Stuff):
 	if s not in discovered_resources:
+		GM.menus.end_turn_box.get_message("Discovered "+s.name+" in "+name+"!")
 		discovered_resources.append(s)
 		
 func forage_spotted(s:Stuff):
 	if s not in discovered_forage:
+		GM.menus.end_turn_box.get_message("Discovered "+s.name+" in "+name+"!")
 		discovered_forage.append(s)

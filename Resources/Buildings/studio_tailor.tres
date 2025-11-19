@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="Building" load_steps=15 format=3 uid="uid://c4taov21qht8o"]
+[gd_resource type="Resource" script_class="Building" load_steps=17 format=3 uid="uid://c4taov21qht8o"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_0hyas"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_wwbm5"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_2n80c"]
+[ext_resource type="Texture2D" uid="uid://bct70j7ghv0v7" path="res://Assets/Images/BuildingImages/tailor.png" id="4_mgusf"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="4_qqb2d"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="5_ygg8b"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="6_84x0l"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_cq2bp"]
 [ext_resource type="Resource" uid="uid://c30ql271iqtyb" path="res://Resources/Recipes/tailor_fancy_dress.tres" id="7_8q7do"]
 [ext_resource type="Resource" uid="uid://cr8vdbd74lcvo" path="res://Resources/Recipes/tailor_fine_clothing.tres" id="8_bkh1a"]
 [ext_resource type="Resource" uid="uid://dfao5oua6uhrf" path="res://Resources/Recipes/tailor_fine_clothing_silk.tres" id="9_g4f4r"]
@@ -23,6 +25,7 @@ script = ExtResource("5_ygg8b")
 name = "Tailor"
 upgrade_only = true
 stats = SubResource("Resource_xwswp")
+image = ExtResource("4_mgusf")
 construction_time = 2
 construction_materials = Dictionary[ExtResource("2_wwbm5"), int]({
 ExtResource("3_2n80c"): 15

@@ -1,11 +1,30 @@
-[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dmasxirak0da2"]
+[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://dmasxirak0da2"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_baarl"]
+[ext_resource type="Resource" uid="uid://0lprkntsdf1v" path="res://Resources/Stuff/frankincense.tres" id="2_e2310"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_hi5bx"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_qyeqx"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_e2310"]
+
+[sub_resource type="Resource" id="Resource_oj88e"]
+script = ExtResource("5_e2310")
+hp = 100.0
+def = 2.0
+magdef = 2.0
+l = 2.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("2_hi5bx")
 kind = 6
+harvest_produce = Dictionary[ExtResource("1_baarl"), int]({
+ExtResource("2_e2310"): 1
+})
 name = "Olibanum"
+stats = SubResource("Resource_oj88e")
 value = 100.0
+mystic_qualities = Dictionary[int, float]({
+0: 3.0,
+4: 3.0
+})
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

@@ -2,22 +2,24 @@ class_name PersonSelectorButton extends Button
 
 @onready var texture_rect: TextureRect = $TextureRect
 
+@export var _size:int
+
 signal removing
 signal open
 var person
 var unit
 signal clicked
 
-func create(u:Unit=null, p:Person=null):
-	if u:
-		unit=u
-	elif p:
-		person=p
-	if unit:
-		texture_rect.texture=unit.leader.image
-	elif person:
+func create(p:Person):
+	if _size:
+		custom_minimum_size.x=_size
+		custom_minimum_size.y=_size
+		size.x=_size
+		size.y=_size
+	person=p
+	if person:
 		texture_rect.texture=person.image
-	if u or p:
+	if p:
 		texture_rect.visible=true
 	else:
 		texture_rect.visible=false

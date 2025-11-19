@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Research" load_steps=10 format=3 uid="uid://cuki2wl56wxby"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_h8cft"]
+[ext_resource type="Resource" uid="uid://oxsalmvn78j3" path="res://Resources/Buildings/aquarium.tres" id="2_nod03"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_vwx3m"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_gf5cg"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_0vlpw"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_5iov1"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_5ssyo"]
+[ext_resource type="Resource" uid="uid://cnml7knu24hmt" path="res://Resources/Research/aquaculture.tres" id="8_n8lwx"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_glvdb"]
+
+[resource]
+script = ExtResource("7_5ssyo")
+name = "Aquarium"
+buildings = Array[ExtResource("1_h8cft")]([ExtResource("2_nod03")])
+exp_to_unlock = 50
+prerequisites = Array[ExtResource("7_5ssyo")]([ExtResource("8_n8lwx")])
+inspiration_threshold = 25.0
+inspired_class = 1
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

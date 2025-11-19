@@ -1,9 +1,19 @@
-[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://blgscnixqsbu6"]
+[gd_resource type="Resource" script_class="Species" load_steps=8 format=3 uid="uid://blgscnixqsbu6"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_bdxhm"]
 [ext_resource type="Resource" uid="uid://bp18xaaeucfs8" path="res://Resources/Stuff/roe.tres" id="2_v6uu6"]
 [ext_resource type="Resource" uid="uid://488tnlw6bkqg" path="res://Resources/Stuff/fancy_fish.tres" id="3_ppjx5"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="4_v6uu6"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_vabtu"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="6_ppjx5"]
+
+[sub_resource type="Resource" id="Resource_vabtu"]
+script = ExtResource("6_ppjx5")
+hp = 15.0
+def = 1.0
+sp = 7.0
+l = 5.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("4_vabtu")
@@ -15,12 +25,16 @@ harvest_produce = Dictionary[ExtResource("1_bdxhm"), int]({
 ExtResource("2_v6uu6"): 1
 })
 rarity = 2.0
-speed = 5.0
 game = true
+skittishness = 5.0
 name = "Pink and Blue Trout"
+stats = SubResource("Resource_vabtu")
 value = 25.0
 qualities = Dictionary[int, float]({
 0: 2.0
+})
+mystic_qualities = Dictionary[int, float]({
+2: 2.0
 })
 found_in = Array[int]([5])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="KhemicRecipe" load_steps=5 format=3 uid="uid://cqvf1x2fwf3j6"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_370x7"]
+[ext_resource type="Script" uid="uid://b5amvji0dfqa4" path="res://Data/khemic_recipe.gd" id="2_gobim"]
+[ext_resource type="Resource" uid="uid://dyyttfsfctue3" path="res://Resources/Stuff/gold_ore.tres" id="2_wprsp"]
+[ext_resource type="Resource" uid="uid://baewvmenynp8x" path="res://Resources/Stuff/oricalc.tres" id="3_bixi1"]
+
+[resource]
+script = ExtResource("2_gobim")
+mystic_need = 25.0
+mystic_type = 3
+level = 3
+name = "Gold to Orichalc"
+id = "khem_gold_to_orichalc"
+turns = 1
+inputs = Dictionary[ExtResource("1_370x7"), int]({
+ExtResource("2_wprsp"): 1
+})
+outputs = Dictionary[ExtResource("1_370x7"), int]({
+ExtResource("3_bixi1"): 1
+})
+exp_to = Dictionary[String, float]({
+"Orangesmithing": 2.0,
+"Voltaomancy": 2.0
+})
+metadata/_custom_type_script = "uid://b5amvji0dfqa4"

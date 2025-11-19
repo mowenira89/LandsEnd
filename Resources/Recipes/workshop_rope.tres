@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bak5oibo45ppn"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_126a6"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="2_8qhk1"]
+[ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="3_sip8k"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_8sf8d"]
+
+[resource]
+script = ExtResource("4_8sf8d")
+name = "Rope"
+id = "workshop_rope"
+turns = 1
+inputs = Dictionary[ExtResource("1_126a6"), int]({
+ExtResource("2_8qhk1"): 1
+})
+outputs = Dictionary[ExtResource("1_126a6"), int]({
+ExtResource("3_sip8k"): 3
+})
+exp_to = Dictionary[String, float]({
+"Textiles": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=6 format=3 uid="uid://ck3f1bhp3y3s0"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_4ngex"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_acx5r"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_lx30w"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_2d3v0"]
+
+[sub_resource type="Resource" id="Resource_qyoso"]
+script = ExtResource("4_2d3v0")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_lx30w")
+crop_level = 2
+vitamins = Dictionary[int, float]({
+0: 1.0,
+2: 3.0
+})
+water_need = 3.0
+health = 16.0
+harvest_season = Array[int]([7])
+dead_season = Array[int]([1, 2, 0, 3, 4, 5])
+kind = 6
+rarity = 10.0
+name = "Fimbulplum"
+stats = SubResource("Resource_qyoso")
+value = 25.0
+qualities = Dictionary[int, float]({
+0: 2.0,
+2: 2.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 1.0
+})
+exp_to = Dictionary[String, float]({
+"Sylvan Farming": 1.0
+})
+found_in = Array[int]([2, 1])
+metadata/_custom_type_script = "uid://wxkcemfn60gw"

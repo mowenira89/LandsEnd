@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Species" load_steps=6 format=3 uid="uid://lmsdaxlp4hco"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_1nqrp"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_eamxv"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_v24nq"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_fq4x2"]
+
+[sub_resource type="Resource" id="Resource_irt8n"]
+script = ExtResource("4_fq4x2")
+hp = 1000.0
+off = 7.0
+def = 7.0
+mag = 9.0
+magdef = 11.0
+sp = 5.0
+l = 7.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_v24nq")
+rarity = 10.0
+aggressiveness = 5.0
+skittishness = 11.0
+name = "Naiad"
+stats = SubResource("Resource_irt8n")
+value = 1000000000.0
+mystic_qualities = Dictionary[int, float]({
+2: 7.0,
+4: 5.0
+})
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

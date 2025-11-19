@@ -45,3 +45,11 @@ func set_for_target():
 	
 func untarget():
 	selector_button.visible=false
+
+
+func _on_selector_button_mouse_entered() -> void:
+	GM.menus.district_stats.update_menu(district)
+
+
+func _on_selector_button_mouse_exited() -> void:
+	pass

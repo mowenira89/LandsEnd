@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="Building" load_steps=11 format=3 uid="uid://b82rdposfw5vp"]
+[gd_resource type="Resource" script_class="Building" load_steps=12 format=3 uid="uid://b82rdposfw5vp"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_x4hma"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_lnxuc"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_h3ulg"]
 [ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="4_wfedc"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_3uccs"]
-[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_kbblo"]
+[ext_resource type="Texture2D" uid="uid://co160eaybkqy0" path="res://Assets/Images/BuildingImages/glass.png" id="5_lnxuc"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_h3ulg"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_jcxkx"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_apacc"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="9_4vswu"]
@@ -18,6 +19,7 @@ metadata/_custom_type_script = "uid://d2hat5snxwp82"
 script = ExtResource("7_jcxkx")
 name = "Glass Workshop"
 stats = SubResource("Resource_sb7ug")
+image = ExtResource("5_lnxuc")
 construction_time = 2
 construction_materials = Dictionary[ExtResource("2_lnxuc"), int]({
 ExtResource("3_h3ulg"): 20,

@@ -10,10 +10,12 @@ var district:District
 
 func update_menu(d:District):
 	district=d
+	build.visible=true
 	if district.building or district.construction_time>0:
 		build.visible=false
-	else:
-		build.visible=true
+	if district.territory.get_pop(Pop.CLASS.Follower)<10:
+		build.visible=false
+	
 	var l = d.name+" of "
 	l+=d.territory.name+"\n"	
 	l+=District.TYPES.keys()[d.type]+" "+Biome.TERRAIN.keys()[d.biome.terrain]

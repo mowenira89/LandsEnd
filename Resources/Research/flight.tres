@@ -11,7 +11,7 @@
 [resource]
 script = ExtResource("6_8y8r5")
 name = "Flight"
-exp_to_unlock = 100
+exp_to_unlock = 1000
 inspiration_threshold = 25.0
 inspired_class = 3
 metadata/_custom_type_script = "uid://bllx77nhi7hwq"

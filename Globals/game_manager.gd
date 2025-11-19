@@ -31,13 +31,15 @@ var demo=true
 signal select_territory
 signal end_turn_message
 
+var starting_territory:Territory
+
 const EVENT_BUTTON = preload("res://Menus/event_button.tscn")
 
 func _ready():
 	pass
 
 func start_new_game():
-	var starting_territory = GM.board.tiles_by_cell.values().pick_random().data
+	starting_territory = GM.board.tiles_by_cell.values().pick_random().data
 	GM.create_initial_party(starting_territory)
 	GM.board.center_camera(starting_territory.coords)
 	GM.board.update_board()
@@ -46,15 +48,14 @@ func start_new_game():
 		owned_territories.append(starting_territory)
 		starting_territory.districts[0].building=RM.buildings["Camp"].duplicate()
 		starting_territory.districts[0].building.create(starting_territory.districts[0])
+		starting_territory.stockpile.add_stuff(RM.stuff["Squash"],1)
+		for x in RM.buildings.values():
+			GM.unlocked_buildings.append(x)
 
-
-func add_event(e:Event):
-	
-	for x in e.effects:
-		if !x.check():		
-			return false
-	for x in e.effects:
-		x.init()
+func add_event(e:Event,d:District=null,b:Building=null,u:Unit=null):
+	if !e.check(d,d.territory,b,u):		
+		return false
+	e.init()
 	event_queue.append(e)
 	return true
 
@@ -90,17 +91,21 @@ func end_turn():
 			
 	for x in board.tiles_by_cell.values():
 		x.data.end_turn()
-			
+	
 	GM.menus.update_menus()
+	GM.menus.end_turn_box.display_messages()
+
 
 func create_initial_party(t:Territory):
 	var scout = RM.NPCs["Scout"].duplicate()
-	scout.create(t)
+	scout.create(t,RM.species["Human"])
 	var unit = Unit.new()
 	var stockpile = Stockpile.new()
+	stockpile.create(null,unit)
 	var outfit = Stockpile.new()
 	var population = Population.new()
-	population.create(null,unit)
+	population.create(starting_territory,unit)
+	population.change_pop(Pop.CLASS.Follower,10)
 	outfit.add_stuff(RM.stuff["Cart"],1)
 	var initial_stuff = {
 		RM.stuff["Wood"]:10,
@@ -110,7 +115,6 @@ func create_initial_party(t:Territory):
 	for x in initial_stuff:
 		stockpile.add_stuff(x,initial_stuff[x])
 	unit.create(t,scout,stockpile,outfit,population)
-
 
 
 func get_buffs(t:Buff.TYPE,b:Building=null,ter:Territory=null,u:Unit=null):

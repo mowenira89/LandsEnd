@@ -2,21 +2,28 @@ class_name MenuController extends CanvasLayer
 
 @onready var side_menu: Control = $SideMenu
 @onready var bottom_menu: Control = $BottomMenu
-@onready var territory_stats: TerritoryStats = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/TerritoryStats
-@onready var district_stats: DistrictStats = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/DistrictStats
-@onready var build_menu: BuildMenu = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/BuildMenu
-@onready var districts_view: DistrictsView = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom/DistrictsView
-@onready var stockpile_menu: StockpileMenu = $BottomMenu/ColorRect/MarginContainer/StockpileMenu
-@onready var unit_view: UnitView = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/UnitView
-@onready var npc_view: NPCView = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/NPC_View
+
 @onready var create_unit: CreateUnitScreen = $CreateUnit
 @onready var top_menu: TopMenu = $TopMenu
-@onready var pop_bottom_menu: PopBottomMenu = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom/PopBottomMenu
-@onready var basic_building_view: BasicBuildingView = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/BasicBuildingView
-@onready var recipe_menu: RecipeMenu = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom/RecipeMenu
-@onready var unit_action_menu: UnitActionMenu = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom/UnitActionMenu
-@onready var exchange_window: ExchangeWindow = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom/ExchangeWindow
-@onready var building_view_bottom: Control = $SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom/BuildingViewBottom
+@onready var stockpile_menu: StockpileMenu = $BottomMenu/MarginContainer/ColorRect/MarginContainer/StockpileMenu
+
+@onready var districts_view: DistrictsView = $SideMenu/ColorRect/SideBottom/DistrictsView
+@onready var pop_bottom_menu: PopBottomMenu = $SideMenu/ColorRect/SideBottom/PopBottomMenu
+@onready var unit_action_menu: UnitActionMenu = $SideMenu/ColorRect/SideBottom/UnitActionMenu
+@onready var exchange_window: ExchangeWindow = $SideMenu/ColorRect/SideBottom/ExchangeWindow
+@onready var building_view_bottom: BuildingViewBottom = $SideMenu/ColorRect/SideBottom/BuildingViewBottom
+@onready var stuff_selector_screen: StuffSelectorScreen = $SideMenu/ColorRect/SideBottom/StuffSelectorScreen
+@onready var territory_stats: TerritoryStats = $SideMenu/ColorRect/SideTop/TerritoryStats
+@onready var district_stats: DistrictStats = $SideMenu/ColorRect/SideTop/DistrictStats
+@onready var build_menu: BuildMenu = $SideMenu/ColorRect/SideTop/BuildMenu
+@onready var unit_view: UnitView = $SideMenu/ColorRect/SideTop/UnitView
+@onready var npc_view: NPCView = $SideMenu/ColorRect/SideTop/NPC_View
+@onready var basic_building_view: BasicBuildingView = $SideMenu/ColorRect/SideTop/BasicBuildingView
+@onready var recipe_menu: RecipeMenu = $SideMenu/ColorRect/SideTop/RecipeMenu
+@onready var farm_view: FarmView = $SideMenu/ColorRect/SideTop/FarmView
+
+
+@onready var warning: _Warning = $Warning
 
 
 @onready var alert: ColorRect = $Alert
@@ -51,6 +58,7 @@ func update_menus():
 		current_side_bottom._update_menu()
 	if top_menu.territory:
 		top_menu._update_menu()
+	stockpile_menu._update_menu()
 
 func switch_side_top(x):
 	if current_side_top and current_side_top!=x:
@@ -76,7 +84,7 @@ func show_territory(t:Territory):
 	territory_stats.update_menu(t)
 	districts_view.update_menu(t)
 	top_menu.update_menu(t)
-
+	stockpile_menu.update_menu(t)
 
 func _on_land_pressed() -> void:
 	territory_stats._update_menu()
@@ -95,7 +103,8 @@ func _on_form_party_pressed() -> void:
 	create_unit.new_party(null)
 
 func update_pop_hud():
-	top_menu._update_menu()
+	if top_menu.territory:
+		top_menu._update_menu()
 
 func disable_buttons():
 	for x in buttons:

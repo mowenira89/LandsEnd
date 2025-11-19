@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="KhemicRecipe" load_steps=5 format=3 uid="uid://b1wfmp4w7oqgh"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_vbow7"]
+[ext_resource type="Resource" uid="uid://c5nba8d43np2d" path="res://Resources/Stuff/copper_ore.tres" id="2_pkyrx"]
+[ext_resource type="Resource" uid="uid://dyyttfsfctue3" path="res://Resources/Stuff/gold_ore.tres" id="3_70vxf"]
+[ext_resource type="Script" uid="uid://b5amvji0dfqa4" path="res://Data/khemic_recipe.gd" id="4_i5cdb"]
+
+[resource]
+script = ExtResource("4_i5cdb")
+mystic_need = 10.0
+mystic_type = 1
+level = 2
+name = "Copper to Gold"
+turns = 1
+inputs = Dictionary[ExtResource("1_vbow7"), int]({
+ExtResource("2_pkyrx"): 1
+})
+outputs = Dictionary[ExtResource("1_vbow7"), int]({
+ExtResource("3_70vxf"): 1
+})
+exp_to = Dictionary[String, float]({
+"Orangesmithing": 1.0,
+"Voltaomancy": 1.0
+})
+metadata/_custom_type_script = "uid://b5amvji0dfqa4"

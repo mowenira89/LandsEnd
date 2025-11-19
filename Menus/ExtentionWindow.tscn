@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://crgonfl6a65yt"]
+
+[ext_resource type="Script" uid="uid://gbqn83otnyqx" path="res://Menus/extention_window.gd" id="1_avso4"]
+
+[node name="ExtentionWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_avso4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="Grid" type="GridContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+columns = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Extention Name"
+
+[node name="Info" type="RichTextLabel" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2

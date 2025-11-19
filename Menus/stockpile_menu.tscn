@@ -1,19 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnra2regy4wld"]
+[gd_scene load_steps=4 format=3 uid="uid://bnra2regy4wld"]
 
 [ext_resource type="Theme" uid="uid://b3tuuffn62byp" path="res://Assets/Themes/menu.tres" id="1_pgvvh"]
 [ext_resource type="Script" uid="uid://dcf8fk0upvfvd" path="res://Menus/stockpile_menu.gd" id="1_xpq48"]
 
-[node name="StockpileMenu" type="ColorRect"]
+[sub_resource type="Theme" id="Theme_pgvvh"]
+Button/font_sizes/font_size = 16
+
+[node name="MarginContainer2" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_pgvvh")
-color = Color(0.13319641, 0.13319641, 0.13319638, 1)
+size_flags_horizontal = 3
 script = ExtResource("1_xpq48")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="StockpileMenu" type="ColorRect" parent="."]
+layout_mode = 2
+theme = ExtResource("1_pgvvh")
+color = Color(0.13319641, 0.13319641, 0.13319638, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="StockpileMenu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,20 +32,40 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="StockpileMenu/MarginContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="StockpileMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 10
+theme = SubResource("Theme_pgvvh")
+alignment = 1
 
-[node name="StoreroomButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="StoreroomButton" type="Button" parent="StockpileMenu/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Storeroom"
 
-[node name="GranaryButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="GranaryButton" type="Button" parent="StockpileMenu/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Granary"
 
-[node name="AnimalsButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="AnimalsButton" type="Button" parent="StockpileMenu/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Animals"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="StockpileMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 600)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StockpileMenu/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Grid" type="GridContainer" parent="StockpileMenu/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+columns = 6
+
+[connection signal="pressed" from="StockpileMenu/MarginContainer/VBoxContainer/HBoxContainer/StoreroomButton" to="." method="_on_storeroom_button_pressed"]
+[connection signal="pressed" from="StockpileMenu/MarginContainer/VBoxContainer/HBoxContainer/GranaryButton" to="." method="_on_granary_button_pressed"]
+[connection signal="pressed" from="StockpileMenu/MarginContainer/VBoxContainer/HBoxContainer/AnimalsButton" to="." method="_on_animals_button_pressed"]

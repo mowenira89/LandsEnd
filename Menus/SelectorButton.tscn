@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://7g2xivh0ne32"]
+
+[ext_resource type="Script" uid="uid://b2elyc6k0a5y1" path="res://Menus/select_button.gd" id="1_m37xy"]
+
+[node name="SelectorButton" type="Button"]
+custom_minimum_size = Vector2(75, 75)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 44
+text = "+"
+script = ExtResource("1_m37xy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="gui_input" from="TextureRect" to="." method="_on_texture_rect_gui_input"]

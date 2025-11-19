@@ -1,19 +1,36 @@
-[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://31w8giuk7vl2"]
+[gd_resource type="Resource" script_class="Species" load_steps=6 format=3 uid="uid://31w8giuk7vl2"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_knivj"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_cx521"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_gcga3"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_gcga3"]
+
+[sub_resource type="Resource" id="Resource_cjt5c"]
+script = ExtResource("4_gcga3")
+hp = 9.0
+off = 2.0
+def = 1.0
+mag = 6.0
+magdef = 5.0
+sp = 7.0
+l = 9.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("2_cx521")
 kind = 1
 rarity = 54.0
-offense = 2.0
-defense = 1.0
-speed = 3.0
+aggressiveness = 2.0
+skittishness = 6.0
 name = "Cat"
+stats = SubResource("Resource_cjt5c")
 value = 5.0
 qualities = Dictionary[int, float]({
 0: 1.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 2.0,
+4: 1.0
 })
 found_in = Array[int]([0, 2, 1, 3, 4])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

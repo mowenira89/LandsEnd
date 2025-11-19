@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Research" load_steps=13 format=3 uid="uid://clqtwsoedomfw"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_e5t0w"]
+[ext_resource type="Resource" uid="uid://deyhnd1rwksgy" path="res://Resources/Buildings/mill.tres" id="2_jlywc"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_k2gnq"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_g7bxf"]
+[ext_resource type="Script" uid="uid://bgumvg008wgml" path="res://Data/conditions/need_stuff_condition.gd" id="5_37fky"]
+[ext_resource type="Resource" uid="uid://r5vcco63ai5s" path="res://Resources/Stuff/grain.tres" id="6_gkiy2"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="7_5uswq"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="8_yxglh"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="9_i07ur"]
+[ext_resource type="Resource" uid="uid://dmffih27j5sab" path="res://Resources/Research/farming.tres" id="10_lxaky"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="11_dptyb"]
+
+[sub_resource type="Resource" id="Resource_rqkdp"]
+script = ExtResource("5_37fky")
+stuff = ExtResource("6_gkiy2")
+metadata/_custom_type_script = "uid://bgumvg008wgml"
+
+[resource]
+script = ExtResource("9_i07ur")
+name = "Mill"
+buildings = Array[ExtResource("1_e5t0w")]([ExtResource("2_jlywc")])
+exp_to_unlock = 50
+prerequisites = Array[ExtResource("9_i07ur")]([ExtResource("10_lxaky")])
+inspiration_threshold = 25.0
+conditions = Array[ExtResource("4_g7bxf")]([SubResource("Resource_rqkdp")])
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

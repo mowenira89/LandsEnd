@@ -1,0 +1,135 @@
+[gd_scene load_steps=3 format=3 uid="uid://pnec8kkr8etr"]
+
+[ext_resource type="Script" uid="uid://pnncvupsoxbs" path="res://Menus/farm_view.gd" id="1_erw3b"]
+[ext_resource type="PackedScene" uid="uid://djcko3bi25pkm" path="res://Menus/ExtentionButton.tscn" id="2_erw3b"]
+
+[node name="FarmView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_erw3b")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Fields1" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Field1" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields1"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Field 1"
+
+[node name="Field2" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields1"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Field 1"
+
+[node name="Field3" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields1"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Field 1"
+
+[node name="Fields2" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Field4" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Field 1"
+
+[node name="Field5" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Field 1"
+
+[node name="Field6" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Field 1"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Field7" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Field 1"
+
+[node name="Field8" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Field 1"
+
+[node name="Field9" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Field 1"
+
+[node name="Production" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Prod1" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production"]
+layout_mode = 2
+
+[node name="Prod2" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production"]
+layout_mode = 2
+
+[node name="Prod3" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production"]
+layout_mode = 2
+
+[node name="Production2" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Prod4" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production2"]
+layout_mode = 2
+
+[node name="Prod5" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production2"]
+layout_mode = 2
+
+[node name="Prod6" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production2"]
+layout_mode = 2
+
+[node name="Extentions" type="VBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Ext1" parent="MarginContainer/MarginContainer/HBoxContainer/Extentions" instance=ExtResource("2_erw3b")]
+layout_mode = 2
+
+[node name="Ext2" parent="MarginContainer/MarginContainer/HBoxContainer/Extentions" instance=ExtResource("2_erw3b")]
+layout_mode = 2
+
+[node name="Ext3" parent="MarginContainer/MarginContainer/HBoxContainer/Extentions" instance=ExtResource("2_erw3b")]
+layout_mode = 2
+
+[node name="Ext4" parent="MarginContainer/MarginContainer/HBoxContainer/Extentions" instance=ExtResource("2_erw3b")]
+layout_mode = 2

@@ -1,9 +1,22 @@
-[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://o0ssbqbs6kbv"]
+[gd_resource type="Resource" script_class="Species" load_steps=8 format=3 uid="uid://o0ssbqbs6kbv"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_re8ed"]
 [ext_resource type="Resource" uid="uid://dw3qa3h2pbl0l" path="res://Resources/Stuff/egg.tres" id="2_ce32h"]
 [ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="2_sgypr"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_ce32h"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="4_ce32h"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="6_0cotf"]
+
+[sub_resource type="Resource" id="Resource_2a82n"]
+script = ExtResource("6_0cotf")
+hp = 55.0
+off = 4.0
+def = 3.0
+mag = 2.0
+magdef = 1.0
+sp = 5.0
+l = 2.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("3_ce32h")
@@ -15,11 +28,15 @@ harvest_produce = Dictionary[ExtResource("1_re8ed"), int]({
 ExtResource("2_ce32h"): 1
 })
 rarity = 15.0
-offense = 3.0
-defense = 2.0
-speed = 4.0
 game = true
+aggressiveness = 3.0
+skittishness = 3.0
 name = "Eagle"
+stats = SubResource("Resource_2a82n")
 value = 75.0
+mystic_qualities = Dictionary[int, float]({
+0: 1.0,
+6: 3.0
+})
 found_in = Array[int]([1])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

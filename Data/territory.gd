@@ -20,7 +20,7 @@ func create(c:Vector2i):
 	population = Population.new()
 	population.create(self)
 	stockpile=Stockpile.new()
-	stockpile.owner=self
+	stockpile.create(self)
 	nymphoi=Pop.new()
 	nymphoi.create(Pop.CLASS.Nymphoi,self)
 
@@ -34,11 +34,13 @@ func check_water():
 
 func get_pop_cap(c:Pop.CLASS)->int:
 	var r=0
+	if c==Pop.CLASS.Underclass or c==Pop.CLASS.Nymphoi:
+		return 10000
 	for x in districts:
 		if x.building and !x.building.pop_cap.is_empty():
 			if x.building.pop_cap.has(c):
 				r+=x.building.pop_cap[c]
-	return r	
+	return r
 
 func assimilate(u:Unit):
 	pass
@@ -81,12 +83,10 @@ func end_turn():
 	for x in districts:
 		if x.building:
 			x.building.end_turn()
-	
-	for x in NPCs:
-		x.end_turn()
 	for x in units:
 		x.end_turn()
-
+	population.end_turn()
+	
 func get_game():
 	var r = []
 	for x in districts:
@@ -96,3 +96,9 @@ func get_game():
 					r.append(f)
 	return r		
 			
+func get_wild_district_indexes():
+	var r = []
+	for x in districts:
+		if x.type==0:
+			r.append(x.index)
+	return r

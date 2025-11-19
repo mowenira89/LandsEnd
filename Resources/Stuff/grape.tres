@@ -16,7 +16,7 @@ mystic_qualities = Dictionary[int, float]({
 0: 2.0
 })
 exp_to = Dictionary[String, float]({
-"Brewery": 1.0
+"Brewing": 1.0
 })
 found_in = Array[int]([0])
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

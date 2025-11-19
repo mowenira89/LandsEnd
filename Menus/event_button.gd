@@ -1,5 +1,6 @@
-class_name EventButton extends Button
+class_name EventButton extends HBoxContainer
 
+@onready var button: Button = $Button
 
 var event:Event
 var unit:Unit
@@ -7,7 +8,10 @@ var unit:Unit
 func create(e:Event,u:Unit=null):
 	event=e
 	unit=u
+	button.text=e.get_message()
 
-func _on_x_pressed() -> void:
-	unit.action_queue.erase(event)
-	queue_free()
+
+func _on_button_gui_input(e: InputEvent) -> void:
+	if e.is_action_released("Right Click"):
+		unit.remove_event(event)
+		queue_free()

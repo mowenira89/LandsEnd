@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://cc4jjk0qer8ds"]
+[gd_scene load_steps=40 format=4 uid="uid://cc4jjk0qer8ds"]
 
 [ext_resource type="Texture2D" uid="uid://6ddnc08k2vlq" path="res://Assets/Images/Territory Tiles/water.png" id="1_7ncmu"]
 [ext_resource type="Script" uid="uid://b2e3ta76l8vr" path="res://Board/board.gd" id="1_ehn5f"]
@@ -26,7 +26,10 @@
 [ext_resource type="PackedScene" uid="uid://cqwhwxmmfa8kg" path="res://Menus/exchange_window.tscn" id="20_7hvnj"]
 [ext_resource type="PackedScene" uid="uid://d15ij77ctqagt" path="res://Menus/assimilation.tscn" id="20_y4q0p"]
 [ext_resource type="PackedScene" uid="uid://dox0w3hhuskkv" path="res://Menus/building_view_bottom.tscn" id="21_imfj5"]
+[ext_resource type="PackedScene" uid="uid://cl7teb5vvn8s1" path="res://Menus/stuff_selector_screen.tscn" id="22_2l5si"]
+[ext_resource type="PackedScene" uid="uid://pnec8kkr8etr" path="res://Menus/farm_view.tscn" id="23_iswxo"]
 [ext_resource type="Script" uid="uid://c2uxq8qn50gd7" path="res://Board/message_box.gd" id="24_e123n"]
+[ext_resource type="Script" uid="uid://obmbvjr382gt" path="res://Menus/warning.gd" id="29_ewanr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_733os"]
 texture = ExtResource("1_7ncmu")
@@ -95,14 +98,6 @@ script = ExtResource("8_hmvj7")
 [node name="Menus" type="CanvasLayer" parent="."]
 script = ExtResource("8_mjcd3")
 
-[node name="Screen" type="ColorRect" parent="Menus"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 1, 1, 0)
-
 [node name="SideMenu" type="Control" parent="Menus"]
 layout_mode = 3
 anchors_preset = 0
@@ -129,6 +124,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 725.0
+offset_right = -7.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 20
@@ -137,29 +136,6 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menus/SideMenu/ColorRect/MarginContainer"]
-layout_mode = 2
-
-[node name="SideTop" type="MarginContainer" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 370)
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="TerritoryStats" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" instance=ExtResource("10_733os")]
-layout_mode = 2
-
-[node name="DistrictStats" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" instance=ExtResource("11_fkvs5")]
-layout_mode = 2
-
-[node name="BuildMenu" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" instance=ExtResource("12_1cpk3")]
-layout_mode = 2
-
-[node name="UnitView" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" instance=ExtResource("13_5ybqi")]
-layout_mode = 2
-
-[node name="NPC_View" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" instance=ExtResource("14_1cpk3")]
-layout_mode = 2
-
-[node name="BasicBuildingView" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" instance=ExtResource("15_aaue3")]
 layout_mode = 2
 
 [node name="TopButtons" type="HBoxContainer" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer"]
@@ -195,52 +171,96 @@ text = "Population"
 layout_mode = 2
 text = "Individuals"
 
-[node name="SideBottom" type="Control" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer"]
+[node name="SideBottom" type="Control" parent="Menus/SideMenu/ColorRect"]
 custom_minimum_size = Vector2(0, 350)
-layout_mode = 2
+anchors_preset = 0
+offset_left = -634.0
+offset_top = 504.0
+offset_right = 14.0
+offset_bottom = 854.0
 size_flags_vertical = 10
 mouse_filter = 1
 
-[node name="DistrictsView" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("12_5ybqi")]
+[node name="DistrictsView" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("12_5ybqi")]
 layout_mode = 1
 
-[node name="PopBottomMenu" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("16_0fkod")]
+[node name="PopBottomMenu" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("16_0fkod")]
 layout_mode = 1
 
-[node name="RecipeMenu" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("18_e123n")]
+[node name="UnitActionMenu" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("19_4kang")]
 layout_mode = 1
 
-[node name="UnitActionMenu" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("19_4kang")]
+[node name="ExchangeWindow" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("20_7hvnj")]
 layout_mode = 1
 
-[node name="ExchangeWindow" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("20_7hvnj")]
+[node name="BuildingViewBottom" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("21_imfj5")]
 layout_mode = 1
 
-[node name="BuildingViewBottom" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" instance=ExtResource("21_imfj5")]
+[node name="StuffSelectorScreen" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("22_2l5si")]
 layout_mode = 1
+
+[node name="SideTop" type="MarginContainer" parent="Menus/SideMenu/ColorRect"]
+custom_minimum_size = Vector2(0, 370)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 806.0
+offset_bottom = 708.0
+size_flags_vertical = 0
+
+[node name="TerritoryStats" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("10_733os")]
+layout_mode = 2
+
+[node name="DistrictStats" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("11_fkvs5")]
+layout_mode = 2
+
+[node name="BuildMenu" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("12_1cpk3")]
+layout_mode = 2
+
+[node name="UnitView" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("13_5ybqi")]
+layout_mode = 2
+
+[node name="NPC_View" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("14_1cpk3")]
+visible = false
+layout_mode = 2
+
+[node name="BasicBuildingView" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("15_aaue3")]
+layout_mode = 2
+
+[node name="RecipeMenu" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("18_e123n")]
+layout_mode = 2
+
+[node name="FarmView" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("23_iswxo")]
+layout_mode = 2
 
 [node name="BottomMenu" type="Control" parent="Menus"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 4.0
-offset_top = 421.0
-offset_right = 965.0
+offset_top = 40.0
+offset_right = 335.0
 offset_bottom = 848.0
 
-[node name="ColorRect" type="ColorRect" parent="Menus/BottomMenu"]
+[node name="MarginContainer" type="MarginContainer" parent="Menus/BottomMenu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Menus/BottomMenu/MarginContainer"]
+layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="Menus/BottomMenu/ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="Menus/BottomMenu/MarginContainer/ColorRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 70.0
+offset_right = 4.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 20
@@ -248,7 +268,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="StockpileMenu" parent="Menus/BottomMenu/ColorRect/MarginContainer" instance=ExtResource("9_lwnqk")]
+[node name="StockpileMenu" parent="Menus/BottomMenu/MarginContainer/ColorRect/MarginContainer" instance=ExtResource("9_lwnqk")]
 layout_mode = 2
 
 [node name="TopMenu" type="ColorRect" parent="Menus"]
@@ -262,6 +282,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 319.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 20
@@ -294,6 +315,19 @@ text = "THAWBRAWN"
 layout_mode = 2
 size_flags_horizontal = 10
 text = "  End Turn  "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menus/TopMenu"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 339.0
+grow_vertical = 2
+alignment = 1
+
+[node name="TerritoryName" type="Label" parent="Menus/TopMenu/VBoxContainer"]
+layout_mode = 2
+text = "TerritoryNameHere"
+horizontal_alignment = 1
 
 [node name="CreateUnit" parent="Menus" instance=ExtResource("18_7oini")]
 visible = false
@@ -368,28 +402,78 @@ layout_mode = 2
 layout_mode = 2
 text = "Begin"
 
-[connection signal="mouse_entered" from="Menus/Screen" to="." method="_on_screen_mouse_entered"]
-[connection signal="mouse_exited" from="Menus/Screen" to="." method="_on_screen_mouse_exited"]
+[node name="Warning" type="ColorRect" parent="Menus"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+script = ExtResource("29_ewanr")
+
+[node name="MarginContainer" type="MarginContainer" parent="Menus/Warning"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Menus/Warning/MarginContainer"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menus/Warning/MarginContainer"]
+layout_mode = 2
+
+[node name="Message" type="RichTextLabel" parent="Menus/Warning/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menus/Warning/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="OK" type="Button" parent="Menus/Warning/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "OK"
+
+[node name="No" type="Button" parent="Menus/Warning/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "No"
+
 [connection signal="mouse_entered" from="Menus/SideMenu" to="." method="_on_side_menu_mouse_entered"]
 [connection signal="mouse_exited" from="Menus/SideMenu" to="." method="_on_side_menu_mouse_exited"]
-[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" to="." method="_on_side_top_mouse_entered"]
-[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop" to="." method="_on_side_top_mouse_exited"]
-[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/TerritoryStats" to="." method="_on_territory_stats_mouse_entered"]
-[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/TerritoryStats" to="." method="_on_territory_stats_mouse_exited"]
-[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/DistrictStats" to="." method="_on_district_stats_mouse_entered"]
-[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/DistrictStats" to="." method="_on_district_stats_mouse_exited"]
-[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/BuildMenu" to="." method="_on_build_menu_mouse_entered"]
-[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/BuildMenu" to="." method="_on_build_menu_mouse_exited"]
-[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/UnitView" to="." method="_on_unit_view_mouse_entered"]
-[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/UnitView" to="." method="_on_unit_view_mouse_exited"]
-[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/NPC_View" to="." method="_on_npc_view_mouse_entered"]
-[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/NPC_View" to="." method="_on_npc_view_mouse_exited"]
-[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/BasicBuildingView" to="." method="_on_basic_building_view_mouse_entered"]
-[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideTop/BasicBuildingView" to="." method="_on_basic_building_view_mouse_exited"]
 [connection signal="pressed" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/Land" to="Menus" method="_on_land_pressed"]
 [connection signal="pressed" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/People" to="Menus" method="_on_people_pressed"]
 [connection signal="pressed" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/Events" to="Menus" method="_on_events_pressed"]
-[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" to="." method="_on_side_bottom_mouse_entered"]
-[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/SideBottom" to="." method="_on_side_bottom_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideBottom" to="." method="_on_side_bottom_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideBottom" to="." method="_on_side_bottom_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideTop" to="." method="_on_side_top_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideTop" to="." method="_on_side_top_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideTop/TerritoryStats" to="." method="_on_territory_stats_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideTop/TerritoryStats" to="." method="_on_territory_stats_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideTop/DistrictStats" to="." method="_on_district_stats_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideTop/DistrictStats" to="." method="_on_district_stats_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideTop/BuildMenu" to="." method="_on_build_menu_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideTop/BuildMenu" to="." method="_on_build_menu_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideTop/UnitView" to="." method="_on_unit_view_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideTop/UnitView" to="." method="_on_unit_view_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideTop/NPC_View" to="." method="_on_npc_view_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideTop/NPC_View" to="." method="_on_npc_view_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideTop/BasicBuildingView" to="." method="_on_basic_building_view_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideTop/BasicBuildingView" to="." method="_on_basic_building_view_mouse_exited"]
 [connection signal="pressed" from="Menus/TopMenu/MarginContainer/HBoxContainer/EndTurn" to="Menus" method="_on_end_turn_pressed"]
 [connection signal="pressed" from="Menus/EndTurnBox/MarginContainer/VBoxContainer/StartTurn" to="Menus/EndTurnBox" method="_on_start_turn_pressed"]
+[connection signal="pressed" from="Menus/Warning/MarginContainer/VBoxContainer/HBoxContainer/OK" to="Menus/Warning" method="_on_ok_pressed"]
+[connection signal="pressed" from="Menus/Warning/MarginContainer/VBoxContainer/HBoxContainer/No" to="Menus/Warning" method="_on_no_pressed"]

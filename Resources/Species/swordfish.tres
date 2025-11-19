@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://bj6yr63m6vgov"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_6bhdk"]
+[ext_resource type="Resource" uid="uid://488tnlw6bkqg" path="res://Resources/Stuff/fancy_fish.tres" id="2_eog5x"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_yfbui"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_vrur4"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_cfw8w"]
+
+[sub_resource type="Resource" id="Resource_by5yo"]
+script = ExtResource("5_cfw8w")
+hp = 25.0
+off = 2.0
+def = 1.0
+mag = 1.0
+magdef = 1.0
+sp = 4.0
+l = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("4_vrur4")
+kind = 8
+kill_produce = Dictionary[ExtResource("1_6bhdk"), int]({
+ExtResource("2_eog5x"): 4
+})
+aggressiveness = 2.0
+skittishness = 4.0
+name = "Swordfish"
+stats = SubResource("Resource_by5yo")
+mystic_qualities = Dictionary[int, float]({
+2: 3.0
+})
+exp_to = Dictionary[String, float]({
+"Aquaculture": 1.0
+})
+found_in = Array[int]([5])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

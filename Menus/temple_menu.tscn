@@ -1,0 +1,84 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnnbemsnswy7i"]
+
+[ext_resource type="PackedScene" uid="uid://7g2xivh0ne32" path="res://Menus/SelectorButton.tscn" id="1_jg1bn"]
+[ext_resource type="Script" uid="uid://cmres5rsus1im" path="res://Menus/temple_menu.gd" id="1_u82w4"]
+[ext_resource type="PackedScene" uid="uid://nk2nf7urmdxa" path="res://Menus/PersonSelectButton.tscn" id="3_om8m8"]
+
+[node name="TempleMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u82w4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BonusHolder" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="SelectorButton" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder" instance=ExtResource("1_jg1bn")]
+layout_mode = 2
+
+[node name="SelectorButton2" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder" instance=ExtResource("1_jg1bn")]
+layout_mode = 2
+
+[node name="PersonSelectorButton" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_om8m8")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Name"
+
+[node name="Kind" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Kind"
+
+[node name="Affinity" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Affinity"
+
+[node name="Regalia" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Regalia"
+
+[node name="Button" type="Button" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Ritual 1"
+
+[node name="Button2" type="Button" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Ritual 2"

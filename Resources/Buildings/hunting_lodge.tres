@@ -1,28 +1,29 @@
-[gd_resource type="Resource" script_class="Camp" load_steps=12 format=3 uid="uid://be60enxcfrydi"]
+[gd_resource type="Resource" script_class="Camp" load_steps=15 format=3 uid="uid://be60enxcfrydi"]
 
-[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_dnp71"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_57ek6"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_p7cgw"]
 [ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="4_dq63i"]
+[ext_resource type="Texture2D" uid="uid://ceoyuvkwr6m" path="res://Assets/Images/BuildingImages/hunting.png" id="5_2l2ir"]
 [ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="5_ksg81"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_j76d7"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_rg6ux"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_2l2ir"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_kpook"]
 [ext_resource type="Resource" uid="uid://cv10epx7vb8qx" path="res://Resources/Recipes/hunting_lodge_smoked_meat.tres" id="8_57ek6"]
 [ext_resource type="Script" uid="uid://doa1vbsvkk4tx" path="res://Data/buildings/camp.gd" id="8_rg6ux"]
 [ext_resource type="Resource" uid="uid://dbpdpbk5mumve" path="res://Resources/Recipes/camp_gruel.tres" id="9_dq63i"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="9_teyxr"]
 [ext_resource type="Resource" uid="uid://cwif52v0bdks3" path="res://Resources/Recipes/camp_leather.tres" id="10_ksg81"]
 
 [resource]
 script = ExtResource("8_rg6ux")
 hunt = true
 name = "Hunting Lodge"
+image = ExtResource("5_2l2ir")
 construction_time = 1
 construction_materials = Dictionary[ExtResource("3_p7cgw"), int]({
 ExtResource("4_dq63i"): 15,
 ExtResource("5_ksg81"): 5
-})
-construction_staff = Dictionary[int, int]({
-0: 10
 })
 construction_level = 2
 staff_needed = Dictionary[int, int]({

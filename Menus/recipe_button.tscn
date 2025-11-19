@@ -8,16 +8,19 @@ Label/colors/font_color = Color(0, 0, 0, 1)
 [node name="RecipeButton" type="MarginContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 0
 script = ExtResource("1_o3jy2")
 
 [node name="RecipeButton" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
+mouse_filter = 1
 theme = SubResource("Theme_o3jy2")
-color = Color(0.48570347, 0.48570353, 0.48570347, 1)
+color = Color(0.1331963, 0.13319644, 0.13319638, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
+alignment = 1
 
 [node name="Inputs" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -28,4 +31,4 @@ layout_mode = 2
 [node name="Outputs" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[connection signal="gui_input" from="RecipeButton" to="RecipeButton" method="_on_gui_input"]
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

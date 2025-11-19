@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Species" load_steps=6 format=3 uid="uid://cmmfcq4haqoal"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_e7fe2"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_ub0g3"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_aqxq3"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_imc2k"]
+
+[sub_resource type="Resource" id="Resource_4vjhx"]
+script = ExtResource("4_imc2k")
+hp = 200.0
+off = 4.0
+def = 4.0
+mag = 7.0
+magdef = 7.0
+sp = 6.0
+l = 7.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_aqxq3")
+rarity = 10.0
+aggressiveness = 2.0
+skittishness = 2.0
+name = "Dryad"
+stats = SubResource("Resource_4vjhx")
+value = 100000000.0
+qualities = Dictionary[int, float]({
+10: 7.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 7.0
+})
+exp_to = Dictionary[String, float]({
+"Sylvan Farming": 5.0
+})
+found_in = Array[int]([2])
+prohibited = true
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

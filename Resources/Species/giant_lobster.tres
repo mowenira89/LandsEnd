@@ -1,9 +1,22 @@
-[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://85iq778l2nbx"]
+[gd_resource type="Resource" script_class="Species" load_steps=8 format=3 uid="uid://85iq778l2nbx"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_dkccf"]
 [ext_resource type="Resource" uid="uid://vcopy2xqdqfi" path="res://Resources/Stuff/luxury_meat.tres" id="2_a2nmj"]
 [ext_resource type="Resource" uid="uid://bvki5qdvgnxsa" path="res://Resources/Stuff/chitin.tres" id="3_a2nmj"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_eg5uw"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="4_eg5uw"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="6_yylrj"]
+
+[sub_resource type="Resource" id="Resource_uij24"]
+script = ExtResource("6_yylrj")
+hp = 280.0
+off = 8.0
+def = 7.0
+mag = 5.0
+magdef = 5.0
+sp = 7.0
+l = 2.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("3_eg5uw")
@@ -13,11 +26,13 @@ ExtResource("2_a2nmj"): 4,
 ExtResource("3_a2nmj"): 4
 })
 rarity = 4.0
-offense = 6.0
-defense = 7.0
-speed = 7.0
 game = true
 steed = true
 name = "Giant Lobster"
+stats = SubResource("Resource_uij24")
+value = 500.0
+mystic_qualities = Dictionary[int, float]({
+2: 3.0
+})
 found_in = Array[int]([3])
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

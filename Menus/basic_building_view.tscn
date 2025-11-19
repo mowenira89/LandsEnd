@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4grqya58kder"]
+[gd_scene load_steps=5 format=3 uid="uid://d4grqya58kder"]
 
 [ext_resource type="Script" uid="uid://lldau58vo8m3" path="res://Menus/basic_building_view.gd" id="1_304mf"]
 [ext_resource type="PackedScene" uid="uid://dw5e20m0k7xyn" path="res://Menus/production_container.tscn" id="1_fvjvv"]
+[ext_resource type="PackedScene" uid="uid://nk2nf7urmdxa" path="res://Menus/PersonSelectButton.tscn" id="3_r740m"]
+[ext_resource type="PackedScene" uid="uid://djcko3bi25pkm" path="res://Menus/ExtentionButton.tscn" id="4_ockja"]
 
 [node name="BasicBuildingView" type="ColorRect"]
 anchors_preset = 15
@@ -24,43 +26,6 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Territory District 1 Camp"
-horizontal_alignment = 1
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Wild District"
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-
-[node name="ProductionContainers" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 8
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/ProductionContainers"]
-layout_mode = 2
-text = "Production Slots: "
-
-[node name="ProductionContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/ProductionContainers" instance=ExtResource("1_fvjvv")]
-layout_mode = 2
-size_flags_vertical = 2
-
-[node name="Leader" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="Extentions" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 8
@@ -68,11 +33,116 @@ size_flags_vertical = 8
 [node name="Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_constants/separation = 16
+alignment = 1
 
 [node name="RepairButton" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
 layout_mode = 2
 text = "Repair"
 
-[node name="DemolishButton" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+[node name="UpgradeButton" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+visible = false
+layout_mode = 2
+text = "Upgrade"
+
+[node name="DemolishButton3" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
 layout_mode = 2
 text = "Demolish"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Territory District 1 Camp"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Wild District"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="ProductionContainers" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers"]
+layout_mode = 2
+text = "Production Slots: "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer"]
+layout_mode = 2
+
+[node name="Prod1" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer" instance=ExtResource("1_fvjvv")]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Prod2" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer" instance=ExtResource("1_fvjvv")]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer"]
+layout_mode = 2
+
+[node name="Prod3" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer2" instance=ExtResource("1_fvjvv")]
+visible = false
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Prod4" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer2" instance=ExtResource("1_fvjvv")]
+visible = false
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer"]
+layout_mode = 2
+
+[node name="Prod5" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer3" instance=ExtResource("1_fvjvv")]
+visible = false
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Prod6" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer3" instance=ExtResource("1_fvjvv")]
+visible = false
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Boss" parent="MarginContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("3_r740m")]
+layout_mode = 2
+size_flags_vertical = 0
+_size = 150
+
+[node name="Extentions" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ExtentionButton" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("4_ockja")]
+visible = false
+layout_mode = 2
+
+[node name="ExtentionButton2" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("4_ockja")]
+visible = false
+layout_mode = 2
+
+[node name="ExtentionButton3" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("4_ockja")]
+visible = false
+layout_mode = 2
+
+[node name="ExtentionButton4" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("4_ockja")]
+visible = false
+layout_mode = 2

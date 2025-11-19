@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl7teb5vvn8s1"]
+
+[ext_resource type="Script" uid="uid://b4ca5wwtg6lm6" path="res://Menus/stuff_selector_screen.gd" id="1_hsoee"]
+
+[node name="StuffSelectorScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hsoee")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/ColorRect/MarginContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Collection" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/ScrollContainer/CenterContainer"]
+layout_mode = 2

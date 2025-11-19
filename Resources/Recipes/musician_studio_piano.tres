@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://d2wn7dxnkemye"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_civ0d"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="2_gtfj0"]
+[ext_resource type="Resource" uid="uid://d20v07glb4l0u" path="res://Resources/Stuff/ivory.tres" id="3_31b2v"]
+[ext_resource type="Resource" uid="uid://dgdhe4vlqa7qp" path="res://Resources/Stuff/piano.tres" id="4_1ng0a"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_h61rq"]
+
+[resource]
+script = ExtResource("5_h61rq")
+name = "Piano"
+id = "musician_studio_piano"
+turns = 3
+inputs = Dictionary[ExtResource("1_civ0d"), int]({
+ExtResource("2_gtfj0"): 1,
+ExtResource("3_31b2v"): 1
+})
+outputs = Dictionary[ExtResource("1_civ0d"), int]({
+ExtResource("4_1ng0a"): 1
+})
+exp_to = Dictionary[String, float]({
+"Orchestra": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

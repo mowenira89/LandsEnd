@@ -1,16 +1,32 @@
-[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://2tk6h5o834s2"]
+[gd_resource type="Resource" script_class="Species" load_steps=6 format=3 uid="uid://2tk6h5o834s2"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_qseb5"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_7brjo"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="2_jli5e"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_gak3q"]
+
+[sub_resource type="Resource" id="Resource_r1cx3"]
+script = ExtResource("4_gak3q")
+hp = 40.0
+mag = 7.0
+magdef = 7.0
+l = 3.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("2_jli5e")
 kind = 6
 name = "Hoama"
+stats = SubResource("Resource_r1cx3")
 value = 200.0
 qualities = Dictionary[int, float]({
 5: 1.0,
 10: 5.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 2.0,
+1: 2.0,
+4: 7.0
 })
 exp_to = Dictionary[String, float]({
 "Hoama Ceremony": 1.0

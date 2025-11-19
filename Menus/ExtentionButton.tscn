@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://djcko3bi25pkm"]
+
+[ext_resource type="Script" uid="uid://21l51gstw1xp" path="res://Menus/extention_button.gd" id="1_dw541"]
+
+[node name="ExtentionButton" type="Button"]
+custom_minimum_size = Vector2(75, 75)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 44
+text = "+"
+script = ExtResource("1_dw541")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="gui_input" from="TextureRect" to="." method="_on_texture_rect_gui_input"]

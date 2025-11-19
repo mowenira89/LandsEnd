@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://dkvh1q07kqxa8"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_vejxx"]
+[ext_resource type="Resource" uid="uid://cfwb5j1upsemd" path="res://Resources/Stuff/cursed_meat.tres" id="2_eqg07"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_pgvvg"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_1a0sa"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_eqg07"]
+
+[sub_resource type="Resource" id="Resource_pgvvg"]
+script = ExtResource("5_eqg07")
+hp = 150.0
+off = 9.0
+def = 8.0
+mag = 7.0
+magdef = 7.0
+sp = 6.0
+l = 3.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("4_1a0sa")
+kill_produce = Dictionary[ExtResource("1_vejxx"), int]({
+ExtResource("2_eqg07"): 1
+})
+rarity = 5.0
+steed = true
+aggressiveness = 5.0
+skittishness = 9.0
+name = "Talking Bear"
+stats = SubResource("Resource_pgvvg")
+value = 1500.0
+mystic_qualities = Dictionary[int, float]({
+0: 4.0
+})
+found_in = Array[int]([1, 2])
+prohibited = true
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

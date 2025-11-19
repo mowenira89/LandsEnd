@@ -35,7 +35,7 @@ alignment = 1
 layout_mode = 2
 text = "Move"
 
-[node name="Assimilate" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Exchange" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Exchange"
 
@@ -43,37 +43,93 @@ text = "Exchange"
 layout_mode = 2
 text = "Disband"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Attack" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-text = "Attack"
-
-[node name="Fortify" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-text = "Fortify"
-
-[node name="Plunder" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-text = "Plunder"
-
 [node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="Build" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+[node name="More" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Action"
+
+[node name="Split" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Split"
+
+[node name="Stats" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Stats"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Actions" type="HBoxContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="MarginContainer/Actions"]
+layout_mode = 2
+alignment = 1
+
+[node name="Less" type="Button" parent="MarginContainer/Actions/VBoxContainer5"]
+layout_mode = 2
+text = "Return"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Actions"]
+layout_mode = 2
+alignment = 1
+
+[node name="Hunt" type="Button" parent="MarginContainer/Actions/VBoxContainer"]
+layout_mode = 2
+text = "Hunt"
+
+[node name="Fish" type="Button" parent="MarginContainer/Actions/VBoxContainer"]
+layout_mode = 2
+text = "Fish"
+
+[node name="Forage" type="Button" parent="MarginContainer/Actions/VBoxContainer"]
+layout_mode = 2
+text = "Forage"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/Actions"]
+layout_mode = 2
+alignment = 1
+
+[node name="Build2" type="Button" parent="MarginContainer/Actions/VBoxContainer2"]
 layout_mode = 2
 text = "Build"
 
-[node name="Survey" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+[node name="Survey" type="Button" parent="MarginContainer/Actions/VBoxContainer2"]
 layout_mode = 2
 text = "Survey"
 
-[node name="Forage" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+[node name="Commune" type="Button" parent="MarginContainer/Actions/VBoxContainer2"]
 layout_mode = 2
-text = "Forage"
+text = "Comune"
+
+[node name="Mine" type="Button" parent="MarginContainer/Actions/VBoxContainer2"]
+layout_mode = 2
+text = "Mine"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/Actions"]
+layout_mode = 2
+alignment = 1
+
+[node name="Attack" type="Button" parent="MarginContainer/Actions/VBoxContainer4"]
+layout_mode = 2
+text = "Attack"
+
+[node name="Fortify" type="Button" parent="MarginContainer/Actions/VBoxContainer4"]
+layout_mode = 2
+text = "Fortify"
+
+[node name="Plunder" type="Button" parent="MarginContainer/Actions/VBoxContainer4"]
+layout_mode = 2
+text = "Plunder"
+
+[node name="Forage" type="Button" parent="MarginContainer/Actions/VBoxContainer4"]
+layout_mode = 2
 
 [node name="x" type="Button" parent="MarginContainer"]
 layout_mode = 2
@@ -82,7 +138,12 @@ size_flags_vertical = 0
 text = "X"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Move" to="." method="_on_move_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Assimilate" to="." method="_on_assimilate_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer3/Build" to="." method="_on_build_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer3/Survey" to="." method="_on_survey_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Exchange" to="." method="_on_assimilate_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Disband" to="." method="_on_disband_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer3/More" to="." method="_on_more_pressed"]
+[connection signal="pressed" from="MarginContainer/Actions/VBoxContainer5/Less" to="." method="_on_less_pressed"]
+[connection signal="pressed" from="MarginContainer/Actions/VBoxContainer/Hunt" to="." method="_on_hunt_pressed"]
+[connection signal="pressed" from="MarginContainer/Actions/VBoxContainer/Forage" to="." method="_on_forage_pressed"]
+[connection signal="pressed" from="MarginContainer/Actions/VBoxContainer2/Build2" to="." method="_on_build_pressed"]
+[connection signal="pressed" from="MarginContainer/Actions/VBoxContainer2/Survey" to="." method="_on_survey_pressed"]
 [connection signal="pressed" from="MarginContainer/x" to="." method="_on_x_pressed"]

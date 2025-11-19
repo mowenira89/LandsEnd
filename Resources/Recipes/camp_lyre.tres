@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://bi6a8o17eivdg"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_fhta7"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="2_3o5w5"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="3_6yf0t"]
+[ext_resource type="Resource" uid="uid://b56d35e4ob2md" path="res://Resources/Stuff/lyre.tres" id="4_g5htu"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_47uq6"]
+
+[resource]
+script = ExtResource("5_47uq6")
+name = "Lyre"
+id = "camp_lyre"
+turns = 1
+inputs = Dictionary[ExtResource("1_fhta7"), int]({
+ExtResource("2_3o5w5"): 1,
+ExtResource("3_6yf0t"): 1
+})
+outputs = Dictionary[ExtResource("1_fhta7"), int]({
+ExtResource("4_g5htu"): 1
+})
+exp_to = Dictionary[String, float]({
+"Musician Studio": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

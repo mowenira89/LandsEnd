@@ -33,6 +33,7 @@ func set_species():
 		var new = load(path+x)
 		if new is Species:
 			species[new.name]=new
+			new.init()
 			for y in new.found_in:
 				species_by_habitat[y].append(new)
 
@@ -44,6 +45,8 @@ func set_buildings():
 		buildings[new.name]=new
 		if new.unlocked:
 			GM.unlocked_buildings.append(new)
+		if !new.image:
+			print(new.name+" needs an image")
 
 
 func set_stuff():
@@ -86,3 +89,39 @@ func set_crops():
 			crops[new.id]=new
 		else:
 			crops[x.name]=new
+
+func get_stuff_of_quality(q:Stuff.QUALITIES):
+	var r = []
+	for x in stuff.values():
+		if x.qualities.has(q):
+			r.append(x)
+	return r
+
+func get_animals():
+	var r = []
+	for x in species.values():
+		if x.kind not in [Species.KIND.Flora, Species.KIND.Nymphoi,Species.KIND.Germ]:
+			r.append(x)
+	return r
+	
+func get_plants():
+	var r = []
+	for x in species.values():
+		if x.kind == Species.KIND.Flora:
+			r.append(x)
+	return r
+	
+	
+func get_animals_by_mystic(m:Stuff.MYSTIC):
+	var r = []
+	for x in get_animals():
+		if m in x.mystic_qualities.keys():
+			r.append(x)
+	return r
+
+func get_plants_by_mystic(m:Stuff.MYSTIC):
+	var r = []
+	for x in get_plants():
+		if m in x.mystic_qualities.keys():
+			r.append(x)
+	return r

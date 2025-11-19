@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="Building" load_steps=11 format=3 uid="uid://ngxpvncit6l"]
+[gd_resource type="Resource" script_class="Building" load_steps=12 format=3 uid="uid://ngxpvncit6l"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_2tr68"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_081h6"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_x5n4o"]
 [ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="4_tsgfy"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_21yjg"]
-[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_gl5uk"]
+[ext_resource type="Texture2D" uid="uid://dlhluj8dfebmm" path="res://Assets/Images/BuildingImages/wainwright.png" id="5_tsgfy"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_21yjg"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_at0wj"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_81nm3"]
 [ext_resource type="Resource" uid="uid://vlol4infs4lk" path="res://Resources/Recipes/wainwright_cart.tres" id="9_x5n4o"]
@@ -14,6 +15,7 @@
 [resource]
 script = ExtResource("7_at0wj")
 name = "Wainwright"
+image = ExtResource("5_tsgfy")
 construction_time = 2
 construction_materials = Dictionary[ExtResource("2_081h6"), int]({
 ExtResource("3_x5n4o"): 25,

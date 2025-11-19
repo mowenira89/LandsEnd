@@ -1,11 +1,18 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://dd0g7uocdjhwn"]
+[gd_resource type="Resource" script_class="Stuff" load_steps=5 format=3 uid="uid://dd0g7uocdjhwn"]
 
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_4g6pe"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_iq85h"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="3_v3yir"]
+
+[sub_resource type="Resource" id="Resource_yrwau"]
+script = ExtResource("3_v3yir")
+off = 4.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("1_iq85h")
 name = "Bronze Spear"
+stats = SubResource("Resource_yrwau")
 value = 18.0
 qualities = Dictionary[int, float]({
 7: 4.0
