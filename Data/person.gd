@@ -22,7 +22,7 @@ GreenThumb,LongStrider,Wise,Lucky,Fortunate,StrongBack,Shepherd}
 @export var current_territory:Territory
 @export var unit:Unit
 @export var unlocked:bool=false
-@export var inventory:UnitInventory
+@export var inventory:Inventory
 @export var memories:Array[Event]
 @export var friend:bool=true
 @export var ally:bool=false
@@ -36,7 +36,7 @@ func create(t:Territory,k:Species):
 	name=""
 	species=k
 	image=load(ICON)
-	inventory=UnitInventory.new()
+	inventory=Inventory.new()
 	inventory.init(self)
 	beliefs=t.population.pops[CLASS].beliefs.duplicate()
 	for x in beliefs_mods:
@@ -82,3 +82,29 @@ func add_memory(e:Event):
 
 func end_turn():
 	pass
+
+func get_stat(stat:Stats.STATS):
+	var r = 0
+	match stat:
+		Stats.STATS.HP:
+			r=inventory.get_stats(stat)
+			r+=stats.total_hp
+		Stats.STATS.Attack:
+			r=inventory.get_stats(stat)
+			r+=stats.offense
+		Stats.STATS.Defense:
+			r=inventory.get_stats(stat)
+			r+=stats.defense
+		Stats.STATS.Magic:
+			r=inventory.get_stats(stat)
+			r+=stats.magic
+		Stats.STATS.MagicDef:
+			r=inventory.get_stats(stat)
+			r+=stats.magic_def
+		Stats.STATS.Speed:
+			r=inventory.get_stats(stat)
+			r+=stats.speed
+		Stats.STATS.Luck:
+			r=inventory.get_stats(stat)
+			r+=stats.luck
+	return r

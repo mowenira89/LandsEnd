@@ -157,43 +157,16 @@ func get_research():
 			ResearchManager.get_exp_from_nymphoi(z)
 			
 func get_stat(s:Stats.STATS):
-	var r = 0
-	match s:
-		Stats.STATS.HP:
-			r=leader.stats.total_hp
-			for x in companions:
-				if x:
-					r+=x.stats.total_hp
-		Stats.STATS.Attack:
-			r=leader.stats.offense
-			for x in companions:
-				if x:
-					r+=x.stats.offense
-		Stats.STATS.Defense:
-			r=leader.stats.defense
-			for x in companions:
-				if x:
-					r+=x.stats.defense
-		Stats.STATS.Magic:
-			r=leader.stats.magic
-			for x in companions:
-				if x:
-					r+=x.stats.magic
-		Stats.STATS.MagicDef:
-			r=leader.stats.magic_def
-			for x in companions:
-				if x:
-					r+=x.stats.magic_def
-		Stats.STATS.Speed:
-			r=leader.stats.speed
-			for x in companions:
-				if x:
-					r+=x.stats.speed
-		Stats.STATS.Luck:
-			r=leader.stats.luck
-			for x in companions:
-				if x:
-					r+=x.stats.luck
+	var r = 0		
+	var z = []
+	var a = 0
+	z.append(leader.stats.get_stat(s))
+	for x in companions:
+		if x:
+			z.append(x.stats.get_stat(s))
+	for x in z:
+		a+=x
+	r = a*z.size()
 	return r
 
 func add_event(e:Event,d:District=null,b:Building=null):
