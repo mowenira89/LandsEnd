@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CookhouseRecipe" load_steps=5 format=3 uid="uid://303l7tg77e5r"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_pgpar"]
+[ext_resource type="Resource" uid="uid://cwjrrbty0abgo" path="res://Resources/Stuff/flour.tres" id="2_1e1nj"]
+[ext_resource type="Resource" uid="uid://detd76v7ch5q5" path="res://Resources/Stuff/noodles.tres" id="3_o0j44"]
+[ext_resource type="Script" uid="uid://bbt62vx1q0tfq" path="res://Data/cookhouse_recipe.gd" id="4_7w4vb"]
+
+[resource]
+script = ExtResource("4_7w4vb")
+difficulty = 20.0
+name = "Noodles"
+id = "bakery_noodles"
+turns = 1
+inputs = Dictionary[ExtResource("1_pgpar"), int]({
+ExtResource("2_1e1nj"): 1
+})
+outputs = Dictionary[ExtResource("1_pgpar"), int]({
+ExtResource("3_o0j44"): 3
+})
+exp_to = Dictionary[String, float]({
+"Restaurant": 1.0
+})
+metadata/_custom_type_script = "uid://bbt62vx1q0tfq"

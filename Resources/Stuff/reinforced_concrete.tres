@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://cxi3i6r85458g"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_b10tb"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_00vbp"]
+
+[resource]
+script = ExtResource("2_00vbp")
+name = "Reinforced Concrete"
+value = 100.0
+qualities = Dictionary[int, float]({
+3: 5.0
+})
+mystic_qualities = Dictionary[int, float]({
+1: 1.0,
+4: 1.0
+})
+exp_to = Dictionary[String, float]({
+"Mithril Reinforced Concrete": 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

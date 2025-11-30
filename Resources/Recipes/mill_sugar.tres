@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://c2w2u2p8w7gw5"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_iwu27"]
+[ext_resource type="Resource" uid="uid://ia8j1uk1leoq" path="res://Resources/Stuff/beet.tres" id="2_1yicm"]
+[ext_resource type="Resource" uid="uid://dy2slg0oguxui" path="res://Resources/Stuff/sugar.tres" id="3_aaocr"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_pcr17"]
+
+[resource]
+script = ExtResource("4_pcr17")
+name = "Sugar"
+id = "mill_sugar"
+turns = 1
+inputs = Dictionary[ExtResource("1_iwu27"), int]({
+ExtResource("2_1yicm"): 1
+})
+outputs = Dictionary[ExtResource("1_iwu27"), int]({
+ExtResource("3_aaocr"): 1
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

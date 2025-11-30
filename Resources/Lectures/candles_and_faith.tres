@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Lecture" load_steps=5 format=3 uid="uid://bjf0k0p5xur1e"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_p8qah"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="2_c1njh"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="3_kegc3"]
+[ext_resource type="Resource" uid="uid://bralwey76qjth" path="res://Resources/Recipes/camp_candle.tres" id="4_d0v7u"]
+
+[resource]
+script = ExtResource("2_c1njh")
+name = "Candles and Faith"
+lecture_length = 3
+subject = 2
+lecturer_type = 3
+teaches_recipe = Array[ExtResource("3_kegc3")]([ExtResource("4_d0v7u")])
+metadata/_custom_type_script = "uid://m330oqovp04n"

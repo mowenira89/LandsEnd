@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Food" load_steps=3 format=3 uid="uid://cal6t176yygqs"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_ujlka"]
+[ext_resource type="Script" uid="uid://cnmbjer2140vm" path="res://Data/food.gd" id="2_ujlka"]
+
+[resource]
+script = ExtResource("2_ujlka")
+vitamins = Dictionary[int, float]({
+0: 2.0,
+1: 2.0,
+2: 2.0,
+3: 2.0
+})
+name = "Jam"
+value = 4.0
+qualities = Dictionary[int, float]({
+0: 4.5
+})
+mystic_qualities = Dictionary[int, float]({
+4: 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

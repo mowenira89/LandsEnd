@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bire5efpkuhdj"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_wewg4"]
+[ext_resource type="Resource" uid="uid://c5r55i24jswhv" path="res://Resources/Stuff/crop_potato.tres" id="2_0jqot"]
+[ext_resource type="Resource" uid="uid://c2cexpyvgp8vn" path="res://Resources/Stuff/potato_juice.tres" id="4_ucpln"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_77141"]
+
+[resource]
+script = ExtResource("5_77141")
+name = "Potato Juice"
+id = "brewery_potato_juice"
+turns = 3
+inputs = Dictionary[ExtResource("1_wewg4"), int]({
+ExtResource("2_0jqot"): 1
+})
+outputs = Dictionary[ExtResource("1_wewg4"), int]({
+ExtResource("4_ucpln"): 2
+})
+exp_to = Dictionary[String, float]({
+"Advanced Distillation": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

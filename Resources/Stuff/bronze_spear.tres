@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://vklnhypsf1hb"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_s61k0"]
+[ext_resource type="Script" uid="uid://6vtv547g3vpj" path="res://Data/weapon.gd" id="2_s61k0"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="3_al15s"]
+
+[sub_resource type="Resource" id="Resource_o52m0"]
+script = ExtResource("3_al15s")
+off = 3.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("2_s61k0")
+damage_type = 1
+prowess_bonus = Array[int]([13])
+name = "Bronze Spear"
+stats = SubResource("Resource_o52m0")
+value = 16.0
+qualities = Dictionary[int, float]({
+7: 3.0
+})
+mystic_qualities = Dictionary[int, float]({
+4: 1.0
+})
+exp_to = Dictionary[String, float]({
+"Armory": 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

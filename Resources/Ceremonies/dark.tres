@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Ceremony" load_steps=6 format=3 uid="uid://bcmvmfpmoijhe"]
+
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="1_awmxq"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_chc5n"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_awmxq"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_qgtg2"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="4_k2may"]
+
+[resource]
+script = ExtResource("4_k2may")
+name = "Dark Ceremony"
+length = 10
+happiness_reward = -0.1
+requirements_of_people = Dictionary[int, int]({
+0: 100,
+3: 100
+})
+credit_to = Dictionary[int, float]({
+5: 100.0
+})
+metadata/_custom_type_script = "uid://h1hksovre84"

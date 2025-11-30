@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cj0lvxbqmvuxb"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_6kq11"]
+[ext_resource type="Resource" uid="uid://ck05rw8vdjhpj" path="res://Resources/Stuff/silk_cocoon.tres" id="2_0cloi"]
+[ext_resource type="Resource" uid="uid://c2jwwx234kob" path="res://Resources/Stuff/raw_silk.tres" id="3_slavv"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_x7v26"]
+
+[resource]
+script = ExtResource("4_x7v26")
+name = "Raw Silk"
+id = "farm_raw_silk"
+turns = 1
+inputs = Dictionary[ExtResource("1_6kq11"), int]({
+ExtResource("2_0cloi"): 1
+})
+outputs = Dictionary[ExtResource("1_6kq11"), int]({
+ExtResource("3_slavv"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

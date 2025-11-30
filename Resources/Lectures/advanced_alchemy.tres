@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Lecture" load_steps=4 format=3 uid="uid://dynm61qqwjo3e"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_ep30q"]
+[ext_resource type="Resource" uid="uid://drn6neqlfh77q" path="res://Resources/Research/voltaic_generator.tres" id="2_srbsu"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="3_pkimr"]
+
+[resource]
+script = ExtResource("3_pkimr")
+name = "Advanced Alchemy"
+lecture_length = 6
+subject = 5
+pop_training = 1
+research = Dictionary[ExtResource("1_ep30q"), float]({
+ExtResource("2_srbsu"): 5.0
+})
+metadata/_custom_type_script = "uid://m330oqovp04n"

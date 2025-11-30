@@ -16,6 +16,10 @@ vitamins = Dictionary[int, float]({
 name = "Grain"
 stats = SubResource("Resource_t70fl")
 value = 1.0
+qualities = Dictionary[int, float]({
+0: 0.5,
+22: 1.0
+})
 mystic_qualities = Dictionary[int, float]({
 0: 1.0,
 1: 1.0

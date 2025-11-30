@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Building" load_steps=10 format=3 uid="uid://bos8mhujsf7nn"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_e5i3x"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_tb3y0"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_yxsty"]
+[ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="4_p8n5h"]
+[ext_resource type="Script" uid="uid://c06htwwoposed" path="res://Data/district.gd" id="5_itpf2"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_q75pm"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_icgmi"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="8_l4811"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_yi7m8"]
+
+[resource]
+script = ExtResource("8_l4811")
+name = "Sculpture Studio"
+boss_type = 1
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_tb3y0"), int]({
+ExtResource("3_yxsty"): 25,
+ExtResource("4_p8n5h"): 15
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+1: 5
+})
+district_type = 3
+production_slots = 2
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

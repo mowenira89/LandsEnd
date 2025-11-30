@@ -20,6 +20,11 @@ func create(b:Building,i:int,o:Array[String]):
 		title=s.name
 	elif s is String:
 		title=s
+		if s=="Make Offering":
+			title="Offering "+building.offerings[index]
+	elif s is ObtainEvent:
+		title = "Obtaining "+s.species.name
+	
 	else:
 		title="---"
 		
@@ -29,8 +34,23 @@ func recieve_choice(t:String):
 	building.set_production(t,index)
 	if title=="Craft":
 		GM.menus.recipe_menu.update_menu(building,index)
+	elif title=="Obtain":
+		GM.menus.obtain_screen.update_menu(building.district,building,null)
+		var o = await GM.menus.send_data
+		if o:
+			var event = ObtainEvent.new()
+			event.make_plans(building.district,o,building,null)
+			building.producing_this_turn[index]=event
+	elif title=="Lecture":
+		
+		var a:Array[Lecture] = []
+		for x in building.lectures:
+			a.append(x)
+		if building.lecturers[index]:
+			for x in building.lecturers[index].lectures:
+				a.append(x)
+		GM.menus.lecture_select_window.update_menu(a)
 	else:
-		GM.remove_event(building.district.territory.name+str(building.district.index)+str(index)+"production_event")
 		building.producing_this_turn[index]=title
 		building.turns_producing[index]=0
 
@@ -39,10 +59,3 @@ func _on_gui_input(event: InputEvent) -> void:
 		title="----"
 		building.producing_this_turn[index]=null
 		building.turns_producing[index]=0
-
-
-
-func _on_folding_changed(is_folded: bool) -> void:
-	if title=="Craft" and is_folded:
-		GM.menus.recipe_menu.update_menu(building,index)
-		

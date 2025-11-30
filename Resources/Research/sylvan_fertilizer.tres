@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Research" load_steps=8 format=3 uid="uid://qu1dfi58cick"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_e33ff"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_ggwdg"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_0lilv"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_ywtv3"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="5_0qs6a"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="6_m43k7"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_7i08a"]
+
+[resource]
+script = ExtResource("6_m43k7")
+name = "Sylvan Fertilizer"
+exp_to_unlock = 200
+inspiration_threshold = 50.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

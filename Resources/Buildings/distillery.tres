@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Distillery" load_steps=17 format=3 uid="uid://bqcx3oax30ky1"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_xhhbv"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_pr7g7"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_qcv7j"]
+[ext_resource type="Resource" uid="uid://b4bdqksem0uu6" path="res://Resources/Stuff/bronze_ingot.tres" id="4_l4xm1"]
+[ext_resource type="Resource" uid="uid://c2wuxkk4cgide" path="res://Resources/Stuff/barrel.tres" id="5_ylnkd"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_ewms6"]
+[ext_resource type="Texture2D" uid="uid://b4a7kkvk86wq1" path="res://Assets/Images/BuildingImages/distillery.png" id="6_pr7g7"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_ixb7q"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="8_o5deb"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_3m8tm"]
+[ext_resource type="Resource" uid="uid://cibwb3tmgdq54" path="res://Resources/Recipes/brewery_aged_tea.tres" id="10_0aa31"]
+[ext_resource type="Resource" uid="uid://6ouo741twhdi" path="res://Resources/Recipes/brewery_beer.tres" id="11_1a2ew"]
+[ext_resource type="Resource" uid="uid://bire5efpkuhdj" path="res://Resources/Recipes/brewery_potato_juice.tres" id="12_2dcsm"]
+[ext_resource type="Resource" uid="uid://bnkv3wt2jcnwa" path="res://Resources/Recipes/brewery_rice_wine.tres" id="13_yx0x1"]
+[ext_resource type="Resource" uid="uid://caiutatl1a11i" path="res://Resources/Recipes/brewery_wine.tres" id="14_fv5wy"]
+[ext_resource type="Script" uid="uid://3qdxr31qg8sg" path="res://Data/distillery.gd" id="15_7mugv"]
+
+[resource]
+script = ExtResource("15_7mugv")
+name = "Distillery"
+image = ExtResource("6_pr7g7")
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_pr7g7"), int]({
+ExtResource("3_qcv7j"): 25,
+ExtResource("4_l4xm1"): 5,
+ExtResource("5_ylnkd"): 20
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+0: 15
+})
+district_type = 3
+production_slots = 2
+recipes = Array[ExtResource("9_3m8tm")]([ExtResource("10_0aa31"), ExtResource("11_1a2ew"), ExtResource("12_2dcsm"), ExtResource("13_yx0x1"), ExtResource("14_fv5wy")])
+metadata/_custom_type_script = "uid://3qdxr31qg8sg"

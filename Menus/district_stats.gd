@@ -29,7 +29,7 @@ func update_menu(d:District):
 	for x in d.discovered_forage:
 		i+=x.name+". "
 	i+="\n\nFlora: "
-	for x in d.discovered_resources:
+	for x in d.discovered_flora:
 		i+=x.name+". "
 	i+="\n\nFauna: "
 	for x in d.discovered_game:

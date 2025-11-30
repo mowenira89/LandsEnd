@@ -83,7 +83,7 @@ func get_target_territory(t:Territory,unit:Unit):
 	for x in surrounding:
 		if x in tiles_by_cell.keys():
 			tiles_by_cell[x].untarget()
-	return array[0]
+	GM.menus.send_data.emit(array[0])
 	
 	#the cell coords are held in the territory, used to get surrounding tiles, 
 	#data can be handled from there. the board is disabled so that only the  

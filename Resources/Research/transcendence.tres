@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Research" load_steps=9 format=3 uid="uid://kbo67sptg63p"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_hpsho"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_caibc"]
+[ext_resource type="Resource" uid="uid://37kgfbjbb27u" path="res://Resources/Ceremonies/transcendence.tres" id="3_nsecq"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_pr32g"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_ielcc"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_ma3is"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_5blkp"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_s6xm1"]
+
+[resource]
+script = ExtResource("7_5blkp")
+name = "Transcendence"
+ceremonies = Array[ExtResource("2_caibc")]([ExtResource("3_nsecq")])
+exp_to_unlock = 2000
+inspiration_threshold = 10.0
+inspired_class = 3
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="Camp" load_steps=15 format=3 uid="uid://be60enxcfrydi"]
+[gd_resource type="Resource" script_class="Camp" load_steps=17 format=3 uid="uid://be60enxcfrydi"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_57ek6"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_p7cgw"]
 [ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="4_dq63i"]
 [ext_resource type="Texture2D" uid="uid://ceoyuvkwr6m" path="res://Assets/Images/BuildingImages/hunting.png" id="5_2l2ir"]
+[ext_resource type="Script" uid="uid://c06htwwoposed" path="res://Data/district.gd" id="5_kpook"]
 [ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="5_ksg81"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_j76d7"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_rg6ux"]
@@ -14,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://dbpdpbk5mumve" path="res://Resources/Recipes/camp_gruel.tres" id="9_dq63i"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="9_teyxr"]
 [ext_resource type="Resource" uid="uid://cwif52v0bdks3" path="res://Resources/Recipes/camp_leather.tres" id="10_ksg81"]
+[ext_resource type="Resource" uid="uid://55jlvb2bfleo" path="res://Resources/Buildings/cookhouse.tres" id="10_teyxr"]
 
 [resource]
 script = ExtResource("8_rg6ux")
@@ -31,4 +33,5 @@ staff_needed = Dictionary[int, int]({
 })
 production_slots = 2
 recipes = Array[ExtResource("7_2l2ir")]([ExtResource("8_57ek6"), ExtResource("9_dq63i"), ExtResource("10_ksg81")])
+possible_extentions = Array[ExtResource("6_j76d7")]([ExtResource("10_teyxr")])
 metadata/_custom_type_script = "uid://doa1vbsvkk4tx"

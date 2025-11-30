@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://b66coo2mjbjog"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_33c14"]
-[ext_resource type="Resource" uid="uid://b334urqnyuaol" path="res://Resources/Stuff/sandalwood.tres" id="2_njbny"]
+[ext_resource type="Resource" uid="uid://b334urqnyuaol" path="res://Resources/Stuff/crop_sandalwood.tres" id="2_njbny"]
 [ext_resource type="Resource" uid="uid://b3fyme33sqg0t" path="res://Resources/Stuff/sandalwood_oil.tres" id="3_fsk46"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_lvvtc"]
 

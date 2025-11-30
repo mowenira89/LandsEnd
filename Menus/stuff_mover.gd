@@ -16,9 +16,10 @@ func create(s:Stuff,s1:Stockpile,s2:Stockpile):
 	stuff=s
 	stockpile_a=s1
 	stockpile_b=s2
-	var stockpile_string = str(int(s1.stuff[stuff]))+"/"+str(stockpile_a.storeroom_capacity) if s1.stuff.has(s) else "0/"+str(stockpile_b.storeroom_capacity)
+	var stockpile_string = str(int(s1.stuff[stuff]))+"/"+str(stockpile_a.get_capacity(stuff)) if s1.stuff.has(s) else "0/"+str(stockpile_b.get_capacity(stuff))
 	stockpile.text = stockpile_string
-	party.text = str(int(s2.stuff[stuff])) if s2.stuff.has(s) else "0/"+str(stockpile_b.storeroom_capacity)
+	party.text = str(int(s2.stuff[stuff]))+"/"+str(stockpile_b.get_capacity(stuff)) if s2.stuff.has(s) else "0/"+str(stockpile_b.get_capacity(stuff))
+	
 	
 func return_to_stockpile(a:int):
 	if stockpile_b.remove_stuff(stuff,a):

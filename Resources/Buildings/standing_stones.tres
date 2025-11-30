@@ -1,8 +1,13 @@
-[gd_resource type="Resource" script_class="Temple" load_steps=7 format=3 uid="uid://b3b5f54egcucd"]
+[gd_resource type="Resource" script_class="Temple" load_steps=12 format=3 uid="uid://b3b5f54egcucd"]
 
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_lmk5p"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_lmk5p"]
 [ext_resource type="Texture2D" uid="uid://cx7sdm6jv32cx" path="res://Assets/Images/BuildingImages/stones.png" id="3_sbm20"]
 [ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="3_tnmht"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_tnmht"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_k74b5"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="7_07hip"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_ddybo"]
 [ext_resource type="Script" uid="uid://ds8ftt1ahq3nf" path="res://Data/buildings/temple.gd" id="8_gxr84"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="9_ndp50"]
 
@@ -14,34 +19,20 @@ metadata/_custom_type_script = "uid://d2hat5snxwp82"
 script = ExtResource("8_gxr84")
 pilgrim_draw = 15.0
 name = "Standing Stones"
-unlocked = null
-upgrade_only = null
 stats = SubResource("Resource_6phg4")
 image = ExtResource("3_sbm20")
 pop_cap = Dictionary[int, int]({
 3: 20
 })
-boss_type = null
-unlock_message = null
-age = null
-memories = null
 construction_time = 6
 construction_materials = Dictionary[ExtResource("2_lmk5p"), int]({
 ExtResource("3_tnmht"): 12
 })
 construction_level = 1
-construction_conditions = null
 staff_needed = Dictionary[int, int]({
 3: 20
 })
-staff_appointed = null
 needed_districts = 1
 district_type = 1
 production_slots = 1
-recipes = null
-possible_extentions = null
-possible_upgrades = null
-upgrades = null
-upgrade_at_level = null
-level_up_slates = null
 metadata/_custom_type_script = "uid://ds8ftt1ahq3nf"

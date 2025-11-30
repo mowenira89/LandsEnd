@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Research" load_steps=11 format=3 uid="uid://blpaqit2qjg4b"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_york5"]
+[ext_resource type="Resource" uid="uid://dcfk12tjksoj4" path="res://Resources/Buildings/alchemist_studio.tres" id="2_lkvol"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_dbdio"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_sv047"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_jchgw"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_ls5wx"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_j1ick"]
+[ext_resource type="Resource" uid="uid://ystbsnykcgxr" path="res://Resources/Research/brewing.tres" id="8_1qlle"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_eqhjm"]
+[ext_resource type="Resource" uid="uid://cfgx2mn2nq4cv" path="res://Resources/Research/metallurgy.tres" id="9_lkvol"]
+
+[resource]
+script = ExtResource("7_j1ick")
+name = "Alchemy"
+buildings = Array[ExtResource("1_york5")]([ExtResource("2_lkvol")])
+exp_to_unlock = 1000
+prerequisites = Array[ExtResource("7_j1ick")]([ExtResource("8_1qlle"), ExtResource("9_lkvol")])
+inspiration_threshold = 10.0
+inspired_class = 1
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

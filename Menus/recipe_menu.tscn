@@ -32,3 +32,5 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "x"
+
+[connection signal="pressed" from="MarginContainer/Button" to="." method="_on_button_pressed"]

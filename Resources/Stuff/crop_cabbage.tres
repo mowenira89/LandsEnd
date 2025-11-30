@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=4 format=3 uid="uid://dhivvcrgfqosa"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_indua"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_3if8l"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_oirem"]
+
+[resource]
+script = ExtResource("3_oirem")
+crop_level = 1
+vitamins = Dictionary[int, float]({
+0: 2.0,
+1: 2.0
+})
+water_need = 2.0
+health = 35.0
+dead_season = Array[int]([6, 7, 8])
+kind = 6
+diet = 3
+harvest_season = Array[int]([4, 5])
+rarity = 40.0
+name = "Cabbage"
+qualities = Dictionary[int, float]({
+0: 1.0,
+22: 2.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 1.0
+})
+exp_to = Dictionary[String, float]({
+"Farming": 1.0
+})
+food_type = 2
+diet_type = Array[int]([2, 0])
+metadata/_custom_type_script = "uid://wxkcemfn60gw"

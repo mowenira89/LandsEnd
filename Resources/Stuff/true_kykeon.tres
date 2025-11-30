@@ -9,7 +9,8 @@ name = "True Kykeon"
 value = 100.0
 qualities = Dictionary[int, float]({
 2: 5.0,
-10: 7.0
+10: 7.0,
+17: 10.0
 })
 mystic_qualities = Dictionary[int, float]({
 0: 7.0,
@@ -17,6 +18,6 @@ mystic_qualities = Dictionary[int, float]({
 4: 7.0
 })
 exp_to = Dictionary[String, float]({
-"Taumaturgy": 2.0
+"Thaumaturgy": 1.0
 })
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

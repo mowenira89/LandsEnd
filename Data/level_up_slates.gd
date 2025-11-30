@@ -11,9 +11,3 @@ class_name LevelUpSlates extends Resource
 	9:null,
 	10:null,
 } 
-
-var owner:Building
-
-func init(b:Building):
-	owner=b
-	

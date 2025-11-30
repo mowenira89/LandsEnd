@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=6 format=3 uid="uid://ch0pt1pivuqbm"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_27aqt"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_7ywvv"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_ppw2w"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_2yj4i"]
+
+[sub_resource type="Resource" id="Resource_e2cfg"]
+script = ExtResource("4_2yj4i")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_ppw2w")
+id = "Swamp Pear"
+crop_level = 1
+dead_season = Array[int]([6, 7, 8])
+kind = 6
+harvest_season = Array[int]([4, 5])
+rarity = 20.0
+name = "Swamp Pear"
+stats = SubResource("Resource_e2cfg")
+value = 3.0
+qualities = Dictionary[int, float]({
+0: 1.0,
+5: 39.0,
+9: 1.0,
+20: 1.0,
+22: 1.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 1.0
+})
+exp_to = Dictionary[String, float]({
+"Farming": 1.0
+})
+found_in = Array[int]([3])
+food_type = 1
+diet_type = Array[int]([0, 2])
+metadata/_custom_type_script = "uid://wxkcemfn60gw"

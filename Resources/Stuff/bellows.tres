@@ -6,9 +6,9 @@
 [resource]
 script = ExtResource("1_einr2")
 name = "Bellows"
-value = 4.0
+value = 10.0
 mystic_qualities = Dictionary[int, float]({
-4: 0.5,
-6: 1.0
+4: 1.0,
+6: 2.0
 })
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

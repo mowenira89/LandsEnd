@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="Species" load_steps=6 format=3 uid="uid://bp88vww7wloft"]
+[gd_resource type="Resource" script_class="Species" load_steps=9 format=3 uid="uid://bp88vww7wloft"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_k2m1l"]
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_1qh7n"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="2_vjhxw"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_5rvit"]
+[ext_resource type="Resource" uid="uid://dvqstmgmsdhpc" path="res://Resources/Research/Charm.tres" id="3_21yb1"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_1qh7n"]
+[ext_resource type="Resource" uid="uid://bld06l1x6uvdy" path="res://Resources/Research/glamour.tres" id="4_3vtta"]
 
 [sub_resource type="Resource" id="Resource_5rvit"]
 script = ExtResource("4_1qh7n")
@@ -21,6 +24,7 @@ script = ExtResource("3_5rvit")
 rarity = 45.0
 aggressiveness = 3.0
 skittishness = 8.0
+knowledge = Array[ExtResource("2_vjhxw")]([ExtResource("3_21yb1"), ExtResource("4_3vtta")])
 name = "Fey"
 stats = SubResource("Resource_5rvit")
 value = 10000.0

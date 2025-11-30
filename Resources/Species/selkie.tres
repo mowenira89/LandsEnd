@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://ctr8nun38x6y2"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_2k778"]
+[ext_resource type="Resource" uid="uid://dgjhkn842uhmy" path="res://Resources/Stuff/mortal_flesh.tres" id="2_2k778"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_3wdn6"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_pve8e"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_kn51m"]
+
+[sub_resource type="Resource" id="Resource_u6qvo"]
+script = ExtResource("5_kn51m")
+hp = 100.0
+off = 3.0
+def = 3.0
+mag = 5.0
+magdef = 5.0
+sp = 4.0
+l = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("4_pve8e")
+kill_produce = Dictionary[ExtResource("1_2k778"), int]({
+ExtResource("2_2k778"): 2
+})
+rarity = 10.0
+aggressiveness = 20.0
+skittishness = 70.0
+name = "Selkie"
+stats = SubResource("Resource_u6qvo")
+mystic_qualities = Dictionary[int, float]({
+0: 3.0,
+2: 3.0
+})
+found_in = Array[int]([5, 0])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

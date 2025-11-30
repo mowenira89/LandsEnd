@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Building" load_steps=11 format=3 uid="uid://cmd34d6xt5u68"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_xfiff"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_b5mgs"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_nmfw8"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="4_brm7t"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="5_hoeau"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_8r6y1"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="7_n1u4n"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_g3ghy"]
+[ext_resource type="Resource" uid="uid://r85g3bf8jeni" path="res://Resources/Recipes/apiary_beehive.tres" id="9_b5mgs"]
+[ext_resource type="Resource" uid="uid://eeho25e1nq6c" path="res://Resources/Recipes/bug_house_raw_silk.tres" id="10_nmfw8"]
+
+[resource]
+script = ExtResource("6_8r6y1")
+name = "Bug House"
+desc = "A place specialized for raising insects and harvesting their produce. "
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_b5mgs"), int]({
+ExtResource("3_nmfw8"): 25,
+ExtResource("4_brm7t"): 20,
+ExtResource("5_hoeau"): 5
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+0: 10
+})
+recipes = Array[ExtResource("8_g3ghy")]([ExtResource("9_b5mgs"), ExtResource("10_nmfw8")])
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

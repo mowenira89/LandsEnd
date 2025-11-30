@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Ceremony" load_steps=8 format=3 uid="uid://brwb8v8cg77vt"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_pltx4"]
+[ext_resource type="Resource" uid="uid://coqwyx2r33sfn" path="res://Resources/Research/whitesmithing.tres" id="2_7q6fp"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="3_8a3hk"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="4_eg2b6"]
+[ext_resource type="Resource" uid="uid://dtdqjwtloddb4" path="res://Resources/Stuff/mithril.tres" id="5_7q6fp"]
+[ext_resource type="Resource" uid="uid://vc1jcimcly1p" path="res://Resources/Stuff/refined_mithril.tres" id="5_a4bcf"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="6_n887b"]
+
+[resource]
+script = ExtResource("6_n887b")
+name = "Mithril Ceremony"
+length = 7
+interest = 0.002
+reward = Dictionary[ExtResource("4_eg2b6"), float]({
+ExtResource("5_a4bcf"): 1.0
+})
+requirements = Dictionary[ExtResource("4_eg2b6"), float]({
+ExtResource("5_7q6fp"): 20.0
+})
+requirements_of_quality = Dictionary[int, float]({
+17: 20.0
+})
+monks_needed = 50
+exp_to = Dictionary[ExtResource("1_pltx4"), float]({
+ExtResource("2_7q6fp"): 5.0
+})
+metadata/_custom_type_script = "uid://h1hksovre84"

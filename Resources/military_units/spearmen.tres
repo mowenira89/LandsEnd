@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="MilitaryUnit" load_steps=7 format=3 uid="uid://dbwfemfjk60qq"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_tmixa"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="2_l5o7x"]
+[ext_resource type="Script" uid="uid://cp0je3yls6fec" path="res://Data/military_unit.gd" id="3_navxb"]
+[ext_resource type="Resource" uid="uid://l38bjx2o7f1b" path="res://Resources/Species/human.tres" id="4_6ix57"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_pm8i4"]
+
+[sub_resource type="Resource" id="Resource_s7lmi"]
+script = ExtResource("5_pm8i4")
+hp = 100.0
+off = 6.0
+def = 5.0
+sp = 4.0
+l = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_navxb")
+military_prowess = Array[int]([0])
+title = "Spearmen"
+species = ExtResource("4_6ix57")
+prowess = Dictionary[int, float]({
+15: 1.0
+})
+stats = SubResource("Resource_s7lmi")
+CLASS = 2
+beliefs_mods = Dictionary[int, float]({
+1: 0.5,
+2: 0.5
+})
+metadata/_custom_type_script = "uid://cp0je3yls6fec"

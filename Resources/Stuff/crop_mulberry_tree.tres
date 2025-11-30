@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=6 format=3 uid="uid://vyx2qbh2nads"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_nsprh"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="2_6x8uq"]
+[ext_resource type="Resource" uid="uid://csqckqv31tkpb" path="res://Resources/Stuff/mulbery_leaves.tres" id="3_vkaaq"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="4_s12ad"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="5_42cjl"]
+
+[resource]
+script = ExtResource("5_42cjl")
+crop_level = 1
+vitamins = Dictionary[int, float]({
+0: 5.0,
+3: 5.0,
+6: 5.0
+})
+water_need = 15.0
+startup_time = 25.0
+produce = Array[ExtResource("1_nsprh")]([ExtResource("3_vkaaq")])
+dead_season = Array[int]([6, 7, 8])
+kill_produce = Dictionary[ExtResource("1_nsprh"), int]({
+ExtResource("2_6x8uq"): 3,
+ExtResource("3_vkaaq"): 10
+})
+harvest_season = Array[int]([4, 1])
+name = "Mulberry Tree"
+value = 25.0
+mystic_qualities = Dictionary[int, float]({
+0: 3.0
+})
+exp_to = Dictionary[String, float]({
+"Sericulture": 1.0
+})
+found_in = Array[int]([0, 2])
+metadata/_custom_type_script = "uid://wxkcemfn60gw"

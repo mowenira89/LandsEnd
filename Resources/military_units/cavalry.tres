@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="MilitaryUnit" load_steps=7 format=3 uid="uid://bhyym8eefxstl"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_yweig"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="2_qnb1o"]
+[ext_resource type="Script" uid="uid://cp0je3yls6fec" path="res://Data/military_unit.gd" id="3_od4tt"]
+[ext_resource type="Resource" uid="uid://l38bjx2o7f1b" path="res://Resources/Species/human.tres" id="4_6yo7g"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_rg51e"]
+
+[sub_resource type="Resource" id="Resource_f5ep5"]
+script = ExtResource("5_rg51e")
+hp = 130.0
+off = 7.0
+def = 5.0
+magdef = 2.0
+sp = 8.0
+l = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_od4tt")
+military_prowess = Dictionary[int, float]({
+3: 1.0
+})
+title = "Cavalry"
+species = ExtResource("4_6yo7g")
+stats = SubResource("Resource_f5ep5")
+CLASS = 2
+beliefs_mods = Dictionary[int, float]({
+1: 0.5,
+2: 0.5
+})
+metadata/_custom_type_script = "uid://cp0je3yls6fec"

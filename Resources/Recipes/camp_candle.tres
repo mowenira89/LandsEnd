@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://bralwey76qjth"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_vrvap"]
+[ext_resource type="Resource" uid="uid://dnw12ex8mn5xu" path="res://Resources/Stuff/wax.tres" id="2_6rytv"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="3_7qbhe"]
+[ext_resource type="Resource" uid="uid://ce7p4vcse8l0g" path="res://Resources/Stuff/candle.tres" id="4_uweej"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_l61li"]
+
+[resource]
+script = ExtResource("5_l61li")
+name = "Candle"
+id = "camp_candle"
+turns = 1
+inputs = Dictionary[ExtResource("1_vrvap"), int]({
+ExtResource("2_6rytv"): 1,
+ExtResource("3_7qbhe"): 1
+})
+outputs = Dictionary[ExtResource("1_vrvap"), int]({
+ExtResource("4_uweej"): 1
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

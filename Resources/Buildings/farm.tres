@@ -1,19 +1,27 @@
-[gd_resource type="Resource" script_class="Farm" load_steps=16 format=3 uid="uid://vyyhdli2faa6"]
+[gd_resource type="Resource" script_class="Farm" load_steps=24 format=3 uid="uid://vyyhdli2faa6"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_b44j8"]
 [ext_resource type="Script" uid="uid://bjkwd2eqjow0a" path="res://Data/conditions/needs_terrain_condition.gd" id="3_fi2wv"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="4_mjyw8"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="5_suiq6"]
 [ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="6_o00dq"]
-[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="7_b44j8"]
 [ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="7_upxnp"]
 [ext_resource type="Texture2D" uid="uid://bjfr383ojbehf" path="res://Assets/Images/BuildingImages/farm.png" id="9_bmvb1"]
-[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="10_2vyas"]
-[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="10_fi2wv"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="11_3jrbj"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="11_b44j8"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="12_udeb0"]
 [ext_resource type="Script" uid="uid://dbhgissbp5478" path="res://Data/buildings/farm.gd" id="13_a6q2k"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="14_3jrbj"]
+[ext_resource type="Resource" uid="uid://cyli28x4doa8v" path="res://Resources/Buildings/water_wheel.tres" id="14_upxnp"]
+[ext_resource type="Resource" uid="uid://deyhnd1rwksgy" path="res://Resources/Buildings/mill.tres" id="15_qnitw"]
+[ext_resource type="Resource" uid="uid://pfrxq521edbu" path="res://Resources/Recipes/farm_animal_feed.tres" id="16_3jrbj"]
+[ext_resource type="Resource" uid="uid://bgxleyckw7mxb" path="res://Resources/Buildings/windmill.tres" id="16_bmvb1"]
+[ext_resource type="Resource" uid="uid://yb08w6lad2g7" path="res://Resources/Recipes/farm_canvas.tres" id="17_udeb0"]
+[ext_resource type="Resource" uid="uid://bv7yr3g4hikn4" path="res://Resources/Buildings/fish_pens.tres" id="17_upxnp"]
+[ext_resource type="Resource" uid="uid://bmmte8hwfos7m" path="res://Resources/Recipes/farm_fertilizer.tres" id="18_a6q2k"]
+[ext_resource type="Resource" uid="uid://tnybjctjkasf" path="res://Resources/Recipes/farm_fiber_flax.tres" id="19_n3hev"]
+[ext_resource type="Resource" uid="uid://bgh6sy35by67w" path="res://Resources/Recipes/farm_fiber_hemp.tres" id="20_mwp0k"]
+[ext_resource type="Resource" uid="uid://0ymv4yb3lo4a" path="res://Resources/Recipes/farm_rope.tres" id="21_yacak"]
+[ext_resource type="Resource" uid="uid://cl6j0scg0ag0w" path="res://Resources/Recipes/farm_sylvan_fertilizer.tres" id="22_qsbqy"]
 
 [sub_resource type="Resource" id="Resource_n3hev"]
 script = ExtResource("3_fi2wv")
@@ -22,24 +30,28 @@ metadata/_custom_type_script = "uid://bjkwd2eqjow0a"
 
 [resource]
 script = ExtResource("13_a6q2k")
+raise_crops = true
+raise_livestock = true
 name = "Farm"
 unlocked = true
 image = ExtResource("9_bmvb1")
 pop_cap = Dictionary[int, int]({
-0: 5
+0: 15
 })
 construction_time = 4
 construction_materials = Dictionary[ExtResource("4_mjyw8"), int]({
 ExtResource("5_suiq6"): 25,
-ExtResource("6_o00dq"): 5,
+ExtResource("6_o00dq"): 10,
 ExtResource("7_upxnp"): 5
 })
 construction_level = 2
 construction_conditions = Array[ExtResource("2_b44j8")]([SubResource("Resource_n3hev")])
 staff_needed = Dictionary[int, int]({
-0: 10
+0: 25
 })
 needed_districts = 1
 district_type = 2
-production_slots = 2
+production_slots = 1
+recipes = Array[ExtResource("12_udeb0")]([ExtResource("16_3jrbj"), ExtResource("17_udeb0"), ExtResource("18_a6q2k"), ExtResource("19_n3hev"), ExtResource("20_mwp0k"), ExtResource("21_yacak"), ExtResource("22_qsbqy")])
+possible_extentions = Array[ExtResource("11_3jrbj")]([ExtResource("14_upxnp"), ExtResource("16_bmvb1"), ExtResource("17_upxnp"), ExtResource("15_qnitw")])
 metadata/_custom_type_script = "uid://dbhgissbp5478"

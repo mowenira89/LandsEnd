@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Nymphoi" load_steps=11 format=3 uid="uid://bvrq3t7klrluf"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_g4eud"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_t77pu"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_2l0jk"]
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="4_apexp"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_wk514"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_fflws"]
+[ext_resource type="Script" uid="uid://vfa8xldyecm2" path="res://Data/territory.gd" id="7_qxjo6"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_dfgrm"]
+[ext_resource type="Script" uid="uid://o783htdr3cnx" path="res://Data/nymphoi.gd" id="9_e126e"]
+[ext_resource type="Resource" uid="uid://jo27inbpgaho" path="res://Resources/Species/djinn.tres" id="10_ykv1m"]
+
+[resource]
+script = ExtResource("9_e126e")
+title = "Spirits of Flame"
+age = 10000
+species = ExtResource("10_ykv1m")
+affinity = Array[int]([3])
+metadata/_custom_type_script = "uid://o783htdr3cnx"

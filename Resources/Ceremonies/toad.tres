@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Ceremony" load_steps=6 format=3 uid="uid://bcex7l15a86xe"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_y7p75"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_hoh8j"]
+[ext_resource type="Resource" uid="uid://cbrc03ir8pc21" path="res://Resources/Research/black_magic.tres" id="2_rmpup"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_rmpup"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="4_1qm04"]
+
+[resource]
+script = ExtResource("4_1qm04")
+name = "Toad Ceremony"
+length = 5
+interest = 0.5
+requirements_of_quality = Dictionary[int, float]({
+0: 100.0,
+2: 50.0,
+10: 100.0,
+17: 100.0,
+18: 50.0
+})
+monks_needed = 150
+exp_to = Dictionary[ExtResource("1_y7p75"), float]({
+ExtResource("2_rmpup"): 10.0
+})
+metadata/_custom_type_script = "uid://h1hksovre84"

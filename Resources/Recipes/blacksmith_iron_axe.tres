@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://c4nvx8lkutibw"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_lie3v"]
+[ext_resource type="Resource" uid="uid://b23k518tdno7r" path="res://Resources/Stuff/iron_ingot.tres" id="2_x56a4"]
+[ext_resource type="Resource" uid="uid://ca01syf1xy7dc" path="res://Resources/Stuff/iron_axe.tres" id="3_cxrom"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_egyyu"]
+
+[resource]
+script = ExtResource("4_egyyu")
+name = "Iron Axe"
+id = "blacksmith_ino_axe"
+turns = 1
+inputs = Dictionary[ExtResource("1_lie3v"), int]({
+ExtResource("2_x56a4"): 1
+})
+outputs = Dictionary[ExtResource("1_lie3v"), int]({
+ExtResource("3_cxrom"): 1
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

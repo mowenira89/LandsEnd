@@ -1,34 +1,35 @@
 class_name Unit extends Resource
 
-@export var name:String
-@export var leader:Person
-@export var cargo:Stockpile
-@export var outfit:Stockpile
-@export var followers:Population
-@export var action_queue:Array[Event]=[]
-@export var original_territory:Territory
-@export var previous_territory:Territory
-@export var current_territory:Territory
-@export var destination_territory:Territory
-@export var companions:Array[Person]=[]
-@export var guards:Array=[]
-@export var speed:int=1
-@export var movements_allowed_this_turn=0
-@export var traveling:bool=false
-@export var friendly:bool=true
-@export var memories:Array[Memory]
-@export var prohibited_game:Array[Species]
+var name:String
+var leader:Person
+var cargo:Stockpile
+var outfit:Array[Stuff]
+var followers:Population
+var action_queue:Array[Event]=[]
+var original_territory:Territory
+var previous_territory:Territory
+var current_territory:Territory
+var destination_territory:Territory
+var companions:Array[Person]=[]
+var guard:Array[MilitaryUnit]=[]
+var speed:int=1
+var movements_allowed_this_turn=0
+var traveling:bool=false
+var friendly:bool=true
+var memories:Array[Memory]
+var prohibited_game:Array[Species]
 #STATS
-@export var animals_killed:int=0
-@export var previous_territories:Array[Territory]
-@export var turns_existed:int=0
-@export var creation_date=[]
+var animals_killed:int=0
+var previous_territories:Array[Territory]
+var turns_existed:int=0
+var creation_date=[]
+var automate:bool=false
+var recipes:Array[Recipe]=[]:get=get_known_recipes
+var player_unit:bool=true
 
-
-@export var outfit_order:Array[Stuff]
-
-func create(t:Territory,l:Person=null, c:Stockpile=null,o:Stockpile=null,f:Population=null,coms=[]):
+func create(t:Territory,pu:bool,l:Person=null, c:Stockpile=null,o:Array[Stuff]=[],f:Population=null,coms=[]):
 	creation_date=[GM.month,GM.week]
+	player_unit=pu
 	leader=l
 	l.unit=self
 	cargo=c
@@ -38,7 +39,6 @@ func create(t:Territory,l:Person=null, c:Stockpile=null,o:Stockpile=null,f:Popul
 		companions=coms
 		for x in companions:
 			x.unit=self
-	outfit_order.resize(4)
 	companions.resize(4)
 	original_territory=t
 	current_territory=t
@@ -46,9 +46,8 @@ func create(t:Territory,l:Person=null, c:Stockpile=null,o:Stockpile=null,f:Popul
 		cargo=Stockpile.new()
 	cargo.owner=self
 	cargo.create(null,self)
-	if outfit==null:
-		outfit=Stockpile.new()
-		outfit.create(null,self)
+	outfit.resize(4)
+	guard.resize(4)
 	if followers==null:
 		followers=Population.new()
 		followers.create(current_territory,self)
@@ -58,6 +57,12 @@ func create(t:Territory,l:Person=null, c:Stockpile=null,o:Stockpile=null,f:Popul
 		if x:
 			x.unit=self
 	move(t)
+	if leader:
+		speed = leader.get_prowess(Person.PROWESS.LongStrider)+1
+	if leader and !leader.recipes.is_empty():
+		for x in leader.recipes:
+			if x not in recipes:
+				recipes.append(x)
 	movements_allowed_this_turn=speed
 
 func move(t:Territory):
@@ -78,18 +83,25 @@ func move(t:Territory):
 	GM.menus.update_menus()
 
 
+func get_total_people():
+	var p = 1 if leader else 0
+	for x in companions:
+		if x:
+			p+=1
+	return followers.get_total_population()+p
+
 func get_total_followers():
 	return followers.get_total_population()
-	
 
 	
-func change_inventory_capacity():
+func get_inventory_capacity():
 	var r=1
-	for x in outfit.keys():
+	for x in outfit:
 		if x.qualities.has(Stuff.QUALITIES.Capacity):
-			r+=x.qualities[Stuff.QUALITIES.Capacity]*outfit[x]
+			r+=x.qualities[Stuff.QUALITIES.Capacity]
 	r+=get_total_followers()
-	cargo.capacity=r
+	cargo.storeroom_capacity=r
+	cargo.granary_capacity=r
 	
 
 func remove_person(p:Person):
@@ -112,25 +124,18 @@ func end_turn():
 	for x in action_queue.duplicate():
 		x.end_turn()
 		if !x.is_alive():
+			x.on_removal()
 			action_queue.erase(x)
 	leader.end_turn()
 	for x in companions:
 		if x:
 			x.end_turn()
-	
+	followers.end_turn()
 	for x in memories:
 		x.end_turn()
 	
 	movements_allowed_this_turn=speed
-
-func get_all_buffs(t:Buff.TYPE):
-	var amt=0
-	if leader:
-		amt+=get_all_buffs(t)
-	for x in companions:
-		amt+=get_all_buffs(t)
-	
-	return amt
+	movements_allowed_this_turn-=action_queue.size()
 
 func extract_buffs():
 	var r:Array[Buffs] = []
@@ -145,6 +150,9 @@ func get_prowess(p:Person.PROWESS):
 	for x in companions:
 		if x:
 			prowess += x.get_prowess(p)
+	for x in cargo.outfit:
+		if x and x.conveys_prowess.has(p):
+			prowess+=x.conveys_prowess[p]
 	return prowess
 
 func get_research():
@@ -160,20 +168,29 @@ func get_stat(s:Stats.STATS):
 	var r = 0		
 	var z = []
 	var a = 0
-	z.append(leader.stats.get_stat(s))
+	z.append(leader.get_stat(s))
 	for x in companions:
 		if x:
 			z.append(x.stats.get_stat(s))
 	for x in z:
 		a+=x
-	r = a*z.size()
+	r = a/z.size()
+	return r
+	
+func get_all_stats():
+	var r = {}
+	for x in Stats.STATS:
+		r[x]=get_stat(x)
 	return r
 
 func add_event(e:Event,d:District=null,b:Building=null):
-	if !e.check(d,d.territory,b):		
+	if !e.check(d,current_territory,b):		
 		return false
 	e.init()
+	if automate:
+		e.turns=-1
 	action_queue.append(e)
+	movements_allowed_this_turn-=1
 	return true
 
 func remove_event(e:Event):
@@ -185,7 +202,7 @@ func disband():
 		followers.add_max(current_territory.population,x)
 	for x in companions:
 		if x:
-			leave_party(x)
+			remove_person(x)
 	
 	if !leader:
 		for x in cargo:
@@ -195,7 +212,56 @@ func disband():
 func foresake():
 	pass		
 
-func leave_party(p:Person):
-	var u = Unit.new()
-	u.create(current_territory,p)
+
 	
+	
+func get_luck():
+	var luck = get_stat(Stats.STATS.Luck)
+	luck+=get_prowess(Person.PROWESS.Lucky)
+	return luck
+
+func _automate():
+	for x in action_queue:
+		x.turns=-1
+	automate=true
+	
+func deautomate():
+	for x in action_queue:
+		x.turns=1
+	automate=false
+
+func get_known_recipes():
+	var r:Array[Recipe] = []
+	if leader:
+		for x in leader.recipes:
+			if x not in r:
+				r.append(x)
+	for x in companions:
+		if x:
+			for y in x.recipes:
+				if y not in r:
+					r.append(y)
+	return r
+
+func get_individuals():
+	var r = []
+	if leader!=null:
+		r.append(leader)
+	for x in companions:
+		if x!=null:
+			r.append(x)
+	for x in guard:
+		if x!=null:
+			r.append(x)
+	return r
+	
+func get_power():
+	var r = 0
+	for x:Person in get_individuals():
+		r+=x.get_power()
+	return r
+
+func take_damage(a:float):
+	for x:Person in get_individuals():
+		
+		x.stats.change_hp(a)

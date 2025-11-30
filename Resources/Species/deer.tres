@@ -21,6 +21,7 @@ metadata/_custom_type_script = "uid://d2hat5snxwp82"
 [resource]
 script = ExtResource("4_ismi2")
 kind = 1
+diet = 2
 kill_produce = Dictionary[ExtResource("1_2oieu"), int]({
 ExtResource("2_13lcq"): 3,
 ExtResource("3_blbps"): 2

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Person" load_steps=13 format=3 uid="uid://wkj5svilwt3x"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_oagwv"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_mailo"]
+[ext_resource type="Script" uid="uid://cpk6i5qt14wc7" path="res://Data/inventory.gd" id="3_v6fec"]
+[ext_resource type="Resource" uid="uid://cfcf3o761kpox" path="res://Resources/Stuff/longbow.tres" id="4_4v2qd"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="5_rcjbk"]
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="6_763is"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="7_6qmpm"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="8_wqhoe"]
+[ext_resource type="Script" uid="uid://vfa8xldyecm2" path="res://Data/territory.gd" id="9_pqvj2"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="10_8j1bq"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="11_ps82p"]
+
+[sub_resource type="Resource" id="Resource_4xap1"]
+script = ExtResource("3_v6fec")
+weapon = ExtResource("4_4v2qd")
+metadata/_custom_type_script = "uid://cpk6i5qt14wc7"
+
+[resource]
+script = ExtResource("11_ps82p")
+title = "Hunter"
+prowess = Dictionary[int, float]({
+0: 1.0
+})
+level = 1
+unlocked = true
+inventory = SubResource("Resource_4xap1")
+affinity = Array[int]([0])
+metadata/_custom_type_script = "uid://bd374amcrlpgs"

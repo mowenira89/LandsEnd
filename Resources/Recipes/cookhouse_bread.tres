@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://b2yk636rcjp5y"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_0fups"]
+[ext_resource type="Resource" uid="uid://cwjrrbty0abgo" path="res://Resources/Stuff/flour.tres" id="2_mltkd"]
+[ext_resource type="Resource" uid="uid://dqbk1rtwh6lva" path="res://Resources/Stuff/bread.tres" id="3_roeyy"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_l73jn"]
+
+[resource]
+script = ExtResource("4_l73jn")
+name = "Bread"
+id = "cookhouse_bread"
+turns = 1
+inputs = Dictionary[ExtResource("1_0fups"), int]({
+ExtResource("2_mltkd"): 1
+})
+outputs = Dictionary[ExtResource("1_0fups"), int]({
+ExtResource("3_roeyy"): 2
+})
+exp_to = Dictionary[String, float]({
+"Bakery": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

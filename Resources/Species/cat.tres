@@ -19,6 +19,7 @@ metadata/_custom_type_script = "uid://d2hat5snxwp82"
 [resource]
 script = ExtResource("2_cx521")
 kind = 1
+breeding_season = Array[int]([0])
 rarity = 54.0
 aggressiveness = 2.0
 skittishness = 6.0

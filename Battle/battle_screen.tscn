@@ -1,0 +1,332 @@
+[gd_scene load_steps=11 format=3 uid="uid://cx55xkhysyfad"]
+
+[ext_resource type="PackedScene" uid="uid://nk2nf7urmdxa" path="res://Menus/PersonSelectButton.tscn" id="1_8qdji"]
+[ext_resource type="Script" uid="uid://blqfmy43yb1fj" path="res://Battle/battle_screen.gd" id="1_lshkp"]
+[ext_resource type="Script" uid="uid://cq43h5yhwdvac" path="res://Battle/info_hover_box.gd" id="3_oyio6"]
+[ext_resource type="Script" uid="uid://wkg0kv8i5lt4" path="res://Battle/battle_state_machine.gd" id="3_txu5l"]
+[ext_resource type="Script" uid="uid://dlgjnv54kte2x" path="res://Battle/battle_states/null_state.gd" id="4_21wey"]
+[ext_resource type="Script" uid="uid://donf40x1girqp" path="res://Battle/battle_states/character_select_state.gd" id="5_8w3xk"]
+[ext_resource type="Script" uid="uid://x7aeatbfspas" path="res://Battle/battle_states/character_positioning_state.gd" id="5_q8n6m"]
+[ext_resource type="Script" uid="uid://bxvd561asfm18" path="res://Battle/battle_states/action_select_state.gd" id="6_8w3xk"]
+[ext_resource type="Script" uid="uid://dn8a2xp4biyks" path="res://Battle/battle_states/resolve_state.gd" id="9_ixvb7"]
+[ext_resource type="Script" uid="uid://78qkloywpqte" path="res://Battle/battle_states/battle_end_state.gd" id="10_uwms2"]
+
+[node name="BattleScreen" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 0.85882354)
+script = ExtResource("1_lshkp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(900, 550)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -312.0
+offset_right = 450.0
+offset_bottom = 380.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="PotentialContainerContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/PotentialContainerContainer"]
+layout_mode = 2
+text = "Select your combatants and place them on the field"
+horizontal_alignment = 1
+
+[node name="PotentialContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/PotentialContainerContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="EnemiesRow2" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Enemies0" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/EnemiesRow2" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Enemies2" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/EnemiesRow2" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Enemies4" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/EnemiesRow2" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Enemies6" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/EnemiesRow2" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="EnemiesRow1" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Enemies1" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/EnemiesRow1" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Enemies3" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/EnemiesRow1" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Enemies5" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/EnemiesRow1" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Enemies7" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/EnemiesRow1" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Fighters" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="Allies0" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Fighters" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Allies2" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Fighters" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Allies4" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Fighters" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Allies6" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Fighters" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Fighters2" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Allies1" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Fighters2" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Allies3" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Fighters2" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Allies5" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Fighters2" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="Allies7" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Fighters2" instance=ExtResource("1_8qdji")]
+layout_mode = 2
+
+[node name="ActionContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Melee" type="Button" parent="MarginContainer/MarginContainer/ActionContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Melee"
+
+[node name="Missile" type="Button" parent="MarginContainer/MarginContainer/ActionContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Missile"
+
+[node name="Fortify" type="Button" parent="MarginContainer/MarginContainer/ActionContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Fortify"
+
+[node name="Magic" type="Button" parent="MarginContainer/MarginContainer/ActionContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Magic"
+
+[node name="Item" type="Button" parent="MarginContainer/MarginContainer/ActionContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Item"
+
+[node name="FleeInBattle" type="Button" parent="MarginContainer/MarginContainer/ActionContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Flee"
+
+[node name="Cancel" type="Button" parent="MarginContainer/MarginContainer/ActionContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Cancel"
+
+[node name="RetreatContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Retreat" type="Button" parent="MarginContainer/MarginContainer/RetreatContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Retreat"
+
+[node name="MagicSelectContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="MagicSelectGrid" type="GridContainer" parent="MarginContainer/MarginContainer/MagicSelectContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/MarginContainer"]
+visible = false
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="StartBattle" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Start Battle"
+
+[node name="Attack" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Attack!"
+
+[node name="Start" type="MarginContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(1400, 550)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Start"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Start/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="EnemyInfo" type="VBoxContainer" parent="Start/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="EnemyPowerLabel" type="Label" parent="Start/VBoxContainer/HBoxContainer/EnemyInfo"]
+layout_mode = 2
+
+[node name="EnemyInfo" type="RichTextLabel" parent="Start/VBoxContainer/HBoxContainer/EnemyInfo"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("3_oyio6")
+
+[node name="Enemies" type="GridContainer" parent="Start/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+columns = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Start/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Fight" type="Button" parent="Start/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Fight"
+
+[node name="Autoresolve" type="Button" parent="Start/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Autoresolve"
+
+[node name="Flee" type="Button" parent="Start/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Flee"
+
+[node name="Finish" type="Button" parent="Start/VBoxContainer/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Finish"
+
+[node name="Allies" type="GridContainer" parent="Start/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+columns = 4
+
+[node name="AllyInfo" type="VBoxContainer" parent="Start/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="AllyPowerLabel" type="Label" parent="Start/VBoxContainer/HBoxContainer/AllyInfo"]
+layout_mode = 2
+
+[node name="AllyInfo" type="RichTextLabel" parent="Start/VBoxContainer/HBoxContainer/AllyInfo"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("3_oyio6")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_txu5l")
+
+[node name="NullState" type="Node" parent="StateMachine"]
+script = ExtResource("4_21wey")
+
+[node name="CharacterPositioningState" type="Node" parent="StateMachine"]
+script = ExtResource("5_q8n6m")
+
+[node name="CharacterChoiceState" type="Node" parent="StateMachine"]
+script = ExtResource("5_8w3xk")
+
+[node name="ActionSelectState" type="Node" parent="StateMachine"]
+script = ExtResource("6_8w3xk")
+
+[node name="ResolveState" type="Node" parent="StateMachine"]
+script = ExtResource("9_ixvb7")
+
+[node name="EndState" type="Node" parent="StateMachine"]
+script = ExtResource("10_uwms2")
+
+[connection signal="pressed" from="MarginContainer/MarginContainer/ActionContainer/Melee" to="StateMachine/ActionSelectState" method="_on_melee_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/ActionContainer/Missile" to="StateMachine/ActionSelectState" method="_on_missile_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer2/StartBattle" to="StateMachine/CharacterPositioningState" method="_on_start_battle_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer2/Attack" to="StateMachine/CharacterChoiceState" method="_on_attack_pressed"]
+[connection signal="pressed" from="Start/VBoxContainer/HBoxContainer/VBoxContainer/Fight" to="." method="_on_fight_pressed"]
+[connection signal="pressed" from="Start/VBoxContainer/HBoxContainer/VBoxContainer/Autoresolve" to="." method="_on_autoresolve_pressed"]
+[connection signal="pressed" from="Start/VBoxContainer/HBoxContainer/VBoxContainer/Flee" to="." method="_on_flee_pressed"]

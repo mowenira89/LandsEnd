@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CookhouseRecipe" load_steps=6 format=3 uid="uid://cosddnocql1nw"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_p5qhe"]
+[ext_resource type="Resource" uid="uid://bkphlf0yxmdq3" path="res://Resources/Stuff/fish.tres" id="2_g20uw"]
+[ext_resource type="Resource" uid="uid://bi1h6r5lyjqlk" path="res://Resources/Stuff/rice.tres" id="3_ho5mv"]
+[ext_resource type="Resource" uid="uid://cywwpjuuelyuu" path="res://Resources/Stuff/sushi.tres" id="4_d4uil"]
+[ext_resource type="Script" uid="uid://bbt62vx1q0tfq" path="res://Data/cookhouse_recipe.gd" id="5_jb6qe"]
+
+[resource]
+script = ExtResource("5_jb6qe")
+requirements = Array[ExtResource("1_p5qhe")]([ExtResource("2_g20uw"), ExtResource("3_ho5mv")])
+difficulty = 40.0
+name = "Sushi"
+id = "cookhouse_sushi"
+turns = 1
+inputs = Dictionary[ExtResource("1_p5qhe"), int]({
+ExtResource("2_g20uw"): 1,
+ExtResource("3_ho5mv"): 1
+})
+outputs = Dictionary[ExtResource("1_p5qhe"), int]({
+ExtResource("4_d4uil"): 3
+})
+exp_to = Dictionary[String, float]({
+"Restaurant": 1.0
+})
+metadata/_custom_type_script = "uid://bbt62vx1q0tfq"

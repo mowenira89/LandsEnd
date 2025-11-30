@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://cqy0dl1b47acq"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_hwgok"]
+[ext_resource type="Script" uid="uid://6vtv547g3vpj" path="res://Data/weapon.gd" id="2_hwgok"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="3_10aqb"]
+
+[sub_resource type="Resource" id="Resource_y5k73"]
+script = ExtResource("3_10aqb")
+off = 6.0
+l = 2.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("2_hwgok")
+damage_boost = 2.0
+prowess_bonus = Array[int]([15])
+name = "Magic Axe"
+stats = SubResource("Resource_y5k73")
+value = 250.0
+qualities = Dictionary[int, float]({
+7: 6.0
+})
+mystic_qualities = Dictionary[int, float]({
+4: 2.0
+})
+conveys_prowess = Dictionary[int, float]({
+18: 3.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

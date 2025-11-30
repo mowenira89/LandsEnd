@@ -1,18 +1,76 @@
-[gd_resource type="Resource" script_class="Building" load_steps=12 format=3 uid="uid://b5ewy0vgr6nbq"]
+[gd_resource type="Resource" script_class="Building" load_steps=25 format=3 uid="uid://b5ewy0vgr6nbq"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_py65h"]
 [ext_resource type="Script" uid="uid://dy2kpn5vls50" path="res://Data/conditions/need_resource_condition.gd" id="2_n1s3d"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_1r2li"]
 [ext_resource type="Texture2D" uid="uid://brha6bjdrf6n8" path="res://Assets/Images/BuildingImages/mine.png" id="4_rpess"]
+[ext_resource type="Script" uid="uid://cufwo02xpojny" path="res://Data/level_up_slates.gd" id="5_qg4rm"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_ybnde"]
-[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_n1s3d"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_qg4rm"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_cnoxh"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="7_s6mde"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="8_s6mde"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="9_h80n8"]
+[ext_resource type="Resource" uid="uid://cqbotyca2l4m7" path="res://Resources/Buildings/water_pump.tres" id="10_cnoxh"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="10_q25g6"]
+[ext_resource type="Resource" uid="uid://c8gdxaa40a5wf" path="res://Resources/Buildings/sheave_wheel.tres" id="11_s6mde"]
 
 [sub_resource type="Resource" id="Resource_h80n8"]
 script = ExtResource("2_n1s3d")
 metadata/_custom_type_script = "uid://dy2kpn5vls50"
+
+[sub_resource type="Resource" id="Resource_ss7yh"]
+script = ExtResource("5_ybnde")
+extention_slots = 1
+production_slots = 1
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_jc5bw"]
+script = ExtResource("5_ybnde")
+extentions_unlocked = Array[ExtResource("6_qg4rm")]([ExtResource("10_cnoxh")])
+extention_slots = 1
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_2ccw5"]
+script = ExtResource("5_ybnde")
+needs_extentions = Array[ExtResource("6_qg4rm")]([ExtResource("10_cnoxh")])
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_x1ed0"]
+script = ExtResource("5_ybnde")
+extention_slots = 1
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_tc1mb"]
+script = ExtResource("5_ybnde")
+store_cap_up = 100
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_eg0xm"]
+script = ExtResource("5_ybnde")
+extentions_unlocked = Array[ExtResource("6_qg4rm")]([ExtResource("11_s6mde")])
+extention_slots = 1
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_y146d"]
+script = ExtResource("5_ybnde")
+needs_upgrade = Array[ExtResource("6_qg4rm")]([ExtResource("11_s6mde")])
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_6o8d0"]
+script = ExtResource("5_qg4rm")
+slates = Dictionary[int, ExtResource("5_ybnde")]({
+2: SubResource("Resource_ss7yh"),
+3: SubResource("Resource_jc5bw"),
+4: SubResource("Resource_2ccw5"),
+5: SubResource("Resource_x1ed0"),
+6: SubResource("Resource_tc1mb"),
+7: SubResource("Resource_eg0xm"),
+8: SubResource("Resource_y146d"),
+9: null,
+10: null
+})
+metadata/_custom_type_script = "uid://cufwo02xpojny"
 
 [sub_resource type="Resource" id="Resource_q25g6"]
 script = ExtResource("8_s6mde")
@@ -31,4 +89,5 @@ staff_needed = Dictionary[int, int]({
 })
 district_type = 4
 possible_extentions = Array[ExtResource("6_qg4rm")]([null])
+level_up_slates = SubResource("Resource_6o8d0")
 metadata/_custom_type_script = "uid://jgjaoud3lh53"

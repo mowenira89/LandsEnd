@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Research" load_steps=11 format=3 uid="uid://bj5yyr7kyuau0"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_bbsn4"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_q46jw"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_ob2b3"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_036xo"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="5_n862t"]
+[ext_resource type="Resource" uid="uid://2uq1pwa3prne" path="res://Resources/military_units/archer.tres" id="6_tlhdd"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_yal7j"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_x1onc"]
+[ext_resource type="Resource" uid="uid://ceabqeusumj7b" path="res://Resources/Recipes/armory_longbow.tres" id="9_5xiky"]
+[ext_resource type="Resource" uid="uid://88qsknm6cn4e" path="res://Resources/Recipes/workshop_longbow.tres" id="10_q46jw"]
+
+[resource]
+script = ExtResource("7_yal7j")
+name = "Archery"
+recipes = Array[ExtResource("8_x1onc")]([ExtResource("9_5xiky"), ExtResource("10_q46jw")])
+people = Array[ExtResource("5_n862t")]([ExtResource("6_tlhdd")])
+exp_to_unlock = 40
+inspiration_threshold = 10.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

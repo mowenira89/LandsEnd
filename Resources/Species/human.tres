@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://l38bjx2o7f1b"]
+[gd_resource type="Resource" script_class="Species" load_steps=8 format=3 uid="uid://l38bjx2o7f1b"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_il1mm"]
 [ext_resource type="Resource" uid="uid://dgjhkn842uhmy" path="res://Resources/Stuff/mortal_flesh.tres" id="2_3xgc4"]
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_6n3u3"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_wk12w"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_wk12w"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_3xgc4"]
 

@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="Building" load_steps=21 format=3 uid="uid://cb6d1kppx0q1r"]
+[gd_resource type="Resource" script_class="Building" load_steps=32 format=3 uid="uid://cb6d1kppx0q1r"]
 
-[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_ul6y8"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_b71b7"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_xp3l6"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="4_r38nb"]
@@ -10,16 +9,28 @@
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_ijljd"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="7_r38nb"]
 [ext_resource type="Resource" uid="uid://c4vvwlmleaqk0" path="res://Resources/Recipes/workshop_amphora.tres" id="8_jle1f"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="8_l2tss"]
 [ext_resource type="Resource" uid="uid://dhbojnxm65y6e" path="res://Resources/Recipes/workshop_barrel.tres" id="9_ilfc6"]
 [ext_resource type="Resource" uid="uid://xjsf4olbqnat" path="res://Resources/Recipes/workshop_bellows.tres" id="10_1t452"]
+[ext_resource type="Resource" uid="uid://cyni8ddcjdbwi" path="res://Resources/Recipes/workshop_alembic.tres" id="10_c64j4"]
 [ext_resource type="Resource" uid="uid://b6wj3274fhas" path="res://Resources/Recipes/workshop_canvas.tres" id="11_uh6kp"]
 [ext_resource type="Resource" uid="uid://dqrhsqnodr3ws" path="res://Resources/Recipes/workshop_cart.tres" id="12_kbsid"]
+[ext_resource type="Resource" uid="uid://cirp8ao86yp21" path="res://Resources/Recipes/workshop_axe.tres" id="12_sc18c"]
 [ext_resource type="Resource" uid="uid://8d2ii7nuv6jo" path="res://Resources/Recipes/workshop_chariot.tres" id="13_l0eps"]
 [ext_resource type="Resource" uid="uid://bid5br31j7243" path="res://Resources/Recipes/workshop_horn_carving.tres" id="14_l2tss"]
+[ext_resource type="Resource" uid="uid://dbmc30tg6g2pi" path="res://Resources/Recipes/workshop_bricks.tres" id="15_a61b2"]
 [ext_resource type="Resource" uid="uid://cedtw1lh0df7i" path="res://Resources/Recipes/workshop_ivory_carving.tres" id="15_c64j4"]
 [ext_resource type="Resource" uid="uid://d4lgyb52ri20o" path="res://Resources/Recipes/workshop_loom.tres" id="16_sc18c"]
 [ext_resource type="Resource" uid="uid://qnfs1ibtvf1e" path="res://Resources/Recipes/workshop_stone_carving.tres" id="17_a61b2"]
 [ext_resource type="Resource" uid="uid://qmdifkgbveme" path="res://Resources/Recipes/workshop_wood_carving.tres" id="18_k13sd"]
+[ext_resource type="Resource" uid="uid://devcnpwwjbuxk" path="res://Resources/Recipes/workshop_cut_stone.tres" id="19_k13sd"]
+[ext_resource type="Resource" uid="uid://cjaiifjifpidi" path="res://Resources/Recipes/workshop_drum.tres" id="20_rg2sx"]
+[ext_resource type="Resource" uid="uid://2nw6yxgxlter" path="res://Resources/Recipes/workshop_fiber_flax.tres" id="21_4aut0"]
+[ext_resource type="Resource" uid="uid://cce2mseql7hit" path="res://Resources/Recipes/workshop_fiber_hemp.tres" id="22_g2wnu"]
+[ext_resource type="Resource" uid="uid://c3krd5sjgxm" path="res://Resources/Recipes/workshop_glass.tres" id="23_b6sb3"]
+[ext_resource type="Resource" uid="uid://88qsknm6cn4e" path="res://Resources/Recipes/workshop_longbow.tres" id="26_7e1wy"]
+[ext_resource type="Resource" uid="uid://ct4xst3ba25vr" path="res://Resources/Recipes/workshop_lyre.tres" id="28_0si3a"]
+[ext_resource type="Resource" uid="uid://bak5oibo45ppn" path="res://Resources/Recipes/workshop_rope.tres" id="29_oau5q"]
 
 [resource]
 script = ExtResource("6_bmbpn")
@@ -28,11 +39,8 @@ unlocked = true
 image = ExtResource("6_xp3l6")
 construction_time = 2
 construction_materials = Dictionary[ExtResource("3_xp3l6"), int]({
-ExtResource("4_r38nb"): 10,
+ExtResource("4_r38nb"): 20,
 ExtResource("5_p07rn"): 5
-})
-construction_staff = Dictionary[int, int]({
-0: 10
 })
 construction_level = 2
 staff_needed = Dictionary[int, int]({
@@ -40,5 +48,5 @@ staff_needed = Dictionary[int, int]({
 })
 district_type = 3
 production_slots = 2
-recipes = Array[ExtResource("7_ijljd")]([ExtResource("8_jle1f"), ExtResource("9_ilfc6"), ExtResource("10_1t452"), ExtResource("11_uh6kp"), ExtResource("12_kbsid"), ExtResource("13_l0eps"), ExtResource("14_l2tss"), ExtResource("15_c64j4"), ExtResource("16_sc18c"), ExtResource("17_a61b2"), ExtResource("18_k13sd")])
+recipes = Array[ExtResource("7_ijljd")]([ExtResource("10_c64j4"), ExtResource("8_jle1f"), ExtResource("12_sc18c"), ExtResource("9_ilfc6"), ExtResource("15_a61b2"), ExtResource("11_uh6kp"), ExtResource("12_kbsid"), ExtResource("13_l0eps"), ExtResource("19_k13sd"), ExtResource("20_rg2sx"), ExtResource("21_4aut0"), ExtResource("22_g2wnu"), ExtResource("23_b6sb3"), ExtResource("14_l2tss"), ExtResource("15_c64j4"), ExtResource("26_7e1wy"), ExtResource("16_sc18c"), ExtResource("28_0si3a"), ExtResource("29_oau5q"), ExtResource("17_a61b2"), ExtResource("18_k13sd"), ExtResource("10_1t452")])
 metadata/_custom_type_script = "uid://jgjaoud3lh53"

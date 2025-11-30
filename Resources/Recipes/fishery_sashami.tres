@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bkn5b4d3shkjs"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_nccnv"]
+[ext_resource type="Resource" uid="uid://bkphlf0yxmdq3" path="res://Resources/Stuff/fish.tres" id="2_4yjpx"]
+[ext_resource type="Resource" uid="uid://cnm18tddpd40a" path="res://Resources/Stuff/sashami.tres" id="3_7d2nf"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_usatl"]
+
+[resource]
+script = ExtResource("4_usatl")
+name = "Sashami"
+id = "fishery_sashami"
+turns = 1
+inputs = Dictionary[ExtResource("1_nccnv"), int]({
+ExtResource("2_4yjpx"): 1
+})
+outputs = Dictionary[ExtResource("1_nccnv"), int]({
+ExtResource("3_7d2nf"): 1
+})
+exp_to = Dictionary[String, float]({
+"Restaurant": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

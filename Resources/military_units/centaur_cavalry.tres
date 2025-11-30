@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="MilitaryUnit" load_steps=7 format=3 uid="uid://bcfg088bair83"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_t1kdb"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="2_50sgw"]
+[ext_resource type="Script" uid="uid://cp0je3yls6fec" path="res://Data/military_unit.gd" id="3_jupso"]
+[ext_resource type="Resource" uid="uid://b5n84hbvyf263" path="res://Resources/Species/centaur.tres" id="4_b2vb6"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_5s740"]
+
+[sub_resource type="Resource" id="Resource_5oe0l"]
+script = ExtResource("5_5s740")
+hp = 120.0
+off = 9.0
+def = 7.0
+mag = 3.0
+magdef = 3.0
+sp = 8.0
+l = 3.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_jupso")
+military_prowess = Dictionary[int, float]({
+1: 1.0,
+3: 3.0,
+5: 2.0
+})
+title = "Centaur Cavalry"
+species = ExtResource("4_b2vb6")
+stats = SubResource("Resource_5oe0l")
+metadata/_custom_type_script = "uid://cp0je3yls6fec"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Research" load_steps=10 format=3 uid="uid://djoj4qv2nnvg6"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_va5q1"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_vvdpb"]
+[ext_resource type="Resource" uid="uid://8k0c4jk187xr" path="res://Resources/Ceremonies/dance.tres" id="3_svs4v"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_6n6nr"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_yj4sn"]
+[ext_resource type="Resource" uid="uid://40ovhp0q4c7e" path="res://Resources/Lectures/the_essence_of_ceremony.tres" id="6_t11q1"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="7_mauxf"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="8_jq8si"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_kutbj"]
+
+[resource]
+script = ExtResource("8_jq8si")
+name = "Dance Ceremony"
+recipes = Array[ExtResource("9_kutbj")]([null])
+ceremonies = Array[ExtResource("2_vvdpb")]([ExtResource("3_svs4v")])
+lectures = Array[ExtResource("5_yj4sn")]([ExtResource("6_t11q1")])
+exp_to_unlock = 50
+inspiration_threshold = 50.0
+inspired_class = 3
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

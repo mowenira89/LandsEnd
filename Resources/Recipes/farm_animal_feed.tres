@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://pfrxq521edbu"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_7xiy5"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="2_h007f"]
+[ext_resource type="Resource" uid="uid://r5vcco63ai5s" path="res://Resources/Stuff/grain.tres" id="3_1nk5v"]
+[ext_resource type="Resource" uid="uid://bcmtjphspc5kn" path="res://Resources/Stuff/animal_feed.tres" id="4_bo5sg"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_gswjk"]
+
+[resource]
+script = ExtResource("5_gswjk")
+name = "Animal Feed"
+id = "farm_animal_feed"
+turns = 1
+inputs = Dictionary[ExtResource("1_7xiy5"), int]({
+ExtResource("2_h007f"): 1,
+ExtResource("3_1nk5v"): 1
+})
+outputs = Dictionary[ExtResource("1_7xiy5"), int]({
+ExtResource("4_bo5sg"): 4
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

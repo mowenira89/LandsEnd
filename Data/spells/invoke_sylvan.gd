@@ -1,0 +1,1 @@
+class_name SpellInvokeSylvan extends Spell

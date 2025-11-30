@@ -11,14 +11,14 @@ hp = 2.0
 off = 2.0
 mag = 2.0
 magdef = 2.0
-sp = 7.0
+sp = 2.0
 l = 2.0
 metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("2_avdo4")
 kind = 9
-rarity = 50.0
+rarity = 30.0
 aggressiveness = 2.0
 skittishness = 2.0
 name = "Bee"

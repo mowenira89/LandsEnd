@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://b1ue65pvuglfc" path="res://Resources/Stuff/concrete.tres" id="3_iicoa"]
 [ext_resource type="Resource" uid="uid://bt85i3i2fa24g" path="res://Resources/Stuff/oricalchum.tres" id="4_042wd"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_ep7kn"]
-[ext_resource type="Script" uid="uid://clkvgoo0fbadr" path="res://Data/memory.gd" id="6_dc6wk"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_4uqr7"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_2j816"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_5eh0w"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="9_vsym5"]

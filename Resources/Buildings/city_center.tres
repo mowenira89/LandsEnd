@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Building" load_steps=10 format=3 uid="uid://85b01tm0lfj7"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_pvbc1"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_p2aud"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_ogsv1"]
+[ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="4_8h5q4"]
+[ext_resource type="Resource" uid="uid://b1ue65pvuglfc" path="res://Resources/Stuff/concrete.tres" id="5_bqn8j"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_2pjn2"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_5kfiy"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="8_v8324"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_nyjo7"]
+
+[resource]
+script = ExtResource("7_5kfiy")
+name = "City Center"
+upgrade_only = true
+pop_cap = Dictionary[int, int]({
+0: 1500,
+1: 1500
+})
+construction_time = 10
+construction_materials = Dictionary[ExtResource("2_p2aud"), int]({
+ExtResource("3_ogsv1"): 100,
+ExtResource("4_8h5q4"): 50,
+ExtResource("5_bqn8j"): 50
+})
+construction_level = 6
+staff_needed = Dictionary[int, int]({
+0: 50
+})
+needed_districts = 1
+district_type = 6
+production_slots = 6
+granary_cap = 200
+storeroom_cap = 200
+animal_fields = 200
+attractiveness_boost = 10.0
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Research" load_steps=11 format=3 uid="uid://bf5qbiau1jvbi"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_7a85v"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_re48n"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_q7u4s"]
+[ext_resource type="Script" uid="uid://bgumvg008wgml" path="res://Data/conditions/need_stuff_condition.gd" id="4_p0kkg"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_cd236"]
+[ext_resource type="Resource" uid="uid://unubdugtruel" path="res://Resources/Stuff/crop_tobacco.tres" id="5_re48n"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_j3cvm"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_vnp13"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_k6gpo"]
+
+[sub_resource type="Resource" id="Resource_m7dml"]
+script = ExtResource("4_p0kkg")
+stuff = ExtResource("5_re48n")
+metadata/_custom_type_script = "uid://bgumvg008wgml"
+
+[resource]
+script = ExtResource("7_vnp13")
+name = "Tobacco Ceremony"
+exp_to_unlock = 25
+prerequisites = Array[ExtResource("7_vnp13")]([null])
+inspiration_threshold = 25.0
+inspired_class = 3
+conditions = Array[ExtResource("3_q7u4s")]([SubResource("Resource_m7dml")])
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

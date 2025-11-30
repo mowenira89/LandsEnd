@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://b5dvgon24uktt"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_48e8s"]
+[ext_resource type="Resource" uid="uid://c2jwwx234kob" path="res://Resources/Stuff/raw_silk.tres" id="2_k6iom"]
+[ext_resource type="Resource" uid="uid://cry61qvpicxe5" path="res://Resources/Stuff/silk.tres" id="3_6s7fq"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_c6fv0"]
+
+[resource]
+script = ExtResource("4_c6fv0")
+name = "Silk"
+id = "textile_silk"
+turns = 1
+inputs = Dictionary[ExtResource("1_48e8s"), int]({
+ExtResource("2_k6iom"): 1
+})
+outputs = Dictionary[ExtResource("1_48e8s"), int]({
+ExtResource("3_6s7fq"): 1
+})
+exp_to = Dictionary[String, float]({
+"Tailor": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

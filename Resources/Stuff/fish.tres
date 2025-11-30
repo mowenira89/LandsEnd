@@ -6,13 +6,14 @@
 [resource]
 script = ExtResource("1_w6501")
 vitamins = Dictionary[int, float]({
-2: 4.0,
+0: 2.0,
 5: 4.0
 })
 name = "Fish"
 value = 2.0
 qualities = Dictionary[int, float]({
-0: 2.0
+0: 2.0,
+22: 2.0
 })
 mystic_qualities = Dictionary[int, float]({
 2: 1.0
@@ -20,4 +21,6 @@ mystic_qualities = Dictionary[int, float]({
 exp_to = Dictionary[String, float]({
 "Fishery": 1.0
 })
+food_type = 3
+diet_type = Array[int]([0, 1])
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

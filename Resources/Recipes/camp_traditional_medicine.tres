@@ -8,7 +8,7 @@
 
 [resource]
 script = ExtResource("5_vlpga")
-name = "Traditional Medicine"
+name = "Traditional Fever Reducer"
 id = "camp_raditional_medicine"
 turns = 1
 inputs = Dictionary[ExtResource("1_jyrj4"), int]({

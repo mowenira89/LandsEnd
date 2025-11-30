@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cqb0701rwf7vt"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_teg8u"]
-[ext_resource type="Resource" uid="uid://bkk5cro2nvdbq" path="res://Resources/Crops/hemp.tres" id="2_yjl11"]
+[ext_resource type="Resource" uid="uid://bkk5cro2nvdbq" path="res://Resources/Stuff/crop_hemp.tres" id="2_yjl11"]
 [ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="3_rmiu6"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_yarfk"]
 
@@ -17,7 +17,7 @@ outputs = Dictionary[ExtResource("1_teg8u"), int]({
 ExtResource("3_rmiu6"): 2
 })
 exp_to = Dictionary[String, float]({
-"Textiles": 2.0
+"Textiles": 1.0
 })
 unlocked = true
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

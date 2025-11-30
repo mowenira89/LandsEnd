@@ -21,4 +21,7 @@ mystic_qualities = Dictionary[int, float]({
 4: 0.5
 })
 outfit_buffs = Array[ExtResource("1_knvi2")]([SubResource("Resource_lr7am")])
+conveys_prowess = Dictionary[int, float]({
+11: 1.0
+})
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

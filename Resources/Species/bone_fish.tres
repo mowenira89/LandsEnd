@@ -21,11 +21,14 @@ kind = 8
 kill_produce = Dictionary[ExtResource("1_eyuxl"), int]({
 ExtResource("2_qhrn6"): 1
 })
+harvest_season = Array[int]([0, 1, 2])
+breeding_season = Array[int]([0, 1])
 rarity = 75.0
 game = true
 skittishness = 2.0
 name = "Bone Fish"
 stats = SubResource("Resource_xi8eb")
+value = 25.0
 mystic_qualities = Dictionary[int, float]({
 2: 1.0
 })

@@ -1,17 +1,19 @@
-[gd_resource type="Resource" script_class="Camp" load_steps=14 format=3 uid="uid://55jlvb2bfleo"]
+[gd_resource type="Resource" script_class="Camp" load_steps=16 format=3 uid="uid://55jlvb2bfleo"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_6f8pr"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_3q04x"]
 [ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="3_22577"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="4_xtjgl"]
 [ext_resource type="Texture2D" uid="uid://oglmurxehuak" path="res://Assets/Images/BuildingImages/cookhouse.png" id="5_3q04x"]
-[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_ytf1m"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_3fnrt"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_22577"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="8_pstx2"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_ws7dt"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="9_ytf1m"]
 [ext_resource type="Script" uid="uid://doa1vbsvkk4tx" path="res://Data/buildings/camp.gd" id="10_844fv"]
+[ext_resource type="Resource" uid="uid://cug64pdrjjui4" path="res://Resources/Buildings/restaurant.tres" id="10_qlk7s"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="11_uxxxr"]
+[ext_resource type="Resource" uid="uid://b2yk636rcjp5y" path="res://Resources/Recipes/cookhouse_bread.tres" id="11_xtjgl"]
+[ext_resource type="Resource" uid="uid://codb16b34rmrj" path="res://Resources/Recipes/cookhouse_stew.tres" id="12_ytf1m"]
 
 [sub_resource type="Resource" id="Resource_fpt1b"]
 script = ExtResource("11_uxxxr")
@@ -33,4 +35,7 @@ staff_needed = Dictionary[int, int]({
 0: 10
 })
 production_slots = 2
+recipes = Array[ExtResource("9_ws7dt")]([ExtResource("11_xtjgl"), ExtResource("12_ytf1m")])
+possible_upgrades = Array[ExtResource("7_3fnrt")]([ExtResource("10_qlk7s")])
+upgrade_at_level = 5
 metadata/_custom_type_script = "uid://doa1vbsvkk4tx"

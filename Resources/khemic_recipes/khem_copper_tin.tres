@@ -18,5 +18,12 @@ ExtResource("2_y3s30"): 1
 outputs = Dictionary[ExtResource("1_o50ru"), int]({
 ExtResource("3_b6aus"): 1
 })
+exp_to = Dictionary[String, float]({
+"Alchemy 2": 1.0,
+"Spiritual Alchemy": 1.0
+})
 unlocked = true
+air_pollution = 2.0
+water_pollution = 2.0
+spiritual_pollution = 2.0
 metadata/_custom_type_script = "uid://b5amvji0dfqa4"

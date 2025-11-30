@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="KhemicRecipe" load_steps=5 format=3 uid="uid://8u56ylym3627"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_3ym60"]
+[ext_resource type="Resource" uid="uid://bdmfger4xbtew" path="res://Resources/Stuff/tin_ingot.tres" id="2_qpsp0"]
+[ext_resource type="Resource" uid="uid://dw8mtx3417ev6" path="res://Resources/Stuff/lead_ingot.tres" id="3_wm3fo"]
+[ext_resource type="Script" uid="uid://b5amvji0dfqa4" path="res://Data/khemic_recipe.gd" id="4_qy4ng"]
+
+[resource]
+script = ExtResource("4_qy4ng")
+mystic_need = 5.0
+mystic_type = 1
+name = "Tin to Lead"
+id = "khemic_tin_to_lead"
+turns = 1
+inputs = Dictionary[ExtResource("1_3ym60"), int]({
+ExtResource("2_qpsp0"): 1
+})
+outputs = Dictionary[ExtResource("1_3ym60"), int]({
+ExtResource("3_wm3fo"): 1
+})
+exp_to = Dictionary[String, float]({
+"Alchemy 2": 1.0,
+"Spiritual Alchemy": 1.0
+})
+air_pollution = 3.0
+water_pollution = 3.0
+spiritual_pollution = 1.0
+metadata/_custom_type_script = "uid://b5amvji0dfqa4"

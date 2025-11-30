@@ -1,37 +1,89 @@
-[gd_resource type="Resource" script_class="Camp" load_steps=29 format=3 uid="uid://ddnn8m548yucj"]
+[gd_resource type="Resource" script_class="Camp" load_steps=47 format=3 uid="uid://ddnn8m548yucj"]
 
-[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_fxers"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_j13ja"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_lm60y"]
 [ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="3_j13ja"]
 [ext_resource type="Resource" uid="uid://be3fpj4ymxj8y" path="res://Resources/Stuff/canvas.tres" id="4_jlqba"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="5_uah8x"]
+[ext_resource type="Script" uid="uid://cufwo02xpojny" path="res://Data/level_up_slates.gd" id="6_ctfnk"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="6_j14bi"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_jlqba"]
 [ext_resource type="Texture2D" uid="uid://bdwdjfpgh8kub" path="res://Assets/Images/BuildingImages/camp.png" id="6_uah8x"]
 [ext_resource type="Resource" uid="uid://628r3srsrfjx" path="res://Resources/Recipes/camp_canvas.tres" id="7_kllio"]
 [ext_resource type="Resource" uid="uid://cuprv3t8m84s8" path="res://Resources/Recipes/camp_horn_carving.tres" id="8_jvke4"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="8_uah8x"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="8_nnbe4"]
 [ext_resource type="Resource" uid="uid://dwsu1sq0thk3u" path="res://Resources/Recipes/camp_ivory_carving.tres" id="9_j27x5"]
 [ext_resource type="Resource" uid="uid://cwif52v0bdks3" path="res://Resources/Recipes/camp_leather.tres" id="10_80m7v"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="10_yj6nq"]
+[ext_resource type="Resource" uid="uid://08qshph7oh40" path="res://Resources/Buildings/market.tres" id="11_6caxu"]
 [ext_resource type="Resource" uid="uid://c0wyua0f1r05e" path="res://Resources/Recipes/camp_lumber.tres" id="11_jxmh5"]
 [ext_resource type="Resource" uid="uid://8v4i0hnt5w35" path="res://Resources/Buildings/fishery.tres" id="11_t1wd2"]
 [ext_resource type="Resource" uid="uid://dne6u8apox0fa" path="res://Resources/Buildings/tannery.tres" id="12_5675l"]
-[ext_resource type="Resource" uid="uid://q8874acykipv" path="res://Resources/Recipes/camp_simple_clohing_canvas.tres" id="12_t1wd2"]
+[ext_resource type="Resource" uid="uid://b1sa5fw58o2ei" path="res://Resources/Buildings/village_center.tres" id="12_rh0va"]
+[ext_resource type="Resource" uid="uid://q8874acykipv" path="res://Resources/Recipes/camp_simple_clothing_canvas.tres" id="12_t1wd2"]
 [ext_resource type="Resource" uid="uid://dsm568eqwf6o6" path="res://Resources/Recipes/camp_simple_clothing_pelt.tres" id="13_5675l"]
 [ext_resource type="Resource" uid="uid://bg7rwygs07wkj" path="res://Resources/Buildings/lumber_mill.tres" id="13_vggk8"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="14_1kimc"]
+[ext_resource type="Resource" uid="uid://be60enxcfrydi" path="res://Resources/Buildings/hunting_lodge.tres" id="14_bf4no"]
 [ext_resource type="Resource" uid="uid://cpjc66m2o43ll" path="res://Resources/Buildings/ranger_lodge.tres" id="14_bqfr3"]
+[ext_resource type="Resource" uid="uid://55jlvb2bfleo" path="res://Resources/Buildings/cookhouse.tres" id="14_t1wd2"]
 [ext_resource type="Resource" uid="uid://dtov2tct7blh5" path="res://Resources/Recipes/camp_stone_carving.tres" id="14_vggk8"]
 [ext_resource type="Resource" uid="uid://drm1r5x0plpnr" path="res://Resources/Recipes/camp_traditional_medicine.tres" id="15_bqfr3"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="15_cmqur"]
 [ext_resource type="Resource" uid="uid://71gkprq6v0vd" path="res://Resources/Recipes/camp_wood_carving.tres" id="16_cmqur"]
 [ext_resource type="Script" uid="uid://doa1vbsvkk4tx" path="res://Data/buildings/camp.gd" id="17_vl77t"]
-[ext_resource type="Resource" uid="uid://d13f3l1litam3" path="res://Resources/Buildings/longhouses.tres" id="28_t1wd2"]
+[ext_resource type="Resource" uid="uid://cqb0701rwf7vt" path="res://Resources/Recipes/camp_fiber_hemp.tres" id="18_cmqur"]
+[ext_resource type="Resource" uid="uid://bopuaeiietoll" path="res://Resources/Recipes/camp_bread.tres" id="18_ouj08"]
+[ext_resource type="Resource" uid="uid://d1w1de5c5ncmi" path="res://Resources/Recipes/camp_fiber_flax.tres" id="19_vl77t"]
+[ext_resource type="Resource" uid="uid://dnjuvirqunqgv" path="res://Resources/Recipes/camp_cut_stone.tres" id="20_lmw6y"]
+[ext_resource type="Resource" uid="uid://6crtkhussdig" path="res://Resources/Recipes/camp_drum.tres" id="21_as40x"]
+[ext_resource type="Resource" uid="uid://dbpdpbk5mumve" path="res://Resources/Recipes/camp_gruel.tres" id="24_hk6nr"]
+[ext_resource type="Resource" uid="uid://bi6a8o17eivdg" path="res://Resources/Recipes/camp_lyre.tres" id="29_ctfnk"]
+[ext_resource type="Resource" uid="uid://b6l4iyis0yxri" path="res://Resources/Recipes/camp_rope.tres" id="30_nnbe4"]
+[ext_resource type="Resource" uid="uid://cpibfrauaslp4" path="res://Resources/Recipes/camp_stew.tres" id="33_yj6nq"]
+[ext_resource type="Resource" uid="uid://kl7po0uvd6uh" path="res://Resources/Recipes/camp_axe.tres" id="36_ouj08"]
 
-[sub_resource type="Resource" id="Resource_j14bi"]
+[sub_resource type="Resource" id="Resource_b1b8e"]
 script = ExtResource("6_jlqba")
 extention_slots = 1
+production_slots = 1
 metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_qvkqn"]
+script = ExtResource("6_jlqba")
+buildings_unlocked = Array[ExtResource("5_uah8x")]([ExtResource("11_6caxu")])
+extentions_unlocked = Array[ExtResource("5_uah8x")]([ExtResource("11_6caxu")])
+upgrades_unlocked = Array[ExtResource("5_uah8x")]([ExtResource("12_rh0va")])
+pops_cap_up = Dictionary[int, int]({
+0: 50,
+1: 10
+})
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_mllos"]
+script = ExtResource("6_jlqba")
+extention_slots = 1
+production_slots = 1
+needs_upgrade = Array[ExtResource("5_uah8x")]([ExtResource("12_rh0va")])
+store_cap_up = 100
+granary_cap_up = 100
+attractiveness_boost = 10.0
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_exul0"]
+script = ExtResource("6_ctfnk")
+slates = Dictionary[int, ExtResource("6_jlqba")]({
+2: SubResource("Resource_b1b8e"),
+3: SubResource("Resource_qvkqn"),
+4: SubResource("Resource_mllos"),
+5: null,
+6: null,
+7: null,
+8: null,
+9: null,
+10: null
+})
+metadata/_custom_type_script = "uid://cufwo02xpojny"
 
 [resource]
 script = ExtResource("17_vl77t")
@@ -54,10 +106,11 @@ construction_level = 1
 staff_needed = Dictionary[int, int]({
 0: 10
 })
-production_slots = 2
-recipes = Array[ExtResource("6_j14bi")]([ExtResource("7_kllio"), ExtResource("8_jvke4"), ExtResource("9_j27x5"), ExtResource("10_80m7v"), ExtResource("11_jxmh5"), ExtResource("12_t1wd2"), ExtResource("13_5675l"), ExtResource("14_vggk8"), ExtResource("15_bqfr3"), ExtResource("16_cmqur")])
-possible_extentions = Array[ExtResource("5_uah8x")]([ExtResource("11_t1wd2"), ExtResource("12_5675l"), ExtResource("13_vggk8"), ExtResource("14_bqfr3"), null])
-upgrades = Array[ExtResource("5_uah8x")]([ExtResource("28_t1wd2")])
+production_slots = 1
+recipes = Array[ExtResource("6_j14bi")]([ExtResource("18_ouj08"), ExtResource("7_kllio"), ExtResource("20_lmw6y"), ExtResource("21_as40x"), ExtResource("19_vl77t"), ExtResource("18_cmqur"), ExtResource("24_hk6nr"), ExtResource("8_jvke4"), ExtResource("9_j27x5"), ExtResource("10_80m7v"), ExtResource("11_jxmh5"), ExtResource("29_ctfnk"), ExtResource("30_nnbe4"), ExtResource("12_t1wd2"), ExtResource("13_5675l"), ExtResource("33_yj6nq"), ExtResource("14_vggk8"), ExtResource("15_bqfr3"), ExtResource("16_cmqur"), ExtResource("36_ouj08")])
+possible_extentions = Array[ExtResource("5_uah8x")]([ExtResource("11_t1wd2"), ExtResource("12_5675l"), ExtResource("13_vggk8"), ExtResource("14_bqfr3"), ExtResource("14_t1wd2"), ExtResource("14_bf4no")])
 upgrade_at_level = 4
-level_up_slates = Array[ExtResource("6_jlqba")]([SubResource("Resource_j14bi")])
+level_up_slates = SubResource("Resource_exul0")
+granary_cap = 100
+storeroom_cap = 100
 metadata/_custom_type_script = "uid://doa1vbsvkk4tx"

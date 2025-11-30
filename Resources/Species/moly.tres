@@ -24,7 +24,7 @@ qualities = Dictionary[int, float]({
 10: 4.0
 })
 mystic_qualities = Dictionary[int, float]({
-0: 5.0,
+0: 7.0,
 4: 7.0
 })
 found_in = Array[int]([0, 2, 1])

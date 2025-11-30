@@ -21,14 +21,3 @@ func return_buff_amount(s:Stats.STATS):
 			r+=x.amt
 	return r
 	
-func get_buffs_total(type:Buff.TYPE,research:Research=null):
-	var r = 0
-	for x in buffs:
-		if type in x.type:
-			if x is ResearchBuff:
-				if research==x.research:
-					r+=x.type[type]
-					continue
-			r+=x.type[type]
-	return r
-	

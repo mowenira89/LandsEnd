@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dv4gqur5id7ty"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_2fa3j"]
+[ext_resource type="Resource" uid="uid://cwjrrbty0abgo" path="res://Resources/Stuff/flour.tres" id="2_cc5rn"]
+[ext_resource type="Resource" uid="uid://dqbk1rtwh6lva" path="res://Resources/Stuff/bread.tres" id="3_cc5rn"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="3_k5p5m"]
+
+[resource]
+script = ExtResource("3_k5p5m")
+name = "Bread"
+id = "restaurant_bread"
+turns = 1
+inputs = Dictionary[ExtResource("1_2fa3j"), int]({
+ExtResource("2_cc5rn"): 1
+})
+outputs = Dictionary[ExtResource("1_2fa3j"), int]({
+ExtResource("3_cc5rn"): 5
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

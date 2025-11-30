@@ -1,0 +1,231 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfb1154p6j7ku"]
+
+[ext_resource type="Script" uid="uid://bmf48joch71qq" path="res://Menus/school_view.gd" id="1_6yvtr"]
+[ext_resource type="PackedScene" uid="uid://nk2nf7urmdxa" path="res://Menus/PersonSelectButton.tscn" id="1_wppfe"]
+[ext_resource type="PackedScene" uid="uid://dw5e20m0k7xyn" path="res://Menus/production_container.tscn" id="2_kbgx7"]
+[ext_resource type="PackedScene" uid="uid://djcko3bi25pkm" path="res://Menus/ExtentionButton.tscn" id="3_kbgx7"]
+
+[node name="SchoolView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6yvtr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Headmaster:"
+
+[node name="Headmaster" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Lecturers:"
+
+[node name="Label2" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Pupils:"
+
+[node name="Class1" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="lecturer1" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="lecture1" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1" instance=ExtResource("2_kbgx7")]
+layout_mode = 2
+
+[node name="pupil1_1" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="pupil1_2" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="pupil1_3" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="Class2" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="lecturer2" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="lecture2" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2" instance=ExtResource("2_kbgx7")]
+layout_mode = 2
+
+[node name="pupil2_1" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="puplic2_2" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="pupil2_3" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="Class3" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="lecturer3" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="lecture3" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3" instance=ExtResource("2_kbgx7")]
+layout_mode = 2
+
+[node name="pupil3_1" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="pupil3_2" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="pupil3_3" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="Class4" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="lecturer4" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="lecture4" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4" instance=ExtResource("2_kbgx7")]
+layout_mode = 2
+
+[node name="pupil4_1" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="pupil4_2" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="pupil4_3" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4" instance=ExtResource("1_wppfe")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Button" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ext1" parent="MarginContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("3_kbgx7")]
+layout_mode = 2
+
+[node name="ext2" parent="MarginContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("3_kbgx7")]
+layout_mode = 2
+
+[node name="ext3" parent="MarginContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("3_kbgx7")]
+layout_mode = 2
+
+[node name="ext4" parent="MarginContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("3_kbgx7")]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Info" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Upgrade" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Upgrade"
+
+[node name="Repair" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Repair"
+
+[node name="Destroy" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Destroy"
+
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Headmaster" to="." method="_on_headmaster_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Headmaster" to="." method="_on_headmaster_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1/lecturer1" to="." method="_on_lecturer_1_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1/lecturer1" to="." method="_on_lecturer_1_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1/pupil1_1" to="." method="_on_pupil_1_1_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1/pupil1_1" to="." method="_on_pupil_1_1_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1/pupil1_2" to="." method="_on_pupil_1_2_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1/pupil1_2" to="." method="_on_pupil_1_2_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1/pupil1_3" to="." method="_on_pupil_1_3_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class1/pupil1_3" to="." method="_on_pupil_1_3_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2/lecturer2" to="." method="_on_lecturer_2_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2/lecturer2" to="." method="_on_lecturer_2_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2/pupil2_1" to="." method="_on_pupil_2_1_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2/pupil2_1" to="." method="_on_pupil_2_1_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2/puplic2_2" to="." method="_on_puplic_2_2_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2/puplic2_2" to="." method="_on_puplic_2_2_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2/pupil2_3" to="." method="_on_pupil_2_3_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class2/pupil2_3" to="." method="_on_pupil_2_3_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3/lecturer3" to="." method="_on_lecturer_3_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3/lecturer3" to="." method="_on_lecturer_3_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3/pupil3_1" to="." method="_on_pupil_3_1_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3/pupil3_1" to="." method="_on_pupil_3_1_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3/pupil3_2" to="." method="_on_pupil_3_2_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3/pupil3_2" to="." method="_on_pupil_3_2_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3/pupil3_3" to="." method="_on_pupil_3_3_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class3/pupil3_3" to="." method="_on_pupil_3_3_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4/lecturer4" to="." method="_on_lecturer_4_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4/lecturer4" to="." method="_on_lecturer_4_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4/pupil4_1" to="." method="_on_pupil_4_1_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4/pupil4_1" to="." method="_on_pupil_4_1_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4/pupil4_2" to="." method="_on_pupil_4_2_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4/pupil4_2" to="." method="_on_pupil_4_2_removing"]
+[connection signal="open" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4/pupil4_3" to="." method="_on_pupil_4_3_open"]
+[connection signal="removing" from="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Class4/pupil4_3" to="." method="_on_pupil_4_3_removing"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

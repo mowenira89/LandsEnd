@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Species" load_steps=8 format=3 uid="uid://dcon6w2ox47vd"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_hkalm"]
+[ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="2_cnutl"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="2_onud3"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_cnutl"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_erlxu"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_3mokf"]
+
+[sub_resource type="Resource" id="Resource_2tfq7"]
+script = ExtResource("5_3mokf")
+hp = 1000.0
+off = 9.0
+def = 10.0
+mag = 8.0
+magdef = 9.0
+sp = 3.0
+l = 3.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("4_erlxu")
+diet = 2
+natural_prowess = Dictionary[int, int]({
+5: 5
+})
+kill_produce = Dictionary[ExtResource("1_hkalm"), int]({
+ExtResource("2_cnutl"): 10
+})
+rarity = 25.0
+domestication_difficulty = 99.99
+aggressiveness = 15.0
+skittishness = 20.0
+name = "Oread"
+stats = SubResource("Resource_2tfq7")
+value = 100000.0
+mystic_qualities = Dictionary[int, float]({
+1: 7.0
+})
+exp_to = Dictionary[String, float]({
+"Metallurgy": 5.0
+})
+found_in = Array[int]([1])
+prohibited = true
+diet_type = Array[int]([2])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

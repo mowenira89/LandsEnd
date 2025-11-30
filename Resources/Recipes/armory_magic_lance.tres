@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://ct4bjoqpuetoy"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_65chr"]
+[ext_resource type="Resource" uid="uid://bt85i3i2fa24g" path="res://Resources/Stuff/oricalchum.tres" id="2_vwuk7"]
+[ext_resource type="Resource" uid="uid://qqesjg4cfmx1" path="res://Resources/Stuff/magic_lance.tres" id="3_uhskh"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_8s2lx"]
+
+[resource]
+script = ExtResource("4_8s2lx")
+name = "Magic Lance"
+id = "armory_magic_lance"
+turns = 1
+inputs = Dictionary[ExtResource("1_65chr"), int]({
+ExtResource("2_vwuk7"): 1
+})
+outputs = Dictionary[ExtResource("1_65chr"), int]({
+ExtResource("3_uhskh"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

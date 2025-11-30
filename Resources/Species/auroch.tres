@@ -23,6 +23,7 @@ metadata/_custom_type_script = "uid://d2hat5snxwp82"
 [resource]
 script = ExtResource("6_3858v")
 kind = 1
+diet = 2
 kill_produce = Dictionary[ExtResource("1_u4art"), int]({
 ExtResource("3_cvsd3"): 4,
 ExtResource("4_3ilrb"): 3,
@@ -31,11 +32,16 @@ ExtResource("5_a3e3b"): 1
 harvest_produce = Dictionary[ExtResource("1_u4art"), int]({
 ExtResource("2_5dgew"): 1
 })
+harvest_season = Array[int]([0, 1, 2, 3, 4, 5])
+breeding_season = Array[int]([0])
 rarity = 50.0
+domestication_difficulty = 3.0
 game = true
 steed = true
 aggressiveness = 4.0
 skittishness = 3.0
+produce_manure = true
+food_need = 0.2
 name = "Auroch"
 stats = SubResource("Resource_3ilrb")
 value = 50.0

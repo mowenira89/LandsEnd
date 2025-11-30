@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Research" load_steps=10 format=3 uid="uid://dfphv04xet6ye"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_bjtsc"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_4uat8"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_1s4wt"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_b5ojp"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="5_8fplb"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="6_noae3"]
+[ext_resource type="Resource" uid="uid://bfp82l7jug6fo" path="res://Resources/Research/concrete.tres" id="7_uaoqy"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_mnvr2"]
+[ext_resource type="Resource" uid="uid://bp7vyxgvp65sh" path="res://Resources/Recipes/whitesmith_mithril_reinforced_concrete.tres" id="9_kc0rs"]
+
+[resource]
+script = ExtResource("6_noae3")
+name = "Mithril Reinforced Concrete"
+recipes = Array[ExtResource("8_mnvr2")]([ExtResource("9_kc0rs")])
+exp_to_unlock = 100
+prerequisites = Array[ExtResource("6_noae3")]([ExtResource("7_uaoqy")])
+inspiration_threshold = 25.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

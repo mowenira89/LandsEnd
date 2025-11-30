@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://ccf7niqhjvcce"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://ccf7niqhjvcce"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_nf7pt"]
 [ext_resource type="Resource" uid="uid://baewvmenynp8x" path="res://Resources/Stuff/oricalc.tres" id="2_vsbw2"]
 [ext_resource type="Resource" uid="uid://bt85i3i2fa24g" path="res://Resources/Stuff/oricalchum.tres" id="3_2t31j"]
+[ext_resource type="Resource" uid="uid://cm0xo6ydyl2bi" path="res://Resources/Stuff/gypsum.tres" id="3_vsbw2"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_4xcmr"]
 
 [resource]
@@ -11,7 +12,8 @@ name = "Orichalcum"
 id = "smelter_orichalcum"
 turns = 1
 inputs = Dictionary[ExtResource("1_nf7pt"), int]({
-ExtResource("2_vsbw2"): 1
+ExtResource("2_vsbw2"): 1,
+ExtResource("3_vsbw2"): 1
 })
 outputs = Dictionary[ExtResource("1_nf7pt"), int]({
 ExtResource("3_2t31j"): 1
@@ -19,4 +21,6 @@ ExtResource("3_2t31j"): 1
 exp_to = Dictionary[String, float]({
 "Orangesmith": 1.0
 })
+air_pollution = 5.0
+water_pollution = 5.0
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

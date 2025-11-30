@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Research" load_steps=10 format=3 uid="uid://c6fllexyv3211"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_mlf0i"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_r314k"]
+[ext_resource type="Resource" uid="uid://bcex7l15a86xe" path="res://Resources/Ceremonies/toad.tres" id="3_chnyt"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_3kpfg"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_f1gno"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_18uuq"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_cutpd"]
+[ext_resource type="Resource" uid="uid://b3x3scxkrj1tv" path="res://Resources/Research/ceremony_haoma.tres" id="8_cp36y"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_82c7i"]
+
+[resource]
+script = ExtResource("7_cutpd")
+name = "Toad Ceremony"
+ceremonies = Array[ExtResource("2_r314k")]([ExtResource("3_chnyt")])
+exp_to_unlock = 50
+prerequisites = Array[ExtResource("7_cutpd")]([ExtResource("8_cp36y")])
+inspiration_threshold = 10.0
+inspired_class = 3
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

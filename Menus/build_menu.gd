@@ -21,7 +21,7 @@ func update_menu(d:District,s:Stockpile):
 		if !x.upgrade_only:
 			var proceed=true
 			for c in x.construction_conditions:
-				if !c.check(d,d.territory,x):
+				if !c.check(d.territory,d,x):
 					proceed=false
 					break
 			if proceed:

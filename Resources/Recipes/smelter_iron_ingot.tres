@@ -16,5 +16,6 @@ ExtResource("2_pdvtn"): 1
 outputs = Dictionary[ExtResource("1_n0sx7"), int]({
 ExtResource("3_rv3hw"): 1
 })
-pollution = 3.0
+air_pollution = 2.0
+water_pollution = 2.0
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

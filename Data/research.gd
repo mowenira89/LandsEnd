@@ -14,41 +14,46 @@ class_name Research extends Resource
 @export var inspired_class:Pop.CLASS
 @export var conditions:Array[Condition]
 
-func add_exp(a:float,b:Array[Buffs],territory:Territory):
+func add_exp(a:float,b:Building=null,u:Unit=null,d:District=null):
+	var t = u.current_territory if u else b.district.territory
+	var wise=0
+	var maverick=0
+	if !d:
+		if b:
+			d=b.district
 	for x in conditions:
-		if !x.check(null,territory):
+		if !x.check(t,d,b,u):
 			return false
+	if b and b.boss:
+		wise = b.boss.get_prowess(Person.PROWESS.Wise)
+		maverick=b.boss.get_prowess(Person.PROWESS.Maverick)
+	elif u:
+		maverick=u.get_prowess(Person.PROWESS.Maverick)
+		wise = u.get_prowess(Person.PROWESS.Wise)
+	a+=wise
 	for x in prerequisites:
 		if !ResearchManager.research[x.name].unlocked:
 				return false
-		var amt = add_buffs(a,b)
-		
-		current_exp+=amt
-		if current_exp>=exp_to_unlock:
-			check_inspiration(territory)
-			
-func check_inspiration(t:Territory):
-	var creativity = t.population.get_pop_belief(inspired_class,Beliefs.STATS.Creativity)
+	var p = u.followers if u else t.population
+	var creativity = p.get_pop_belief(inspired_class,Beliefs.STATS.Creativity)
+	creativity+=maverick*(wise+1)
+	if randf()<(creativity/(inspiration_threshold/100)+creativity):
+		a*=2
+	current_exp+=a
+	if current_exp>=exp_to_unlock:
+		if randf()<(creativity/(inspiration_threshold/100)+creativity)+(maverick*(wise+1)):
+			unlock()
+	return true
 	
 func unlock():
 	for x in buildings:
-		RM.buildings[x.name].unlocked=true
+		x.unlocked=true
+		if x not in GM.unlocked_buildings:
+			GM.unlocked_buildings.append(x)
 	for x in people:
 		RM.NPCs[x.name].unlocked=true
 	for x in recipes:
 		RM.recipes[x.id].unlocked=true
-
-func add_buffs(a:float,bs:Array[Buffs]):
-	var rbs:Array[ResearchBuff] = []
-	for x in bs:
-		var y = x.get_research_buffs()
-		for z in y:
-			if z not in rbs: 
-				rbs.append(z)
-	for x in rbs:
-		if !x.research.is_empty():
-			if self in x.research:
-				a+=x.amount
-		else:
-			a+=x.amount
-	return a
+	GM.menus.end_turn_box.get_message("You've unlocked "+name+"!")
+	for x in ceremonies:
+		MagicManager.unlocked_ceremonies.append(x)

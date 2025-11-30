@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://msghlfkxbw0p" path="res://Assets/Images/BuildingImages/shrine.png" id="5_87pbs"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_t0tm4"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_6v47q"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_q4l3a"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="8_87pbs"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_c38yv"]
 [ext_resource type="Script" uid="uid://ds8ftt1ahq3nf" path="res://Data/buildings/temple.gd" id="9_otdv4"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="10_dttfm"]

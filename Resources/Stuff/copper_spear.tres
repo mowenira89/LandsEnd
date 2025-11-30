@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=5 format=3 uid="uid://duo8uxj8be472"]
+[gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://duo8uxj8be472"]
 
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_2vn3t"]
-[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_ubyyn"]
+[ext_resource type="Script" uid="uid://6vtv547g3vpj" path="res://Data/weapon.gd" id="2_ag0lg"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="3_ag0lg"]
 
 [sub_resource type="Resource" id="Resource_fut2j"]
@@ -10,7 +10,9 @@ off = 2.0
 metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
-script = ExtResource("1_ubyyn")
+script = ExtResource("2_ag0lg")
+damage_type = 1
+prowess_bonus = Array[int]([13])
 name = "Copper Spear"
 stats = SubResource("Resource_fut2j")
 value = 15.0

@@ -20,4 +20,7 @@ exp_to = Dictionary[String, float]({
 "Whitesmith": 1.0
 })
 exp_value = 3.0
+air_pollution = 7.0
+water_pollution = 7.0
+spiritual_pollution = 7.0
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://yfwimc457qhm"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_8pcit"]
+[ext_resource type="Resource" uid="uid://b23k518tdno7r" path="res://Resources/Stuff/iron_ingot.tres" id="2_1xkbf"]
+[ext_resource type="Resource" uid="uid://db8x2qoa3j11u" path="res://Resources/Stuff/iron_sword.tres" id="3_tq7iw"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_em5f1"]
+
+[resource]
+script = ExtResource("4_em5f1")
+name = "Iron Sword"
+id = "blacksmith_iron_sword"
+turns = 1
+inputs = Dictionary[ExtResource("1_8pcit"), int]({
+ExtResource("2_1xkbf"): 1
+})
+outputs = Dictionary[ExtResource("1_8pcit"), int]({
+ExtResource("3_tq7iw"): 1
+})
+exp_to = Dictionary[String, float]({
+"Armory": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

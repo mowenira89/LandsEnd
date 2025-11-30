@@ -22,5 +22,6 @@ exp_to = Dictionary[String, float]({
 "Orangesmiting": 1.0
 })
 unlocked = true
-pollution = 3.0
+air_pollution = 2.0
+water_pollution = 2.0
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

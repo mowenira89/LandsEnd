@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=7 format=3 uid="uid://yh6j3v5hv2sp"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_113vj"]
+[ext_resource type="Resource" uid="uid://brb7cei56ovf0" path="res://Resources/Stuff/myrrh.tres" id="2_j5n8q"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_jb6s7"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_jb6s7"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_6l2ge"]
+
+[sub_resource type="Resource" id="Resource_wm7dw"]
+script = ExtResource("5_6l2ge")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_jb6s7")
+crop_level = 2
+vitamins = Dictionary[int, float]({
+4: 7.0,
+6: 7.0
+})
+water_need = 10.0
+health = 50.0
+startup_time = 15.0
+produce = Array[ExtResource("1_113vj")]([ExtResource("2_j5n8q")])
+kind = 6
+harvest_season = Array[int]([0])
+rarity = 10.0
+name = "Myrrh Bush"
+stats = SubResource("Resource_wm7dw")
+value = 50.0
+qualities = Dictionary[int, float]({
+10: 2.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 4.0,
+4: 1.0
+})
+found_in = Array[int]([4])
+diet_type = Array[int]([0, 0])
+metadata/_custom_type_script = "uid://wxkcemfn60gw"

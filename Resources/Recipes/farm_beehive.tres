@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://dp41kt4q1jjvd"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_fv7d2"]
+[ext_resource type="Resource" uid="uid://c01cbb5sk5odj" path="res://Resources/Stuff/beehive.tres" id="2_o0ery"]
+[ext_resource type="Resource" uid="uid://cebnskotkm8hs" path="res://Resources/Stuff/honey.tres" id="3_cpqma"]
+[ext_resource type="Resource" uid="uid://dnw12ex8mn5xu" path="res://Resources/Stuff/wax.tres" id="4_i6fef"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_m2lky"]
+
+[resource]
+script = ExtResource("5_m2lky")
+name = "Beehive"
+id = "farm_beehive"
+turns = 1
+inputs = Dictionary[ExtResource("1_fv7d2"), int]({
+ExtResource("2_o0ery"): 1
+})
+outputs = Dictionary[ExtResource("1_fv7d2"), int]({
+ExtResource("3_cpqma"): 2,
+ExtResource("4_i6fef"): 1
+})
+exp_to = Dictionary[String, float]({
+"Beekeeping": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

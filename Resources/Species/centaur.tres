@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=6 format=3 uid="uid://b5n84hbvyf263"]
+[gd_resource type="Resource" script_class="Species" load_steps=8 format=3 uid="uid://b5n84hbvyf263"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_cycvd"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="2_o33nq"]
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_wvvjm"]
+[ext_resource type="Resource" uid="uid://bj5yyr7kyuau0" path="res://Resources/Research/archery.tres" id="3_lki41"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="3_o33nq"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="4_wvvjm"]
 
@@ -18,8 +20,10 @@ metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
 script = ExtResource("3_o33nq")
+natural_prowess = Array[int]([28, 20, 11])
 aggressiveness = 2.0
 skittishness = 8.0
+knowledge = Array[ExtResource("2_o33nq")]([ExtResource("3_lki41")])
 name = "Centaur"
 stats = SubResource("Resource_o33nq")
 value = 2500.0

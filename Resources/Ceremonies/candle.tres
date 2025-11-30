@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Ceremony" load_steps=8 format=3 uid="uid://dte7pf2hc1d2j"]
+
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="1_3a7y5"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="1_ugq6w"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="2_3a7y5"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="3_2qja3"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="4_0eduq"]
+[ext_resource type="Resource" uid="uid://ce7p4vcse8l0g" path="res://Resources/Stuff/candle.tres" id="5_l48ya"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="6_t2s3y"]
+
+[resource]
+script = ExtResource("6_t2s3y")
+name = "Candle Ceremony"
+length = 2
+happiness_reward = 0.1
+requirements = Dictionary[ExtResource("4_0eduq"), float]({
+ExtResource("5_l48ya"): 16.0
+})
+requirements_of_quality = Dictionary[int, float]({
+15: 10.0
+})
+requirements_of_people = Dictionary[int, int]({
+3: 10
+})
+credit_to = Dictionary[int, float]({
+4: 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://h1hksovre84"

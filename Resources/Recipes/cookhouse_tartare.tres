@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CookhouseRecipe" load_steps=5 format=3 uid="uid://dtpoqg5r1pwk2"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_iedl5"]
+[ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="2_77c28"]
+[ext_resource type="Resource" uid="uid://g60mm3rfkack" path="res://Resources/Stuff/tartare.tres" id="3_o7o8d"]
+[ext_resource type="Script" uid="uid://bbt62vx1q0tfq" path="res://Data/cookhouse_recipe.gd" id="4_cxjtv"]
+
+[resource]
+script = ExtResource("4_cxjtv")
+difficulty = 15.0
+name = "Tartare"
+id = "cookhouse_tartare"
+turns = 1
+inputs = Dictionary[ExtResource("1_iedl5"), int]({
+ExtResource("2_77c28"): 1
+})
+outputs = Dictionary[ExtResource("1_iedl5"), int]({
+ExtResource("3_o7o8d"): 1
+})
+exp_to = Dictionary[String, float]({
+"Restaurant": 1.0
+})
+metadata/_custom_type_script = "uid://bbt62vx1q0tfq"

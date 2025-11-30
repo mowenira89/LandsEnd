@@ -30,6 +30,7 @@ var buffs:Buffs
 
 func init(o):
 	stats[STATS.HP]=hp
+	stats[STATS.CurrentHP]=hp
 	stats[STATS.Attack]=off
 	stats[STATS.Defense]=def
 	stats[STATS.Magic]=mag
@@ -93,7 +94,7 @@ func get_magic():
 func get_magic_def():
 	magic_def=stats[STATS.MagicDef]
 	var mod=0
-	for x in owner.buffs.return_buff_amount(STATS.MagicDef):
+	for x in buffs.return_buff_amount(STATS.MagicDef):
 		if x.stat==stats[STATS.MagicDef]:
 			mod+=x.amt
 	total_hp+=total_hp*mod
@@ -124,4 +125,11 @@ func change_hp(a:float):
 		die()
 		
 func die():
-	death.emit()
+	if owner is Person:
+		GM.afterlife[owner]=0
+		if owner.unit:
+			owner.unit.remove_person(owner)
+		owner.remove_as_boss()
+		owner.current_territory.NPCs.erase(owner)
+		owner.alive=false			
+	death.emit(owner)

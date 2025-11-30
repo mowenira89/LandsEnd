@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bp7vyxgvp65sh"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_tuetf"]
+[ext_resource type="Resource" uid="uid://vc1jcimcly1p" path="res://Resources/Stuff/refined_mithril.tres" id="2_vn2uj"]
+[ext_resource type="Resource" uid="uid://ds5kltl4is2re" path="res://Resources/Stuff/mithil_reinforced_concrete.tres" id="3_fthfg"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_emlk5"]
+
+[resource]
+script = ExtResource("4_emlk5")
+name = "Mithril Reinforced Concrete"
+id = "whitesmith_mithril_reinforced_concrete"
+turns = 1
+inputs = Dictionary[ExtResource("1_tuetf"), int]({
+ExtResource("2_vn2uj"): 1
+})
+outputs = Dictionary[ExtResource("1_tuetf"), int]({
+ExtResource("3_fthfg"): 1
+})
+exp_value = 3.0
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=4 format=3 uid="uid://coe70gpt7xkgr"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_mqdeh"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_sv8bj"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_7gi7g"]
+
+[resource]
+script = ExtResource("3_7gi7g")
+crop_level = 2
+vitamins = Dictionary[int, float]({
+0: 2.0,
+2: 5.0
+})
+water_need = 8.0
+health = 45.0
+startup_time = 15.0
+dead_season = Array[int]([8, 7, 5])
+kind = 6
+harvest_season = Array[int]([0, 1])
+rarity = 25.0
+name = "Citrus"
+value = 2.0
+qualities = Dictionary[int, float]({
+0: 1.0,
+11: 1.0,
+20: 1.0,
+22: 1.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 1.0,
+4: 1.0
+})
+food_type = 1
+diet_type = Array[int]([0])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

@@ -1,0 +1,90 @@
+[gd_resource type="Resource" script_class="Camp" load_steps=20 format=3 uid="uid://b1sa5fw58o2ei"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_no0w7"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_a5eqh"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_6msgi"]
+[ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="4_e24he"]
+[ext_resource type="Resource" uid="uid://87npi8da4k00" path="res://Resources/Stuff/brick.tres" id="5_jw0ye"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_bx8y2"]
+[ext_resource type="Script" uid="uid://cufwo02xpojny" path="res://Data/level_up_slates.gd" id="6_jw0ye"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_uswl8"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="8_bx8y2"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="8_c6w7w"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="9_7mjl3"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="10_po1pl"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="10_uswl8"]
+[ext_resource type="Resource" uid="uid://6ru5e1i0b1dv" path="res://Resources/Buildings/town_center.tres" id="11_c6w7w"]
+[ext_resource type="Script" uid="uid://doa1vbsvkk4tx" path="res://Data/buildings/camp.gd" id="11_vbshq"]
+
+[sub_resource type="Resource" id="Resource_7mjl3"]
+script = ExtResource("6_bx8y2")
+production_slots = 1
+store_cap_up = 50
+granary_cap_up = 50
+animal_fields_up = 50
+pops_cap_up = Dictionary[int, int]({
+1: 100
+})
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_po1pl"]
+script = ExtResource("6_bx8y2")
+upgrades_unlocked = Array[ExtResource("7_uswl8")]([ExtResource("11_c6w7w")])
+store_cap_up = 50
+granary_cap_up = 50
+animal_fields_up = 50
+pops_cap_up = Dictionary[int, int]({
+0: 50,
+1: 50
+})
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_vbshq"]
+script = ExtResource("6_bx8y2")
+extention_slots = 1
+production_slots = 1
+needs_upgrade = Array[ExtResource("7_uswl8")]([ExtResource("11_c6w7w")])
+store_cap_up = 100
+granary_cap_up = 100
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
+[sub_resource type="Resource" id="Resource_i6sgj"]
+script = ExtResource("6_jw0ye")
+slates = Dictionary[int, ExtResource("6_bx8y2")]({
+2: null,
+3: null,
+4: null,
+5: SubResource("Resource_7mjl3"),
+6: SubResource("Resource_po1pl"),
+7: SubResource("Resource_vbshq"),
+8: null,
+9: null,
+10: null
+})
+metadata/_custom_type_script = "uid://cufwo02xpojny"
+
+[resource]
+script = ExtResource("11_vbshq")
+fish = true
+hunt = true
+forage = true
+chop_wood = true
+name = "Village Center"
+upgrade_only = true
+pop_cap = Dictionary[int, int]({
+0: 200,
+1: 200
+})
+construction_time = 4
+construction_materials = Dictionary[ExtResource("2_a5eqh"), int]({
+ExtResource("3_6msgi"): 50,
+ExtResource("4_e24he"): 10,
+ExtResource("5_jw0ye"): 50
+})
+construction_level = 4
+staff_needed = Dictionary[int, int]({
+0: 25
+})
+production_slots = 3
+level_up_slates = SubResource("Resource_i6sgj")
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

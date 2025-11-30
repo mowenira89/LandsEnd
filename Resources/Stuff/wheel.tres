@@ -11,7 +11,7 @@ mystic_qualities = Dictionary[int, float]({
 4: 1.0
 })
 exp_to = Dictionary[String, float]({
-"Chariot": 1.0,
-"Wainwright": 1.0
+"Wainwright": 1.0,
+"Water Wheel": 1.0
 })
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

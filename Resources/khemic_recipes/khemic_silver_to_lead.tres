@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="KhemicRecipe" load_steps=5 format=3 uid="uid://bfoxfehf43piy"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_uqw1r"]
+[ext_resource type="Resource" uid="uid://bk0p2ys740a5e" path="res://Resources/Stuff/silver_ingot.tres" id="2_eal4s"]
+[ext_resource type="Resource" uid="uid://dw8mtx3417ev6" path="res://Resources/Stuff/lead_ingot.tres" id="3_rqul5"]
+[ext_resource type="Script" uid="uid://b5amvji0dfqa4" path="res://Data/khemic_recipe.gd" id="4_jnrc2"]
+
+[resource]
+script = ExtResource("4_jnrc2")
+mystic_need = 20.0
+mystic_type = 2
+level = 2
+name = "Silver to Lead"
+id = "khemic_silver_to_lead"
+turns = 1
+inputs = Dictionary[ExtResource("1_uqw1r"), int]({
+ExtResource("2_eal4s"): 1
+})
+outputs = Dictionary[ExtResource("1_uqw1r"), int]({
+ExtResource("3_rqul5"): 1
+})
+exp_to = Dictionary[String, float]({
+"Alchemy 3": 1.0,
+"Spiritual Alchemy": 1.0
+})
+air_pollution = 3.0
+water_pollution = 3.0
+spiritual_pollution = 3.0
+metadata/_custom_type_script = "uid://b5amvji0dfqa4"

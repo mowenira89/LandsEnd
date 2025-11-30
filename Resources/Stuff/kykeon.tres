@@ -9,7 +9,8 @@ name = "Kykeon"
 value = 5.0
 qualities = Dictionary[int, float]({
 0: 1.0,
-10: 2.0
+10: 2.0,
+17: 3.0
 })
 mystic_qualities = Dictionary[int, float]({
 0: 2.0,

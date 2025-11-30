@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://c30tncu0433i8"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_uhaeb"]
+[ext_resource type="Resource" uid="uid://bt85i3i2fa24g" path="res://Resources/Stuff/oricalchum.tres" id="2_jb1rq"]
+[ext_resource type="Resource" uid="uid://cqy0dl1b47acq" path="res://Resources/Stuff/magic_axe.tres" id="3_igpnk"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_hpp6k"]
+
+[resource]
+script = ExtResource("4_hpp6k")
+name = "Magic Axe"
+id = "armory_magic_axe"
+turns = 1
+inputs = Dictionary[ExtResource("1_uhaeb"), int]({
+ExtResource("2_jb1rq"): 1
+})
+outputs = Dictionary[ExtResource("1_uhaeb"), int]({
+ExtResource("3_igpnk"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

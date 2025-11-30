@@ -32,13 +32,12 @@ func set_menu():
 	for x in a:
 		var button = RED_GREEN_BUTTON.instantiate()
 		grid.add_child(button)
-		button.text=x.name+" "+str(int(territory.stockpile.check_stuff_amount(x)))
-		if x in territory.stockpile.prohibited:
-			button.button_pressed=true
-		button.emit_contents.connect(get_contents)
-	print(territory.stockpile.stuff)
+		var s = x.name+" "+str(int(territory.stockpile.check_stuff_amount(x)))
+		var b = false if x in territory.stockpile.prohibited else true
+		button.create(s,b)
+		button.right_clicked.connect(get_contents)
 		
-func get_contents(x:String,b:bool):
+func get_contents(x:String):
 	var s = x.split(" ") as Array[String]
 	s.pop_at(s.size()-1)
 	var ss=""
@@ -47,6 +46,7 @@ func get_contents(x:String,b:bool):
 	ss=ss.strip_edges(false,true)
 	var stuff = RM.stuff[ss]
 	territory.stockpile.alter_useage(stuff)
+	_update_menu()
 		
 func _on_storeroom_button_pressed() -> void:
 	setting="Storeroom"

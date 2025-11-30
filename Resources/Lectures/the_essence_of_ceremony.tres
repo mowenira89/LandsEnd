@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Lecture" load_steps=5 format=3 uid="uid://40ovhp0q4c7e"]
 
 [ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_gkwey"]
-[ext_resource type="Resource" uid="uid://cnxla5x8wv1pu" path="res://Resources/Research/tea_ceremony.tres" id="2_vy26x"]
-[ext_resource type="Resource" uid="uid://bf5qbiau1jvbi" path="res://Resources/Research/tobacco_ceremony.tres" id="3_u1atu"]
+[ext_resource type="Resource" uid="uid://cnxla5x8wv1pu" path="res://Resources/Research/ceremony_tea.tres" id="2_vy26x"]
+[ext_resource type="Resource" uid="uid://bf5qbiau1jvbi" path="res://Resources/Research/ceremony_tobacco.tres" id="3_u1atu"]
 [ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_s6j58"]
 
 [resource]

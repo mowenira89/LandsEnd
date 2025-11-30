@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Lecture" load_steps=5 format=3 uid="uid://lpd2tka043s6"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_wq5nt"]
+[ext_resource type="Resource" uid="uid://cvx5p01d1hrdf" path="res://Resources/Research/orangesmithing.tres" id="2_w22jf"]
+[ext_resource type="Resource" uid="uid://bgx3biv0fu1j7" path="res://Resources/Research/voltaomancy.tres" id="3_nnxq8"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_rxr4f"]
+
+[resource]
+script = ExtResource("4_rxr4f")
+name = "Fundamenals of Alchemy"
+lecture_length = 4
+subject = 5
+research = Dictionary[ExtResource("1_wq5nt"), float]({
+ExtResource("2_w22jf"): 5.0,
+ExtResource("3_nnxq8"): 5.0
+})
+metadata/_custom_type_script = "uid://m330oqovp04n"

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Building" load_steps=13 format=3 uid="uid://bv08fbw7tbu50"]
+[gd_resource type="Resource" script_class="Smith" load_steps=14 format=3 uid="uid://bv08fbw7tbu50"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_nbvh4"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_b8kj2"]
@@ -8,13 +8,14 @@
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_3a8it"]
 [ext_resource type="Texture2D" uid="uid://dxygqfi6xjbcs" path="res://Assets/Images/BuildingImages/blacksmith.png" id="6_nmucx"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="8_rjxdk"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="8_ttp0j"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_3d7bi"]
 [ext_resource type="Resource" uid="uid://fwfxx3jdb2es" path="res://Resources/Buildings/whitesmith.tres" id="9_i8wrp"]
 [ext_resource type="Resource" uid="uid://dshsqcvo8q3ri" path="res://Resources/Buildings/orangesmith.tres" id="10_nmucx"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="11_nmucx"]
+[ext_resource type="Script" uid="uid://dihqh4ehkm2lh" path="res://Data/buildings/smith.gd" id="13_ttp0j"]
 
 [resource]
-script = ExtResource("8_rjxdk")
+script = ExtResource("13_ttp0j")
 name = "Blacksmith"
 image = ExtResource("6_nmucx")
 construction_time = 3
@@ -25,7 +26,7 @@ ExtResource("5_ttp0j"): 10
 })
 construction_level = 3
 staff_needed = Dictionary[int, int]({
-0: 5
+0: 15
 })
 district_type = 3
 production_slots = 2

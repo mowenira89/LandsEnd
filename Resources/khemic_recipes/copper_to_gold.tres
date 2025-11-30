@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("4_i5cdb")
-mystic_need = 10.0
+mystic_need = 20.0
 mystic_type = 1
 level = 2
 name = "Copper to Gold"
@@ -19,6 +19,7 @@ outputs = Dictionary[ExtResource("1_vbow7"), int]({
 ExtResource("3_70vxf"): 1
 })
 exp_to = Dictionary[String, float]({
+"Alchemy 2": 1.0,
 "Orangesmithing": 1.0,
 "Voltaomancy": 1.0
 })

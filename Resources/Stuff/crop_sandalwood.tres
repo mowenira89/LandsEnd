@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=4 format=3 uid="uid://b334urqnyuaol"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_s0kx4"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_wiui2"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_7ectd"]
+
+[resource]
+script = ExtResource("3_7ectd")
+crop_level = 3
+vitamins = Dictionary[int, float]({
+4: 4.0,
+5: 4.0,
+6: 4.0
+})
+water_need = 25.0
+health = 60.0
+startup_time = 25.0
+dead_season = Array[int]([4])
+kind = 6
+harvest_season = Array[int]([3])
+name = "Sandalwood"
+value = 10.0
+qualities = Dictionary[int, float]({
+1: 2.0,
+10: 2.0,
+15: 4.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 3.0,
+4: 3.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

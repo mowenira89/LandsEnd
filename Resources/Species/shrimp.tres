@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://dyglxodjku68b"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_c2hg0"]
+[ext_resource type="Resource" uid="uid://dm38w0pg58mox" path="res://Resources/Stuff/shrimp.tres" id="2_a7npx"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_gcvoj"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_bybqj"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_kpxj1"]
+
+[sub_resource type="Resource" id="Resource_cnwpo"]
+script = ExtResource("5_kpxj1")
+hp = 10.0
+magdef = 1.0
+sp = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("4_bybqj")
+kind = 5
+diet = 2
+kill_produce = Dictionary[ExtResource("1_c2hg0"), int]({
+ExtResource("2_a7npx"): 1
+})
+rarity = 30.0
+domestication_difficulty = 15.0
+name = "Shrimp"
+stats = SubResource("Resource_cnwpo")
+mystic_qualities = Dictionary[int, float]({
+2: 1.0
+})
+found_in = Array[int]([5])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

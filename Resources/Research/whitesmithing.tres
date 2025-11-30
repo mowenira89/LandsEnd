@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Research" load_steps=15 format=3 uid="uid://coqwyx2r33sfn"]
+[gd_resource type="Resource" script_class="Research" load_steps=18 format=3 uid="uid://coqwyx2r33sfn"]
 
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_g7on2"]
 [ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_4r1l2"]
+[ext_resource type="Resource" uid="uid://fwfxx3jdb2es" path="res://Resources/Buildings/whitesmith.tres" id="2_u4a7q"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_wcnxc"]
 [ext_resource type="Script" uid="uid://dy2kpn5vls50" path="res://Data/conditions/need_resource_condition.gd" id="3_4r1l2"]
 [ext_resource type="Resource" uid="uid://dtdqjwtloddb4" path="res://Resources/Stuff/mithril.tres" id="4_7ege2"]
@@ -13,6 +14,8 @@
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_n242f"]
 [ext_resource type="Resource" uid="uid://dk604h1unoagc" path="res://Resources/Recipes/smelter_refined_mithril.tres" id="10_ijxot"]
 [ext_resource type="Resource" uid="uid://po5nmvu0vq71" path="res://Resources/Recipes/armory_mithril_armor.tres" id="11_bngs7"]
+[ext_resource type="Resource" uid="uid://j226p4r2nrvh" path="res://Resources/Recipes/whitesmith_refined_mithril.tres" id="14_ena48"]
+[ext_resource type="Resource" uid="uid://duq1w0sjbjub8" path="res://Resources/Recipes/whitesmith_mithril_armor.tres" id="15_u4a7q"]
 
 [sub_resource type="Resource" id="Resource_1cdoi"]
 script = ExtResource("3_4r1l2")
@@ -22,7 +25,8 @@ metadata/_custom_type_script = "uid://dy2kpn5vls50"
 [resource]
 script = ExtResource("6_u4a7q")
 name = "Whitesmithing"
-recipes = Array[ExtResource("9_n242f")]([ExtResource("10_ijxot"), ExtResource("11_bngs7")])
+recipes = Array[ExtResource("9_n242f")]([ExtResource("10_ijxot"), ExtResource("11_bngs7"), ExtResource("14_ena48"), ExtResource("15_u4a7q")])
+buildings = Array[ExtResource("1_g7on2")]([ExtResource("2_u4a7q")])
 exp_to_unlock = 1000
 prerequisites = Array[ExtResource("6_u4a7q")]([ExtResource("7_iu6sj"), ExtResource("8_yylh3")])
 inspiration_threshold = 10.0

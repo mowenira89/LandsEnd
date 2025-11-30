@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Nymphoi" load_steps=10 format=3 uid="uid://dtqfd434l0hc2"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_vlsy8"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_dywm0"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_sp2ks"]
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="4_gv4t5"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_gl6qg"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_31cn0"]
+[ext_resource type="Script" uid="uid://vfa8xldyecm2" path="res://Data/territory.gd" id="7_o62c6"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_6mu04"]
+[ext_resource type="Script" uid="uid://o783htdr3cnx" path="res://Data/nymphoi.gd" id="9_aysrh"]
+
+[resource]
+script = ExtResource("9_aysrh")
+title = "Spirits of the Quintessence"
+age = 100000
+affinity = Array[int]([4])
+metadata/_custom_type_script = "uid://o783htdr3cnx"

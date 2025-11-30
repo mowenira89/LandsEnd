@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Research" load_steps=8 format=3 uid="uid://5iulf7vsfiuo"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_omyok"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_qqqh2"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_jw73y"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_qfx0f"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="5_vp21d"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="6_1sksu"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_v6him"]
+
+[resource]
+script = ExtResource("6_1sksu")
+name = "White Magic"
+exp_to_unlock = 1000
+inspiration_threshold = 10.0
+inspired_class = 3
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

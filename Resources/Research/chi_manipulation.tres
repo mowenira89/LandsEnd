@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Research" load_steps=9 format=3 uid="uid://c4hnenl2dvw36"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_wfhtn"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_ricpj"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_o7fy0"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_ifhqo"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="5_bjaju"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="6_ibb5a"]
+[ext_resource type="Resource" uid="uid://cnxla5x8wv1pu" path="res://Resources/Research/ceremony_tea.tres" id="7_254tf"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_3uvdr"]
+
+[resource]
+script = ExtResource("6_ibb5a")
+name = "Chi Manipulation"
+exp_to_unlock = 600
+prerequisites = Array[ExtResource("6_ibb5a")]([ExtResource("7_254tf")])
+inspiration_threshold = 10.0
+inspired_class = 3
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

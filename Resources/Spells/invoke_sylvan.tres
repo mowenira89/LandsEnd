@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://dnml4776mhys1"]
+
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="1_c3rxf"]
+
+[resource]
+script = ExtResource("1_c3rxf")
+name = "Invoke Sylvan Spirits"
+damage = 10.0
+heal = 10.0
+cost = 10.0
+piety_multiplier = true
+learning_threshold = 10.0
+metadata/_custom_type_script = "uid://cqth5y8dta6l4"

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Person" load_steps=10 format=3 uid="uid://dlgi7612g32bn"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_wt6k4"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_d50ei"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_24khc"]
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="4_0bojg"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_3k0bv"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_psbjf"]
+[ext_resource type="Script" uid="uid://vfa8xldyecm2" path="res://Data/territory.gd" id="7_w6fjn"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_ysxhk"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="9_teydu"]
+
+[resource]
+script = ExtResource("9_teydu")
+title = "Ranger"
+prowess = Dictionary[int, float]({
+20: 1.0
+})
+level = 1
+metadata/_custom_type_script = "uid://bd374amcrlpgs"

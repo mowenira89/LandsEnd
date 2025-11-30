@@ -1,0 +1,128 @@
+[gd_scene load_steps=5 format=3 uid="uid://b80kt0t05eqpx"]
+
+[ext_resource type="PackedScene" uid="uid://dw5e20m0k7xyn" path="res://Menus/production_container.tscn" id="1_hba0b"]
+[ext_resource type="PackedScene" uid="uid://nk2nf7urmdxa" path="res://Menus/PersonSelectButton.tscn" id="2_15v54"]
+[ext_resource type="PackedScene" uid="uid://djcko3bi25pkm" path="res://Menus/ExtentionButton.tscn" id="3_qb7hq"]
+[ext_resource type="PackedScene" uid="uid://7g2xivh0ne32" path="res://Menus/SelectorButton.tscn" id="4_0yxer"]
+
+[node name="HerbalistView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Herbalist District 2 Goddrick's Hollow"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ProductionContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("1_hba0b")]
+layout_mode = 2
+
+[node name="ProductionContainer2" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("1_hba0b")]
+layout_mode = 2
+
+[node name="ProductionContainer3" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("1_hba0b")]
+layout_mode = 2
+
+[node name="ProductionContainer4" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("1_hba0b")]
+layout_mode = 2
+
+[node name="ProductionContainer5" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("1_hba0b")]
+layout_mode = 2
+
+[node name="ProductionContainer6" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("1_hba0b")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Boss"
+horizontal_alignment = 1
+
+[node name="PersonSelectorButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_15v54")]
+layout_mode = 2
+_size = 150
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Pichael"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Hunter"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="ExtentionButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("3_qb7hq")]
+layout_mode = 2
+
+[node name="ExtentionButton2" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("3_qb7hq")]
+layout_mode = 2
+
+[node name="ExtentionButton3" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("3_qb7hq")]
+layout_mode = 2
+
+[node name="ExtentionButton4" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("3_qb7hq")]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SelectorButton" parent="MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_0yxer")]
+layout_mode = 2
+
+[node name="SelectorButton2" parent="MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_0yxer")]
+layout_mode = 2
+
+[node name="SelectorButton3" parent="MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_0yxer")]
+layout_mode = 2
+
+[node name="SelectorButton4" parent="MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_0yxer")]
+layout_mode = 2
+
+[node name="SelectorButton5" parent="MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_0yxer")]
+layout_mode = 2
+
+[node name="SelectorButton6" parent="MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("4_0yxer")]
+layout_mode = 2

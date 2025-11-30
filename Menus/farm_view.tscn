@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://pnec8kkr8etr"]
+[gd_scene load_steps=6 format=3 uid="uid://pnec8kkr8etr"]
 
 [ext_resource type="Script" uid="uid://pnncvupsoxbs" path="res://Menus/farm_view.gd" id="1_erw3b"]
 [ext_resource type="PackedScene" uid="uid://djcko3bi25pkm" path="res://Menus/ExtentionButton.tscn" id="2_erw3b"]
+[ext_resource type="PackedScene" uid="uid://dw5e20m0k7xyn" path="res://Menus/production_container.tscn" id="2_sxrvc"]
+[ext_resource type="PackedScene" uid="uid://nk2nf7urmdxa" path="res://Menus/PersonSelectButton.tscn" id="2_vaxl0"]
+[ext_resource type="PackedScene" uid="uid://7g2xivh0ne32" path="res://Menus/SelectorButton.tscn" id="4_vaxl0"]
 
 [node name="FarmView" type="Control"]
 layout_mode = 3
@@ -26,9 +29,60 @@ color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Boss"
+horizontal_alignment = 1
+
+[node name="PersonSelectorButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("2_vaxl0")]
+layout_mode = 2
+_size = 150
+
+[node name="Label2" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Production" type="VBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="ProductionContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Production" instance=ExtResource("2_sxrvc")]
+layout_mode = 2
+
+[node name="ProductionContainer2" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Production" instance=ExtResource("2_sxrvc")]
+layout_mode = 2
+
+[node name="ProductionContainer3" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Production" instance=ExtResource("2_sxrvc")]
+layout_mode = 2
+
+[node name="ProductionContainer4" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Production" instance=ExtResource("2_sxrvc")]
+layout_mode = 2
+
+[node name="ProductionContainer5" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Production" instance=ExtResource("2_sxrvc")]
+layout_mode = 2
+
+[node name="ProductionContainer6" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2/Production" instance=ExtResource("2_sxrvc")]
+layout_mode = 2
+
+[node name="SelectorButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("4_vaxl0")]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Fertilizer"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -44,15 +98,69 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 text = "Field 1"
 
+[node name="Button" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields1/Field1"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "No food!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Field2" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields1"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 text = "Field 1"
 
+[node name="Button" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields1/Field2"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "No food!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Field3" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields1"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 text = "Field 1"
+
+[node name="Button" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields1/Field3"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "No food!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Fields2" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -64,15 +172,69 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 text = "Field 1"
 
+[node name="Button" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields2/Field4"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "No food!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Field5" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields2"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 text = "Field 1"
 
+[node name="Button" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields2/Field5"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "No food!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Field6" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields2"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 text = "Field 1"
+
+[node name="Button" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Fields2/Field6"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "No food!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -83,41 +245,73 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 text = "Field 1"
 
+[node name="Button" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Field7"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "No food!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Field8" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 text = "Field 1"
+
+[node name="Button" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Field8"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "No food!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Field9" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 text = "Field 1"
 
-[node name="Production" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Prod1" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production"]
-layout_mode = 2
-
-[node name="Prod2" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production"]
-layout_mode = 2
-
-[node name="Prod3" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production"]
-layout_mode = 2
+[node name="Button" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Field9"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "No food!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Production2" type="HBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
-
-[node name="Prod4" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production2"]
-layout_mode = 2
-
-[node name="Prod5" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production2"]
-layout_mode = 2
-
-[node name="Prod6" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/Production2"]
-layout_mode = 2
 
 [node name="Extentions" type="VBoxContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2

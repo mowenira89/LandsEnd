@@ -1,4 +1,4 @@
-class_name _Warning extends ColorRect
+class_name AWarning extends ColorRect
 
 @onready var message: RichTextLabel = $MarginContainer/VBoxContainer/Message
 @onready var ok: Button = $MarginContainer/VBoxContainer/HBoxContainer/OK

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="MilitaryUnit" load_steps=7 format=3 uid="uid://cmseuy1gk3yof"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_4w5ox"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="2_ektc2"]
+[ext_resource type="Script" uid="uid://cp0je3yls6fec" path="res://Data/military_unit.gd" id="3_wd3l4"]
+[ext_resource type="Resource" uid="uid://l38bjx2o7f1b" path="res://Resources/Species/human.tres" id="4_3jg56"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_y1lbh"]
+
+[sub_resource type="Resource" id="Resource_v0nrj"]
+script = ExtResource("5_y1lbh")
+hp = 80.0
+off = 2.0
+def = 2.0
+mag = 5.0
+magdef = 5.0
+sp = 4.0
+l = 2.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_wd3l4")
+military_prowess = Dictionary[int, float]({
+6: 1.0
+})
+title = "Warlock"
+species = ExtResource("4_3jg56")
+prowess = Dictionary[int, float]({
+17: 1.0
+})
+stats = SubResource("Resource_v0nrj")
+CLASS = 1
+metadata/_custom_type_script = "uid://cp0je3yls6fec"

@@ -15,7 +15,8 @@ mystic_qualities = Dictionary[int, float]({
 4: 5.0
 })
 exp_to = Dictionary[String, float]({
-"Whitesmithing": 2.0
+"Mithril Ceremony": 1.0,
+"Whitesmithing": 1.0
 })
 found_in = Array[int]([1])
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

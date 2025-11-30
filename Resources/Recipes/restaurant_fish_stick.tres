@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CookhouseRecipe" load_steps=6 format=3 uid="uid://dxltoc46n6503"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_sansw"]
+[ext_resource type="Resource" uid="uid://bkphlf0yxmdq3" path="res://Resources/Stuff/fish.tres" id="2_qfcm7"]
+[ext_resource type="Resource" uid="uid://cwjrrbty0abgo" path="res://Resources/Stuff/flour.tres" id="3_j5kh0"]
+[ext_resource type="Resource" uid="uid://be7lkmjgn8vh" path="res://Resources/Stuff/fish_sticks.tres" id="4_5vu3d"]
+[ext_resource type="Script" uid="uid://bbt62vx1q0tfq" path="res://Data/cookhouse_recipe.gd" id="5_2suw2"]
+
+[resource]
+script = ExtResource("5_2suw2")
+difficulty = 2.0
+name = "Fish Sticks"
+id = "restaurant_fish_sticks"
+turns = 1
+inputs = Dictionary[ExtResource("1_sansw"), int]({
+ExtResource("2_qfcm7"): 1,
+ExtResource("3_j5kh0"): 1
+})
+outputs = Dictionary[ExtResource("1_sansw"), int]({
+ExtResource("4_5vu3d"): 3
+})
+metadata/_custom_type_script = "uid://bbt62vx1q0tfq"

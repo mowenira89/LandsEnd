@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://qqesjg4cfmx1"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_0o8fl"]
+[ext_resource type="Script" uid="uid://6vtv547g3vpj" path="res://Data/weapon.gd" id="2_0o8fl"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="3_20deq"]
+
+[sub_resource type="Resource" id="Resource_q8orr"]
+script = ExtResource("3_20deq")
+off = 8.0
+l = 3.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("2_0o8fl")
+damage_type = 1
+damage_boost = 2.0
+prowess_bonus = Array[int]([26, 13, 15])
+name = "Magic Lance"
+stats = SubResource("Resource_q8orr")
+value = 150.0
+qualities = Dictionary[int, float]({
+7: 8.0
+})
+mystic_qualities = Dictionary[int, float]({
+3: 1.0,
+4: 3.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

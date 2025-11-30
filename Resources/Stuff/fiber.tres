@@ -9,12 +9,16 @@ name = "Fiber"
 value = 1.0
 qualities = Dictionary[int, float]({
 4: 0.5,
-5: 0.0
+5: 0.0,
+22: 1.0
 })
 mystic_qualities = Dictionary[int, float]({
 0: 1.0
 })
 exp_to = Dictionary[String, float]({
+"Archery": 1.0,
 "Textiles": 1.0
 })
+food_type = 6
+diet_type = Array[int]([2, 0])
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

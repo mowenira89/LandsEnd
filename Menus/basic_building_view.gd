@@ -22,11 +22,12 @@ var building:Building
 @onready var extention_buttons = [ext1,ext2,ext3,ext4]
 const PRODUCTION_SLOT = preload("res://Menus/production_container.tscn")
 
+
 func _ready():
 	for x in 6:
 		prods[x].index=x
-	call_deferred("connect_signal")
-
+		
+		
 func update_menu(b:Building):
 	building = b	
 	var s = building.district.territory.name+" District "+str(building.district.index)+" "+building.name
@@ -45,8 +46,24 @@ func update_menu(b:Building):
 	for x in building.extention_slots:
 		extention_buttons[x].visible=true
 	boss.create(building.boss)
+	
+	
 		
 	GM.menus.switch_side_top(self)
 	
 func _update_menu():
 	update_menu(building)
+
+
+func _on_boss_open(p:PersonSelectorButton) -> void:
+	GM.menus.send_data.emit(null)
+	GM.menus.npc_selector_menu.update_menu(building.district.territory,"NewBoss")
+	var choice = await GM.menus.send_data
+	if choice is Person:
+		if choice.unit.leader == choice:
+			choice.unit.leader=null
+		choice.unit=null
+		choice.boss_of=building
+		building.boss=choice
+	GM.menus.switch_side_bottom(GM.menus.districts_view)
+	GM.menus.update_menus()

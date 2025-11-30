@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://ogkjpttd3ct6"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_0eqrg"]
+[ext_resource type="Resource" uid="uid://cfwpyp0enafq1" path="res://Resources/Stuff/cinnabar.tres" id="2_qo0qa"]
+[ext_resource type="Resource" uid="uid://bpjkqdhv6n3qp" path="res://Resources/Stuff/mercury.tres" id="3_wtcqb"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_yqouj"]
+
+[resource]
+script = ExtResource("4_yqouj")
+name = "Mercury"
+id = "alchemy_studio_mercury"
+turns = 1
+inputs = Dictionary[ExtResource("1_0eqrg"), int]({
+ExtResource("2_qo0qa"): 1
+})
+outputs = Dictionary[ExtResource("1_0eqrg"), int]({
+ExtResource("3_wtcqb"): 1
+})
+exp_to = Dictionary[String, float]({
+"Spiritual Alchemy": 1.0
+})
+unlocked = true
+air_pollution = 1.0
+water_pollution = 1.0
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

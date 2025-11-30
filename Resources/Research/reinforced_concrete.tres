@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Research" load_steps=10 format=3 uid="uid://138i6805ph8n"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_anrx2"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_8ed4g"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_y1o4g"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="4_a44sk"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="5_v5vp7"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="6_1gomh"]
+[ext_resource type="Resource" uid="uid://bfp82l7jug6fo" path="res://Resources/Research/concrete.tres" id="7_jqmh6"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_mldho"]
+[ext_resource type="Resource" uid="uid://c676xcrb4xo8p" path="res://Resources/Recipes/mason_reinforced_concrete.tres" id="9_43mam"]
+
+[resource]
+script = ExtResource("6_1gomh")
+name = "Reinforced Concrete"
+recipes = Array[ExtResource("8_mldho")]([ExtResource("9_43mam")])
+exp_to_unlock = 100
+prerequisites = Array[ExtResource("6_1gomh")]([ExtResource("7_jqmh6")])
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

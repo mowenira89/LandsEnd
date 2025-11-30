@@ -16,7 +16,7 @@ ExtResource("2_rnsyk"): 1,
 ExtResource("3_8fg3d"): 1
 })
 outputs = Dictionary[ExtResource("1_x3c2v"), int]({
-ExtResource("4_f7kam"): 3
+ExtResource("4_f7kam"): 2
 })
 exp_to = Dictionary[String, float]({
 "Reinforced Concrete": 1.0

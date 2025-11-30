@@ -1,50 +1,88 @@
 class_name Farm extends Building
 
-@export var fields:int=3
-@export var crops:Array[Crop]=[]
-@export var livestock:Array[Species]
-var growth=[]
+var fields:int=0:get=get_fields
+var crops:Array[Crop]=[]
+var livestock:Array[Herd]
+var fertilizer:Stuff
+var fertilizer_buffer:float
+
+var preserving:Dictionary[int,Dictionary]
+
+
+@export var raise_crops:bool
+@export var raise_livestock:bool
 
 func create(d:District):
 	super(d)
 	crops.resize(9)
-	growth.resize(9)
+	livestock.resize(9)
+	utilized_districts.append(district)
+	district.type=District.TYPES.Agricultural
+	
+func get_fields():
+	return (utilized_districts.size()*3)
 	
 func end_turn():
+	super()
+	for x in livestock:
+		if x is Herd:
+			x.handle(district,boss)
 	for x in crops:
-		x.starting_up-=1
-	for x in crops:
-		if x is Crop:
-			if GM.month in x.dead_season:
-				growth[x]=0
-			if GM.month not in x.dead_season:
-				if x.starting_up<=0:
-					grow()
-			if GM.month in x.harvest_season:
-				for y in x.produce:
-					district.stockpile.add_stuff(y,growth[x])
-				
+		if x:
+			x.grow(district,boss)
+	for x in preserving:
+		if producing_this_turn[x]=="Make Preserves":
+			make_preserves(x)
 
-func plant_crop(c:Crop,i:int):
-	crops[i]=c.duplicate()
-	crops[i].starting_up=crops[i].startup_time
 
-func grow():	
-	if district.biome.water<0:
-		return false
-	
-	for x in fields:
-		if crops[x]:
-			var growth_this_turn=0
-			for y in crops[x].vitamins_needed:
-				district.biome.vitamins[y]-=crops[y].vitamin_need
-				if !district.biome.vitamins[y]<0:
-					growth_this_turn+=.2
-			var green_thumb = GM.get_prowess(Person.PROWESS.GreenThumb,self)
-			growth_this_turn+=growth_this_turn*green_thumb/10
-			growth[x]+=growth_this_turn
+
 			
-func get_extention(b:Building):
-	if b is Pasture:
-		fields+=b.fields
-		district.territory.stockpile.animal_fields+=b.field_capacity
+
+func get_production_options():
+	var a:Array[String]=[]
+	a.append("Craft")
+	if raise_crops:
+		a+=["Plant Crops","Chop Wood","Make Preserves"] 
+	return a
+
+func save():
+	var s = get_save()
+	s['crops']={}
+	for x in crops.size()-1:
+		if crops[x]:
+			s['crops'][x]=crops[x].save()
+	
+func set_production(s:String,i:int,r:Recipe=null):
+	super(s,i,r)
+	if s=="Make Preserves":
+		GM.menus.preserve_menu.update_menu(self,i)
+
+func make_preserves(i:int):
+	var p = preserving[i]
+	for x in p:
+		if !p[x]:
+			return
+		if district.territory.stockpile.check_stuff_amount(p[x])<1:
+			return
+	for x in p:
+		district.territory.stockpile.remove_stuff(p[x],1)
+	var stuff:Stuff
+	if p[PreserveMenu.COMPONENTS.Preservative]==RM.stuff["Vinegar"]:
+		stuff=RM.stuff["Pickles"]
+	else:
+		stuff=RM.stuff["Jam"]
+	district.territory.stockpile.add_stuff(stuff,1)
+
+func set_crop(c:Crop,i:int):
+	crops[i]=c.duplicate()
+	crops[i].create()
+	
+func set_livestock(s:Species,i:int):
+	var amt = district.territory.stockpile.check_stuff_amount(s)
+	district.territory.stockpile.remove_stuff(s,amt)
+	var h = Herd.new()
+	h.create(s,amt)
+	livestock[i]=h
+	
+func get_menu():
+	GM.menus.farm_view.update_menu(self)

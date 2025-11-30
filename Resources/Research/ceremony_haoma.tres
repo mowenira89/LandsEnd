@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Research" load_steps=10 format=3 uid="uid://b3x3scxkrj1tv"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_y646v"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_oi40s"]
+[ext_resource type="Resource" uid="uid://blj7nxbeavx8l" path="res://Resources/Ceremonies/haoma.tres" id="3_equ2d"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_an1y7"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_xh31l"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_ku8yi"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_xeg63"]
+[ext_resource type="Resource" uid="uid://derdinkyxw10j" path="res://Resources/Research/ceremony_ganja.tres" id="8_37t2k"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_4d131"]
+
+[resource]
+script = ExtResource("7_xeg63")
+name = "Haoma Ceremony"
+ceremonies = Array[ExtResource("2_oi40s")]([ExtResource("3_equ2d")])
+exp_to_unlock = 100
+prerequisites = Array[ExtResource("7_xeg63")]([ExtResource("8_37t2k")])
+inspiration_threshold = 25.0
+inspired_class = 3
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

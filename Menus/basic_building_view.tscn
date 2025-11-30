@@ -84,6 +84,7 @@ layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="Prod1" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer" instance=ExtResource("1_fvjvv")]
 layout_mode = 2
@@ -95,27 +96,25 @@ size_flags_vertical = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="Prod3" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer2" instance=ExtResource("1_fvjvv")]
-visible = false
 layout_mode = 2
 size_flags_vertical = 2
 
 [node name="Prod4" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer2" instance=ExtResource("1_fvjvv")]
-visible = false
 layout_mode = 2
 size_flags_vertical = 2
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="Prod5" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer3" instance=ExtResource("1_fvjvv")]
-visible = false
 layout_mode = 2
 size_flags_vertical = 2
 
 [node name="Prod6" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer3" instance=ExtResource("1_fvjvv")]
-visible = false
 layout_mode = 2
 size_flags_vertical = 2
 
@@ -132,17 +131,15 @@ _size = 150
 layout_mode = 2
 
 [node name="ExtentionButton" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("4_ockja")]
-visible = false
 layout_mode = 2
 
 [node name="ExtentionButton2" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("4_ockja")]
-visible = false
 layout_mode = 2
 
 [node name="ExtentionButton3" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("4_ockja")]
-visible = false
 layout_mode = 2
 
 [node name="ExtentionButton4" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("4_ockja")]
-visible = false
 layout_mode = 2
+
+[connection signal="open" from="MarginContainer/HBoxContainer/VBoxContainer3/Boss" to="." method="_on_boss_open"]

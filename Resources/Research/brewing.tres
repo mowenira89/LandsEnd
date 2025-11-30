@@ -11,6 +11,7 @@
 [resource]
 script = ExtResource("6_p2na3")
 name = "Brewing"
+buildings = Array[ExtResource("1_t0xdv")]([null])
 exp_to_unlock = 250
 inspiration_threshold = 10.0
 metadata/_custom_type_script = "uid://bllx77nhi7hwq"

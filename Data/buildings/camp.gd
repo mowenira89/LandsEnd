@@ -17,6 +17,7 @@ func get_production_options():
 		r.append("Fish")
 	if chop_wood:
 		r.append("Chop Wood")
+	r.append("Obtain")
 	return r
 	
 func get_menu():
@@ -29,14 +30,20 @@ func progress_production():
 			match producing_this_turn[x]:
 				"Hunt":
 					var hunt_event = HuntEvent.new()
-					hunt_event.make_plans(district,district.territory.stockpile,district.territory,self)
-					hunt_event.apply()
+					hunt_event.make_plans(district.territory.population,self)
+					GM.add_event(hunt_event,district,self)
 				"Fish":
-					pass
+					var f = FishingEvent.new()
+					f.make_plans(district.territory.population,district,null)
+					GM.add_event(f,district,self)
 				"Chop Wood":
-					pass
+					var c = ChopWoodEvent.new()
+					c.make_plans(district.territory.population,district)
+					GM.add_event(c,district,self)
 				"Forage":
-					var forage = ForageEvent.new()
-					forage.make_plans(district.territory,district.stockpile,district,self)
-					forage.apply()
+					var f = ForageEvent.new()
+					f.make_plans(district.territory.population,self)
+					GM.add_event(f,district,self)
 				
+		elif producing_this_turn[x] is ObtainEvent:
+			producing_this_turn[x].apply()

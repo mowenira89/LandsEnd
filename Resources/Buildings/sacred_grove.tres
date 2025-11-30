@@ -5,9 +5,9 @@
 [ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="3_f5afp"]
 [ext_resource type="Texture2D" uid="uid://b6fgelyevgk3" path="res://Assets/Images/BuildingImages/grove.png" id="4_iw5j1"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="4_msqjc"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_f5afp"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_tngq5"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_boc4b"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="7_iw5j1"]
 [ext_resource type="Script" uid="uid://ds8ftt1ahq3nf" path="res://Data/buildings/temple.gd" id="8_7kdx7"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="9_ah4vs"]
 
@@ -33,4 +33,5 @@ construction_level = 1
 needed_districts = 1
 district_type = 1
 production_slots = 1
+level = 5
 metadata/_custom_type_script = "uid://ds8ftt1ahq3nf"

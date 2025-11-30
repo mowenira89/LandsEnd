@@ -4,32 +4,32 @@ class_name Mine extends Building
 var mine_depth:int=1
 var sheave_wheel:bool=false
 var water_pump:bool=false
-var sideways=0
+var y=0
 var disrepair:float=0
-@export var max_depth:int
+var max_depth:int=100
+
+func create(d:District):
+	super(d)
+	y  = randi_range(1,3)
 
 func end_turn():
+	
 	var haul = 0
-	var r = randi_range(1,mining.qualities[Stuff.QUALITIES.Mineable])
-	var luck = GM.get_buffs(Buff.TYPE.LuckPER,self,district.territory,boss.unit)
-	var l=randi_range(1,r)
-	l+=l*luck
-	haul+=l
-	sideways+=1
-	if mine_depth<50:
-		mine_depth+=1
-	if mine_depth>15:
-		if water_pump:
-			l=randi_range(1,r)
-			l+=l*luck
-			haul+=l		
-	if mine_depth>200:
-		if sheave_wheel:
-			l=randi_range(1,r)
-			l+=l*luck
-			haul+=l		
+	var luck = boss.get_prowess(Person.PROWESS.Lucky) if boss else 0
+	var prowess = boss.get_prowess(Person.PROWESS.Miner) if boss else 0
+	prowess+=age/100
+	haul = y * (1+prowess**.7)*(1 + log(1*mine_depth))
+	haul+=haul*luck/10
+	
 	district.territory.stockpile.add_stuff(mining,haul)
+	experience+=1
 
+
+	var base=.05
+	var depth_factor = mine_depth/(mine_depth+5)
+	var skill_factor = 1 - (prowess**.8)
+	if randf() < base + depth_factor * skill_factor:
+		take_damage(10-luck)
 
 func repair():
 	var stockpile = district.territory.stockpile
@@ -49,7 +49,7 @@ func repair():
 
 func get_damage(depth:int):
 	var r = randi_range(1,100)
-	var prowess = 10+GM.get_prowess(Person.PROWESS.MiningSavant,self)*10
+	var prowess = 10+GM.get_prowess(Person.PROWESS.Miner,self)*10
 	var disrepair = stats.total_hp-stats.current_hp
 	r+=disrepair
 	if r>prowess:
@@ -59,3 +59,7 @@ func get_damage(depth:int):
 		memory.create(self,damage,string)
 		memories.append(memory)
 		take_damage(damage)
+
+func level_up():
+	super()
+	max_depth=level*100

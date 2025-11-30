@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Nymphoi" load_steps=10 format=3 uid="uid://ca7jih1r20iay"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_81tap"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_thpix"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_5mlbp"]
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="4_6pjfa"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_lx83g"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_4llq6"]
+[ext_resource type="Script" uid="uid://vfa8xldyecm2" path="res://Data/territory.gd" id="7_5l8gg"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_tnhec"]
+[ext_resource type="Script" uid="uid://o783htdr3cnx" path="res://Data/nymphoi.gd" id="9_uimcm"]
+
+[resource]
+script = ExtResource("9_uimcm")
+title = "Spirits of the Air"
+affinity = Array[int]([6])
+metadata/_custom_type_script = "uid://o783htdr3cnx"

@@ -6,6 +6,7 @@ var territory:Territory
 signal send_targeted_district
 
 func update_menu(t:Territory):
+	GM.menus.send_data.emit(null)
 	territory=t
 	var children = grid_container.get_children()
 	for x in 8:
@@ -18,12 +19,16 @@ func _update_menu():
 func get_buttons():
 	return grid_container.get_children()
 
+func _ready():
+	for x in grid_container.get_children():
+		x.select_district.connect(send_target)
+
 func set_for_selection(targetable:Array):
 	_update_menu()
 	for x in grid_container.get_children():
 		if x.district.index in targetable:
 			x.set_for_target()
-			x.select_district.connect(send_target)
+			
 		
 func target_for_build():
 	_update_menu()
@@ -40,6 +45,7 @@ func target_for_build():
 	
 func send_target(d:District):
 	send_targeted_district.emit(d)
+	
 	
 func untarget():
 	for x in grid_container.get_children():

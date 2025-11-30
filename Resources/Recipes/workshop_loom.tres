@@ -12,7 +12,7 @@ name = "Loom"
 id = "workshop_loom"
 turns = 1
 inputs = Dictionary[ExtResource("1_upk44"), int]({
-ExtResource("2_q7e5w"): 2,
+ExtResource("2_q7e5w"): 1,
 ExtResource("3_ctukg"): 1
 })
 outputs = Dictionary[ExtResource("1_upk44"), int]({

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://dvmcif7ap84gc"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_low64"]
+[ext_resource type="Resource" uid="uid://cebnskotkm8hs" path="res://Resources/Stuff/honey.tres" id="2_ngutp"]
+[ext_resource type="Resource" uid="uid://cvj6j6supf8xr" path="res://Resources/Species/locust.tres" id="3_44i6b"]
+[ext_resource type="Resource" uid="uid://bhc2mmsi2hx6" path="res://Resources/Stuff/honeyed_locust.tres" id="4_kaxxc"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_6je71"]
+
+[resource]
+script = ExtResource("5_6je71")
+name = "Honeyed Locust"
+id = "bug_house_honeyed_locust"
+turns = 1
+inputs = Dictionary[ExtResource("1_low64"), int]({
+ExtResource("2_ngutp"): 1,
+ExtResource("3_44i6b"): 1
+})
+outputs = Dictionary[ExtResource("1_low64"), int]({
+ExtResource("4_kaxxc"): 3
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

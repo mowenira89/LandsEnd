@@ -7,24 +7,29 @@ var territory:Territory
 const PERSON_SELECT = preload("res://Menus/PersonSelectButton.tscn")
 
 func update_menu(t:Territory):
+	GM.menus.send_data.emit(null)
 	territory=t
 	for x in friends.get_children():
 		x.queue_free()
 	for x in foes.get_children():
 		x.queue_free()
 	for x in territory.units:
+		var icon = PERSON_SELECT.instantiate()
 		if x.friendly:
-			var icon = PERSON_SELECT.instantiate()
 			friends.add_child(icon)
-			icon.create(x.leader)
-			icon.clicked.connect(show_unit_view)
+		else:
+			foes.add_child(icon)
+		icon.create(x.leader)
+		icon.clicked.connect(show_unit_view)
 	for x in territory.NPCs:
-		if !x.unit:
-			if x.friendly:
-				var icon = PERSON_SELECT.instantiate()
+		if !x.unit and !x.boss_of:
+			var icon = PERSON_SELECT.instantiate()
+			if x.get_friendliness():
 				friends.add_child(icon)
-				icon.create(x)
-				icon.clicked.connect(show_unit_view)
+			else:
+				foes.add_child(icon)
+			icon.create(x)
+			icon.clicked.connect(show_unit_view)
 	GM.menus.switch_side_bottom(self)
 
 func show_unit_view(button):

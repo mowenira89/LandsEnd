@@ -1,17 +1,28 @@
-[gd_resource type="Resource" script_class="Research" load_steps=7 format=3 uid="uid://dp1hi5cgcithi"]
+[gd_resource type="Resource" script_class="Research" load_steps=13 format=3 uid="uid://dp1hi5cgcithi"]
 
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_8dwup"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_e5x45"]
 [ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_udgpv"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="3_gqx3l"]
 [ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_hlif7"]
 [ext_resource type="Resource" uid="uid://cfgx2mn2nq4cv" path="res://Resources/Research/metallurgy.tres" id="4_40epg"]
+[ext_resource type="Script" uid="uid://bgumvg008wgml" path="res://Data/conditions/need_stuff_condition.gd" id="4_kbgi2"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_802gj"]
+[ext_resource type="Resource" uid="uid://caxykwx2ho0tk" path="res://Resources/Stuff/iron_ore.tres" id="5_ocuyw"]
 [ext_resource type="Resource" uid="uid://25mq1rtxotke" path="res://Resources/Recipes/smelter_iron_ingot.tres" id="6_e5x45"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="6_rflv5"]
+
+[sub_resource type="Resource" id="Resource_esqrx"]
+script = ExtResource("4_kbgi2")
+stuff = ExtResource("5_ocuyw")
+metadata/_custom_type_script = "uid://bgumvg008wgml"
 
 [resource]
 script = ExtResource("3_hlif7")
 name = "Ironwork"
 recipes = Array[ExtResource("5_802gj")]([ExtResource("6_e5x45")])
-exp_to_unlock = 25
+exp_to_unlock = 100
 prerequisites = Array[ExtResource("3_hlif7")]([ExtResource("4_40epg")])
 inspiration_threshold = 10.0
+conditions = Array[ExtResource("3_gqx3l")]([SubResource("Resource_esqrx")])
 metadata/_custom_type_script = "uid://bllx77nhi7hwq"

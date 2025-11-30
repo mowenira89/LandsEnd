@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://bne6h3c2gd220"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_47kuv"]
+[ext_resource type="Resource" uid="uid://dnw12ex8mn5xu" path="res://Resources/Stuff/wax.tres" id="2_hlr3l"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="3_kwsdw"]
+[ext_resource type="Resource" uid="uid://ce7p4vcse8l0g" path="res://Resources/Stuff/candle.tres" id="4_llo36"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_20384"]
+
+[resource]
+script = ExtResource("5_20384")
+name = "Candle"
+id = "monastary_candle"
+turns = 1
+inputs = Dictionary[ExtResource("1_47kuv"), int]({
+ExtResource("2_hlr3l"): 1,
+ExtResource("3_kwsdw"): 1
+})
+outputs = Dictionary[ExtResource("1_47kuv"), int]({
+ExtResource("4_llo36"): 5
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

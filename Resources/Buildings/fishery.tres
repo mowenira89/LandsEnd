@@ -7,13 +7,13 @@
 [ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="4_g7b6d"]
 [ext_resource type="Resource" uid="uid://c2wuxkk4cgide" path="res://Resources/Stuff/barrel.tres" id="5_e7rxv"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_a6pby"]
-[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="7_a6pby"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_h4uyu"]
 [ext_resource type="Texture2D" uid="uid://b62rn6c0ug6yd" path="res://Assets/Images/BuildingImages/fishery.png" id="7_ly88r"]
 [ext_resource type="Script" uid="uid://doa1vbsvkk4tx" path="res://Data/buildings/camp.gd" id="8_ly88r"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="9_81gmf"]
 [ext_resource type="Resource" uid="uid://k7yaa1es4tcb" path="res://Resources/Recipes/fishery_smoked_fish.tres" id="10_g7b6d"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="10_ly88r"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="11_ly88r"]
+[ext_resource type="Resource" uid="uid://bv7yr3g4hikn4" path="res://Resources/Buildings/fish_pens.tres" id="12_81gmf"]
 
 [sub_resource type="Resource" id="Resource_e7rxv"]
 script = ExtResource("3_g7b6d")
@@ -37,4 +37,5 @@ staff_needed = Dictionary[int, int]({
 })
 production_slots = 2
 recipes = Array[ExtResource("7_h4uyu")]([ExtResource("10_g7b6d")])
+possible_extentions = Array[ExtResource("6_a6pby")]([ExtResource("12_81gmf")])
 metadata/_custom_type_script = "uid://doa1vbsvkk4tx"

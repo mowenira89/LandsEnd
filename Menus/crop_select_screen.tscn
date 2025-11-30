@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://wkpveam3vsc3"]
+
+[ext_resource type="Script" uid="uid://6i5ycoxb4tqt" path="res://Menus/crop_select_screen.gd" id="1_6rw3n"]
+
+[node name="CropSelectScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6rw3n")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="CropsLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Crops"
+
+[node name="Crops" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+columns = 6
+
+[node name="LivestockLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Livestock"
+
+[node name="Livestock" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+columns = 6
+
+[node name="Details" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Name" type="Label" parent="MarginContainer/Details"]
+layout_mode = 2
+
+[node name="Info" type="RichTextLabel" parent="MarginContainer/Details"]
+layout_mode = 2

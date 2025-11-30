@@ -12,9 +12,12 @@ vitamins = Dictionary[int, float]({
 name = "Meat"
 value = 2.0
 qualities = Dictionary[int, float]({
-0: 3.0
+0: 3.0,
+22: 3.0
 })
 mystic_qualities = Dictionary[int, float]({
 0: 1.0
 })
+food_type = 3
+diet_type = Array[int]([1, 0])
 metadata/_custom_type_script = "uid://cnmbjer2140vm"

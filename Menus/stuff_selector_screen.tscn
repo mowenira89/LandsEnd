@@ -24,15 +24,40 @@ layout_mode = 2
 color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/ColorRect/MarginContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Collection" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/ScrollContainer"]
 layout_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/ColorRect/MarginContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="ItemName" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Collection" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/ScrollContainer/CenterContainer"]
+[node name="Details" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"
+
+[connection signal="pressed" from="MarginContainer/ColorRect/MarginContainer/Button" to="." method="_on_button_pressed"]

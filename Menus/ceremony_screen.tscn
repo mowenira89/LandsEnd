@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://wtqjmbfmifd7"]
+[gd_scene load_steps=5 format=3 uid="uid://wtqjmbfmifd7"]
 
 [ext_resource type="Script" uid="uid://d2knneryj3hs4" path="res://Menus/ceremony_screen.gd" id="1_i2qs0"]
 [ext_resource type="PackedScene" uid="uid://7g2xivh0ne32" path="res://Menus/SelectorButton.tscn" id="1_i62wk"]
+[ext_resource type="PackedScene" uid="uid://nk2nf7urmdxa" path="res://Menus/PersonSelectButton.tscn" id="2_8t0y8"]
+[ext_resource type="PackedScene" uid="uid://dmatujyhdawrv" path="res://Menus/dedication_selection_button.tscn" id="4_mipcv"]
 
 [node name="CeremonyScreen" type="Control"]
 layout_mode = 3
@@ -28,8 +30,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 40
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Priest" parent="MarginContainer/HBoxContainer/VBoxContainer4" instance=ExtResource("2_8t0y8")]
+layout_mode = 2
+size_flags_vertical = 4
+_size = 100
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "Priest"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
@@ -41,10 +66,10 @@ layout_mode = 2
 text = "Incense"
 horizontal_alignment = 1
 
-[node name="SelectorButton" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("1_i62wk")]
+[node name="Incense" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("1_i62wk")]
 layout_mode = 2
 
-[node name="SelectorButton2" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("1_i62wk")]
+[node name="Fuel" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("1_i62wk")]
 layout_mode = 2
 
 [node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -56,12 +81,18 @@ horizontal_alignment = 1
 layout_mode = 2
 alignment = 1
 
-[node name="SelectorButton2" parent="MarginContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("1_i62wk")]
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Offering"
+horizontal_alignment = 1
+
+[node name="Offering" parent="MarginContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("1_i62wk")]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="Ceremony" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-text = "Ceremony"
+text = "Choose
+Ceremony"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -69,16 +100,58 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
-text = "Offering"
+text = "Music"
 horizontal_alignment = 1
 
-[node name="SelectorButton" parent="MarginContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("1_i62wk")]
+[node name="Music" parent="MarginContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("1_i62wk")]
 layout_mode = 2
 
-[node name="SelectorButton2" parent="MarginContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("1_i62wk")]
+[node name="Libation" parent="MarginContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("1_i62wk")]
 layout_mode = 2
 
 [node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 text = "Libation"
 horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+text = "Target"
+horizontal_alignment = 1
+
+[node name="Target" parent="MarginContainer/HBoxContainer/VBoxContainer5" instance=ExtResource("4_mipcv")]
+layout_mode = 2
+_size = 150
+
+[node name="Button" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Commit to Ceremony"
+
+[node name="InfoContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+alignment = 1
+
+[connection signal="open" from="MarginContainer/HBoxContainer/VBoxContainer/Incense" to="." method="_on_incense_open"]
+[connection signal="removing" from="MarginContainer/HBoxContainer/VBoxContainer/Incense" to="." method="_on_incense_removing"]
+[connection signal="open" from="MarginContainer/HBoxContainer/VBoxContainer/Fuel" to="." method="_on_fuel_open"]
+[connection signal="removing" from="MarginContainer/HBoxContainer/VBoxContainer/Fuel" to="." method="_on_fuel_removing"]
+[connection signal="open" from="MarginContainer/HBoxContainer/VBoxContainer2/Offering" to="." method="_on_offering_open"]
+[connection signal="removing" from="MarginContainer/HBoxContainer/VBoxContainer2/Offering" to="." method="_on_offering_removing"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer2/Ceremony" to="." method="_on_ceremony_pressed"]
+[connection signal="open" from="MarginContainer/HBoxContainer/VBoxContainer3/Libation" to="." method="_on_libation_open"]
+[connection signal="removing" from="MarginContainer/HBoxContainer/VBoxContainer3/Libation" to="." method="_on_libation_removing"]
+[connection signal="open" from="MarginContainer/HBoxContainer/VBoxContainer5/Target" to="." method="_on_target_open"]
+[connection signal="removing" from="MarginContainer/HBoxContainer/VBoxContainer5/Target" to="." method="_on_target_removing"]
+[connection signal="pressed" from="MarginContainer/Button" to="." method="_on_button_pressed"]

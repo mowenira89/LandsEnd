@@ -1,17 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://nk2nf7urmdxa"]
+[gd_scene load_steps=5 format=3 uid="uid://nk2nf7urmdxa"]
 
 [ext_resource type="Script" uid="uid://guc4a2i7c5nk" path="res://Menus/person_select_button.gd" id="1_cm5uf"]
 
-[node name="PersonSelectorButton" type="Button"]
-custom_minimum_size = Vector2(75, 75)
-offset_right = 8.0
-offset_bottom = 8.0
-theme_override_font_sizes/font_size = 44
-text = "+"
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm5uf"]
+bg_color = Color(0.077095665, 0.19288415, 0.07484082, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6m6v"]
+bg_color = Color(0.35492724, 0.69557595, 0.24254686, 1)
+
+[sub_resource type="Theme" id="Theme_dnebw"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_cm5uf")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_a6m6v")
+
+[node name="PersonSelectorButton" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_cm5uf")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Eol Sassafrass"
+
+[node name="PersonSelectorButton" type="Button" parent="."]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+theme_override_font_sizes/font_size = 44
+text = "+"
+
+[node name="TextureRect" type="TextureRect" parent="PersonSelectorButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,5 +38,45 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
 
-[connection signal="pressed" from="." to="." method="_on_pressed"]
-[connection signal="gui_input" from="TextureRect" to="." method="_on_texture_rect_gui_input"]
+[node name="ProgressBar" type="ProgressBar" parent="PersonSelectorButton/TextureRect"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_dnebw")
+show_percentage = false
+
+[node name="BattleOrdered" type="ColorRect" parent="PersonSelectorButton"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0.5882353, 0.5882353, 0.7921569)
+
+[node name="Selector" type="ColorRect" parent="PersonSelectorButton"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(1, 0.015686275, 0.15294118, 0.78431374)
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="PersonSelectorButton" to="." method="_on_person_selector_button_pressed"]
+[connection signal="gui_input" from="PersonSelectorButton/TextureRect" to="." method="_on_texture_rect_gui_input"]
+[connection signal="mouse_entered" from="PersonSelectorButton/TextureRect" to="." method="_on_texture_rect_mouse_entered"]
+[connection signal="mouse_exited" from="PersonSelectorButton/TextureRect" to="." method="_on_texture_rect_mouse_exited"]
+[connection signal="gui_input" from="PersonSelectorButton/BattleOrdered" to="PersonSelectorButton" method="_on_battle_ordered_gui_input"]
+[connection signal="gui_input" from="PersonSelectorButton/Selector" to="." method="_on_selector_gui_input"]
+[connection signal="gui_input" from="PersonSelectorButton/Selector" to="PersonSelectorButton" method="_on_selector_gui_input"]

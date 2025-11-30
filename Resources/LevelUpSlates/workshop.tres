@@ -1,61 +1,68 @@
-[gd_resource type="Resource" script_class="LevelUpSlates" load_steps=14 format=3 uid="uid://bkm1nwvtb22w3"]
+[gd_resource type="Resource" script_class="LevelUpSlates" load_steps=15 format=3 uid="uid://bkm1nwvtb22w3"]
 
-[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_sjcel"]
-[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="2_ifwxq"]
-[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="3_nkcwt"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="4_b6kio"]
-[ext_resource type="Script" uid="uid://cufwo02xpojny" path="res://Data/level_up_slates.gd" id="5_mdcg7"]
+[ext_resource type="Script" uid="uid://cufwo02xpojny" path="res://Data/level_up_slates.gd" id="1_sjcel"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="2_ifwxq"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_nkcwt"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="4_b6kio"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="5_mdcg7"]
 
 [sub_resource type="Resource" id="Resource_iam2k"]
-script = ExtResource("3_nkcwt")
-extention_slots = 1
+script = ExtResource("2_ifwxq")
+production_slots = 1
 metadata/_custom_type_script = "uid://cfwodcj64kdgn"
 
 [sub_resource type="Resource" id="Resource_eej25"]
-script = ExtResource("3_nkcwt")
-production_slots = 1
+script = ExtResource("2_ifwxq")
+extention_slots = 1
 metadata/_custom_type_script = "uid://cfwodcj64kdgn"
 
 [sub_resource type="Resource" id="Resource_cdp4r"]
-script = ExtResource("3_nkcwt")
-extention_slots = 1
-production_slots = 1
+script = ExtResource("2_ifwxq")
+store_cap_up = 50
 metadata/_custom_type_script = "uid://cfwodcj64kdgn"
 
 [sub_resource type="Resource" id="Resource_ligne"]
-script = ExtResource("3_nkcwt")
+script = ExtResource("2_ifwxq")
 production_slots = 1
 metadata/_custom_type_script = "uid://cfwodcj64kdgn"
 
 [sub_resource type="Resource" id="Resource_b1ikq"]
-script = ExtResource("3_nkcwt")
-extention_slots = 2
-district_upgrade = Array[int]([3])
+script = ExtResource("2_ifwxq")
+extention_slots = 1
 metadata/_custom_type_script = "uid://cfwodcj64kdgn"
 
 [sub_resource type="Resource" id="Resource_b8pwk"]
-script = ExtResource("3_nkcwt")
+script = ExtResource("2_ifwxq")
 production_slots = 1
 metadata/_custom_type_script = "uid://cfwodcj64kdgn"
 
 [sub_resource type="Resource" id="Resource_jwqae"]
-script = ExtResource("3_nkcwt")
+script = ExtResource("2_ifwxq")
 production_slots = 1
 metadata/_custom_type_script = "uid://cfwodcj64kdgn"
 
 [sub_resource type="Resource" id="Resource_nqfrn"]
-script = ExtResource("3_nkcwt")
+script = ExtResource("2_ifwxq")
 production_slots = 1
 metadata/_custom_type_script = "uid://cfwodcj64kdgn"
 
+[sub_resource type="Resource" id="Resource_dlxuv"]
+script = ExtResource("2_ifwxq")
+extention_slots = 1
+store_cap_up = 50
+metadata/_custom_type_script = "uid://cfwodcj64kdgn"
+
 [resource]
-script = ExtResource("5_mdcg7")
-lvl2 = SubResource("Resource_iam2k")
-lvl3 = SubResource("Resource_eej25")
-lvl4 = SubResource("Resource_cdp4r")
-lvl5 = SubResource("Resource_ligne")
-lvl6 = SubResource("Resource_b1ikq")
-lvl7 = SubResource("Resource_b8pwk")
-lvl8 = SubResource("Resource_jwqae")
-lvl9 = SubResource("Resource_nqfrn")
+script = ExtResource("1_sjcel")
+slates = Dictionary[int, ExtResource("2_ifwxq")]({
+2: SubResource("Resource_iam2k"),
+3: SubResource("Resource_eej25"),
+4: SubResource("Resource_cdp4r"),
+5: SubResource("Resource_ligne"),
+6: SubResource("Resource_b1ikq"),
+7: SubResource("Resource_b8pwk"),
+8: SubResource("Resource_jwqae"),
+9: SubResource("Resource_nqfrn"),
+10: SubResource("Resource_dlxuv")
+})
 metadata/_custom_type_script = "uid://cufwo02xpojny"

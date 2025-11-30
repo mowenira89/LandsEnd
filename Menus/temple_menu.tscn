@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnnbemsnswy7i"]
+[gd_scene load_steps=6 format=3 uid="uid://bnnbemsnswy7i"]
 
 [ext_resource type="PackedScene" uid="uid://7g2xivh0ne32" path="res://Menus/SelectorButton.tscn" id="1_jg1bn"]
 [ext_resource type="Script" uid="uid://cmres5rsus1im" path="res://Menus/temple_menu.gd" id="1_u82w4"]
+[ext_resource type="PackedScene" uid="uid://dw5e20m0k7xyn" path="res://Menus/production_container.tscn" id="2_2y3oh"]
 [ext_resource type="PackedScene" uid="uid://nk2nf7urmdxa" path="res://Menus/PersonSelectButton.tscn" id="3_om8m8"]
+[ext_resource type="PackedScene" uid="uid://dmatujyhdawrv" path="res://Menus/dedication_selection_button.tscn" id="5_x6c1n"]
 
 [node name="TempleMenu" type="Control"]
 layout_mode = 3
@@ -42,43 +44,102 @@ layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
+alignment = 1
+
+[node name="ProdContainers" type="GridContainer" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="prod1" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/ProdContainers" instance=ExtResource("2_2y3oh")]
+layout_mode = 2
+
+[node name="prod2" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/ProdContainers" instance=ExtResource("2_2y3oh")]
+layout_mode = 2
+
+[node name="prod3" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/ProdContainers" instance=ExtResource("2_2y3oh")]
+layout_mode = 2
+
+[node name="prod4" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/ProdContainers" instance=ExtResource("2_2y3oh")]
+layout_mode = 2
+
+[node name="prod5" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/ProdContainers" instance=ExtResource("2_2y3oh")]
+layout_mode = 2
+
+[node name="prod6" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/ProdContainers" instance=ExtResource("2_2y3oh")]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "High
+Priest"
+horizontal_alignment = 1
+
+[node name="PersonSelectorButton2" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("3_om8m8")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="BonusHolder" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="SelectorButton" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder" instance=ExtResource("1_jg1bn")]
+[node name="MusicLabel" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder"]
+layout_mode = 2
+text = "Music:"
+horizontal_alignment = 1
+
+[node name="Music" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder" instance=ExtResource("1_jg1bn")]
 layout_mode = 2
 
-[node name="SelectorButton2" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder" instance=ExtResource("1_jg1bn")]
+[node name="IncenseLabel" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder"]
+layout_mode = 2
+text = "Incense:"
+horizontal_alignment = 1
+
+[node name="Incense" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder" instance=ExtResource("1_jg1bn")]
 layout_mode = 2
 
-[node name="PersonSelectorButton" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_om8m8")]
+[node name="FuelLabel" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder"]
+layout_mode = 2
+text = "Hearth 
+Fuel:"
+horizontal_alignment = 1
+
+[node name="Fuel" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder" instance=ExtResource("1_jg1bn")]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Dedication:"
+
+[node name="Dedication" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("5_x6c1n")]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="DedicationInfo" type="RichTextLabel" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Name"
 
-[node name="Kind" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Ritual1" type="Button" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Kind"
+text = "Select Ceremony"
 
-[node name="Affinity" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Affinity"
-
-[node name="Regalia" type="Label" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Regalia"
-
-[node name="Button" type="Button" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Ritual 1"
-
-[node name="Button2" type="Button" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer"]
+[node name="Ritual2" type="Button" parent="MarginContainer/ColorRect/MarginContainer/VBoxContainer"]
 visible = false
 layout_mode = 2
 text = "Ritual 2"
+
+[connection signal="open" from="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder/Music" to="." method="_on_music_open"]
+[connection signal="removing" from="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder/Music" to="." method="_on_music_removing"]
+[connection signal="open" from="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder/Incense" to="." method="_on_incense_open"]
+[connection signal="removing" from="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder/Incense" to="." method="_on_incense_removing"]
+[connection signal="open" from="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder/Fuel" to="." method="_on_fuel_open"]
+[connection signal="removing" from="MarginContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/BonusHolder/Fuel" to="." method="_on_fuel_removing"]
+[connection signal="pressed" from="MarginContainer/ColorRect/MarginContainer/VBoxContainer/Ritual1" to="." method="_on_ritual_1_pressed"]
+[connection signal="pressed" from="MarginContainer/ColorRect/MarginContainer/VBoxContainer/Ritual2" to="." method="_on_ritual_2_pressed"]

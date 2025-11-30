@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://ceabqeusumj7b"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_h5rwg"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="2_6j72c"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="3_10twb"]
+[ext_resource type="Resource" uid="uid://cfcf3o761kpox" path="res://Resources/Stuff/longbow.tres" id="4_m6pge"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_c7v6y"]
+
+[resource]
+script = ExtResource("5_c7v6y")
+name = "Longbow"
+id = "armory_longbow"
+turns = 1
+inputs = Dictionary[ExtResource("1_h5rwg"), int]({
+ExtResource("2_6j72c"): 1,
+ExtResource("3_10twb"): 1
+})
+outputs = Dictionary[ExtResource("1_h5rwg"), int]({
+ExtResource("4_m6pge"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

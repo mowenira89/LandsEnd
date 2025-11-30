@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=6 format=3 uid="uid://c5r55i24jswhv"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_y5v3i"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_5erdg"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_5erdg"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_3d8h0"]
+
+[sub_resource type="Resource" id="Resource_w3wjw"]
+script = ExtResource("5_3d8h0")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_5erdg")
+crop_level = 1
+vitamins = Dictionary[int, float]({
+1: 1.0,
+2: 3.0
+})
+water_need = 1.0
+health = 80.0
+startup_time = 1.0
+dead_season = Array[int]([6, 7, 8])
+kind = 6
+harvest_season = Array[int]([4, 5])
+rarity = 60.0
+name = "Potato"
+stats = SubResource("Resource_w3wjw")
+qualities = Dictionary[int, float]({
+0: 1.0,
+20: 1.0,
+22: 1.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 1.0,
+1: 1.0
+})
+exp_to = Dictionary[String, float]({
+"Farming": 1.0
+})
+found_in = Array[int]([0, 2, 1])
+food_type = 2
+diet_type = Array[int]([0, 2])
+metadata/_custom_type_script = "uid://wxkcemfn60gw"

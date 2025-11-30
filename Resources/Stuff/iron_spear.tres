@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="Stuff" load_steps=5 format=3 uid="uid://cyjmvps2jrmmu"]
+[gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://cyjmvps2jrmmu"]
 
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_dyaiy"]
-[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_rf31n"]
+[ext_resource type="Script" uid="uid://6vtv547g3vpj" path="res://Data/weapon.gd" id="2_j1v24"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="3_j1v24"]
 
 [sub_resource type="Resource" id="Resource_xk0gt"]
@@ -10,7 +10,10 @@ off = 4.0
 metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
-script = ExtResource("1_rf31n")
+script = ExtResource("2_j1v24")
+damage_type = 1
+damage_boost = 1.0
+prowess_bonus = Array[int]([13])
 name = "Iron Spear"
 stats = SubResource("Resource_xk0gt")
 value = 20.0

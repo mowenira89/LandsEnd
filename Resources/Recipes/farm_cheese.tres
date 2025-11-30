@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://0wi5py3gdifk"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_ttpkv"]
+[ext_resource type="Resource" uid="uid://cskujfa1ue1oe" path="res://Resources/Stuff/milk.tres" id="2_mecs2"]
+[ext_resource type="Resource" uid="uid://cc08mofd84smf" path="res://Resources/Stuff/cheese.tres" id="3_v7vy8"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_ly4le"]
+
+[resource]
+script = ExtResource("4_ly4le")
+name = "Cheese"
+id = "farm_cheese"
+turns = 1
+inputs = Dictionary[ExtResource("1_ttpkv"), int]({
+ExtResource("2_mecs2"): 1
+})
+outputs = Dictionary[ExtResource("1_ttpkv"), int]({
+ExtResource("3_v7vy8"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

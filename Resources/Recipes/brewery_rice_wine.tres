@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://bnkv3wt2jcnwa"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_ka0l3"]
+[ext_resource type="Resource" uid="uid://bi1h6r5lyjqlk" path="res://Resources/Stuff/rice.tres" id="2_j0ag3"]
+[ext_resource type="Resource" uid="uid://dt6xa2pnw3n6t" path="res://Resources/Stuff/rice_wine.tres" id="4_mdhcj"]
+[ext_resource type="Resource" uid="uid://ce5nq1lgmy21k" path="res://Resources/Stuff/vinegar.tres" id="5_j0ag3"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_xprlu"]
+
+[resource]
+script = ExtResource("5_xprlu")
+name = "Rice Wine"
+id = "brewery_rice_wine"
+turns = 3
+inputs = Dictionary[ExtResource("1_ka0l3"), int]({
+ExtResource("2_j0ag3"): 1
+})
+outputs = Dictionary[ExtResource("1_ka0l3"), int]({
+ExtResource("4_mdhcj"): 2,
+ExtResource("5_j0ag3"): 1
+})
+exp_to = Dictionary[String, float]({
+"Advanced Distillation": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

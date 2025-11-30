@@ -12,6 +12,7 @@ mystic_qualities = Dictionary[int, float]({
 })
 exp_to = Dictionary[String, float]({
 "Concrete": 1.0,
+"Orangesmithing": 1.0,
 "Porcelain": 1.0
 })
 found_in = Array[int]([1])

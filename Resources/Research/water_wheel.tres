@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Research" load_steps=9 format=3 uid="uid://6cfwfyhema3w"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_i7a2w"]
+[ext_resource type="Resource" uid="uid://cyli28x4doa8v" path="res://Resources/Buildings/water_wheel.tres" id="2_tik3t"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_rg6mm"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_mto1w"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_p2wq4"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_qdxh7"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_ip6uq"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_ut1vg"]
+
+[resource]
+script = ExtResource("7_ip6uq")
+name = "Water Wheel"
+buildings = Array[ExtResource("1_i7a2w")]([ExtResource("2_tik3t")])
+exp_to_unlock = 100
+inspiration_threshold = 15.0
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

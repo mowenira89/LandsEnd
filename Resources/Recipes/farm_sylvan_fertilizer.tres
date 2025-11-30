@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cl6j0scg0ag0w"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_jrjm3"]
+[ext_resource type="Resource" uid="uid://ccc85f3vs0de6" path="res://Resources/Stuff/manure.tres" id="2_awcum"]
+[ext_resource type="Resource" uid="uid://cm0xo6ydyl2bi" path="res://Resources/Stuff/gypsum.tres" id="3_42ish"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_iei5b"]
+
+[resource]
+script = ExtResource("4_iei5b")
+name = "Syvan Fertilizer"
+id = "farm_sylvan_fertilizer"
+turns = 1
+inputs = Dictionary[ExtResource("1_jrjm3"), int]({
+ExtResource("2_awcum"): 1,
+ExtResource("3_42ish"): 1
+})
+exp_to = Dictionary[String, float]({
+"Sylvan Farming": 1.0
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

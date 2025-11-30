@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Research" load_steps=12 format=3 uid="uid://qdp85ciwpbb1"]
+
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_5lkfm"]
+[ext_resource type="Resource" uid="uid://b8xf8dvwu1ofs" path="res://Resources/Buildings/dairy.tres" id="2_f526n"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="3_6ks3s"]
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="4_a3t8x"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_ifb0y"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_g8tmc"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_tmssr"]
+[ext_resource type="Resource" uid="uid://dmffih27j5sab" path="res://Resources/Research/farming.tres" id="8_jaecx"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_s804j"]
+[ext_resource type="Resource" uid="uid://0wi5py3gdifk" path="res://Resources/Recipes/farm_cheese.tres" id="10_6ks3s"]
+[ext_resource type="Resource" uid="uid://d0mbtt4p0jy1x" path="res://Resources/Recipes/restaurant_cheese.tres" id="11_a3t8x"]
+
+[resource]
+script = ExtResource("7_tmssr")
+name = "Dairy"
+recipes = Array[ExtResource("9_s804j")]([ExtResource("10_6ks3s"), ExtResource("11_a3t8x")])
+buildings = Array[ExtResource("1_5lkfm")]([ExtResource("2_f526n")])
+exp_to_unlock = 20
+prerequisites = Array[ExtResource("7_tmssr")]([ExtResource("8_jaecx")])
+metadata/_custom_type_script = "uid://bllx77nhi7hwq"

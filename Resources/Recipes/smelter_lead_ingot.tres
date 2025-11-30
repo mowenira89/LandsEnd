@@ -19,5 +19,7 @@ ExtResource("3_xho0p"): 1
 exp_to = Dictionary[String, float]({
 "Whitesmithing": 1.0
 })
-pollution = 5.0
+unlocked = true
+air_pollution = 2.0
+water_pollution = 2.0
 metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

@@ -1,20 +1,17 @@
 [gd_resource type="Resource" script_class="Building" load_steps=14 format=3 uid="uid://deyhnd1rwksgy"]
 
-[ext_resource type="Script" uid="uid://shaorb866qv1" path="res://Data/buffs.gd" id="1_v8dg4"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_uejv6"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_vac5f"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="4_e24cy"]
 [ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="5_t2fhg"]
-[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_4g0oi"]
 [ext_resource type="Texture2D" uid="uid://dyc7fwi7tecoo" path="res://Assets/Images/BuildingImages/mill.png" id="6_uejv6"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="8_2cxuc"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="8_vac5f"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_dy8vr"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="9_e24cy"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="10_f8sqq"]
-
-[sub_resource type="Resource" id="Resource_e6cqj"]
-script = ExtResource("1_v8dg4")
-metadata/_custom_type_script = "uid://shaorb866qv1"
+[ext_resource type="Resource" uid="uid://oy6b221wxmcl" path="res://Resources/Buildings/bakery.tres" id="10_vac5f"]
+[ext_resource type="Resource" uid="uid://b817ifwuf1ohv" path="res://Resources/Recipes/mill_flour.tres" id="11_t2fhg"]
+[ext_resource type="Resource" uid="uid://c2w2u2p8w7gw5" path="res://Resources/Recipes/mill_sugar.tres" id="12_4g0oi"]
 
 [sub_resource type="Resource" id="Resource_1ppwd"]
 script = ExtResource("10_f8sqq")
@@ -23,7 +20,6 @@ metadata/_custom_type_script = "uid://d2hat5snxwp82"
 [resource]
 script = ExtResource("8_2cxuc")
 name = "Mill"
-buffs = SubResource("Resource_e6cqj")
 stats = SubResource("Resource_1ppwd")
 image = ExtResource("6_uejv6")
 construction_time = 2
@@ -35,4 +31,6 @@ staff_needed = Dictionary[int, int]({
 0: 5
 })
 district_type = 3
+recipes = Array[ExtResource("9_dy8vr")]([ExtResource("11_t2fhg"), ExtResource("12_4g0oi")])
+possible_extentions = Array[ExtResource("8_2cxuc")]([ExtResource("10_vac5f")])
 metadata/_custom_type_script = "uid://jgjaoud3lh53"

@@ -1,12 +1,9 @@
 class_name SelectorButton extends Button
 
-@onready var texture_rect: TextureRect = $TextureRect
-
 signal removing
 signal open
 var data
-signal clicked
-@export var _size:int
+@export var _size:int=75
 
 func _ready():
 	removing.connect(reset)
@@ -15,7 +12,6 @@ func _ready():
 		
 func create(s:Stuff):
 	data=s
-	text=data.name
 	if data:
 		text=data.name
 		add_theme_font_size_override("font_size",16)
@@ -23,16 +19,19 @@ func create(s:Stuff):
 		text="+"
 		add_theme_font_size_override("font_size",44)
 		
-		
-func _on_texture_rect_gui_input(event: InputEvent) -> void:
-	if event.is_action_released("Right Click"):
-		removing.emit(self)
-	if event.is_action_released("Click"):
-		clicked.emit(self)
 
 func _on_pressed() -> void:
 	open.emit(self)
+	var s = await GM.menus.send_data
+	if s is Stuff:
+		create(s)
+	elif s is String:
+		create(RM.stuff[s])
 
 func reset():
 	data=null
-	texture_rect.visible=false
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	if event.is_action_released("Right Click"):
+		removing.emit(self)

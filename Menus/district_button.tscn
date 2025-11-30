@@ -14,7 +14,7 @@ Button/styles/hover = SubResource("StyleBoxFlat_it08n")
 Button/styles/normal = SubResource("StyleBoxFlat_v00ma")
 Button/styles/pressed = null
 
-[node name="District" type="Button"]
+[node name="District" type="ColorRect"]
 custom_minimum_size = Vector2(150, 150)
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,6 +23,7 @@ offset_right = -1650.0
 offset_bottom = -700.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.38039216, 0.31764707, 0, 1)
 script = ExtResource("1_it08n")
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -75,7 +76,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_6m70w")
 
-[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="gui_input" from="SelectorButton" to="." method="_on_selector_button_gui_input"]
 [connection signal="mouse_entered" from="SelectorButton" to="." method="_on_selector_button_mouse_entered"]

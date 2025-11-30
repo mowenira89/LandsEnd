@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CookhouseRecipe" load_steps=7 format=3 uid="uid://cl6miqfxnocvj"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_5nxli"]
+[ext_resource type="Resource" uid="uid://detd76v7ch5q5" path="res://Resources/Stuff/noodles.tres" id="2_q7e5b"]
+[ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="3_o67le"]
+[ext_resource type="Resource" uid="uid://cdvqigqcuonrx" path="res://Resources/Stuff/crop_onion.tres" id="4_jy8vv"]
+[ext_resource type="Resource" uid="uid://dunbs3tuibbkw" path="res://Resources/Stuff/stir_fry.tres" id="5_k58hg"]
+[ext_resource type="Script" uid="uid://bbt62vx1q0tfq" path="res://Data/cookhouse_recipe.gd" id="6_wb7qr"]
+
+[resource]
+script = ExtResource("6_wb7qr")
+difficulty = 40.0
+name = "Stir Fry"
+id = "cookhouse_stir_fry"
+turns = 1
+inputs = Dictionary[ExtResource("1_5nxli"), int]({
+ExtResource("2_q7e5b"): 1,
+ExtResource("3_o67le"): 1,
+ExtResource("4_jy8vv"): 1
+})
+outputs = Dictionary[ExtResource("1_5nxli"), int]({
+ExtResource("5_k58hg"): 3
+})
+exp_to = Dictionary[String, float]({
+"Restaurant": 1.0
+})
+metadata/_custom_type_script = "uid://bbt62vx1q0tfq"

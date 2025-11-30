@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Research" load_steps=15 format=3 uid="uid://bhskv37cf1khi"]
+[gd_resource type="Resource" script_class="Research" load_steps=16 format=3 uid="uid://bhskv37cf1khi"]
 
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_k2asy"]
 [ext_resource type="Resource" uid="uid://ceoktbvqlfxoq" path="res://Resources/Buildings/workshop_textile.tres" id="2_cjev0"]
@@ -9,16 +9,17 @@
 [ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="7_5iag7"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_nkc5k"]
 [ext_resource type="Resource" uid="uid://628r3srsrfjx" path="res://Resources/Recipes/camp_canvas.tres" id="9_dynle"]
-[ext_resource type="Resource" uid="uid://q8874acykipv" path="res://Resources/Recipes/camp_simple_clohing_canvas.tres" id="10_iv2rc"]
+[ext_resource type="Resource" uid="uid://q8874acykipv" path="res://Resources/Recipes/camp_simple_clothing_canvas.tres" id="10_iv2rc"]
 [ext_resource type="Resource" uid="uid://b075l3lc04412" path="res://Resources/Recipes/textile_canvas.tres" id="11_cvxno"]
 [ext_resource type="Resource" uid="uid://b6wj3274fhas" path="res://Resources/Recipes/workshop_canvas.tres" id="12_m2ctr"]
 [ext_resource type="Resource" uid="uid://b6l4iyis0yxri" path="res://Resources/Recipes/camp_rope.tres" id="13_4vnvf"]
 [ext_resource type="Resource" uid="uid://bak5oibo45ppn" path="res://Resources/Recipes/workshop_rope.tres" id="14_bxo66"]
+[ext_resource type="Resource" uid="uid://yb08w6lad2g7" path="res://Resources/Recipes/farm_canvas.tres" id="15_bxo66"]
 
 [resource]
 script = ExtResource("7_5iag7")
 name = "Textiles"
-recipes = Array[ExtResource("8_nkc5k")]([ExtResource("9_dynle"), ExtResource("10_iv2rc"), ExtResource("11_cvxno"), ExtResource("12_m2ctr"), ExtResource("13_4vnvf"), ExtResource("14_bxo66")])
+recipes = Array[ExtResource("8_nkc5k")]([ExtResource("9_dynle"), ExtResource("10_iv2rc"), ExtResource("11_cvxno"), ExtResource("12_m2ctr"), ExtResource("13_4vnvf"), ExtResource("14_bxo66"), ExtResource("15_bxo66"), ExtResource("14_bxo66")])
 buildings = Array[ExtResource("1_k2asy")]([ExtResource("2_cjev0")])
 exp_to_unlock = 25
 inspiration_threshold = 5.0

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dya86pcc7ixpt"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_ok7eo"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="2_myx4k"]
+[ext_resource type="Resource" uid="uid://b0xevwyexmoxh" path="res://Resources/Stuff/lance.tres" id="3_dok0p"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="4_ysrml"]
+
+[resource]
+script = ExtResource("4_ysrml")
+name = "Lance"
+id = "armory_lance"
+turns = 1
+inputs = Dictionary[ExtResource("1_ok7eo"), int]({
+ExtResource("2_myx4k"): 1
+})
+outputs = Dictionary[ExtResource("1_ok7eo"), int]({
+ExtResource("3_dok0p"): 1
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

@@ -14,7 +14,7 @@ inputs = Dictionary[ExtResource("1_g5fsm"), int]({
 ExtResource("2_qf1lc"): 1
 })
 outputs = Dictionary[ExtResource("1_g5fsm"), int]({
-ExtResource("3_lr02d"): 2
+ExtResource("3_lr02d"): 3
 })
 exp_to = Dictionary[String, float]({
 "Restaurant": 1.0

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://cirp8ao86yp21"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_pf3x6"]
+[ext_resource type="Resource" uid="uid://inswy00n3ae5" path="res://Resources/Stuff/wood.tres" id="2_8l5yj"]
+[ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="3_m7f1x"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="4_o61nq"]
+[ext_resource type="Resource" uid="uid://cepnxaih24slh" path="res://Resources/Stuff/axe.tres" id="5_4icko"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="6_4bymo"]
+
+[resource]
+script = ExtResource("6_4bymo")
+name = "Axe"
+id = "workshop_axe"
+turns = 1
+inputs = Dictionary[ExtResource("1_pf3x6"), int]({
+ExtResource("2_8l5yj"): 1,
+ExtResource("3_m7f1x"): 1,
+ExtResource("4_o61nq"): 1
+})
+outputs = Dictionary[ExtResource("1_pf3x6"), int]({
+ExtResource("5_4icko"): 2
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

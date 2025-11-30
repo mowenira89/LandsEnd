@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Ceremony" load_steps=5 format=3 uid="uid://dpge23lfwvg2k"]
+[gd_resource type="Resource" script_class="Ceremony" load_steps=6 format=3 uid="uid://dpge23lfwvg2k"]
 
 [ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_dxd5r"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_qr0w2"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_umw2r"]
 [ext_resource type="Resource" uid="uid://dduf4xcy2iye2" path="res://Resources/Stuff/tea.tres" id="3_qr0w2"]
 [ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="4_w74i8"]
@@ -9,10 +10,11 @@
 script = ExtResource("4_w74i8")
 name = "Tea Ceremony"
 length = 1
-requirements = Dictionary[ExtResource("2_umw2r"), int]({
-ExtResource("3_qr0w2"): 1
+requirements = Dictionary[ExtResource("2_umw2r"), float]({
+ExtResource("3_qr0w2"): 1.0
 })
-requirements_of_quality = Dictionary[int, int]({
-15: 1
+requirements_of_quality = Dictionary[int, float]({
+15: 5.0
 })
+monks_needed = 5
 metadata/_custom_type_script = "uid://h1hksovre84"

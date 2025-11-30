@@ -40,6 +40,7 @@ func update_tile():
 		travelers.visible=true
 
 func _on_button_pressed() -> void:
+	GM.menus.send_data.emit(null)
 	tile_clicked.emit(self)
 
 func disable():

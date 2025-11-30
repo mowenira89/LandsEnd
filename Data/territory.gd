@@ -1,18 +1,19 @@
 class_name Territory extends Resource
 
-@export var name:String
-@export var districts:Array[District]
-@export var coords:Vector2i
-@export var stockpile:Stockpile
-@export var population:Population
-@export var temp_jobs:Dictionary[Pop.CLASS,int]
-@export var buffs:Buffs
-@export var nymphoi:Pop
-@export var units:Array[Unit]=[]
-@export var NPCs:Array[Person]=[]
-	
+var name:String
+var districts:Array[District]
+var coords:Vector2i
+var stockpile:Stockpile
+var population:Population
+var temp_jobs:Dictionary[Pop.CLASS,int]
+var buffs:Buffs
+var nymphoi:Pop
+var units:Array[Unit]=[]
+var NPCs:Array[Person]=[]
+
 func create(c:Vector2i):
 	coords=c
+	name = NM.territory_names.pick_random()+" "+NM.territory_names.pick_random()
 	for x in 8:
 		var nd = District.new()
 		districts.append(nd)
@@ -52,28 +53,32 @@ func get_known_fauna():
 	var r = []
 	for x in districts:
 		for y in x.discovered_game:
-			r.append(y)
+			if y not in r:
+				r.append(y)
 	return r
 	
 func get_known_flora():
 	var r = []
 	for x in districts:
 		for y in x.discovered_flora:
-			r.append(y)
+			if y not in r:
+				r.append(y)
 	return r
 	
 func get_known_resources():
 	var r = []
 	for x in districts:
 		for y in x.discovered_resources:
-			r.append(y)
+			if y not in r:
+				r.append(y)
 	return r
 		
 func get_known_forage():
 	var r = []
 	for x in districts:
 		for y in x.discovered_forage:
-			r.append(y)
+			if y not in r:
+				r.append(y)
 	return r
 		
 	
@@ -102,3 +107,53 @@ func get_wild_district_indexes():
 		if x.type==0:
 			r.append(x.index)
 	return r
+
+func get_river_districts():
+	var r = []
+	for x in districts:
+		if x.biome.terrain!=Biome.TERRAIN.Barren:
+			r.append(x.index)
+	return r
+
+func save():
+	var s={}
+	s['name']=name
+
+func get_mineable_districts():
+	var r = []
+	for x in districts:
+		if x.biome.mineable:
+			r.append(x)
+	return r
+
+func get_attractiveness():
+	var amt=0
+	for x in districts:
+		amt+=x.get_attractiveness()
+	return amt/8
+
+func extract_products():
+	var r = {}
+	for d in districts:
+		for x in d.biome.fauna:
+			if x.aggressiveness<3:
+				if r.has(x):
+					r[x]=(r[x]+d.biome.fauna[x])/2
+				else:
+					r[x]=d.biome.fauna[x]
+		for x in d.biome.flora:
+			if x.qualities.has(Stuff.QUALITIES.Forage):
+				if r.has(x):
+					r[x]=(r[x]+d.biome.flora[x])/2
+				else:
+					r[x]=d.biome.flora[x]
+		for x in d.biome.forage:
+			if r.has(x):
+				r[x]=(r[x]+d.biome.forage[x])/2
+			else:
+				r[x]=d.biome.forage[x]
+		if d.biome.mineable:
+			var x = d.biome.mineable
+			r[x]=x.qualities[Stuff.QUALITIES.Mineable]
+
+		return r

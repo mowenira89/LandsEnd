@@ -1,36 +1,40 @@
-[gd_resource type="Resource" script_class="Building" load_steps=19 format=3 uid="uid://cmdo7n46mq0em"]
+[gd_resource type="Resource" script_class="Smith" load_steps=23 format=3 uid="uid://cmdo7n46mq0em"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_el85g"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_ihqb2"]
-[ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="3_32d8y"]
-[ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="4_iex4i"]
+[ext_resource type="Resource" uid="uid://87npi8da4k00" path="res://Resources/Stuff/brick.tres" id="3_32d8y"]
+[ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="4_iex4i"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_7iv3x"]
 [ext_resource type="Texture2D" uid="uid://bnwo3ymco2fgn" path="res://Assets/Images/BuildingImages/smelter.png" id="5_32d8y"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_xl1qk"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_64uxn"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_iex4i"]
 [ext_resource type="Resource" uid="uid://domj8ccbp6wjq" path="res://Resources/Recipes/smelter_copper_ingot.tres" id="8_3cdyv"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="8_7iv3x"]
+[ext_resource type="Resource" uid="uid://drf6atprx0w4a" path="res://Resources/Buildings/blast_furnace.tres" id="8_xl1qk"]
+[ext_resource type="Resource" uid="uid://bv08fbw7tbu50" path="res://Resources/Buildings/blacksmith.tres" id="9_64uxn"]
 [ext_resource type="Resource" uid="uid://carbbrw5n73um" path="res://Resources/Recipes/smelter_gold_ingot.tres" id="9_cgrwf"]
 [ext_resource type="Resource" uid="uid://25mq1rtxotke" path="res://Resources/Recipes/smelter_iron_ingot.tres" id="10_khlsp"]
+[ext_resource type="Resource" uid="uid://cs0ldv8c87sg8" path="res://Resources/Buildings/studio_casting.tres" id="10_xl1qk"]
 [ext_resource type="Resource" uid="uid://ccf7niqhjvcce" path="res://Resources/Recipes/smelter_orichalcum.tres" id="11_gkjfw"]
 [ext_resource type="Resource" uid="uid://dk604h1unoagc" path="res://Resources/Recipes/smelter_refined_mithril.tres" id="12_06pmi"]
 [ext_resource type="Resource" uid="uid://cvywvqoel40jn" path="res://Resources/Recipes/smelter_silver_ingot.tres" id="13_aumex"]
 [ext_resource type="Resource" uid="uid://ud03cqfqm02f" path="res://Resources/Recipes/smelter_tin_ingot.tres" id="14_dhpmh"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="15_oyaud"]
+[ext_resource type="Script" uid="uid://dihqh4ehkm2lh" path="res://Data/buildings/smith.gd" id="20_64uxn"]
 
 [sub_resource type="Resource" id="Resource_rlh43"]
 script = ExtResource("15_oyaud")
 metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
-script = ExtResource("6_xl1qk")
+script = ExtResource("20_64uxn")
 name = "Smelter"
 stats = SubResource("Resource_rlh43")
 image = ExtResource("5_32d8y")
 construction_time = 3
 construction_materials = Dictionary[ExtResource("2_ihqb2"), int]({
-ExtResource("3_32d8y"): 10,
-ExtResource("4_iex4i"): 25
+ExtResource("3_32d8y"): 25,
+ExtResource("4_iex4i"): 10
 })
 construction_level = 3
 staff_needed = Dictionary[int, int]({
@@ -39,4 +43,5 @@ staff_needed = Dictionary[int, int]({
 district_type = 3
 production_slots = 2
 recipes = Array[ExtResource("7_64uxn")]([ExtResource("8_3cdyv"), ExtResource("9_cgrwf"), ExtResource("10_khlsp"), ExtResource("11_gkjfw"), ExtResource("12_06pmi"), ExtResource("13_aumex"), ExtResource("14_dhpmh")])
+possible_extentions = Array[ExtResource("6_xl1qk")]([ExtResource("8_xl1qk"), ExtResource("9_64uxn"), ExtResource("10_xl1qk")])
 metadata/_custom_type_script = "uid://jgjaoud3lh53"

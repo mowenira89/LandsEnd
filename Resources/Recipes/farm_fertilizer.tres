@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://bmmte8hwfos7m"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_wyudw"]
+[ext_resource type="Resource" uid="uid://ccc85f3vs0de6" path="res://Resources/Stuff/manure.tres" id="3_vhtah"]
+[ext_resource type="Resource" uid="uid://dhuuxiv38pk4g" path="res://Resources/Stuff/horn.tres" id="3_wyudw"]
+[ext_resource type="Resource" uid="uid://dg2k5fxcuu7ic" path="res://Resources/Stuff/fertilizer.tres" id="4_jal82"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_3myxo"]
+
+[resource]
+script = ExtResource("5_3myxo")
+name = "Fertilizer"
+id = "farm_fertilizer"
+turns = 1
+inputs = Dictionary[ExtResource("1_wyudw"), int]({
+ExtResource("3_vhtah"): 1,
+ExtResource("3_wyudw"): 1
+})
+outputs = Dictionary[ExtResource("1_wyudw"), int]({
+ExtResource("4_jal82"): 1
+})
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

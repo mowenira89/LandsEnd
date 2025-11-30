@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://b0xevwyexmoxh"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_2r0f8"]
+[ext_resource type="Script" uid="uid://6vtv547g3vpj" path="res://Data/weapon.gd" id="2_2r0f8"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="3_41wyx"]
+
+[sub_resource type="Resource" id="Resource_q8orr"]
+script = ExtResource("3_41wyx")
+off = 5.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("2_2r0f8")
+damage_type = 1
+prowess_bonus = Array[int]([26, 13])
+name = "Lance"
+stats = SubResource("Resource_q8orr")
+value = 25.0
+qualities = Dictionary[int, float]({
+7: 5.0
+})
+mystic_qualities = Dictionary[int, float]({
+4: 1.0
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

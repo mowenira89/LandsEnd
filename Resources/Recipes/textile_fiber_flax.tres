@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=4 format=3 uid="uid://dbqnlu4j70fl5"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_jm2fd"]
-[ext_resource type="Resource" uid="uid://bkk5cro2nvdbq" path="res://Resources/Crops/hemp.tres" id="2_a28bv"]
+[ext_resource type="Resource" uid="uid://bkk5cro2nvdbq" path="res://Resources/Stuff/crop_hemp.tres" id="2_a28bv"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="3_ojjxj"]
 
 [resource]

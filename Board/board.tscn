@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://cc4jjk0qer8ds"]
+[gd_scene load_steps=57 format=4 uid="uid://cc4jjk0qer8ds"]
 
 [ext_resource type="Texture2D" uid="uid://6ddnc08k2vlq" path="res://Assets/Images/Territory Tiles/water.png" id="1_7ncmu"]
 [ext_resource type="Script" uid="uid://b2e3ta76l8vr" path="res://Board/board.gd" id="1_ehn5f"]
@@ -21,15 +21,32 @@
 [ext_resource type="PackedScene" uid="uid://crkbfw7fflemo" path="res://Menus/pop_hud.tscn" id="17_mjeqw"]
 [ext_resource type="Script" uid="uid://bk6647o8qcyff" path="res://Menus/top_menu.gd" id="18_6dage"]
 [ext_resource type="PackedScene" uid="uid://bew5nturr15aw" path="res://Menus/create_unit_screen.tscn" id="18_7oini"]
+[ext_resource type="PackedScene" uid="uid://bnnbemsnswy7i" path="res://Menus/temple_menu.tscn" id="18_dpqyd"]
 [ext_resource type="PackedScene" uid="uid://517t13bv8ubd" path="res://Menus/recipe_menu.tscn" id="18_e123n"]
 [ext_resource type="PackedScene" uid="uid://bf2q05mnpbcaf" path="res://Menus/unit_action_menu.tscn" id="19_4kang"]
+[ext_resource type="PackedScene" uid="uid://etlatvbsi1w8" path="res://Menus/brewery_view.tscn" id="19_pd10c"]
 [ext_resource type="PackedScene" uid="uid://cqwhwxmmfa8kg" path="res://Menus/exchange_window.tscn" id="20_7hvnj"]
+[ext_resource type="PackedScene" uid="uid://c4fqn2erxdror" path="res://Menus/smith_view.tscn" id="20_8yoi6"]
 [ext_resource type="PackedScene" uid="uid://d15ij77ctqagt" path="res://Menus/assimilation.tscn" id="20_y4q0p"]
-[ext_resource type="PackedScene" uid="uid://dox0w3hhuskkv" path="res://Menus/building_view_bottom.tscn" id="21_imfj5"]
+[ext_resource type="PackedScene" uid="uid://bfb1154p6j7ku" path="res://Menus/school_view.tscn" id="21_2il35"]
 [ext_resource type="PackedScene" uid="uid://cl7teb5vvn8s1" path="res://Menus/stuff_selector_screen.tscn" id="22_2l5si"]
+[ext_resource type="PackedScene" uid="uid://cl18nagwddk1a" path="res://Menus/market_view.tscn" id="22_qy2m2"]
 [ext_resource type="PackedScene" uid="uid://pnec8kkr8etr" path="res://Menus/farm_view.tscn" id="23_iswxo"]
+[ext_resource type="PackedScene" uid="uid://b80kt0t05eqpx" path="res://Menus/herbalist_view.tscn" id="23_s3jp1"]
+[ext_resource type="PackedScene" uid="uid://ce35nywmv520m" path="res://Menus/preserve_menu.tscn" id="24_3p6lh"]
 [ext_resource type="Script" uid="uid://c2uxq8qn50gd7" path="res://Board/message_box.gd" id="24_e123n"]
+[ext_resource type="PackedScene" uid="uid://wtqjmbfmifd7" path="res://Menus/ceremony_screen.tscn" id="25_tju8l"]
+[ext_resource type="PackedScene" uid="uid://jyoc1s4ta5mx" path="res://Menus/obtain_screen.tscn" id="26_2pwfe"]
+[ext_resource type="PackedScene" uid="uid://cpvt0ioo3h241" path="res://Menus/crop_stat_view.tscn" id="27_rhlfp"]
+[ext_resource type="PackedScene" uid="uid://wkpveam3vsc3" path="res://Menus/crop_select_screen.tscn" id="28_pbio6"]
 [ext_resource type="Script" uid="uid://obmbvjr382gt" path="res://Menus/warning.gd" id="29_ewanr"]
+[ext_resource type="PackedScene" uid="uid://bk4aq5sdxhs7" path="res://Menus/npc_selector_menu.tscn" id="29_pgwsv"]
+[ext_resource type="PackedScene" uid="uid://cx55xkhysyfad" path="res://Battle/battle_screen.tscn" id="30_iswxo"]
+[ext_resource type="PackedScene" uid="uid://baqkqblr25ny0" path="res://Menus/feed_select_screen.tscn" id="32_qxjpy"]
+[ext_resource type="PackedScene" uid="uid://bt0c3j2mirdui" path="res://Menus/dedication_select_window.tscn" id="34_yijld"]
+[ext_resource type="PackedScene" uid="uid://b5lq2b6d3ki5j" path="res://Menus/ceremony_selection_screen.tscn" id="35_n44wu"]
+[ext_resource type="PackedScene" uid="uid://blnjpdyj4bpyi" path="res://Menus/item_amount_selector.tscn" id="36_18w6y"]
+[ext_resource type="PackedScene" uid="uid://duwidlx0kbcpd" path="res://Menus/lecture_select_window.tscn" id="38_u851t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_733os"]
 texture = ExtResource("1_7ncmu")
@@ -119,93 +136,13 @@ grow_vertical = 2
 mouse_filter = 1
 color = Color(0, 0, 0, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="Menus/SideMenu/ColorRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 28.0
-offset_top = 725.0
-offset_right = -7.0
-offset_bottom = -16.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Menus/SideMenu/ColorRect/MarginContainer"]
-layout_mode = 2
-
-[node name="TopButtons" type="HBoxContainer" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 50
-alignment = 1
-
-[node name="Land" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons"]
-layout_mode = 2
-text = "Land"
-
-[node name="People" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons"]
-layout_mode = 2
-text = "People"
-
-[node name="Events" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons"]
-layout_mode = 2
-text = "Events"
-
-[node name="LandButtons" type="HBoxContainer" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="PeopleButtons" type="HBoxContainer" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 16
-alignment = 1
-
-[node name="Population" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/PeopleButtons"]
-layout_mode = 2
-text = "Population"
-
-[node name="Individuals" type="Button" parent="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/PeopleButtons"]
-layout_mode = 2
-text = "Individuals"
-
-[node name="SideBottom" type="Control" parent="Menus/SideMenu/ColorRect"]
-custom_minimum_size = Vector2(0, 350)
-anchors_preset = 0
-offset_left = -634.0
-offset_top = 504.0
-offset_right = 14.0
-offset_bottom = 854.0
-size_flags_vertical = 10
-mouse_filter = 1
-
-[node name="DistrictsView" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("12_5ybqi")]
-layout_mode = 1
-
-[node name="PopBottomMenu" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("16_0fkod")]
-layout_mode = 1
-
-[node name="UnitActionMenu" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("19_4kang")]
-layout_mode = 1
-
-[node name="ExchangeWindow" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("20_7hvnj")]
-layout_mode = 1
-
-[node name="BuildingViewBottom" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("21_imfj5")]
-layout_mode = 1
-
-[node name="StuffSelectorScreen" parent="Menus/SideMenu/ColorRect/SideBottom" instance=ExtResource("22_2l5si")]
-layout_mode = 1
-
 [node name="SideTop" type="MarginContainer" parent="Menus/SideMenu/ColorRect"]
 custom_minimum_size = Vector2(0, 370)
 layout_mode = 0
 offset_left = 20.0
 offset_top = 20.0
-offset_right = 806.0
-offset_bottom = 708.0
+offset_right = 810.0
+offset_bottom = 491.0
 size_flags_vertical = 0
 
 [node name="TerritoryStats" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("10_733os")]
@@ -227,11 +164,190 @@ layout_mode = 2
 [node name="BasicBuildingView" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("15_aaue3")]
 layout_mode = 2
 
-[node name="RecipeMenu" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("18_e123n")]
+[node name="FarmView" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("23_iswxo")]
+visible = false
 layout_mode = 2
 
-[node name="FarmView" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("23_iswxo")]
+[node name="HerbalistView" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("23_s3jp1")]
+visible = false
 layout_mode = 2
+
+[node name="TempleMenu" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("18_dpqyd")]
+layout_mode = 2
+
+[node name="DistilleryMenu" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("19_pd10c")]
+visible = false
+layout_mode = 2
+
+[node name="SmithView" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("20_8yoi6")]
+layout_mode = 2
+
+[node name="SchoolView" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("21_2il35")]
+layout_mode = 2
+
+[node name="MarketView" parent="Menus/SideMenu/ColorRect/SideTop" instance=ExtResource("22_qy2m2")]
+layout_mode = 2
+
+[node name="SideBottom" type="Control" parent="Menus/SideMenu/ColorRect"]
+custom_minimum_size = Vector2(0, 350)
+anchors_preset = 0
+offset_left = 26.0
+offset_top = 498.0
+offset_right = 809.0
+offset_bottom = 848.0
+size_flags_vertical = 10
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Menus/SideMenu/ColorRect/SideBottom"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DistrictsView" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("12_5ybqi")]
+layout_mode = 2
+
+[node name="PopBottomMenu" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("16_0fkod")]
+layout_mode = 2
+
+[node name="UnitActionMenu" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("19_4kang")]
+visible = false
+layout_mode = 2
+
+[node name="ExchangeWindow" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("20_7hvnj")]
+visible = false
+layout_mode = 2
+
+[node name="StuffSelectorScreen" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("22_2l5si")]
+visible = false
+layout_mode = 2
+
+[node name="PreserveMenu" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("24_3p6lh")]
+visible = false
+layout_mode = 2
+
+[node name="RecipeMenu" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("18_e123n")]
+visible = false
+layout_mode = 2
+
+[node name="CeremonyScreen" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("25_tju8l")]
+layout_mode = 2
+
+[node name="ObtainScreen" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("26_2pwfe")]
+visible = false
+layout_mode = 2
+
+[node name="CropStatView" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("27_rhlfp")]
+visible = false
+layout_mode = 2
+
+[node name="CropSelectScreen" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("28_pbio6")]
+visible = false
+layout_mode = 2
+
+[node name="NPCSelectorMenu" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("29_pgwsv")]
+visible = false
+layout_mode = 2
+
+[node name="FeedSelectScreen" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("32_qxjpy")]
+visible = false
+layout_mode = 2
+
+[node name="DedicationSelectWindow" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("34_yijld")]
+layout_mode = 2
+
+[node name="CeremonySelectionSceen" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("35_n44wu")]
+layout_mode = 2
+
+[node name="ItemAmountSelector" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("36_18w6y")]
+layout_mode = 2
+
+[node name="LectureSelectWindow" parent="Menus/SideMenu/ColorRect/SideBottom/MarginContainer" instance=ExtResource("38_u851t")]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Menus/SideMenu/ColorRect"]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 489.0
+offset_right = 16.0
+offset_bottom = 566.0
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Menus/SideMenu/ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menus/SideMenu/ColorRect/ColorRect/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Land" type="Button" parent="Menus/SideMenu/ColorRect/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Land"
+
+[node name="People" type="Button" parent="Menus/SideMenu/ColorRect/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "People"
+
+[node name="ColorRect2" type="ColorRect" parent="Menus/SideMenu"]
+layout_mode = 0
+offset_left = -638.0
+offset_top = 689.0
+offset_right = 8.0
+offset_bottom = 844.0
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Menus/SideMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -689.0
+offset_top = 700.0
+offset_right = -724.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menus/SideMenu/MarginContainer"]
+layout_mode = 2
+
+[node name="TopButtons" type="HBoxContainer" parent="Menus/SideMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Events" type="Button" parent="Menus/SideMenu/MarginContainer/VBoxContainer/TopButtons"]
+layout_mode = 2
+text = "Almanac"
+
+[node name="LandButtons" type="HBoxContainer" parent="Menus/SideMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PeopleButtons" type="HBoxContainer" parent="Menus/SideMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Population" type="Button" parent="Menus/SideMenu/MarginContainer/VBoxContainer/PeopleButtons"]
+layout_mode = 2
+text = "Population"
+
+[node name="Individuals" type="Button" parent="Menus/SideMenu/MarginContainer/VBoxContainer/PeopleButtons"]
+layout_mode = 2
+text = "Individuals"
 
 [node name="BottomMenu" type="Control" parent="Menus"]
 layout_mode = 3
@@ -452,13 +568,11 @@ text = "OK"
 layout_mode = 2
 text = "No"
 
+[node name="BattleScreen" parent="Menus" instance=ExtResource("30_iswxo")]
+visible = false
+
 [connection signal="mouse_entered" from="Menus/SideMenu" to="." method="_on_side_menu_mouse_entered"]
 [connection signal="mouse_exited" from="Menus/SideMenu" to="." method="_on_side_menu_mouse_exited"]
-[connection signal="pressed" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/Land" to="Menus" method="_on_land_pressed"]
-[connection signal="pressed" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/People" to="Menus" method="_on_people_pressed"]
-[connection signal="pressed" from="Menus/SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/Events" to="Menus" method="_on_events_pressed"]
-[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideBottom" to="." method="_on_side_bottom_mouse_entered"]
-[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideBottom" to="." method="_on_side_bottom_mouse_exited"]
 [connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideTop" to="." method="_on_side_top_mouse_entered"]
 [connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideTop" to="." method="_on_side_top_mouse_exited"]
 [connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideTop/TerritoryStats" to="." method="_on_territory_stats_mouse_entered"]
@@ -473,6 +587,11 @@ text = "No"
 [connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideTop/NPC_View" to="." method="_on_npc_view_mouse_exited"]
 [connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideTop/BasicBuildingView" to="." method="_on_basic_building_view_mouse_entered"]
 [connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideTop/BasicBuildingView" to="." method="_on_basic_building_view_mouse_exited"]
+[connection signal="mouse_entered" from="Menus/SideMenu/ColorRect/SideBottom" to="." method="_on_side_bottom_mouse_entered"]
+[connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideBottom" to="." method="_on_side_bottom_mouse_exited"]
+[connection signal="pressed" from="Menus/SideMenu/ColorRect/ColorRect/MarginContainer/VBoxContainer/Land" to="Menus" method="_on_land_pressed"]
+[connection signal="pressed" from="Menus/SideMenu/ColorRect/ColorRect/MarginContainer/VBoxContainer/People" to="Menus" method="_on_people_pressed"]
+[connection signal="pressed" from="Menus/SideMenu/MarginContainer/VBoxContainer/TopButtons/Events" to="Menus" method="_on_events_pressed"]
 [connection signal="pressed" from="Menus/TopMenu/MarginContainer/HBoxContainer/EndTurn" to="Menus" method="_on_end_turn_pressed"]
 [connection signal="pressed" from="Menus/EndTurnBox/MarginContainer/VBoxContainer/StartTurn" to="Menus/EndTurnBox" method="_on_start_turn_pressed"]
 [connection signal="pressed" from="Menus/Warning/MarginContainer/VBoxContainer/HBoxContainer/OK" to="Menus/Warning" method="_on_ok_pressed"]

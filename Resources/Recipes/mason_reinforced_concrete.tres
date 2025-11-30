@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://c676xcrb4xo8p"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_wyn2r"]
+[ext_resource type="Resource" uid="uid://b1ue65pvuglfc" path="res://Resources/Stuff/concrete.tres" id="2_7iinr"]
+[ext_resource type="Resource" uid="uid://b23k518tdno7r" path="res://Resources/Stuff/iron_ingot.tres" id="3_6x8up"]
+[ext_resource type="Resource" uid="uid://cxi3i6r85458g" path="res://Resources/Stuff/reinforced_concrete.tres" id="4_agjgn"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_eqlox"]
+
+[resource]
+script = ExtResource("5_eqlox")
+name = "Reinforced Concrete"
+id = "mason_reinforced_concrete"
+turns = 1
+inputs = Dictionary[ExtResource("1_wyn2r"), int]({
+ExtResource("2_7iinr"): 1,
+ExtResource("3_6x8up"): 1
+})
+outputs = Dictionary[ExtResource("1_wyn2r"), int]({
+ExtResource("4_agjgn"): 1
+})
+exp_to = Dictionary[String, float]({
+"Mithril Reinforced Concrete": 1.0
+})
+exp_value = 2.0
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

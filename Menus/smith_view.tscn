@@ -1,0 +1,157 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4fqn2erxdror"]
+
+[ext_resource type="Script" uid="uid://k8swbg1ar1rf" path="res://Menus/smith_view.gd" id="1_yfpao"]
+[ext_resource type="PackedScene" uid="uid://dw5e20m0k7xyn" path="res://Menus/production_container.tscn" id="2_xregl"]
+[ext_resource type="PackedScene" uid="uid://7g2xivh0ne32" path="res://Menus/SelectorButton.tscn" id="3_0nsx3"]
+[ext_resource type="PackedScene" uid="uid://nk2nf7urmdxa" path="res://Menus/PersonSelectButton.tscn" id="4_cwwlb"]
+[ext_resource type="PackedScene" uid="uid://djcko3bi25pkm" path="res://Menus/ExtentionButton.tscn" id="5_ppywk"]
+
+[node name="SmithView" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+script = ExtResource("1_yfpao")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="RepairButton" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+layout_mode = 2
+text = "Repair"
+
+[node name="UpgradeButton" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+visible = false
+layout_mode = 2
+text = "Upgrade"
+
+[node name="DemolishButton3" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+layout_mode = 2
+text = "Demolish"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Territory District 1 Camp"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Wild District"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="ProductionContainers" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers"]
+layout_mode = 2
+text = "Production Slots: "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Prod1" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer" instance=ExtResource("2_xregl")]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Prod2" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer" instance=ExtResource("2_xregl")]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Prod3" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer2" instance=ExtResource("2_xregl")]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Prod4" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer2" instance=ExtResource("2_xregl")]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Prod5" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer3" instance=ExtResource("2_xregl")]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Prod6" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/HBoxContainer3" instance=ExtResource("2_xregl")]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Fuel" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer" instance=ExtResource("3_0nsx3")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer"]
+layout_mode = 2
+text = "Fuel"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Boss" parent="MarginContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("4_cwwlb")]
+layout_mode = 2
+size_flags_vertical = 0
+_size = 150
+
+[node name="Extentions" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ExtentionButton" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("5_ppywk")]
+layout_mode = 2
+
+[node name="ExtentionButton2" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("5_ppywk")]
+layout_mode = 2
+
+[node name="ExtentionButton3" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("5_ppywk")]
+layout_mode = 2
+
+[node name="ExtentionButton4" parent="MarginContainer/HBoxContainer/Extentions" instance=ExtResource("5_ppywk")]
+layout_mode = 2
+
+[connection signal="open" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/Fuel" to="." method="_on_selector_button_open"]
+[connection signal="removing" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ProductionContainers/VBoxContainer/Fuel" to="." method="_on_selector_button_removing"]
+[connection signal="open" from="MarginContainer/HBoxContainer/VBoxContainer3/Boss" to="." method="_on_boss_open"]

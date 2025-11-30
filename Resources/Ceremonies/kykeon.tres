@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Ceremony" load_steps=8 format=3 uid="uid://clvh0yojf1qsl"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_x61og"]
+[ext_resource type="Resource" uid="uid://dmwj6qacjge8q" path="res://Resources/Research/theurgy.tres" id="2_gwimv"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="3_o2qn4"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="4_fjgrq"]
+[ext_resource type="Resource" uid="uid://hmtmxq4uk36x" path="res://Resources/Stuff/kykeon.tres" id="5_aotsm"]
+[ext_resource type="Resource" uid="uid://cd2en76hyfke1" path="res://Resources/Stuff/true_kykeon.tres" id="6_i2k1f"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="7_stwh7"]
+
+[resource]
+script = ExtResource("7_stwh7")
+name = "Kykeon Ceremony"
+interest = 0.5
+reward = Dictionary[ExtResource("4_fjgrq"), float]({
+ExtResource("6_i2k1f"): 0.2
+})
+requirements = Dictionary[ExtResource("4_fjgrq"), float]({
+ExtResource("5_aotsm"): 0.1
+})
+requirements_of_quality = Dictionary[int, float]({
+0: 60.0,
+15: 60.0,
+18: 60.0
+})
+monks_needed = 100
+exp_to = Dictionary[ExtResource("1_x61og"), float]({
+ExtResource("2_gwimv"): 10.0
+})
+metadata/_custom_type_script = "uid://h1hksovre84"

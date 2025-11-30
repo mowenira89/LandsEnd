@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Species" load_steps=7 format=3 uid="uid://irhotjsp8c73"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_024ir"]
-[ext_resource type="Resource" uid="uid://cry61qvpicxe5" path="res://Resources/Stuff/silk.tres" id="2_q7xrn"]
+[ext_resource type="Resource" uid="uid://ck05rw8vdjhpj" path="res://Resources/Stuff/silk_cocoon.tres" id="2_q7xrn"]
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_tu10m"]
 [ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="4_kwl3r"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_q7xrn"]
@@ -18,11 +18,15 @@ metadata/_custom_type_script = "uid://d2hat5snxwp82"
 [resource]
 script = ExtResource("4_kwl3r")
 kind = 9
-harvest_produce = Dictionary[ExtResource("1_024ir"), int]({
+kill_produce = Dictionary[ExtResource("1_024ir"), int]({
 ExtResource("2_q7xrn"): 1
 })
+harvest_season = Array[int]([0, 2, 4])
+breeding_season = Array[int]([0])
+fertility = 1.5
 rarity = 5.0
 skittishness = 5.0
+food_need = 0.01
 name = "Bombyx"
 stats = SubResource("Resource_tu10m")
 value = 50.0

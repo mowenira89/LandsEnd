@@ -17,9 +17,11 @@ name = "Cursed Flesh"
 value = 15.0
 qualities = Dictionary[int, float]({
 0: 3.0,
-2: -3.0
+2: -3.0,
+10: -8.0
 })
 mystic_qualities = Dictionary[int, float]({
 5: 1.0
 })
+diet_type = Array[int]([1, 0])
 metadata/_custom_type_script = "uid://cnmbjer2140vm"

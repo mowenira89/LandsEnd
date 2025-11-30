@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Building" load_steps=10 format=3 uid="uid://drf6atprx0w4a"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_51jfa"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_up53j"]
+[ext_resource type="Resource" uid="uid://87npi8da4k00" path="res://Resources/Stuff/brick.tres" id="3_kva1n"]
+[ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="4_voeor"]
+[ext_resource type="Resource" uid="uid://basx14af4ccd2" path="res://Resources/Stuff/bellows.tres" id="5_w0cig"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_1lytm"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_2tqo6"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="8_sux5m"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_r20i2"]
+
+[resource]
+script = ExtResource("7_2tqo6")
+name = "Blast Furnace"
+upgrade_only = true
+desc = "Only the power of coal fueled by bellows can smelt iron ore. "
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_up53j"), int]({
+ExtResource("3_kva1n"): 15,
+ExtResource("4_voeor"): 15,
+ExtResource("5_w0cig"): 10
+})
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

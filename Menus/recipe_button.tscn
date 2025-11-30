@@ -24,11 +24,14 @@ alignment = 1
 
 [node name="Inputs" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
+alignment = 1
 
-[node name="Stuff" type="Label" parent="HBoxContainer"]
+[node name="Label2" type="Label" parent="HBoxContainer"]
 layout_mode = 2
+text = " > "
 
 [node name="Outputs" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
+alignment = 1
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

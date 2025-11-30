@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("2_gobim")
-mystic_need = 25.0
+mystic_need = 30.0
 mystic_type = 3
 level = 3
 name = "Gold to Orichalc"
@@ -21,6 +21,7 @@ ExtResource("3_bixi1"): 1
 })
 exp_to = Dictionary[String, float]({
 "Orangesmithing": 2.0,
+"Spiritual Alchemy": 3.0,
 "Voltaomancy": 2.0
 })
 metadata/_custom_type_script = "uid://b5amvji0dfqa4"

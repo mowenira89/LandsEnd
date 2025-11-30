@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="KhemicRecipe" load_steps=7 format=3 uid="uid://clv5r648ajicb"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_qvgph"]
+[ext_resource type="Resource" uid="uid://dw8mtx3417ev6" path="res://Resources/Stuff/lead_ingot.tres" id="2_4gnx3"]
+[ext_resource type="Resource" uid="uid://bdmfger4xbtew" path="res://Resources/Stuff/tin_ingot.tres" id="3_cp4sm"]
+[ext_resource type="Resource" uid="uid://bk0p2ys740a5e" path="res://Resources/Stuff/silver_ingot.tres" id="4_pr4jn"]
+[ext_resource type="Resource" uid="uid://dtdqjwtloddb4" path="res://Resources/Stuff/mithril.tres" id="5_n1q5x"]
+[ext_resource type="Script" uid="uid://b5amvji0dfqa4" path="res://Data/khemic_recipe.gd" id="6_jwed7"]
+
+[resource]
+script = ExtResource("6_jwed7")
+mystic_need = 100.0
+mystic_type = 1
+level = 3
+name = "Mithril"
+id = "mithril"
+turns = 3
+inputs = Dictionary[ExtResource("1_qvgph"), int]({
+ExtResource("2_4gnx3"): 1,
+ExtResource("3_cp4sm"): 1,
+ExtResource("4_pr4jn"): 1
+})
+outputs = Dictionary[ExtResource("1_qvgph"), int]({
+ExtResource("5_n1q5x"): 6
+})
+exp_to = Dictionary[String, float]({
+"Spiritual Alchemy": 3.0
+})
+air_pollution = 4.0
+water_pollution = 4.0
+spiritual_pollution = 2.0
+metadata/_custom_type_script = "uid://b5amvji0dfqa4"

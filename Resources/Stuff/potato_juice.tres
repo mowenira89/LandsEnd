@@ -9,7 +9,8 @@ name = "Potato Juice"
 value = 10.0
 qualities = Dictionary[int, float]({
 2: 3.0,
-10: 2.0
+10: 2.0,
+17: 2.0
 })
 mystic_qualities = Dictionary[int, float]({
 2: 3.0,

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Building" load_steps=13 format=3 uid="uid://0iopujo0bwe4"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_6x6ib"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_mspp8"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_5o78t"]
+[ext_resource type="Resource" uid="uid://dsmlnxiosi78n" path="res://Resources/Stuff/stone.tres" id="4_ne2co"]
+[ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="5_hihrn"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_m4guk"]
+[ext_resource type="Script" uid="uid://c06htwwoposed" path="res://Data/district.gd" id="6_mspp8"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_ej7gf"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="8_unqw5"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_4npxk"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="10_irdkk"]
+
+[sub_resource type="Resource" id="Resource_j3omi"]
+script = ExtResource("10_irdkk")
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("8_unqw5")
+name = "Reliquary"
+stats = SubResource("Resource_j3omi")
+boss_type = 3
+construction_time = 3
+construction_materials = Dictionary[ExtResource("2_mspp8"), int]({
+ExtResource("3_5o78t"): 25,
+ExtResource("4_ne2co"): 25,
+ExtResource("5_hihrn"): 10
+})
+construction_level = 4
+needed_districts = 1
+district_type = 1
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

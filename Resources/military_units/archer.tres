@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="MilitaryUnit" load_steps=13 format=3 uid="uid://2uq1pwa3prne"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_xyu48"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="2_jd5rb"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_k1jit"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_l264y"]
+[ext_resource type="Script" uid="uid://cp0je3yls6fec" path="res://Data/military_unit.gd" id="3_pv8nt"]
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="4_iovod"]
+[ext_resource type="Resource" uid="uid://l38bjx2o7f1b" path="res://Resources/Species/human.tres" id="4_yswqs"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_7eps2"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_clewt"]
+[ext_resource type="Script" uid="uid://vfa8xldyecm2" path="res://Data/territory.gd" id="7_f7b5h"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_41kf6"]
+
+[sub_resource type="Resource" id="Resource_c88c6"]
+script = ExtResource("5_7eps2")
+hp = 100.0
+off = 3.0
+def = 2.0
+sp = 5.0
+l = 1.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_pv8nt")
+title = "Archer"
+species = ExtResource("4_yswqs")
+prowess = Dictionary[int, float]({
+18: 1.0
+})
+stats = SubResource("Resource_c88c6")
+CLASS = 2
+beliefs_mods = Dictionary[int, float]({
+1: 0.5,
+2: 0.5
+})
+metadata/_custom_type_script = "uid://cp0je3yls6fec"

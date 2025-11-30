@@ -1,6 +1,6 @@
 class_name Pop extends Resource
 
-enum CLASS {Follower,Artist,Soldier,Monk,Underclass,Nymphoi}
+enum CLASS {Follower,Artist,Soldier,Monk,Underclass,Nymphoi,Pilgrim}
 
 @export var _class:CLASS
 @export var persons:int

@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_1tjdv"]
 [ext_resource type="Resource" uid="uid://dprmx6rm7d6cg" path="res://Resources/Stuff/loom.tres" id="4_mau3h"]
 [ext_resource type="Texture2D" uid="uid://c42uv67w4qlii" path="res://Assets/Images/BuildingImages/textile.png" id="5_xcc1u"]
-[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_tyooc"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="7_fd3nv"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_ma8wq"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_b0hq6"]
 [ext_resource type="Resource" uid="uid://b075l3lc04412" path="res://Resources/Recipes/textile_canvas.tres" id="9_u1fng"]
@@ -16,7 +16,7 @@
 
 [resource]
 script = ExtResource("7_ma8wq")
-name = "Textile Workshop"
+name = "Textile Mill"
 image = ExtResource("5_xcc1u")
 construction_time = 2
 construction_materials = Dictionary[ExtResource("2_kfl2l"), int]({

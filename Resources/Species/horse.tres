@@ -37,4 +37,7 @@ mystic_qualities = Dictionary[int, float]({
 0: 2.0
 })
 found_in = Array[int]([0])
+conveys_prowess = Dictionary[int, float]({
+7: 1.0
+})
 metadata/_custom_type_script = "uid://b7lspf02dk4r5"

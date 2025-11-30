@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CookhouseRecipe" load_steps=5 format=3 uid="uid://bjdgijhm2ai4r"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_ipngw"]
+[ext_resource type="Resource" uid="uid://2au2ab8v6jne" path="res://Resources/Stuff/meat.tres" id="2_jbl2h"]
+[ext_resource type="Resource" uid="uid://bkphlf0yxmdq3" path="res://Resources/Stuff/fish.tres" id="3_2ftug"]
+[ext_resource type="Script" uid="uid://bbt62vx1q0tfq" path="res://Data/cookhouse_recipe.gd" id="4_p3crc"]
+
+[resource]
+script = ExtResource("4_p3crc")
+requirements = Array[ExtResource("1_ipngw")]([ExtResource("2_jbl2h"), ExtResource("3_2ftug")])
+difficulty = 50.0
+name = "Surf and Turf"
+id = "surf_and_turf"
+turns = 1
+inputs = Dictionary[ExtResource("1_ipngw"), int]({
+ExtResource("2_jbl2h"): 1,
+ExtResource("3_2ftug"): 1
+})
+exp_to = Dictionary[String, float]({
+"Restaurant": 1.0
+})
+metadata/_custom_type_script = "uid://bbt62vx1q0tfq"

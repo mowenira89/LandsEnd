@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Building" load_steps=8 format=3 uid="uid://cqbotyca2l4m7"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_v7u72"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_orxyd"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_1bu8t"]
+[ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="4_iuppc"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="5_drvd4"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="6_mcqly"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_721w0"]
+
+[resource]
+script = ExtResource("5_drvd4")
+name = "Water Pump"
+upgrade_only = true
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_orxyd"), int]({
+ExtResource("3_1bu8t"): 25,
+ExtResource("4_iuppc"): 15
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+0: 10
+})
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

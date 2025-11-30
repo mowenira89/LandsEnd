@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=5 format=3 uid="uid://dti4ypndrjabw"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_ko2xg"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_2m2nj"]
+[ext_resource type="Resource" uid="uid://r5vcco63ai5s" path="res://Resources/Stuff/grain.tres" id="2_rn531"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_2m2nj"]
+
+[resource]
+script = ExtResource("3_2m2nj")
+id = "Grain"
+vitamins = Dictionary[int, float]({
+4: 1.0,
+6: 1.0
+})
+water_need = 1.0
+growth_mod = 0.3
+health = 25.0
+produce = Array[ExtResource("1_ko2xg")]([ExtResource("2_rn531")])
+kind = 6
+name = "Wheat"
+food_type = 6
+diet_type = Array[int]([2, 0])
+metadata/_custom_type_script = "uid://wxkcemfn60gw"

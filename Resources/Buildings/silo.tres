@@ -1,15 +1,13 @@
-[gd_resource type="Resource" script_class="Storeroom" load_steps=13 format=3 uid="uid://she1pyy46pcb"]
+[gd_resource type="Resource" script_class="Building" load_steps=11 format=3 uid="uid://she1pyy46pcb"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_chy8g"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_btm7g"]
 [ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_ee1kc"]
-[ext_resource type="Resource" uid="uid://87npi8da4k00" path="res://Resources/Stuff/brick.tres" id="4_gdbjr"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_0im0u"]
 [ext_resource type="Texture2D" uid="uid://h8nwtv1t4poi" path="res://Assets/Images/BuildingImages/silo.png" id="5_ee1kc"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_c5s1y"]
 [ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_gdbjr"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="7_mupqa"]
-[ext_resource type="Script" uid="uid://w6133npa21mi" path="res://Data/buildings/storeroom.gd" id="8_ky3wv"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="9_awk63"]
 
 [sub_resource type="Resource" id="Resource_gswpc"]
@@ -17,16 +15,15 @@ script = ExtResource("9_awk63")
 metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
-script = ExtResource("8_ky3wv")
-granary_cap = 50
+script = ExtResource("6_c5s1y")
 name = "Silo"
 stats = SubResource("Resource_gswpc")
 image = ExtResource("5_ee1kc")
 construction_time = 1
 construction_materials = Dictionary[ExtResource("2_btm7g"), int]({
-ExtResource("3_ee1kc"): 15,
-ExtResource("4_gdbjr"): 10
+ExtResource("3_ee1kc"): 15
 })
 construction_level = 1
 district_type = 2
+granary_cap = 50
 metadata/_custom_type_script = "uid://w6133npa21mi"

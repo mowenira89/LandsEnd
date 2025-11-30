@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Market" load_steps=13 format=3 uid="uid://08qshph7oh40"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_vvqgd"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_2oqtt"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_nb6w1"]
+[ext_resource type="Resource" uid="uid://be3fpj4ymxj8y" path="res://Resources/Stuff/canvas.tres" id="4_cc4vd"]
+[ext_resource type="Resource" uid="uid://cvqv7ihlpfguv" path="res://Resources/Stuff/amphora.tres" id="5_fjxol"]
+[ext_resource type="Resource" uid="uid://c2wuxkk4cgide" path="res://Resources/Stuff/barrel.tres" id="6_d4wyx"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="7_hmjh7"]
+[ext_resource type="Texture2D" uid="uid://40fcfblsq0f1" path="res://Assets/Images/BuildingImages/market.png" id="7_nb6w1"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="9_2oqtt"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="9_lxykv"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="10_31jxk"]
+[ext_resource type="Script" uid="uid://ewksenog5ym0" path="res://Data/buildings/market.gd" id="11_nb6w1"]
+
+[resource]
+script = ExtResource("11_nb6w1")
+name = "Market"
+image = ExtResource("7_nb6w1")
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_2oqtt"), int]({
+ExtResource("3_nb6w1"): 25,
+ExtResource("4_cc4vd"): 10,
+ExtResource("5_fjxol"): 5,
+ExtResource("6_d4wyx"): 5
+})
+construction_level = 2
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="MilitaryUnit" load_steps=7 format=3 uid="uid://bc04qtv256afu"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_brg32"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="2_1rgmk"]
+[ext_resource type="Script" uid="uid://cp0je3yls6fec" path="res://Data/military_unit.gd" id="3_8d36n"]
+[ext_resource type="Resource" uid="uid://l38bjx2o7f1b" path="res://Resources/Species/human.tres" id="4_523bf"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_o6y4c"]
+
+[sub_resource type="Resource" id="Resource_xrjvg"]
+script = ExtResource("5_o6y4c")
+hp = 90.0
+off = 1.0
+def = 2.0
+mag = 7.0
+magdef = 7.0
+sp = 4.0
+l = 2.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("3_8d36n")
+military_prowess = Dictionary[int, float]({
+6: 2.0
+})
+title = "Sorcerer"
+species = ExtResource("4_523bf")
+prowess = Dictionary[int, float]({
+17: 2.0
+})
+stats = SubResource("Resource_xrjvg")
+CLASS = 1
+metadata/_custom_type_script = "uid://cp0je3yls6fec"

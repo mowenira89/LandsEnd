@@ -1,0 +1,113 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce35nywmv520m"]
+
+[ext_resource type="PackedScene" uid="uid://7g2xivh0ne32" path="res://Menus/SelectorButton.tscn" id="1_cj6md"]
+[ext_resource type="Script" uid="uid://dygfa1tklfxks" path="res://Menus/preserve_menu.gd" id="1_fuqd3"]
+
+[node name="PreserveMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fuqd3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Preservative"
+
+[node name="Preservative" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource("1_cj6md")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Preserve"
+
+[node name="Preserve" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("1_cj6md")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Container"
+
+[node name="Container" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("1_cj6md")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="SelectionsContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Selections" type="GridContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CenterContainer/SelectionsContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Submenu_x" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/CenterContainer/SelectionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "x"
+
+[node name="x_out" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "x"
+
+[connection signal="clicked" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Preservative" to="." method="_on_preservative_clicked"]
+[connection signal="open" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Preservative" to="." method="_on_preservative_open"]
+[connection signal="removing" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Preservative" to="." method="_on_preservative_removing"]
+[connection signal="open" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Preserve" to="." method="_on_preserve_open"]
+[connection signal="removing" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Preserve" to="." method="_on_preserve_removing"]
+[connection signal="open" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Container" to="." method="_on_container_open"]
+[connection signal="removing" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Container" to="." method="_on_container_removing"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ScrollContainer/CenterContainer/SelectionsContainer/Submenu_x" to="." method="_on_submenu_x_pressed"]
+[connection signal="pressed" from="MarginContainer/x_out" to="." method="_on_x_out_pressed"]

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://caiutatl1a11i"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_t8mkm"]
+[ext_resource type="Resource" uid="uid://dhkx65du07aqm" path="res://Resources/Stuff/crop_grape.tres" id="2_kx66i"]
+[ext_resource type="Resource" uid="uid://c6qmed27pj8nr" path="res://Resources/Stuff/wine.tres" id="4_ips5y"]
+[ext_resource type="Resource" uid="uid://ce5nq1lgmy21k" path="res://Resources/Stuff/vinegar.tres" id="5_kx66i"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_vxvyg"]
+
+[resource]
+script = ExtResource("5_vxvyg")
+name = "Wine"
+id = "brewery_wine"
+turns = 3
+inputs = Dictionary[ExtResource("1_t8mkm"), int]({
+ExtResource("2_kx66i"): 1
+})
+outputs = Dictionary[ExtResource("1_t8mkm"), int]({
+ExtResource("4_ips5y"): 2,
+ExtResource("5_kx66i"): 1
+})
+exp_to = Dictionary[String, float]({
+"Advanced Distillation": 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://ci3e1rcawdpkq"

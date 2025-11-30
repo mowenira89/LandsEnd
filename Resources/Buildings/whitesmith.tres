@@ -1,31 +1,24 @@
-[gd_resource type="Resource" script_class="Building" load_steps=15 format=3 uid="uid://fwfxx3jdb2es"]
+[gd_resource type="Resource" script_class="Smith" load_steps=13 format=3 uid="uid://fwfxx3jdb2es"]
 
-[ext_resource type="Script" uid="uid://shaorb866qv1" path="res://Data/buffs.gd" id="1_y7wcb"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_tm1wn"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_xgchy"]
 [ext_resource type="Resource" uid="uid://b7ibx2uenj1de" path="res://Resources/Stuff/cut_stone.tres" id="4_ig3tk"]
 [ext_resource type="Resource" uid="uid://cm0xo6ydyl2bi" path="res://Resources/Stuff/gypsum.tres" id="5_6r2wj"]
 [ext_resource type="Resource" uid="uid://b1ue65pvuglfc" path="res://Resources/Stuff/concrete.tres" id="6_g6oop"]
-[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="7_d1tlg"]
 [ext_resource type="Texture2D" uid="uid://cg8jusp8orsaq" path="res://Assets/Images/BuildingImages/whitesmith.png" id="7_tm1wn"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="9_ksjm8"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="9_xgchy"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="9_y7wcb"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="10_1n2i8"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="11_r3mov"]
-
-[sub_resource type="Resource" id="Resource_vfth7"]
-script = ExtResource("1_y7wcb")
-metadata/_custom_type_script = "uid://shaorb866qv1"
+[ext_resource type="Script" uid="uid://dihqh4ehkm2lh" path="res://Data/buildings/smith.gd" id="11_tm1wn"]
 
 [sub_resource type="Resource" id="Resource_yui74"]
 script = ExtResource("11_r3mov")
 metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
-script = ExtResource("9_ksjm8")
+script = ExtResource("11_tm1wn")
 name = "Whitesmith"
-upgrade_only = true
-buffs = SubResource("Resource_vfth7")
 stats = SubResource("Resource_yui74")
 image = ExtResource("7_tm1wn")
 construction_time = 4

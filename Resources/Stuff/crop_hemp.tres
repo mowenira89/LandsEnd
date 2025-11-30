@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Crop" load_steps=6 format=3 uid="uid://bkk5cro2nvdbq"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_yjp7w"]
+[ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="2_jrpoi"]
+[ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_ienpx"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_kf1y5"]
+[ext_resource type="Resource" uid="uid://dpp0ng7h5ukw0" path="res://Resources/Stuff/crop_ganja.tres" id="6_mpk8g"]
+
+[resource]
+script = ExtResource("3_ienpx")
+crop_level = 1
+vitamins = Dictionary[int, float]({
+4: 4.0,
+6: 5.0
+})
+water_need = 1.0
+growth_mod = 0.5
+health = 42.0
+special_produce = Array[ExtResource("1_yjp7w")]([ExtResource("6_mpk8g")])
+kind = 6
+kill_produce = Dictionary[ExtResource("1_yjp7w"), int]({
+ExtResource("2_jrpoi"): 6
+})
+harvest_season = Array[int]([3, 4, 5, 2, 1])
+rarity = 50.0
+name = "Hemp"
+value = 5.0
+qualities = Dictionary[int, float]({
+5: 50.0,
+22: 1.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 3.0
+})
+exp_to = Dictionary[String, float]({
+"Textiles": 1.0
+})
+found_in = Array[int]([0, 1, 2])
+food_type = 6
+diet_type = Array[int]([2, 0])
+metadata/_custom_type_script = "uid://wxkcemfn60gw"

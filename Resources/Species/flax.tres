@@ -15,12 +15,9 @@ metadata/_custom_type_script = "uid://d2hat5snxwp82"
 [resource]
 script = ExtResource("4_5c5l8")
 crop_level = 1
-vitamin_need = 3.0
-vitamins_needed = Array[int]([6])
 water_need = 4.0
 growth_mod = 0.02
 startup_time = 1.0
-harvest_season = Array[int]([4, 3, 1])
 dead_season = Array[int]([7, 6, 8])
 kind = 6
 kill_produce = Dictionary[ExtResource("1_qp1jq"), int]({
@@ -29,9 +26,13 @@ ExtResource("2_m4sjt"): 3
 harvest_produce = Dictionary[ExtResource("1_qp1jq"), int]({
 ExtResource("2_m4sjt"): 3
 })
+harvest_season = Array[int]([4, 3, 1])
 rarity = 25.0
 name = "Flax"
 stats = SubResource("Resource_hliqy")
+qualities = Dictionary[int, float]({
+5: 50.0
+})
 mystic_qualities = Dictionary[int, float]({
 0: 3.0
 })

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Building" load_steps=10 format=3 uid="uid://c8gdxaa40a5wf"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_iqcib"]
+[ext_resource type="Script" uid="uid://dfvuv4fq4adpa" path="res://Data/conditions/building_level_condition.gd" id="2_1omo0"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_h64y6"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="4_l4ek7"]
+[ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="5_t0kgi"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="7_7a7dk"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="9_b4ljd"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="10_ng7rh"]
+
+[sub_resource type="Resource" id="Resource_0dt28"]
+script = ExtResource("2_1omo0")
+level = 6
+metadata/_custom_type_script = "uid://dfvuv4fq4adpa"
+
+[resource]
+script = ExtResource("9_b4ljd")
+name = "Sheave Wheel"
+upgrade_only = true
+construction_materials = Dictionary[ExtResource("3_h64y6"), int]({
+ExtResource("4_l4ek7"): 25,
+ExtResource("5_t0kgi"): 15
+})
+construction_level = 2
+construction_conditions = Array[ExtResource("1_iqcib")]([SubResource("Resource_0dt28")])
+staff_needed = Dictionary[int, int]({
+0: 10
+})
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

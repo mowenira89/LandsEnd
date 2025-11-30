@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Research" load_steps=9 format=3 uid="uid://bgx3biv0fu1j7"]
+[gd_resource type="Resource" script_class="Research" load_steps=10 format=3 uid="uid://bgx3biv0fu1j7"]
 
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_wh5m2"]
 [ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_6nlh0"]
@@ -7,12 +7,13 @@
 [ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="5_pl4jn"]
 [ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="6_spn5d"]
 [ext_resource type="Resource" uid="uid://cvx5p01d1hrdf" path="res://Resources/Research/orangesmithing.tres" id="7_s3m5t"]
+[ext_resource type="Resource" uid="uid://blpaqit2qjg4b" path="res://Resources/Research/alchemy.tres" id="8_6nlh0"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_c3cis"]
 
 [resource]
 script = ExtResource("6_spn5d")
 name = "Voltaomancy"
 exp_to_unlock = 2000
-prerequisites = Array[ExtResource("6_spn5d")]([ExtResource("7_s3m5t")])
+prerequisites = Array[ExtResource("6_spn5d")]([ExtResource("7_s3m5t"), ExtResource("8_6nlh0")])
 inspiration_threshold = 10.0
 metadata/_custom_type_script = "uid://bllx77nhi7hwq"

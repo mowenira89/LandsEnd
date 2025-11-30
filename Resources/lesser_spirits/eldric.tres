@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Nymphoi" load_steps=10 format=3 uid="uid://c32nclhwuj7vs"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_nr2kt"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_s4q0c"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_5k4sf"]
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="4_ni74l"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_n7sce"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_n2oyd"]
+[ext_resource type="Script" uid="uid://vfa8xldyecm2" path="res://Data/territory.gd" id="7_5dqwu"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_o8xt0"]
+[ext_resource type="Script" uid="uid://o783htdr3cnx" path="res://Data/nymphoi.gd" id="9_2a338"]
+
+[resource]
+script = ExtResource("9_2a338")
+title = "Spirits of the Unknown"
+age = 100000
+affinity = Array[int]([5])
+metadata/_custom_type_script = "uid://o783htdr3cnx"

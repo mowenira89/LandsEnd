@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Building" load_steps=10 format=3 uid="uid://b8xf8dvwu1ofs"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_5eucw"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_7ejvt"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="3_dfiro"]
+[ext_resource type="Resource" uid="uid://vcaxfbw6q4xk" path="res://Resources/Stuff/rope.tres" id="4_d7feg"]
+[ext_resource type="Texture2D" uid="uid://cepv6v3skudk2" path="res://Assets/Images/BuildingImages/dairy.png" id="5_7ejvt"]
+[ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="5_8axby"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_w6u0y"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="7_xb2o3"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_dvxqg"]
+
+[resource]
+script = ExtResource("6_w6u0y")
+name = "Dairy"
+image = ExtResource("5_7ejvt")
+construction_time = 2
+construction_materials = Dictionary[ExtResource("2_7ejvt"), int]({
+ExtResource("3_dfiro"): 25,
+ExtResource("4_d7feg"): 10
+})
+construction_level = 2
+staff_needed = Dictionary[int, int]({
+0: 10
+})
+district_type = 3
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Building" load_steps=9 format=3 uid="uid://dddnoyywehycv"]
+
+[ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_4ocfd"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_p43x0"]
+[ext_resource type="Resource" uid="uid://bt85i3i2fa24g" path="res://Resources/Stuff/oricalchum.tres" id="3_djvej"]
+[ext_resource type="Resource" uid="uid://vc1jcimcly1p" path="res://Resources/Stuff/refined_mithril.tres" id="4_4q3sk"]
+[ext_resource type="Resource" uid="uid://bjaxari5op5ob" path="res://Resources/Stuff/lumber.tres" id="5_o1lj3"]
+[ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="6_nj6kn"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="7_d7uit"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_5o8jj"]
+
+[resource]
+script = ExtResource("6_nj6kn")
+name = "Earthcracker"
+upgrade_only = true
+desc = "The ultimate mining drill will delve into the deepest depths and relieve them of their riches. "
+construction_time = 6
+construction_materials = Dictionary[ExtResource("2_p43x0"), int]({
+ExtResource("3_djvej"): 15,
+ExtResource("4_4q3sk"): 15,
+ExtResource("5_o1lj3"): 25
+})
+construction_level = 2
+metadata/_custom_type_script = "uid://jgjaoud3lh53"

@@ -20,7 +20,7 @@ mystic_qualities = Dictionary[int, float]({
 4: 5.0
 })
 exp_to = Dictionary[String, float]({
-"Magic Mushroom Ceremony": 1.0
+"Flying Mushroom Ceremony": 2.0
 })
 found_in = Array[int]([3])
 metadata/_custom_type_script = "uid://dx28jau0q0skf"

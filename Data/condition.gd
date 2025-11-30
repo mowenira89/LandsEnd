@@ -1,4 +1,4 @@
 class_name Condition extends Resource 
 
-func check(d:District=null,t:Territory=null,b:Building=null)->bool:
+func check(t:Territory=null,d:District=null,b:Building=null,u:Unit=null)->bool:
 	return true

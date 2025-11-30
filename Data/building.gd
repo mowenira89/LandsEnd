@@ -7,28 +7,31 @@ class_name Building extends Resource
 @export var stats:Stats
 @export var image:Texture2D
 @export var pop_cap:Dictionary[Pop.CLASS,int]
-@export var boss:Person
+var boss:Person
 @export var boss_type:Pop.CLASS
 @export var unlock_message:String
-@export var age:int=0
-@export var memories:Array[Event]
+var age:int=0
+var memories:Array[Event]
 @export_multiline var desc:String
+@export var potential_npcs:Dictionary[Person,float]
 #CONSTRUCTION
-
+var blursed:Dictionary[Nymphoi.BLURSES,float]
 @export var construction_time:int
 @export var construction_materials:Dictionary[Stuff,int]
 @export var construction_level:int
 @export var construction_conditions:Array[Condition]
 #STAFF
 @export var staff_needed:Dictionary[Pop.CLASS,int]
-@export var staff_appointed:Dictionary[Pop.CLASS,float]
+var staff_appointed:Dictionary[Pop.CLASS,float]
 
 #Districts
+
 var utilized_districts:Array[District]
 @export var needed_districts:int
 @export var district_type:District.TYPES
 
 #Production
+
 @export var production_slots:int
 var producing_this_turn=[null,null,null,null,null,null]
 var turns_producing=[0,0,0,0,0,0]
@@ -40,9 +43,8 @@ var this_building_recipes:Dictionary[String,Recipe]
 @export var possible_upgrades:Array[Building]
 var extentions = [null,null,null,null,null,null]
 var extention_construction = [0,0,0,0,0,0]
-var extention_slots:int=0
-var extention_buffs:Array[Buff]
-
+@export var extention_slots:int=0
+var extention_construction_order:Array[Building]
 #UPGRADES
 
 var upgrade_construction = 0
@@ -52,9 +54,16 @@ var upgrading_to:Building
 
 
 #EXPERIENCE
+
 var experience:float=0
-var level:int=1
-@export var level_up_slates:Array[LevelUpSlate]
+@export var level:int=1
+@export var level_up_slates:LevelUpSlates
+
+
+@export var granary_cap:int
+@export var storeroom_cap:int
+@export var animal_fields:int
+@export var attractiveness_boost:float
 
 func create(d:District):
 	district=d
@@ -92,23 +101,55 @@ func get_production(i:int):
 			return prod.name
 		else:
 			return prod.name
+
+func get_production_options():
+	pass
 	
 func progress_production():
 	for x in producing_this_turn.size()-1:
 		if producing_this_turn[x] is Recipe:
 			var recipe:Recipe = producing_this_turn[x]
 			var progress=1
-			for y in staff_appointed:
-				var percentage=(staff_needed[y]-staff_appointed[y])/100		
+			for y in staff_needed:
+				var percentage=clamp(float(staff_needed[y])/staff_appointed[y],0,1)
 				progress*=percentage
 			
 			turns_producing[x]+=progress
 			if turns_producing[x]==recipe.turns:
 				turns_producing[x]=0
-				for y in recipe.outputs:
-					district.territory.stockpile.add_stuff(y,recipe.outputs[y])
-				for y in recipe.exp_to:
-					ResearchManager.research
+				var proceed = true 
+				for y in recipe.inputs:
+					if district.territory.stockpile.check_stuff_amount(y)<recipe.inputs[y]:
+						proceed = false
+						break
+				if !proceed:
+					continue
+				else:
+					
+					if !check_special():
+						continue
+					
+					for y in recipe.inputs:
+						district.territory.stockpile.remove_stuff(y,recipe.inputs[y],true,self,district)
+					for y in recipe.outputs:
+						
+						var amt = recipe.outputs[y]
+						var percentage=0
+						if boss:
+							percentage+=boss.get_prowess(Person.PROWESS.Productive)/10
+							#ADD BLESSING HERE
+							amt+=amt*percentage
+						district.territory.stockpile.add_stuff(y,amt)
+					for y in recipe.exp_to:
+						ResearchManager.research[y].add_exp(recipe.exp_to[y],self)
+					district.biome.air_pollution+=recipe.air_pollution
+					district.biome.water_pollution+=recipe.water_pollution
+					district.biome.spiritual_pollution+=recipe.spiritual_pollution		
+					get_exp(recipe.exp_value)
+				
+				
+func check_special()->bool:
+	return true
 				
 func repair():
 	if stats.current_hp<stats.total_hp:
@@ -151,28 +192,37 @@ func plunder(stockpile:Stockpile):
 
 func upgrade(b:Building):
 	name=b.name
-	production_slots=b.production_slots
-	extention_slots=b.extention_slots
+	level_up_slates=b.level_up_slates.duplicate()
 	for x in b.recipes:
 		this_building_recipes[x.name]=x
 	image=b.image
-	b=null
+	for x in b.possible_extentions:
+		possible_extentions.append(x)
+	for x in b.staff_needed:
+		if x in staff_needed.keys():	
+			staff_needed[x]+=b.staff_needed[x]
+		else:
+			staff_needed[x]=b.staff_needed[x]
 	
 func get_extention(b:Building):
 	for x in b.recipes:
 		this_building_recipes[x.name]=x
-	stats.total_hp+=b.stats.total_hp/2
-	stats.current_hp=stats.total_hp
-	stats.defense+=b.stats.defense
-	stats.offense+=b.offense
+	stats.total_hp+=(b.construction_level*50)/2
+	if b.stats:
+		stats.current_hp=stats.total_hp
+		stats.defense+=b.stats.defense
+		stats.offense+=b.offense
+		stats.magic+=b.stats.magic
+		stats.magdef+=b.stats.magdef
+		stats.luck+=b.stats.luck
 	for x in b.staff_needed:
 		if x in staff_needed.keys():	
 			staff_needed[x]+=b.staff_needed[x]
 		else:
 			staff_needed[x]=b.staff_needed[x]
 			
-func take_damage(a:int):
-	a+=a*stats.defense/100
+func take_damage(a:float):
+	a-=a*stats.defense/10
 	stats.change_hp(a)
 	if stats.current_hp<=0:
 		destroy_building()
@@ -196,10 +246,57 @@ func get_exp(a:float):
 		wisdom=boss.get_prowess(Person.PROWESS.Wise)
 	experience+=a+wisdom
 	if experience>=(level+1)*(50**2):
-		experience=0
-		level+=1
 		level_up()		
 	
 	
 func level_up():
-	pass
+	var level_up_slate = level_up_slates.slates[level+1]
+	if level_up_slate.check(self):
+		level_up_slate.apply(self)
+		level+=1
+		experience=0
+
+func save():
+	var s = get_save()
+	return s
+
+func get_save():
+	var s = {}
+	s["building_type"]=name
+	s["index"]=district.index
+	s["boss"]=null if !boss else boss.id
+	s["territory"]=district.territory.coords
+	s["stats"] = stats.stats.duplicate()
+	s["district"]=district.index
+	s["age"]=age
+	s["utilized_districts"]=[]
+	for x in utilized_districts:
+		s.utilized_districts.append(x.index)
+	s["producing_this_turn"]=[]
+	s["turns_producing"]=turns_producing.duplicate()
+	for x in producing_this_turn:
+		if x is Recipe:
+			s["producing_this_turn"].append(x.name)
+		else:
+			s["producing_this_turn"].append(x)
+	s["this_building_recipes"]=[]
+	for x in this_building_recipes.values():
+		s["this_building_recipies"].append(x.id)
+	s["extentions"]=[]
+	for x in extentions:
+		if x:
+			s["extentions"].append(x.name)
+		else:
+			s["extentions"].append(null)
+	s["extention_construction"] = extention_construction.duplicate()
+	s["extention_slots"] = extention_slots
+	
+	s["upgrade_construction"] = upgrade_construction
+	s["upgrading_to"] = upgrading_to.name
+	s["experience"]=experience
+	s["level"]=level
+	s["potential_npcs"]={}
+	for x in potential_npcs.keys():
+		s["potential_npcs"][x.id]=potential_npcs[x]
+	return s
+	

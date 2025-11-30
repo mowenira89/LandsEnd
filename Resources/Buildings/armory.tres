@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Building" load_steps=15 format=3 uid="uid://bkx0by8t5k6bk"]
+[gd_resource type="Resource" script_class="Building" load_steps=16 format=3 uid="uid://bkx0by8t5k6bk"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_yibe6"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="3_ed0om"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="7_72pt3"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="7_d8fha"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_72pt3"]
+[ext_resource type="Resource" uid="uid://1dfmb5a2yk8t" path="res://Resources/Buildings/voltaic_armory.tres" id="9_vovps"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="9_vs6lo"]
 [ext_resource type="Resource" uid="uid://bwkbtxejhj1ax" path="res://Resources/Recipes/armory_linen_armor.tres" id="9_wrebs"]
 [ext_resource type="Resource" uid="uid://bucl5geng83cp" path="res://Resources/Recipes/armory_magic_sword.tres" id="10_5e13h"]
@@ -37,4 +38,6 @@ staff_needed = Dictionary[int, int]({
 })
 production_slots = 3
 recipes = Array[ExtResource("8_72pt3")]([ExtResource("9_wrebs"), ExtResource("10_5e13h"), ExtResource("11_vovps")])
+possible_extentions = Array[ExtResource("7_d8fha")]([ExtResource("9_vovps")])
+possible_upgrades = Array[ExtResource("7_d8fha")]([null])
 metadata/_custom_type_script = "uid://jgjaoud3lh53"

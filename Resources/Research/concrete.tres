@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Research" load_steps=11 format=3 uid="uid://bfp82l7jug6fo"]
+[gd_resource type="Resource" script_class="Research" load_steps=13 format=3 uid="uid://bfp82l7jug6fo"]
 
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="1_fqgar"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_4is8k"]
 [ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="2_ek6de"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_ovo3r"]
 [ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_65q4r"]
@@ -8,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://cm0xo6ydyl2bi" path="res://Resources/Stuff/gypsum.tres" id="4_5eqbk"]
 [ext_resource type="Resource" uid="uid://ua5auyt0c053" path="res://Resources/Research/masonry.tres" id="4_ovo3r"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="5_in8ti"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="6_g2kre"]
 [ext_resource type="Resource" uid="uid://cjoa407vp84l2" path="res://Resources/Recipes/mason_concrete.tres" id="9_in8ti"]
 
 [sub_resource type="Resource" id="Resource_4is8k"]

@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Species" load_steps=12 format=3 uid="uid://1etabgbj86au"]
+
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_1o3ns"]
+[ext_resource type="Resource" uid="uid://cfwb5j1upsemd" path="res://Resources/Stuff/cursed_meat.tres" id="2_4a6j0"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="2_d72rl"]
+[ext_resource type="Resource" uid="uid://cfgx2mn2nq4cv" path="res://Resources/Research/metallurgy.tres" id="3_4a6j0"]
+[ext_resource type="Resource" uid="uid://cvx5p01d1hrdf" path="res://Resources/Research/orangesmithing.tres" id="4_o7cnk"]
+[ext_resource type="Resource" uid="uid://coqwyx2r33sfn" path="res://Resources/Research/whitesmithing.tres" id="5_p0q6v"]
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="6_mv5mo"]
+[ext_resource type="Script" uid="uid://b7lspf02dk4r5" path="res://Data/species.gd" id="7_0int2"]
+[ext_resource type="Resource" uid="uid://blpaqit2qjg4b" path="res://Resources/Research/alchemy.tres" id="7_o7cnk"]
+[ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="10_o7cnk"]
+
+[sub_resource type="Resource" id="Resource_p0q6v"]
+script = ExtResource("10_o7cnk")
+hp = 200.0
+off = 3.0
+def = 3.0
+mag = 7.0
+magdef = 6.0
+sp = 3.0
+l = 3.0
+metadata/_custom_type_script = "uid://d2hat5snxwp82"
+
+[resource]
+script = ExtResource("7_0int2")
+natural_prowess = Array[int]([0])
+kill_produce = Dictionary[ExtResource("1_1o3ns"), int]({
+ExtResource("2_4a6j0"): 1
+})
+rarity = 5.0
+domestication_difficulty = 99.0
+aggressiveness = 10.0
+skittishness = 50.0
+knowledge = Array[ExtResource("2_d72rl")]([ExtResource("3_4a6j0"), ExtResource("4_o7cnk"), ExtResource("5_p0q6v"), ExtResource("7_o7cnk")])
+name = "Cabeiri"
+stats = SubResource("Resource_p0q6v")
+value = 100000.0
+found_in = Array[int]([3])
+prohibited = true
+diet_type = Array[int]([0])
+metadata/_custom_type_script = "uid://b7lspf02dk4r5"

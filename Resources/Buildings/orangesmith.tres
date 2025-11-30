@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="Building" load_steps=19 format=3 uid="uid://dshsqcvo8q3ri"]
+[gd_resource type="Resource" script_class="Smith" load_steps=18 format=3 uid="uid://dshsqcvo8q3ri"]
 
-[ext_resource type="Script" uid="uid://shaorb866qv1" path="res://Data/buffs.gd" id="1_xm7vu"]
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="2_fgmvw"]
 [ext_resource type="Script" uid="uid://dfvuv4fq4adpa" path="res://Data/conditions/building_level_condition.gd" id="3_8k6gh"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="4_a1h56"]
@@ -8,17 +7,14 @@
 [ext_resource type="Resource" uid="uid://bt85i3i2fa24g" path="res://Resources/Stuff/oricalchum.tres" id="6_m2gxv"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="7_dfsoy"]
 [ext_resource type="Texture2D" uid="uid://bg77bekv0ay4r" path="res://Assets/Images/BuildingImages/orange.png" id="7_fgmvw"]
-[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="9_8k6gh"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="9_aiwoj"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="9_xm7vu"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="10_udoxq"]
 [ext_resource type="Resource" uid="uid://liw3bxv2slon" path="res://Resources/Recipes/orangesmith_gold_ingot.tres" id="11_vac03"]
 [ext_resource type="Resource" uid="uid://c744m7rld0yy3" path="res://Resources/Recipes/orangesmith_magic_sword.tres" id="12_6a58j"]
 [ext_resource type="Resource" uid="uid://be2sap83vst3q" path="res://Resources/Recipes/orangesmith_orichalcum.tres" id="13_dfean"]
+[ext_resource type="Script" uid="uid://dihqh4ehkm2lh" path="res://Data/buildings/smith.gd" id="14_fgmvw"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="14_muieu"]
-
-[sub_resource type="Resource" id="Resource_tgtor"]
-script = ExtResource("1_xm7vu")
-metadata/_custom_type_script = "uid://shaorb866qv1"
 
 [sub_resource type="Resource" id="Resource_45enj"]
 script = ExtResource("3_8k6gh")
@@ -30,9 +26,8 @@ script = ExtResource("14_muieu")
 metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
-script = ExtResource("9_aiwoj")
+script = ExtResource("14_fgmvw")
 name = "Orangesmith"
-buffs = SubResource("Resource_tgtor")
 stats = SubResource("Resource_atse1")
 image = ExtResource("7_fgmvw")
 construction_time = 4

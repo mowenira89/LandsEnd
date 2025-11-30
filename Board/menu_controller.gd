@@ -7,39 +7,58 @@ class_name MenuController extends CanvasLayer
 @onready var top_menu: TopMenu = $TopMenu
 @onready var stockpile_menu: StockpileMenu = $BottomMenu/MarginContainer/ColorRect/MarginContainer/StockpileMenu
 
-@onready var districts_view: DistrictsView = $SideMenu/ColorRect/SideBottom/DistrictsView
-@onready var pop_bottom_menu: PopBottomMenu = $SideMenu/ColorRect/SideBottom/PopBottomMenu
-@onready var unit_action_menu: UnitActionMenu = $SideMenu/ColorRect/SideBottom/UnitActionMenu
-@onready var exchange_window: ExchangeWindow = $SideMenu/ColorRect/SideBottom/ExchangeWindow
-@onready var building_view_bottom: BuildingViewBottom = $SideMenu/ColorRect/SideBottom/BuildingViewBottom
-@onready var stuff_selector_screen: StuffSelectorScreen = $SideMenu/ColorRect/SideBottom/StuffSelectorScreen
+
+
 @onready var territory_stats: TerritoryStats = $SideMenu/ColorRect/SideTop/TerritoryStats
 @onready var district_stats: DistrictStats = $SideMenu/ColorRect/SideTop/DistrictStats
 @onready var build_menu: BuildMenu = $SideMenu/ColorRect/SideTop/BuildMenu
 @onready var unit_view: UnitView = $SideMenu/ColorRect/SideTop/UnitView
 @onready var npc_view: NPCView = $SideMenu/ColorRect/SideTop/NPC_View
 @onready var basic_building_view: BasicBuildingView = $SideMenu/ColorRect/SideTop/BasicBuildingView
-@onready var recipe_menu: RecipeMenu = $SideMenu/ColorRect/SideTop/RecipeMenu
 @onready var farm_view: FarmView = $SideMenu/ColorRect/SideTop/FarmView
+@onready var distillery_menu: DistilleryView = $SideMenu/ColorRect/SideTop/DistilleryMenu
+@onready var temple_menu: TempleMenu = $SideMenu/ColorRect/SideTop/TempleMenu
+@onready var herbalist_view: Control = $SideMenu/ColorRect/SideTop/HerbalistView
+
+@onready var districts_view: DistrictsView = $SideMenu/ColorRect/SideBottom/MarginContainer/DistrictsView
+@onready var pop_bottom_menu: PopBottomMenu = $SideMenu/ColorRect/SideBottom/MarginContainer/PopBottomMenu
+@onready var unit_action_menu: UnitActionMenu = $SideMenu/ColorRect/SideBottom/MarginContainer/UnitActionMenu
+@onready var exchange_window: ExchangeWindow = $SideMenu/ColorRect/SideBottom/MarginContainer/ExchangeWindow
+@onready var stuff_selector_screen: StuffSelectorScreen = $SideMenu/ColorRect/SideBottom/MarginContainer/StuffSelectorScreen
+@onready var preserve_menu: PreserveMenu = $SideMenu/ColorRect/SideBottom/MarginContainer/PreserveMenu
+@onready var recipe_menu: RecipeMenu = $SideMenu/ColorRect/SideBottom/MarginContainer/RecipeMenu
+@onready var ceremony_screen: CeremonyScreen = $SideMenu/ColorRect/SideBottom/MarginContainer/CeremonyScreen
+@onready var obtain_screen: ObtainScreen = $SideMenu/ColorRect/SideBottom/MarginContainer/ObtainScreen
+@onready var crop_stat_view: CropStatView = $SideMenu/ColorRect/SideBottom/MarginContainer/CropStatView
+@onready var crop_select_screen: CropSelectScreen = $SideMenu/ColorRect/SideBottom/MarginContainer/CropSelectScreen
+@onready var npc_selector_menu: NPCSelectorMenu = $SideMenu/ColorRect/SideBottom/MarginContainer/NPCSelectorMenu
+@onready var feed_select_screen: FeedSelectScreen = $SideMenu/ColorRect/SideBottom/MarginContainer/FeedSelectScreen
+@onready var smith_view: SmithView = $SideMenu/ColorRect/SideTop/SmithView
+@onready var dedication_select_window: DedicationSelectWindow = $SideMenu/ColorRect/SideBottom/MarginContainer/DedicationSelectWindow
+@onready var item_amount_selector: ItemAmountSelector = $SideMenu/ColorRect/SideBottom/MarginContainer/ItemAmountSelector
+@onready var school_view: SchoolView = $SideMenu/ColorRect/SideTop/SchoolView
+@onready var lecture_select_window: LectureSelectWindow = $SideMenu/ColorRect/SideBottom/MarginContainer/LectureSelectWindow
+@onready var market_view: MarketView = $SideMenu/ColorRect/SideTop/MarketView
+@onready var ceremony_selection_sceen: CeremonySelectionScreen = $SideMenu/ColorRect/SideBottom/MarginContainer/CeremonySelectionSceen
 
 
-@onready var warning: _Warning = $Warning
+@onready var warning: AWarning = $Warning
 
 
 @onready var alert: ColorRect = $Alert
 @onready var alert_label: Label = $Alert/AlertLabel
 @onready var end_turn_box: EndTurnBox = $EndTurnBox
 
+@onready var land: Button = $SideMenu/ColorRect/ColorRect/MarginContainer/VBoxContainer/Land
+@onready var people: Button = $SideMenu/ColorRect/ColorRect/MarginContainer/VBoxContainer/People
+@onready var events: Button = $SideMenu/MarginContainer/VBoxContainer/TopButtons/Events
+@onready var population: Button = $SideMenu/MarginContainer/VBoxContainer/PeopleButtons/Population
+@onready var individuals: Button = $SideMenu/MarginContainer/VBoxContainer/PeopleButtons/Individuals
 
 
-@onready var land: Button = $SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/Land
-@onready var people: Button = $SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/People
-@onready var events: Button = $SideMenu/ColorRect/MarginContainer/VBoxContainer/TopButtons/Events
-@onready var population: Button = $SideMenu/ColorRect/MarginContainer/VBoxContainer/PeopleButtons/Population
-@onready var individuals: Button = $SideMenu/ColorRect/MarginContainer/VBoxContainer/PeopleButtons/Individuals
 
 @onready var buttons = [land, people, events, population, individuals]
-
+signal send_data
 
 var previous_side_top
 var previous_side_bottom

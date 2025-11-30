@@ -12,32 +12,11 @@ func add_research():
 	for x in dir:
 		var new = load(path+x)
 		research[new.name]=new
+		print(new.name+" "+str(new.exp_to_unlock))
 
-func exp_from_stuff(s:Stuff,b:Building=null,u:Unit=null):
-	var t = b.district.territory if b else u.current_territory
-	var wisdom
-	if b and b.boss:
-		wisdom=b.boss.get_prowess(Person.PROWESS.Wise)
-	elif u:
-		wisdom=u.get_powess(Person.PROWESS.Wise)
-		
-	
+func exp_from_stuff(s:Stuff,b:Building=null,u:Unit=null,d:District=null):
 	for x in s.exp_to:
-		if research.has(x):
-			var r = research[x]
-			var num = s.exp_to[x]+wisdom
-			research[x].add_exp(s.exp_to[x],num,t)
-
-func exp_from_recipe(a:int,b:Building):
-	var array:Array[Buffs]=[]
-	array.append(b.buffs)	
-	if b.boss:
-		array.append(b.boss.personal_buffs)
-	array.append(b.district.territory.buffs)
-	var r=0
-	for x in array:
-		r+=x.get_buffs_total(Buff.TYPE.RSRCH)
-	
+		ResearchManager.research[x].add_exp(s.exp_to[x],b,u,d)
 
 func get_exp_from_nymphoi(n:Nymphoi):
 	var territory = n.unit.current_territory

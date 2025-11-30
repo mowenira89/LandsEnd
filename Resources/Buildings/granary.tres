@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Storeroom" load_steps=14 format=3 uid="uid://biu0am15iaecl"]
+[gd_resource type="Resource" script_class="Building" load_steps=16 format=3 uid="uid://biu0am15iaecl"]
 
 [ext_resource type="Script" uid="uid://iynqr0uc2c8u" path="res://Data/condition.gd" id="1_njbcd"]
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_1l620"]
@@ -6,20 +6,21 @@
 [ext_resource type="Resource" uid="uid://cvqv7ihlpfguv" path="res://Resources/Stuff/amphora.tres" id="4_mpppl"]
 [ext_resource type="Resource" uid="uid://c2wuxkk4cgide" path="res://Resources/Stuff/barrel.tres" id="5_1c0xb"]
 [ext_resource type="Texture2D" uid="uid://c0j2vieojlmys" path="res://Assets/Images/BuildingImages/granary.png" id="6_1l620"]
+[ext_resource type="Resource" uid="uid://87npi8da4k00" path="res://Resources/Stuff/brick.tres" id="6_mpppl"]
 [ext_resource type="Script" uid="uid://cfwodcj64kdgn" path="res://Data/level_up_slate.gd" id="6_yd3lp"]
 [ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="8_edsyj"]
 [ext_resource type="Script" uid="uid://jgjaoud3lh53" path="res://Data/building.gd" id="8_jc6ix"]
 [ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="9_fb7gh"]
-[ext_resource type="Script" uid="uid://w6133npa21mi" path="res://Data/buildings/storeroom.gd" id="10_v35f3"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="11_hefr3"]
+[ext_resource type="Resource" uid="uid://oy6b221wxmcl" path="res://Resources/Buildings/bakery.tres" id="11_yd3lp"]
+[ext_resource type="Resource" uid="uid://55jlvb2bfleo" path="res://Resources/Buildings/cookhouse.tres" id="12_120xh"]
 
 [sub_resource type="Resource" id="Resource_3ulq6"]
 script = ExtResource("11_hefr3")
 metadata/_custom_type_script = "uid://d2hat5snxwp82"
 
 [resource]
-script = ExtResource("10_v35f3")
-granary_cap = 100
+script = ExtResource("8_jc6ix")
 name = "Granary"
 stats = SubResource("Resource_3ulq6")
 image = ExtResource("6_1l620")
@@ -27,7 +28,10 @@ construction_time = 2
 construction_materials = Dictionary[ExtResource("2_1l620"), int]({
 ExtResource("3_edsyj"): 15,
 ExtResource("4_mpppl"): 10,
-ExtResource("5_1c0xb"): 10
+ExtResource("5_1c0xb"): 10,
+ExtResource("6_mpppl"): 15
 })
-construction_level = 2
+construction_level = 3
+possible_extentions = Array[ExtResource("8_jc6ix")]([ExtResource("11_yd3lp"), ExtResource("12_120xh")])
+granary_cap = 100
 metadata/_custom_type_script = "uid://w6133npa21mi"

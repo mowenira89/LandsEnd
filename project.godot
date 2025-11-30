@@ -20,6 +20,9 @@ config/icon="res://icon.svg"
 RM="*res://Globals/resource_manager.gd"
 GM="*res://Globals/game_manager.gd"
 ResearchManager="*res://Globals/ResearchManager.gd"
+MagicManager="*res://Globals/MagicManager.gd"
+NM="*res://Globals/NPCManager.gd"
+BattleManager="*res://Globals/BattleManager.gd"
 
 [display]
 

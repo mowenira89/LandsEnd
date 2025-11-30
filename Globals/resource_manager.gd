@@ -9,12 +9,19 @@ var buildings:Dictionary[String,Building]
 var NPCs:Dictionary[String,Person]
 var recipes:Dictionary[String,Recipe]
 var crops:Dictionary[String,Crop]
+var NPCs_by_building:Dictionary[Building,Array]
+
+var people_by_id:Dictionary[String,Person]
+
+var cookhouse_recipes:Dictionary[String,CookhouseRecipe]
+var khemic_recipes:Dictionary[String,KhemicRecipe]
 
 func _ready():
 	set_species()
 	set_stuff()
 	set_buildings()
 	set_NPCs()
+	set_recipes()
 	
 
 func check_exp_to():
@@ -36,6 +43,13 @@ func set_species():
 			new.init()
 			for y in new.found_in:
 				species_by_habitat[y].append(new)
+			if new.kind==Species.KIND.Nymphoi:
+				print(new.name)
+
+	for x in stuff.values():
+		if x is Crop:
+			for t in x.found_in:
+				species_by_habitat[t].append(x)
 
 func set_buildings():
 	var path = "res://Resources/Buildings/"
@@ -47,6 +61,10 @@ func set_buildings():
 			GM.unlocked_buildings.append(new)
 		if !new.image:
 			print(new.name+" needs an image")
+		
+	for x in buildings:
+		if buildings[x].upgrade_only:
+			print(x +" is upgrade only")
 
 
 func set_stuff():
@@ -65,6 +83,14 @@ func set_stuff():
 			if new.qualities.has(Stuff.QUALITIES.Forage):
 				for y in new.found_in:
 					forage_by_terrain[y].append(new)
+		if new is Crop:
+			species[new.name]=new
+			for y in new.found_in:
+				species_by_habitat[y].append(new)
+
+	for x in stuff.values():
+		if x.qualities.has(Stuff.QUALITIES.Libation):
+			print(x.name + " Libation: " + str(x.qualities[Stuff.QUALITIES.Libation]))
 
 func set_NPCs():
 	var path="res://Resources/NPCs/"
@@ -89,6 +115,19 @@ func set_crops():
 			crops[new.id]=new
 		else:
 			crops[x.name]=new
+
+func set_cookhouse_recipes():
+	var path="res://Resources/CookhouseRecipes/"
+	var dir = ResourceLoader.list_directory(path)
+	for x in dir:
+		var new = load(path+x)
+		if new.id!="":
+			crops[new.id]=new
+		else:
+			crops[x.name]=new
+
+
+
 
 func get_stuff_of_quality(q:Stuff.QUALITIES):
 	var r = []

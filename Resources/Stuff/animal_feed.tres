@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://bcmtjphspc5kn"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_1msfi"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_rdxab"]
+
+[resource]
+script = ExtResource("2_rdxab")
+name = "Animal Feed"
+value = 3.0
+qualities = Dictionary[int, float]({
+22: 3.0
+})
+mystic_qualities = Dictionary[int, float]({
+0: 1.0,
+4: 0.5
+})
+conveys_prowess = Dictionary[int, float]({
+22: 1.0
+})
+food_type = 6
+diet_type = Array[int]([0, 2])
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

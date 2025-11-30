@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Lecture" load_steps=4 format=3 uid="uid://deb2kv3486qxo"]
+
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="1_ohatc"]
+[ext_resource type="Resource" uid="uid://kbo67sptg63p" path="res://Resources/Research/transcendence.tres" id="2_3u1n2"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="2_p8v06"]
+
+[resource]
+script = ExtResource("2_p8v06")
+name = "Spiritual Alchemy"
+subject = 2
+pop_training = 3
+difficulty = 50
+research = Dictionary[ExtResource("1_ohatc"), float]({
+ExtResource("2_3u1n2"): 10.0
+})
+metadata/_custom_type_script = "uid://m330oqovp04n"

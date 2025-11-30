@@ -8,5 +8,6 @@ class_name Recipe extends Resource
 @export var exp_to:Dictionary[String,float]
 @export var exp_value:float=1
 @export var unlocked:bool
-@export var pollution:float=0
+@export var air_pollution:float=0
+@export var water_pollution:float=0
 @export var spiritual_pollution:float=0

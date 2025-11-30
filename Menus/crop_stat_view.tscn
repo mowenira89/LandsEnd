@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpvt0ioo3h241"]
+
+[ext_resource type="Script" uid="uid://cxauq5ib3gyg8" path="res://Menus/crop_stat_view.gd" id="1_ab462"]
+[ext_resource type="PackedScene" uid="uid://7g2xivh0ne32" path="res://Menus/SelectorButton.tscn" id="2_h3lqd"]
+
+[node name="CropStatView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ab462")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="container1" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="vbox" type="VBoxContainer" parent="container1"]
+layout_mode = 2
+alignment = 1
+
+[node name="x" type="Button" parent="container1"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="container1"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="SelectorButton" parent="container1/VBoxContainer" instance=ExtResource("2_h3lqd")]
+layout_mode = 2
+
+[connection signal="clicked" from="container1/VBoxContainer/SelectorButton" to="." method="_on_selector_button_clicked"]
+[connection signal="open" from="container1/VBoxContainer/SelectorButton" to="." method="_on_selector_button_open"]
+[connection signal="removing" from="container1/VBoxContainer/SelectorButton" to="." method="_on_selector_button_removing"]

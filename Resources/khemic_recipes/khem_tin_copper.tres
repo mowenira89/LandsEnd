@@ -9,7 +9,6 @@
 script = ExtResource("4_m1vm0")
 mystic_need = 5.0
 mystic_type = 1
-level = 1
 name = "Tin  to Copper"
 id = "khem_tin_copper"
 turns = 1
@@ -19,5 +18,12 @@ ExtResource("3_4iyov"): 1
 outputs = Dictionary[ExtResource("1_sj446"), int]({
 ExtResource("2_l118e"): 1
 })
+exp_to = Dictionary[String, float]({
+"Alchemy 2": 1.0,
+"Spiritual Alchemy": 1.0
+})
 unlocked = true
+air_pollution = 2.0
+water_pollution = 2.0
+spiritual_pollution = 2.0
 metadata/_custom_type_script = "uid://b5amvji0dfqa4"

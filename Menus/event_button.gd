@@ -14,4 +14,5 @@ func create(e:Event,u:Unit=null):
 func _on_button_gui_input(e: InputEvent) -> void:
 	if e.is_action_released("Right Click"):
 		unit.remove_event(event)
+		unit.movements_allowed_this_turn+=1
 		queue_free()

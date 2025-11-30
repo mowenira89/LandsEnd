@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Stuff" load_steps=3 format=3 uid="uid://ce5nq1lgmy21k"]
+
+[ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="1_mpuml"]
+[ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="2_pqtn1"]
+
+[resource]
+script = ExtResource("2_pqtn1")
+name = "Vinegar"
+value = 5.0
+qualities = Dictionary[int, float]({
+0: 0.5
+})
+mystic_qualities = Dictionary[int, float]({
+2: 0.5,
+3: 0.5,
+4: 0.5
+})
+metadata/_custom_type_script = "uid://dx28jau0q0skf"

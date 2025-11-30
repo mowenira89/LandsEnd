@@ -8,23 +8,27 @@ var vitamins:Dictionary[Biome.VITAMINS,float]
 var temp_jobs:Dictionary[Pop.CLASS,int]
 var growth:float=0
 var pop_cap:Dictionary[Pop,int]
+var growth_factor:float
 
 func create(t:Territory=null,u:Unit=null):
 	if u:
 		owner=u
+		growth_factor=10
 	else:
 		owner=t
+		growth_factor=25
 	for x in Pop.CLASS.values():
 		var new_pop = Pop.new()
 		new_pop.create(x,t)
 		pops[x]=new_pop
 	for x in 6:
 		vitamins[x]=5
+	
 
 func get_total_population():
 	var r=0
-	for x in pops.values():
-		r+=x.persons
+	for x in 4:
+		r+=pops[Pop.CLASS.values()[x]].persons
 	return r
 
 func get_pops(c:Pop.CLASS):
@@ -37,30 +41,46 @@ func get_pop_breakdown():
 	return r
 	
 func consume():
-	hunger+=get_total_population()/10
+	var total_pop = get_total_population()
+	hunger=total_pop/10
 	var stockpile:Stockpile = owner.stockpile if owner is Territory else owner.cargo
 	while hunger>0:
-		for x in stockpile.food_order:
-			for y in stockpile.stuff[x]:
-				if x not in stockpile.forbidden_food:
-					var amount_to_consume = min(hunger,stockpile.stuff[x])
-					if stockpile.remove_stuff(x,amount_to_consume):
-						hunger-=amount_to_consume*x.qualities[Stuff.QUALITIES.Food]
-						for v in x.vitamins:
-							vitamins[v]=clamp(vitamins[v]+x.vitamins[v],-10,10)
+		for x in stockpile.food_order:	
+			if hunger<=0:
+				break
+			if x in stockpile.prohibited:
+				continue
+			var amt = hunger/x.qualities[Stuff.QUALITIES.Food]
+			var amount_to_consume = min(amt,stockpile.stuff[x])
+			if stockpile.remove_stuff(x,amount_to_consume):
+				hunger-=amount_to_consume*x.qualities[Stuff.QUALITIES.Food]
+				for v in x.vitamins:
+					vitamins[v]=clamp(vitamins[v]+x.vitamins[v],-10,10)
 		for x in vitamins:
 			if vitamins[x]<0:
 				for y in stockpile.food_order:
-					for v in y.vitamins:
-						if v==x:
-							if stockpile.remove_stuff(y,1):
-								vitamins[x]+=y.vitamins[v]
-								if vitamins[x]>=0:
-									break
+					if y not in stockpile.prohibited:
+						for v in y.vitamins:
+							if v==x:
+								if stockpile.remove_stuff(y,.2):
+									vitamins[x]+=y.vitamins[v]
+									if vitamins[x]>=0:
+										break
 					if vitamins[x]>=0:
 						break
 		if hunger>0:
 			starvation+=hunger
+			var prohibited_food = []
+			for y in stockpile.prohibited:
+				if y.qualities.has(Stuff.QUALITIES.Food):
+					prohibited_food.append(y)
+			var happiness_loss = prohibited_food.size()/100
+			mass_belief_change(Beliefs.STATS.Happiness,-happiness_loss) 
+			hunger=0
+		else:
+			starvation=0
+
+			
 			
 
 func get_pop_cap(c:Pop.CLASS):
@@ -73,9 +93,28 @@ func get_pop_cap(c:Pop.CLASS):
 		
 		
 func grow():
-	
-	if hunger<0:
-		pass
+	if starvation>5:
+		var p = []
+		for x in pops:
+			if pops[x].persons>0:
+				p.append(x)
+		change_pop(p.pick_random(),-1)
+		change_pop(Pop.CLASS.Underclass,1)
+	var stockpile:Stockpile = owner.stockpile if owner is Territory else owner.cargo
+	var surplus_food = stockpile.get_of_quality(Food.QUALITIES.Food)
+	for x in stockpile.prohibited:
+		if x in surplus_food:
+			surplus_food.erase(x)
+	for x in ceil(surplus_food.size()/2):
+		if randi_range(1,100)<growth_factor:
+			change_pop(Pop.CLASS.Follower,1)
+		
+func get_present_classes():
+	var r = []
+	for x in pops:
+		if pops[x].persons>0:
+			r.append(x)
+	return r
 		
 func assimilate_unit(u:Unit,mode:String):
 	var followers = u.followers.pops
@@ -130,13 +169,6 @@ func get_territory():
 		return owner
 		
 
-func get_needed():
-	var needed={}
-	for x in get_territory().districts:
-		if x.building!=null:
-			for y in x.building.staff_needed:
-				needed[y]+=x.building.staff_needed[y] if needed.has(y) else x.building.staff_needed[y]
-	return needed
 
 func appoint_workers():
 	var ratios = {}
@@ -147,10 +179,11 @@ func appoint_workers():
 		needed[x]=0
 		to_appoint[x]=0
 		ratios[x]=0
-	for x in get_territory().districts:
-		if x.building!=null:
-			for y in x.building.staff_needed:
-				needed[y]+=x.building.staff_needed[y]
+	if owner is Territory:
+		for x in owner.districts:
+			if x.building!=null:
+				for y in x.building.staff_needed:
+					needed[y]+=x.building.staff_needed[y]
 	for x in temp_jobs:
 		needed[x]+=temp_jobs[x]
 	for x in needed:
@@ -158,14 +191,19 @@ func appoint_workers():
 			to_appoint[x]=needed[x]
 		else:
 			ratios[x] = float(get_pops(x))/needed[x]
-	for x in get_territory().districts:
-		if x.building!=null:
-			for c in x.building.staff_needed:
-				if needed[c]>have[c]:
-					x.building.staff_appointed[c]=x.building.staff_appointed[c]*ratios[c]
-				else:
-					x.building.staff_appointed[c]=x.staff_appointed[c]
-	
+	if owner is Territory:
+		for x in owner.districts:
+			if x.building!=null:
+				for c in x.building.staff_needed:
+					if needed[c]>have[c]:
+						x.building.staff_appointed[c]=x.building.staff_appointed[c]*ratios[c]
+					else:
+						x.building.staff_appointed[c]=x.building.staff_appointed[c]
+	elif owner is Unit:
+		for x in owner.action_queue:
+			if x is WorkEvent:
+				for p in 4:
+					pass
 	
 func get_idle_pop(c:Pop.CLASS):
 	var have = get_pops(c)
@@ -175,6 +213,8 @@ func get_idle_pop(c:Pop.CLASS):
 			for y in x.building.staff_needed:
 				if y == c:
 					needed+=x.building.staff_needed[c]
+	if temp_jobs.has(c):
+		needed+=temp_jobs[c]
 	return have-needed
 	
 
@@ -189,7 +229,21 @@ func get_pop_belief(c:Pop.CLASS,b:Beliefs.STATS):
 
 func end_turn():
 	consume()
+	grow()
 
 func move(t:Territory):
 	for x in pops:
 		pops[x].move(t)
+
+func mass_belief_change(b:Beliefs.STATS,d:float):
+	for x in 4:
+		pops[x].beliefs.change_stat(b,d)
+
+func process_pilgrims():
+	if owner is Unit:
+		return
+	var pilgrims_pop = pops[Pop.CLASS.Pilgrim]
+	var draw = owner.get_attractiveness()/100
+	var going = randi_range(0,draw)
+	var current_pilgrims = get_pops(Pop.CLASS.Pilgrim)
+	
