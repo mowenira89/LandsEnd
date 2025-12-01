@@ -17,6 +17,9 @@ var enemy_power:float
 @onready var autoresolve: Button = $Start/VBoxContainer/HBoxContainer/VBoxContainer/Autoresolve
 @onready var flee: Button = $Start/VBoxContainer/HBoxContainer/VBoxContainer/Flee
 @onready var finish: Button = $Start/VBoxContainer/HBoxContainer/VBoxContainer/Finish
+@onready var start_buttons_vbox: VBoxContainer = $Start/VBoxContainer/HBoxContainer/VBoxContainer
+@onready var enemy_result: Label = $Start/VBoxContainer/HBoxContainer/EnemyInfo/EnemyResult
+@onready var ally_result: Label = $Start/VBoxContainer/HBoxContainer/AllyInfo/AllyResult
 
 
 const NPC_SELECTOR = preload("res://Menus/PersonSelectButton.tscn")
@@ -37,6 +40,8 @@ func init_battle(a:Unit,e:Person):
 	finish.visible=false
 	enemy_power_label.visible=true
 	ally_power_label.visible=true
+	enemy_result.visible=false
+	ally_result.visible=false
 	enemy_power_label.text="Power: "+str(enemy_power)
 	ally_power_label.text="Power "+str(ally_power)
 	
@@ -95,45 +100,81 @@ func _on_flee_pressed() -> void:
 	visible=false
 
 func _on_autoresolve_pressed() -> void:
-	var chance_win = ally_power/(ally_power+enemy_power)
-	var chance_lose = 1-chance_win
 	
-	var winner = allies if randf()<chance_win else enemies
+	var flee_vote=0
+	var fight_vote=0
 	
-	var total_power = ally_power+enemy_power
-	var loss_share_A = enemy_power/total_power
-	var loss_share_B = ally_power/total_power
+	for x in enemies.get_individuals():
+		if check_flight(x):
+			flee_vote+=1
+		else:
+			fight_vote+=1
+	
+	if flee_vote>fight_vote:
+		enemies.dissappear()	
+		ally_result.text="Victory!"
+		enemy_result.text="Dispersed!"
+		
+		
+	else:
+		var chance_win = ally_power/(ally_power+enemy_power)
+		var chance_lose = 1-chance_win
+		
+		var winner = allies if randf()<chance_win else enemies
+		
+		var total_power = ally_power+enemy_power
+		var loss_share_A = enemy_power/total_power
+		var loss_share_B = ally_power/total_power
+		
+		var brutality = randf_range(.1,2)
+		
+		for x:Person in enemies.get_individuals():
+			var base_damage = x.stats.total_hp*loss_share_B*brutality
+			x.take_damage(base_damage)
 
-	var brutality = randf()
+		for x:Person in allies.get_individuals():
+			var base_damage = x.stats.total_hp*loss_share_A*brutality
+			x.take_damage(base_damage)
+
+		
+
+		if winner == allies:
+			ally_result.text="Victory!"
+			enemy_result.text="Loss!"
+			enemies.dissappear()
+		else:
+			ally_result.text="Loss!"
+			enemy_result.text="Victory!"
+			
+
+	end_battle()
 	
-	for x:Person in enemies.get_individuals():
-		var base_damage = x.stats.total_hp*loss_share_B*brutality
-		x.take_damage(base_damage)
 
 func end_battle():
 	margin_container.visible=false
 	start.visible=true
 	enemy_power_label.visible=false
 	ally_power_label.visible=false
-	
-	for x in enemies_grid.get_children():
-		x.queue_free()
-	for x in allies_grid.get_children():
-		x.queue_free()
-		
-	create_enemy(enemies.leader)
-	for x in enemies.companions:
-		create_enemy(x)
-	for x in enemies.guard:
-		create_enemy(x)
-
-	create_ally(allies.leader)
-	for x in allies.companions:
-		create_ally(x)
-	for x in allies.guard:
-		create_ally(x)
+	enemy_result.visible=true
+	ally_result.visible=true
+	for x in start_buttons_vbox.get_children():
+		x.visible=false
+	finish.visible=true	
+	set_combatants()
 
 func _on_fight_pressed() -> void:
 	start.visible=false
 	margin_container.visible=true
 	state_machine.state_finished("CharacterPositioning")
+
+
+func _on_finish_pressed() -> void:
+	visible=false
+	GM.menus.update_menus()
+
+func check_flight(p:Person):
+	var imbalance = ally_power-enemy_power
+	var score = (p.species.skittishness+imbalance)-(p.species.aggressiveness)
+	if randi_range(1,100)<score:
+		return true
+	return false

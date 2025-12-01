@@ -54,7 +54,7 @@ func start_new_game():
 		starting_territory.districts[0].building.create(starting_territory.districts[0])
 		starting_territory.districts[1].building=RM.buildings["Farm"].duplicate()
 		starting_territory.districts[1].building.create(starting_territory.districts[1])
-		starting_territory.districts[2].building=RM.buildings["Sacred Grove"].duplicate()
+		starting_territory.districts[2].building=RM.buildings["Market"].duplicate()
 		starting_territory.districts[2].building.create(starting_territory.districts[2])
 		var starting_stockpile = {
 			RM.stuff['Honey']:10,
@@ -119,7 +119,7 @@ func initial_setup():
 	var c = load("res://Resources/Ceremonies/dance.tres")
 
 func create_initial_party(t:Territory):
-	var scout = RM.NPCs["Scout"].duplicate()
+	var scout = RM.NPCs["Hunter"].duplicate()
 	scout.create(t,RM.species["Human"],1,20)
 	var unit = Unit.new()
 	var stockpile = Stockpile.new()

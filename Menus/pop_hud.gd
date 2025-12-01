@@ -38,14 +38,15 @@ var territory:Territory
 
 
 func update_menu(t:Territory):
-	territory=t
-	
+	if t:
+		territory=t
+		var breakdown = territory.population.get_pop_breakdown()
+		var needed = territory.get_jobs()
+		for x in idles:
+			idles[x].text=str(max(breakdown[x]-needed[x],0))
+			employed[x].text=str(needed[x])
+			totals[x].text=str(breakdown[x])
 	
 func _update_menu():
 	update_menu(territory)
-	var breakdown = territory.population.get_pop_breakdown()
-	var needed = territory.population.get_needed()
-	for x in idles:
-		idles[x].text=str(breakdown[x]-needed[x])
-		employed[x].text=str(min(needed[x],territory.get_pop_cap(x)))
-		totals[x].text=str(breakdown[x])
+	

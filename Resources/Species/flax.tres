@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Crop" load_steps=7 format=3 uid="uid://cyhmu63rk664p"]
+[gd_resource type="Resource" script_class="Crop" load_steps=8 format=3 uid="uid://cyhmu63rk664p"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_qp1jq"]
 [ext_resource type="Resource" uid="uid://byghxn6yyngq7" path="res://Resources/Stuff/fiber.tres" id="2_m4sjt"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_hliqy"]
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="3_m4sjt"]
 [ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="4_5c5l8"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_5c5l8"]

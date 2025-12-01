@@ -3,7 +3,7 @@ extends Node
 
 var NPC_images_by_id={}
 
-
+var potential_NPCs:Dictionary[Person,float]
 
 const territory_names = ["Fiblus","Cogram","Lors","Beiel","Blek","Sziam","Bembel","Pollotrix",
 				"Zambus","Godder","Pelizee","Pisa","Kakau","Postolus","Golbos","Pingrus",

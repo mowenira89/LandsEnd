@@ -88,6 +88,7 @@ func create(t:Territory,k:Species,friendliness:float,a:int):
 		stats=Stats.new()
 		stats.init(self)
 		stats.stats[Stats.STATS.HP]=species.stats.hp+randi_range(0,10)
+		stats.stats[Stats.STATS.CurrentHP]=stats.stats[Stats.STATS.HP]
 		stats.stats[Stats.STATS.Attack]=species.stats.off+randf_range(-1,1)
 		stats.stats[Stats.STATS.Defense]=species.stats.def+randf_range(-1,1)
 		stats.stats[Stats.STATS.Magic]=species.stats.mag+randf_range(-1,1)

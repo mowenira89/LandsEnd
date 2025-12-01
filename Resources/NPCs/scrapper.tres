@@ -14,4 +14,9 @@
 script = ExtResource("9_cbyc7")
 title = "Scrapper"
 level = 1
+CLASS = 2
+stat_mods = Dictionary[int, float]({
+4: 0.5
+})
+unlocked = true
 metadata/_custom_type_script = "uid://bd374amcrlpgs"

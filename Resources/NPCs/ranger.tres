@@ -17,4 +17,5 @@ prowess = Dictionary[int, float]({
 20: 1.0
 })
 level = 1
+unlocked = true
 metadata/_custom_type_script = "uid://bd374amcrlpgs"

@@ -7,6 +7,7 @@ class_name MenuController extends CanvasLayer
 @onready var top_menu: TopMenu = $TopMenu
 @onready var stockpile_menu: StockpileMenu = $BottomMenu/MarginContainer/ColorRect/MarginContainer/StockpileMenu
 
+@onready var pop_hud: PopHud = $SideMenu/MarginContainer/PopHud
 
 
 @onready var territory_stats: TerritoryStats = $SideMenu/ColorRect/SideTop/TerritoryStats
@@ -103,12 +104,14 @@ func show_territory(t:Territory):
 	territory_stats.update_menu(t)
 	districts_view.update_menu(t)
 	top_menu.update_menu(t)
+	pop_hud.update_menu(t)
 	stockpile_menu.update_menu(t)
 
 func _on_land_pressed() -> void:
 	territory_stats._update_menu()
 	districts_view._update_menu()
 	top_menu._update_menu()
+	pop_hud._update_menu()
 
 func _on_people_pressed() -> void:
 	pop_bottom_menu.update_menu(GM.board.currently_selected.data)
@@ -120,10 +123,6 @@ func _on_events_pressed() -> void:
 func _on_form_party_pressed() -> void:
 	create_unit.update_menu(GM.board.currently_selected.data)
 	create_unit.new_party(null)
-
-func update_pop_hud():
-	if top_menu.territory:
-		top_menu._update_menu()
 
 func disable_buttons():
 	for x in buttons:

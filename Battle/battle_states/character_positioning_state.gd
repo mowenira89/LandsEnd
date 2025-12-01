@@ -9,7 +9,7 @@ var potential_allies:Array[Person]=[]
 @onready var action_container: HBoxContainer = $"../../MarginContainer/MarginContainer/ActionContainer"
 @onready var retreat_container: HBoxContainer = $"../../MarginContainer/MarginContainer/RetreatContainer"
 @onready var magic_select_container: HBoxContainer = $"../../MarginContainer/MarginContainer/MagicSelectContainer"
-@onready var attack: Button = $"../../MarginContainer/MarginContainer/VBoxContainer2/Attack"
+
 
 const PERSON_SELECT = preload("res://Menus/PersonSelectButton.tscn")
 
@@ -22,7 +22,6 @@ func enter():
 	action_container.visible=false
 	retreat_container.visible=false
 	magic_select_container.visible=false
-	attack.visible=false
 	var unit:Unit = battle_screen.allies
 	var foes:Unit = battle_screen.enemies
 	if unit.leader:

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Person" load_steps=10 format=3 uid="uid://doarhwpq8lmfb"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_7s0pv"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_bg23t"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_uhwww"]
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="4_q6ylr"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_2aj5l"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_d0i3i"]
+[ext_resource type="Script" uid="uid://vfa8xldyecm2" path="res://Data/territory.gd" id="7_hqcw8"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_a0dvy"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="9_avfky"]
+
+[resource]
+script = ExtResource("9_avfky")
+title = "Smith"
+prowess = Dictionary[int, float]({
+3: 1.0,
+11: 1.0
+})
+metadata/_custom_type_script = "uid://bd374amcrlpgs"

@@ -52,7 +52,8 @@ func get_store_capacity():
 	elif owner is Building:
 		c+=owner.storeroom_cap
 		for x in owner.extentions:
-			c+=x.storeroom_cap
+			if x:
+				c+=x.storeroom_cap
 	return c
 	
 func get_animal_fields():
@@ -84,7 +85,8 @@ func get_granary_capacity():
 	elif owner is Building:
 		c+=owner.granary_cap
 		for x in owner.extentions:
-			c+=x.granary_cap
+			if x:
+				c+=x.granary_cap
 	return c
 
 		

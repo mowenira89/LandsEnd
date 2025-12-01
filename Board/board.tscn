@@ -118,7 +118,7 @@ script = ExtResource("8_mjcd3")
 [node name="SideMenu" type="Control" parent="Menus"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 971.0
+offset_left = 934.0
 offset_top = 1.0
 offset_right = 1797.0
 offset_bottom = 853.0
@@ -141,7 +141,7 @@ custom_minimum_size = Vector2(0, 370)
 layout_mode = 0
 offset_left = 20.0
 offset_top = 20.0
-offset_right = 810.0
+offset_right = 842.0
 offset_bottom = 491.0
 size_flags_vertical = 0
 
@@ -204,7 +204,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -5.0
-offset_right = 2.0
+offset_right = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -310,9 +310,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -689.0
+offset_left = -623.0
 offset_top = 700.0
-offset_right = -724.0
+offset_right = -841.0
 offset_bottom = -41.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -321,40 +321,16 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menus/SideMenu/MarginContainer"]
+[node name="PopHud" parent="Menus/SideMenu/MarginContainer" instance=ExtResource("17_mjeqw")]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
-
-[node name="TopButtons" type="HBoxContainer" parent="Menus/SideMenu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 50
-alignment = 1
-
-[node name="Events" type="Button" parent="Menus/SideMenu/MarginContainer/VBoxContainer/TopButtons"]
-layout_mode = 2
-text = "Almanac"
-
-[node name="LandButtons" type="HBoxContainer" parent="Menus/SideMenu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="PeopleButtons" type="HBoxContainer" parent="Menus/SideMenu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 16
-alignment = 1
-
-[node name="Population" type="Button" parent="Menus/SideMenu/MarginContainer/VBoxContainer/PeopleButtons"]
-layout_mode = 2
-text = "Population"
-
-[node name="Individuals" type="Button" parent="Menus/SideMenu/MarginContainer/VBoxContainer/PeopleButtons"]
-layout_mode = 2
-text = "Individuals"
 
 [node name="BottomMenu" type="Control" parent="Menus"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 4.0
 offset_top = 40.0
-offset_right = 335.0
+offset_right = 349.0
 offset_bottom = 848.0
 
 [node name="MarginContainer" type="MarginContainer" parent="Menus/BottomMenu"]
@@ -362,6 +338,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -39.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -374,7 +351,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 70.0
+offset_top = 3.0
 offset_right = 4.0
 offset_bottom = 6.0
 grow_horizontal = 2
@@ -388,7 +365,8 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 
 [node name="TopMenu" type="ColorRect" parent="Menus"]
-offset_right = 968.0
+offset_left = 351.0
+offset_right = 937.0
 offset_bottom = 156.0
 color = Color(0, 0, 0, 1)
 script = ExtResource("18_6dage")
@@ -398,7 +376,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 319.0
+offset_left = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 20
@@ -408,10 +386,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menus/TopMenu/MarginContainer"]
 layout_mode = 2
-
-[node name="PopHud" parent="Menus/TopMenu/MarginContainer/HBoxContainer" instance=ExtResource("17_mjeqw")]
-custom_minimum_size = Vector2(400, 0)
-layout_mode = 2
+alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menus/TopMenu/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -431,19 +406,6 @@ text = "THAWBRAWN"
 layout_mode = 2
 size_flags_horizontal = 10
 text = "  End Turn  "
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Menus/TopMenu"]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 339.0
-grow_vertical = 2
-alignment = 1
-
-[node name="TerritoryName" type="Label" parent="Menus/TopMenu/VBoxContainer"]
-layout_mode = 2
-text = "TerritoryNameHere"
-horizontal_alignment = 1
 
 [node name="CreateUnit" parent="Menus" instance=ExtResource("18_7oini")]
 visible = false
@@ -591,7 +553,6 @@ visible = false
 [connection signal="mouse_exited" from="Menus/SideMenu/ColorRect/SideBottom" to="." method="_on_side_bottom_mouse_exited"]
 [connection signal="pressed" from="Menus/SideMenu/ColorRect/ColorRect/MarginContainer/VBoxContainer/Land" to="Menus" method="_on_land_pressed"]
 [connection signal="pressed" from="Menus/SideMenu/ColorRect/ColorRect/MarginContainer/VBoxContainer/People" to="Menus" method="_on_people_pressed"]
-[connection signal="pressed" from="Menus/SideMenu/MarginContainer/VBoxContainer/TopButtons/Events" to="Menus" method="_on_events_pressed"]
 [connection signal="pressed" from="Menus/TopMenu/MarginContainer/HBoxContainer/EndTurn" to="Menus" method="_on_end_turn_pressed"]
 [connection signal="pressed" from="Menus/EndTurnBox/MarginContainer/VBoxContainer/StartTurn" to="Menus/EndTurnBox" method="_on_start_turn_pressed"]
 [connection signal="pressed" from="Menus/Warning/MarginContainer/VBoxContainer/HBoxContainer/OK" to="Menus/Warning" method="_on_ok_pressed"]

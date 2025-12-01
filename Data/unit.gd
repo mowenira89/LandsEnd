@@ -265,3 +265,9 @@ func take_damage(a:float):
 	for x:Person in get_individuals():
 		
 		x.stats.change_hp(a)
+
+func dissappear():
+	for x:Person in get_individuals():
+		x.current_territory.NPCs.erase(x)
+		x.leave_building()
+	current_territory.units.erase(self)

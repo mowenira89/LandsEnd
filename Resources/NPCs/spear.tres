@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Person" load_steps=10 format=3 uid="uid://dd5jv8a11fio7"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_tpk7d"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_w8cia"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_xbnxr"]
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="4_epo6u"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_dn865"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_8tons"]
+[ext_resource type="Script" uid="uid://vfa8xldyecm2" path="res://Data/territory.gd" id="7_anm1h"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_em66p"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="9_8k0m8"]
+
+[resource]
+script = ExtResource("9_8k0m8")
+title = "Spear"
+abilities = Array[ExtResource("1_tpk7d")]([null])
+prowess = Dictionary[int, float]({
+13: 1.0
+})
+level = 1
+CLASS = 2
+stat_mods = Dictionary[int, float]({
+2: 2.0,
+3: 1.0,
+4: 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://bd374amcrlpgs"

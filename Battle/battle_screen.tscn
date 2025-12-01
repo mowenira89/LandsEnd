@@ -21,6 +21,7 @@ color = Color(0.13333334, 0.13333334, 0.13333334, 0.85882354)
 script = ExtResource("1_lshkp")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
 custom_minimum_size = Vector2(900, 550)
 layout_mode = 1
 anchors_preset = 8
@@ -179,6 +180,11 @@ layout_mode = 2
 size_flags_vertical = 8
 alignment = 1
 
+[node name="Attack" type="Button" parent="MarginContainer/MarginContainer/RetreatContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Attack!"
+
 [node name="Retreat" type="Button" parent="MarginContainer/MarginContainer/RetreatContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
@@ -215,12 +221,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Start Battle"
 
-[node name="Attack" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer2"]
-layout_mode = 2
-text = "Attack!"
-
 [node name="Start" type="MarginContainer" parent="."]
-visible = false
 custom_minimum_size = Vector2(1400, 550)
 layout_mode = 1
 anchors_preset = 8
@@ -248,6 +249,9 @@ custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 
 [node name="EnemyPowerLabel" type="Label" parent="Start/VBoxContainer/HBoxContainer/EnemyInfo"]
+layout_mode = 2
+
+[node name="EnemyResult" type="Label" parent="Start/VBoxContainer/HBoxContainer/EnemyInfo"]
 layout_mode = 2
 
 [node name="EnemyInfo" type="RichTextLabel" parent="Start/VBoxContainer/HBoxContainer/EnemyInfo"]
@@ -297,6 +301,9 @@ layout_mode = 2
 [node name="AllyPowerLabel" type="Label" parent="Start/VBoxContainer/HBoxContainer/AllyInfo"]
 layout_mode = 2
 
+[node name="AllyResult" type="Label" parent="Start/VBoxContainer/HBoxContainer/AllyInfo"]
+layout_mode = 2
+
 [node name="AllyInfo" type="RichTextLabel" parent="Start/VBoxContainer/HBoxContainer/AllyInfo"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -325,8 +332,9 @@ script = ExtResource("10_uwms2")
 
 [connection signal="pressed" from="MarginContainer/MarginContainer/ActionContainer/Melee" to="StateMachine/ActionSelectState" method="_on_melee_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/ActionContainer/Missile" to="StateMachine/ActionSelectState" method="_on_missile_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/RetreatContainer/Attack" to="StateMachine/CharacterChoiceState" method="_on_attack_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer2/StartBattle" to="StateMachine/CharacterPositioningState" method="_on_start_battle_pressed"]
-[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer2/Attack" to="StateMachine/CharacterChoiceState" method="_on_attack_pressed"]
 [connection signal="pressed" from="Start/VBoxContainer/HBoxContainer/VBoxContainer/Fight" to="." method="_on_fight_pressed"]
 [connection signal="pressed" from="Start/VBoxContainer/HBoxContainer/VBoxContainer/Autoresolve" to="." method="_on_autoresolve_pressed"]
 [connection signal="pressed" from="Start/VBoxContainer/HBoxContainer/VBoxContainer/Flee" to="." method="_on_flee_pressed"]
+[connection signal="pressed" from="Start/VBoxContainer/HBoxContainer/VBoxContainer/Finish" to="." method="_on_finish_pressed"]

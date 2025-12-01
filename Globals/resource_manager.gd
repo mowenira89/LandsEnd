@@ -88,9 +88,9 @@ func set_stuff():
 			for y in new.found_in:
 				species_by_habitat[y].append(new)
 
-	for x in stuff.values():
-		if x.qualities.has(Stuff.QUALITIES.Libation):
-			print(x.name + " Libation: " + str(x.qualities[Stuff.QUALITIES.Libation]))
+	#for x in stuff.values():
+		#if x.qualities.has(Stuff.QUALITIES.Libation):
+			#print(x.name + " Libation: " + str(x.qualities[Stuff.QUALITIES.Libation]))
 
 func set_NPCs():
 	var path="res://Resources/NPCs/"

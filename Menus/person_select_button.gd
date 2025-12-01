@@ -49,7 +49,6 @@ func create(p:Person):
 		
 func update_progress_bar():
 	progress_bar.value=person.stats.current_hp
-	print(person.stats.current_hp)
 		
 func _on_texture_rect_gui_input(event: InputEvent) -> void:
 	if event.is_action_released("Right Click"):

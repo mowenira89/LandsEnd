@@ -27,7 +27,6 @@ func change_persons(a:int):
 	if a+persons>capacity or a+persons<0:
 		return false
 	persons+=a
-	GM.menus.update_pop_hud()
 	return true
 
 func move(t:Territory):

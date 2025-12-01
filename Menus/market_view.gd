@@ -9,11 +9,11 @@ var building:Market
 
 const TRADE_BUTTON = preload("res://Menus/trade_buton.tscn")
 
-var player_buttons = {}
-var shop_buttons = {}
+var player_buttons:Dictionary[Stuff,TradeButton] = {}
+var shop_buttons:Dictionary[Stuff,TradeButton] = {}
 
-var selling_buttons = {}
-var buying_buttons = {}
+var selling_buttons:Dictionary[Stuff,TradeButton] = {}
+var buying_buttons:Dictionary[Stuff,TradeButton] = {}
 
 var player_value:float
 var shop_value:float
@@ -43,11 +43,11 @@ func update_menu(b:Market):
 			player_buttons[y]=new
 			new.create(TradeButton.MODES.PlayerInv,y,stockpile.stuff[y],building)
 			new.move_to_sell.connect(moving_to_sell)
-
 	for x in building.stock.stuff.keys():
 		var new = TRADE_BUTTON.instantiate()
 		market_inv.add_child(new)
 		shop_buttons[x]=new
+		new.create(TradeButton.MODES.MarketInv,x,building.stock.stuff[x],building)
 		new.move_to_buy.connect(moving_to_buy)
 
 	GM.menus.switch_side_top(self)
@@ -117,3 +117,13 @@ func calculate_values():
 		desc.text="Generous!" 	
 	
 	
+
+
+func _on_button_pressed() -> void:
+	if desc.text=="Fair" or desc.text=="Generous!":
+		var stockpile = building.district.territory.stockpile
+		for x in selling_buttons.values():
+			stockpile.remove_stuff(x.stuff,x.amt)
+		for x in buying_buttons.values():
+			stockpile.add_stuff(x.stuff,x.amt)
+		_update_menu()

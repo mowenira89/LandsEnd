@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Person" load_steps=10 format=3 uid="uid://blqp04kwmruho"]
+
+[ext_resource type="Script" uid="uid://bgsnmlrrr0b5m" path="res://Data/ability.gd" id="1_2pnvu"]
+[ext_resource type="Script" uid="uid://h1hksovre84" path="res://Data/ceremony.gd" id="2_qij3d"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="3_7s878"]
+[ext_resource type="Script" uid="uid://cqth5y8dta6l4" path="res://Data/spell.gd" id="4_wt358"]
+[ext_resource type="Script" uid="uid://m330oqovp04n" path="res://Data/lecture.gd" id="5_vo0ec"]
+[ext_resource type="Script" uid="uid://hobfnduwe2p0" path="res://Data/event.gd" id="6_gi67m"]
+[ext_resource type="Script" uid="uid://vfa8xldyecm2" path="res://Data/territory.gd" id="7_hp36w"]
+[ext_resource type="Script" uid="uid://ci3e1rcawdpkq" path="res://Data/recipe.gd" id="8_sigyr"]
+[ext_resource type="Script" uid="uid://bd374amcrlpgs" path="res://Data/person.gd" id="9_5curh"]
+
+[resource]
+script = ExtResource("9_5curh")
+title = "Sword"
+prowess = Dictionary[int, float]({
+14: 1.0
+})
+CLASS = 2
+stat_mods = Dictionary[int, float]({
+2: 2.0,
+3: 1.0,
+4: 1.0
+})
+unlocked = true
+metadata/_custom_type_script = "uid://bd374amcrlpgs"

@@ -1,6 +1,6 @@
 class_name BattleStateCharacterSelect extends BattleState
 
-@onready var attack: Button = $"../../MarginContainer/MarginContainer/VBoxContainer2/Attack"
+@onready var attack: Button = $"../../MarginContainer/MarginContainer/RetreatContainer/Attack"
 @onready var start_battle: Button = $"../../MarginContainer/MarginContainer/VBoxContainer2/StartBattle"
 @onready var retreat_container: HBoxContainer = $"../../MarginContainer/MarginContainer/RetreatContainer"
 @onready var action_container: HBoxContainer = $"../../MarginContainer/MarginContainer/ActionContainer"
@@ -15,7 +15,6 @@ func enter():
 		x.disable()
 		x.clicked.connect(select_character)
 		x.battle_order_revoked.connect(revoke_order)
-	attack.visible=true
 	start_battle.visible=false
 	attack.disabled=state_machine.orders.is_empty()
 	action_container.visible=false
@@ -32,7 +31,6 @@ func revoke_order(p:PersonSelectorButton):
 	
 	
 func exit():
-	attack.visible=false
 	for x in state_machine.allies:
 		x.clicked.disconnect(select_character)
 		x.battle_order_revoked.disconnect(revoke_order)

@@ -79,6 +79,14 @@ func consume():
 			hunger=0
 		else:
 			starvation=0
+			if owner is Unit:
+				for x:Person in owner.get_individuals():
+					if x.stats.get_hp()<x.stats.total_hp:
+						x.stats.change_hp(x.stats.total_hp*.1)
+			if owner is Territory:
+				for x in owner.NPCs:
+					if x.unit==null and x.stats.get_hp()<x.stats.total_hp:
+						x.stats.change_hp(x.stats.total_hp*.1)
 
 			
 			

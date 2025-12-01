@@ -157,3 +157,35 @@ func extract_products():
 			r[x]=x.qualities[Stuff.QUALITIES.Mineable]
 
 		return r
+
+func get_jobs():
+	var dict = {
+		Pop.CLASS.Follower:0,
+		Pop.CLASS.Artist:0,
+		Pop.CLASS.Soldier:0,
+		Pop.CLASS.Monk:0,
+	}
+	for x in districts:
+		if x.building:
+			for y in x.building.staff_needed:
+				dict[y]+=x.building.staff_needed[y]
+	for x in population.temp_jobs:
+		dict[x]+=population.temp_jobs[x]
+	return dict
+	
+	
+func get_natural_products():
+	var r = []
+	for x in districts:
+		for y in x.biome.fauna:
+			if y not in r:
+				r.append(y)
+		for y in x.biome.flora:
+			if y not in r:
+				r.append(y)
+		for y in x.biome.forage:
+			if y not in r:
+				r.append(y)
+		if x.biome.mineable and x.biome.mineable not in r:
+			r.append(x.biome.mineable)
+	return r
