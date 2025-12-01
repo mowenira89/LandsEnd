@@ -44,7 +44,6 @@ func change_amt(a:int):
 	if amt==0:
 		if mode==MODES.Buying or mode==MODES.Selling:
 			removing.emit(self)
-			queue_free()
 		else:
 			button.text=str(amt)+" "+stuff.name
 	else:

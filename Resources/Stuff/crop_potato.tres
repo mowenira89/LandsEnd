@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Crop" load_steps=6 format=3 uid="uid://c5r55i24jswhv"]
+[gd_resource type="Resource" script_class="Crop" load_steps=7 format=3 uid="uid://c5r55i24jswhv"]
 
 [ext_resource type="Script" uid="uid://dx28jau0q0skf" path="res://Data/stuff.gd" id="1_y5v3i"]
+[ext_resource type="Script" uid="uid://bllx77nhi7hwq" path="res://Data/research.gd" id="2_0bnl3"]
 [ext_resource type="Script" uid="uid://cnyia00wdrxcr" path="res://Data/buff.gd" id="2_5erdg"]
 [ext_resource type="Script" uid="uid://wxkcemfn60gw" path="res://Data/crop.gd" id="3_5erdg"]
 [ext_resource type="Script" uid="uid://d2hat5snxwp82" path="res://Data/stats.gd" id="5_3d8h0"]

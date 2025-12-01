@@ -43,12 +43,14 @@ func update_menu(b:Market):
 			player_buttons[y]=new
 			new.create(TradeButton.MODES.PlayerInv,y,stockpile.stuff[y],building)
 			new.move_to_sell.connect(moving_to_sell)
+			new.removing.connect(process_removal)
 	for x in building.stock.stuff.keys():
 		var new = TRADE_BUTTON.instantiate()
 		market_inv.add_child(new)
 		shop_buttons[x]=new
 		new.create(TradeButton.MODES.MarketInv,x,building.stock.stuff[x],building)
 		new.move_to_buy.connect(moving_to_buy)
+		new.removing.connect(process_removal)
 
 	GM.menus.switch_side_top(self)
 
@@ -64,6 +66,7 @@ func process_removal(b:TradeButton):
 			player_buttons[stuff].change_amt(b.amt)
 			selling_buttons.erase(stuff)
 			b.queue_free()
+
 			
 func moving_to_sell(b:TradeButton):
 	
@@ -76,17 +79,20 @@ func moving_to_sell(b:TradeButton):
 		new.create(TradeButton.MODES.Selling,stuff,1,building)
 		new.return_to_player.connect(return_to_player)
 		selling_buttons[stuff]=new
+		new.removing.connect(process_removal)
 	calculate_values()
 		
 		
 func moving_to_buy(b:TradeButton):
 	if buying_buttons.has(b.stuff):
-		selling_buttons[b.stuff].change_amt(1)
+		buying_buttons[b.stuff].change_amt(1)
 	else:
 		var new = TRADE_BUTTON.instantiate()
 		buying.add_child(new)
 		new.create(TradeButton.MODES.Buying,b.stuff,1,building)
 		new.return_to_market.connect(return_to_market)
+		buying_buttons[b.stuff]=new
+		new.removing.connect(process_removal)
 	calculate_values()
 		
 func return_to_player(b:TradeButton):
